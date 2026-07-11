@@ -122,4 +122,104 @@ class ExperienceTest extends TestCase
             ->assertOk()
             ->assertJsonPath('data.title', 'Public Exp');
     }
+
+    public function test_web_create_form_renders_for_authenticated_user(): void
+    {
+        $user = User::factory()->create();
+        Category::factory()->create();
+
+        $this->actingAs($user, 'web')
+            ->get(route('experiences.create'))
+            ->assertOk()
+            ->assertSee('Đăng trải nghiệm', false)
+            ->assertSee('name="title"', false)
+            ->assertSee('experience-map', false)
+            ->assertSee('Lưu nháp', false)
+            ->assertSee('Đăng công khai', false);
+    }
+
+    public function test_web_user_can_store_published_experience(): void
+    {
+        $user = User::factory()->create();
+        $category = Category::factory()->create();
+        $tag = Tag::factory()->create(['category_id' => $category->id]);
+
+        $response = $this->actingAs($user, 'web')->post(route('experiences.store'), [
+            'title' => 'Cà phê view biển Đà Nẵng',
+            'content' => 'View đẹp lúc hoàng hôn',
+            'category_id' => $category->id,
+            'tags' => [$tag->id],
+            'place_name' => 'Café Horizon',
+            'address' => 'Vo Nguyen Giap, Da Nang',
+            'latitude' => 16.0544,
+            'longitude' => 108.2022,
+            'status' => 'published',
+        ]);
+
+        $experience = Experience::query()->where('title', 'Cà phê view biển Đà Nẵng')->first();
+        $this->assertNotNull($experience);
+        $response->assertRedirect(route('experiences.show', $experience->slug));
+        $this->assertSame(ExperienceStatus::Published, $experience->status);
+        $this->assertTrue($experience->tags->contains('id', $tag->id));
+    }
+
+    public function test_web_user_can_store_draft_without_coordinates(): void
+    {
+        $user = User::factory()->create();
+        $category = Category::factory()->create();
+
+        $this->actingAs($user, 'web')->post(route('experiences.store'), [
+            'title' => 'Nháp chưa có toạ độ',
+            'category_id' => $category->id,
+            'status' => 'draft',
+        ])->assertRedirect();
+
+        $this->assertDatabaseHas('experiences', [
+            'title' => 'Nháp chưa có toạ độ',
+            'user_id' => $user->id,
+            'status' => ExperienceStatus::Draft->value,
+        ]);
+    }
+
+    public function test_user_can_create_experience_with_author_rating_and_new_pending_tag(): void
+    {
+        $user = User::factory()->create();
+        $category = Category::factory()->create();
+
+        $response = $this->actingAs($user, 'web')->post(route('experiences.store'), [
+            'title' => 'Quán có thẻ mới',
+            'category_id' => $category->id,
+            'latitude' => 16.05,
+            'longitude' => 108.20,
+            'status' => 'published',
+            'author_rating' => 9, // 4.5 sao
+            'new_tags' => ['Siêu chill Đà Nẵng'],
+        ]);
+
+        $experience = Experience::query()->where('title', 'Quán có thẻ mới')->first();
+        $this->assertNotNull($experience);
+        $response->assertRedirect(route('experiences.show', $experience->slug));
+        $this->assertSame(9, $experience->author_rating); // 4.5 / 5 sao
+
+        $tag = Tag::query()->where('name', 'Siêu chill Đà Nẵng')->first();
+        $this->assertNotNull($tag);
+        $this->assertSame(\App\Enums\TagStatus::Pending, $tag->status);
+        $this->assertSame($user->id, $tag->created_by);
+        $this->assertTrue($experience->tags->contains('id', $tag->id));
+    }
+
+    public function test_pending_tag_not_listed_on_public_tags_api(): void
+    {
+        $user = User::factory()->create();
+        Tag::factory()->create(['name' => 'Public Tag', 'status' => \App\Enums\TagStatus::Approved]);
+        Tag::factory()->pending()->create([
+            'name' => 'Secret Tag',
+            'created_by' => $user->id,
+        ]);
+
+        $this->getJson('/api/tags')
+            ->assertOk()
+            ->assertJsonFragment(['name' => 'Public Tag'])
+            ->assertJsonMissing(['name' => 'Secret Tag']);
+    }
 }

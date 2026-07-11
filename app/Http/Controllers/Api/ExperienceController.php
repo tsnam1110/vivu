@@ -48,6 +48,7 @@ class ExperienceController extends Controller
             $request->validated(),
             $request->input('tags'),
             $request->file('images'),
+            $request->input('new_tags'),
         );
 
         return (new ExperienceResource($experience))
@@ -61,6 +62,7 @@ class ExperienceController extends Controller
             $experience,
             $request->validated(),
             $request->has('tags') ? $request->input('tags') : null,
+            $request->input('new_tags'),
         );
 
         return new ExperienceResource($experience);

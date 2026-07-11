@@ -25,24 +25,29 @@ nhật bảng này.
 | Framework | React | **19.x** | AntD 6 hỗ trợ React 18+; dùng React 19 stable |
 | Ngôn ngữ | TypeScript | 5.x | `strict: true` |
 | UI kit | Ant Design | **6.x** | Ra mắt 11/2025; tương thích ngược v5, bỏ hỗ trợ IE |
-| Build tool | Vite | **7.x** | latest stable |
+| Build tool | Vite | **8.x** | Admin SPA port **5200** |
 | HTTP client | Axios | mới nhất | Interceptor gắn Bearer token |
 | State/Data | TanStack Query (React Query) | 5.x | Cache & sync dữ liệu server |
-| Router | React Router | 6.x | |
-| Form | AntD Form + Zod (tuỳ chọn) | — | |
+| Router | React Router | 7.x | |
+| Form | AntD Form | — | `Input.Password` có eye toggle |
+| UI template | **Không** (custom layout) | — | Ant Design components, không Pro/CoreUI |
 
-Thư mục: `admin/` (dự án Vite riêng). Build ra `admin/dist`, phục vụ tách hoặc qua
-route `admin/*` của Laravel.
+Thư mục: `admin/` (dự án Vite riêng). Dev: http://localhost:5200 · API Bearer.
+
+> Hướng dẫn dùng AntD / layout admin: [`15-design-system.md`](15-design-system.md) §7.
 
 ## 3. Frontend — Public site
 
 | Hạng mục | Lựa chọn | Ghi chú |
 |---|---|---|
 | Template engine | Blade | Render server-side, SEO |
-| CSS | Tailwind CSS 4.x | Utility-first; cấu hình CSS-first (`@theme`) |
-| JS tương tác | Alpine.js 3.x | Reaction, share, dropdown, modal nhẹ |
-| Build | Vite (Laravel plugin) | `resources/js`, `resources/css` |
+| CSS | Tailwind CSS 4.x | Utility-first; CSS-first (`@theme`); palette **teal + stone** |
+| JS tương tác | Alpine.js 3.x | Password toggle, reaction, share, UI nhẹ |
+| Build | Vite 8 (Laravel plugin) | Public HMR port **5201** |
+| Shell UI | Floating iOS tab bar + sticky footer | `layouts/app.blade.php` |
 | Bản đồ | Google Maps JS API | Places Autocomplete + Geocoding |
+
+> Design system public (token, IA, component): [`15-design-system.md`](15-design-system.md).
 
 ## 4. Bản đồ & dịch vụ ngoài
 

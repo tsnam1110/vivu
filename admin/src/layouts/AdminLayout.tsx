@@ -6,6 +6,8 @@ import {
   AppstoreOutlined,
   CompassOutlined,
   SmileOutlined,
+  SkinOutlined,
+  CrownOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, theme, Typography, Button, Space } from 'antd';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -35,6 +37,8 @@ export default function AdminLayout() {
             { key: '/categories', icon: <AppstoreOutlined />, label: <Link to="/categories">Danh mục</Link> },
             { key: '/tags', icon: <TagsOutlined />, label: <Link to="/tags">Thẻ</Link> },
             { key: '/taste-traits', icon: <SmileOutlined />, label: <Link to="/taste-traits">Nhãn gu</Link> },
+            { key: '/avatar-frames', icon: <SkinOutlined />, label: <Link to="/avatar-frames">Khung avatar</Link> },
+            { key: '/premium', icon: <CrownOutlined />, label: <Link to="/premium">Premium</Link> },
           ]}
         />
       </Sider>

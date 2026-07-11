@@ -102,6 +102,22 @@ Thả cảm xúc lên Experience (và có thể mở rộng lên Comment).
 - `belongsTo` **Experience**.
 - `path`, `disk`, `width`, `height`, `sort_order`, `is_cover`.
 
+### 2.10 SampleAvatar (avatar mẫu)
+Catalog ảnh đại diện có sẵn để user chọn (không bắt buộc upload).
+- `slug`, `name`, `path` (file tĩnh trong `public/`), `sort_order`, `is_active`.
+
+### 2.11 AvatarFrame (khung avatar)
+Catalog khung trang trí quanh avatar (kiểu Discord/LoL).
+- `effect_type` + `effect_config` (JSON) — engine CSS cố định, config tham số hoá.
+- `is_premium`, `show_badge`, `sort_order`, `is_active`.
+- Scale: thêm khung = thêm row; không hard-code enum khung.
+
+### 2.12 PremiumSubscription (gói Premium)
+Đăng ký Premium theo **thời hạn**.
+- `starts_at`, `ends_at` (null = lifetime), `status`, `source`.
+- User có `premium_expires_at` denormalized để check O(1).
+- Admin grant / extend / cancel.
+
 ## 3. Quy tắc miền quan trọng (business rules)
 
 1. **User ≠ Admin:** hai loại tài khoản tách bảng, tách guard, tách endpoint.
@@ -120,6 +136,8 @@ Thả cảm xúc lên Experience (và có thể mở rộng lên Comment).
 8. **Taste-match không lưu quan hệ cứng ở v1:** điểm tương đồng tính khi cần (hoặc
    cache tạm), không tạo bảng "friendship". Xem
    [`features/taste-matching.md`](features/taste-matching.md).
+9. **Khung premium chỉ khi Premium còn hạn:** `premium_expires_at > now()`. Hết hạn
+   → fallback khung free / none. Xem [`features/avatar-and-premium.md`](features/avatar-and-premium.md).
 
 ## 4. Vòng đời trạng thái Experience
 

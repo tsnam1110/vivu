@@ -50,3 +50,9 @@ Cần Laravel API đang chạy (`php artisan serve` hoặc `composer dev` ở ro
 
 Admin dùng **Bearer token**, không dùng cookie session SPA.
 **Không** thêm `localhost:5200` vào `SANCTUM_STATEFUL_DOMAINS` của Laravel (sẽ HTTP 419 CSRF).
+
+## Design system
+
+Quy ước layout AntD, form login (eye toggle), Table/Modal, và ranh giới với public UI:
+
+→ [`../docs/15-design-system.md`](../docs/15-design-system.md) (đặc biệt §1, §7, §8).

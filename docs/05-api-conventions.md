@@ -124,11 +124,17 @@ POST   /api/admin/login
 POST   /api/admin/logout
 GET    /api/admin/users
 PATCH  /api/admin/users/{id}            # khoá/mở, đổi status
+PATCH  /api/admin/users/{id}/premium    # grant Premium (days | lifetime)
 GET    /api/admin/experiences?status=pending
 PATCH  /api/admin/experiences/{id}      # duyệt/ẩn
 CRUD   /api/admin/categories
 CRUD   /api/admin/tags
 CRUD   /api/admin/taste-traits
+CRUD   /api/admin/avatar-frames         # catalog khung + preview data
+CRUD   /api/admin/sample-avatars
+GET    /api/admin/premium-subscriptions
+POST   /api/admin/premium-subscriptions # grant
+PATCH  /api/admin/premium-subscriptions/{id}  # cancel | extend
 GET    /api/admin/comments?status=pending
 PATCH  /api/admin/comments/{id}         # ẩn/hiện
 ```

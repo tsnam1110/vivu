@@ -18,4 +18,14 @@ class PageController extends Controller
     {
         return view('pages.privacy');
     }
+
+    public function community(): View
+    {
+        return view('pages.community');
+    }
+
+    public function cookies(): View
+    {
+        return view('pages.cookies');
+    }
 }

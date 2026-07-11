@@ -37,7 +37,7 @@ class ProcessExperienceImages implements ShouldQueue
 
         try {
             $fullPath = Storage::disk($media->disk)->path($media->path);
-            $image = Image::read($fullPath);
+            $image = Image::decodePath($fullPath);
             $image->scaleDown(width: 1600);
             $image->save($fullPath);
 

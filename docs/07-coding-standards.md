@@ -68,6 +68,8 @@ public function rules(): array
 
 ## C. Frontend — Admin (React + TypeScript + AntD)
 
+> **Design system chi tiết (layout, AntD, auth form):** [`15-design-system.md`](15-design-system.md) §7.
+
 ### C.1 Cấu trúc `admin/src`
 ```
 admin/src/
@@ -102,11 +104,14 @@ export const listExperiences = (params: ListParams) =>
 
 ## D. Frontend — Public (Blade + Tailwind + Alpine)
 
-- Blade: component hoá bằng `<x-...>` (Blade components), layout kế thừa `@extends`.
-- Tailwind: utility trong markup; gom pattern lặp lại thành Blade component, **không**
-  tạo class CSS tuỳ biến trừ khi cần.
-- Alpine cho tương tác nhẹ; logic phức tạp → cân nhắc component nhỏ, tránh nhồi JS vào
-  `x-data` khổng lồ.
+> **Design system chi tiết (token, menu iOS, shell, component):** [`15-design-system.md`](15-design-system.md) §2–§6.
+
+- Blade: component hoá bằng `<x-...>` (Blade components), layout kế thừa `@extends('layouts.app')`.
+- Tailwind: utility trong markup; palette **teal + stone**; bo góc `rounded-2xl` / `rounded-full`.
+  Gom pattern lặp thành Blade component — **không** invent CSS rải rác.
+- Alpine cho tương tác nhẹ (`x-password-input`, toggle); luôn có `[x-cloak]` trong `app.css`.
+- **Shell bắt buộc:** brand chip + floating tab bar + sticky footer — xem design system §5.
+- **IA:** `/` = kho cá nhân (auth); `/explore` = khám phá — không đổi mặc định về explore nếu chưa cập nhật docs.
 - **SEO bắt buộc:** mỗi trang experience có `<title>`, meta description, Open Graph
   (og:title, og:image, og:description), URL có slug, dữ liệu có cấu trúc
   (schema.org `LocalBusiness`/`Place` nếu phù hợp).

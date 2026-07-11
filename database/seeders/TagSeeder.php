@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\TagStatus;
 use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
@@ -31,7 +32,10 @@ class TagSeeder extends Seeder
                         'category_id' => $category->id,
                         'slug' => \Illuminate\Support\Str::slug($name),
                     ],
-                    ['name' => $name],
+                    [
+                        'name' => $name,
+                        'status' => TagStatus::Approved,
+                    ],
                 );
             }
         }
@@ -42,7 +46,10 @@ class TagSeeder extends Seeder
                     'category_id' => null,
                     'slug' => \Illuminate\Support\Str::slug($name),
                 ],
-                ['name' => $name],
+                [
+                    'name' => $name,
+                    'status' => TagStatus::Approved,
+                ],
             );
         }
     }

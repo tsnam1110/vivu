@@ -18,6 +18,22 @@ class TagResource extends JsonResource
             'name' => $this->name,
             'slug' => $this->slug,
             'usage_count' => $this->usage_count,
+            'status' => $this->status?->value ?? $this->status,
+            'created_by' => $this->created_by,
+            'category' => $this->whenLoaded('category', fn () => $this->category
+                ? [
+                    'id' => $this->category->id,
+                    'name' => $this->category->name,
+                    'icon' => $this->category->icon,
+                ]
+                : null),
+            'creator' => $this->whenLoaded('creator', fn () => $this->creator
+                ? [
+                    'id' => $this->creator->id,
+                    'name' => $this->creator->name,
+                    'username' => $this->creator->username,
+                ]
+                : null),
         ];
     }
 }

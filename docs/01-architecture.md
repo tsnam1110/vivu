@@ -36,11 +36,13 @@ ViVu gồm **ba mặt tiền (frontend)** chia sẻ **một backend Laravel** du
 
 | Mặt tiền | Công nghệ | Lý do |
 |---|---|---|
-| **Public site** | Blade + Tailwind + Alpine | Nội dung trải nghiệm/địa điểm cần **SEO** (Google index), tải nhanh, render server-side. Alpine đủ cho tương tác nhẹ (reaction, share). |
-| **Admin panel** | React 19 + Ant Design 6 | Giao diện quản trị nhiều bảng/biểu mẫu, "app-like", cần component phong phú của AntD. Không cần SEO. |
+| **Public site** | Blade + Tailwind + Alpine | Nội dung trải nghiệm/địa điểm cần **SEO** (Google index), tải nhanh, render server-side. Alpine đủ cho tương tác nhẹ (reaction, share). UX: **kho cá nhân trước**, menu floating iOS. |
+| **Admin panel** | React 19 + Ant Design 6 | Giao diện quản trị nhiều bảng/biểu mẫu, "app-like", cần component phong phú của AntD. Không cần SEO. **Không** dùng template admin marketplace. |
+
+> Design system / token / shell / component: [`15-design-system.md`](15-design-system.md).
 
 > 💡 Nếu sau này muốn public site cũng là SPA/SSR (Next/Inertia), đây là quyết định
-> lớn — cập nhật tài liệu này trước.
+> lớn — cập nhật tài liệu này **và** design system trước.
 
 ## 3. Ranh giới & luồng xác thực
 

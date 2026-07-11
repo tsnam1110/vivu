@@ -19,6 +19,7 @@ class StoreTagRequest extends FormRequest
             'name' => ['required', 'string', 'max:80'],
             'category_id' => ['nullable', 'integer', 'exists:categories,id'],
             'slug' => ['nullable', 'string', 'max:100'],
+            'status' => ['sometimes', 'in:pending,approved'],
         ];
     }
 }

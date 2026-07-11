@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Foodie">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <circle cx="100" cy="80" r="34" fill="#ffedd5"/>
+  <ellipse cx="100" cy="155" rx="46" ry="36" fill="#ffedd5"/>
+  <circle cx="88" cy="78" r="4" fill="#7c2d12"/>
+  <circle cx="112" cy="78" r="4" fill="#7c2d12"/>
+  <path d="M88 94c5 8 19 8 24 0" stroke="#7c2d12" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="100" cy="48" rx="22" ry="12" fill="#fbbf24"/>
+  <circle cx="100" cy="42" r="8" fill="#dc2626"/>
+</svg>

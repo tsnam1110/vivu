@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             TagSeeder::class,
             TasteTraitSeeder::class,
+            SampleAvatarSeeder::class,
+            AvatarFrameSeeder::class,
         ]);
     }
 }

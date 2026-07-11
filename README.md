@@ -82,7 +82,8 @@ Chi tiết đầy đủ, route, troubleshooting: **[`docs/06-setup-development.m
 | `/experiences/{slug}` | Chi tiết trải nghiệm |
 | `/u/{username}` | Hồ sơ công khai |
 | `/matches` | Tìm người cùng gu (đã đăng nhập) |
-| `/profile/edit` | Sửa hồ sơ + gu |
+| `/profile` | Trang cá nhân + avatar / Avatar Premium |
+| `/profile/edit` | Hồ sơ gu (taste) |
 
 ## Kiểm thử
 
@@ -104,6 +105,7 @@ Chi tiết: [`docs/05-api-conventions.md`](docs/05-api-conventions.md).
 ## Tài liệu
 
 > 📚 Toàn bộ tài liệu: [`docs/`](docs/) — bắt đầu [`docs/README.md`](docs/README.md).  
+> 🎨 **UI / design system:** [`docs/15-design-system.md`](docs/15-design-system.md).  
 > 🤖 **AI Agent:** [`CLAUDE.md`](CLAUDE.md) → [`docs/08-agent-playbook.md`](docs/08-agent-playbook.md).  
 > 🤝 Đóng góp: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 

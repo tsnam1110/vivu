@@ -47,10 +47,11 @@ composer dev
 ### Quy ước kỹ thuật
 7. [`05-api-conventions.md`](05-api-conventions.md) — Chuẩn thiết kế REST API
 8. [`07-coding-standards.md`](07-coding-standards.md) — Quy ước code Backend & Frontend
-9. [`12-testing.md`](12-testing.md) — Chiến lược kiểm thử
-10. [`13-project-structure.md`](13-project-structure.md) — Cấu trúc thư mục & nơi đặt file
-11. [`09-git-workflow.md`](09-git-workflow.md) — Quy trình Git, commit, PR
-12. [`10-security-privacy.md`](10-security-privacy.md) — Bảo mật & quyền riêng tư
+9. [`15-design-system.md`](15-design-system.md) — **Design system & hướng dẫn UI** (public + admin)
+10. [`12-testing.md`](12-testing.md) — Chiến lược kiểm thử
+11. [`13-project-structure.md`](13-project-structure.md) — Cấu trúc thư mục & nơi đặt file
+12. [`09-git-workflow.md`](09-git-workflow.md) — Quy trình Git, commit, PR
+13. [`10-security-privacy.md`](10-security-privacy.md) — Bảo mật & quyền riêng tư
 
 ### Quản trị dự án
 - [`14-roadmap.md`](14-roadmap.md) — Lộ trình & cột mốc (M0–M6)
@@ -62,6 +63,7 @@ composer dev
 - [`maps-and-location.md`](features/maps-and-location.md) — Bản đồ & định vị Google Maps
 - [`social-sharing.md`](features/social-sharing.md) — Chia sẻ mạng xã hội
 - [`taste-matching.md`](features/taste-matching.md) — Ghép "gu" người dùng
+- [`avatar-and-premium.md`](features/avatar-and-premium.md) — Avatar, khung, Premium
 
 ### Dành cho Agent
 - [`08-agent-playbook.md`](08-agent-playbook.md) — **Quy tắc & quy trình bắt buộc cho AI Agent**

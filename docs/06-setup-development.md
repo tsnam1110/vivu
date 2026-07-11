@@ -152,11 +152,16 @@ npm run build:all      # cả hai
 | `/login` | Đăng nhập user | Guest |
 | `/register` | Đăng ký user | Guest |
 | `/experiences/create/new` | Đăng trải nghiệm mới | User (`web`) |
-| `/profile/edit` | Sửa hồ sơ + taste profile (+ đăng xuất) | User |
+| `/profile` | Trang cá nhân + avatar / Avatar Premium | User |
+| `/profile/edit` | Sửa hồ sơ gu (taste) | User |
 | `/matches` | Tìm người cùng gu | User |
-| `/terms`, `/privacy` | Điều khoản / bảo mật | Công khai |
+| `/terms` | Điều khoản sử dụng dịch vụ | Công khai |
+| `/privacy` | Chính sách bảo vệ dữ liệu cá nhân (NĐ 13/2023) | Công khai |
+| `/community` | Quy tắc cộng đồng & nội dung | Công khai |
+| `/cookies` | Chính sách cookie | Công khai |
 
-> Ưu tiên sản phẩm: **lưu trữ cá nhân** trước, khám phá là phụ. Menu floating iOS ở cuối màn hình.
+> Ưu tiên sản phẩm: **lưu trữ cá nhân** trước, khám phá là phụ. Menu floating iOS ở cuối màn hình.  
+> Chi tiết token, component, checklist UI: [`15-design-system.md`](15-design-system.md).
 
 Source routes: `routes/web.php`.
 

@@ -22,6 +22,7 @@ class ExperienceResource extends JsonResource
             'latitude' => $this->latitude,
             'longitude' => $this->longitude,
             'google_place_id' => $this->google_place_id,
+            'author_rating' => $this->author_rating,
             'status' => $this->status?->value,
             'rating_avg' => $this->rating_avg,
             'rating_count' => $this->rating_count,

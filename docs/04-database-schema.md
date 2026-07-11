@@ -37,11 +37,17 @@ Vai trò/quyền qua `spatie/laravel-permission` (bảng `roles`, `permissions`,
 | email | VARCHAR(191) | UNIQUE, NOT NULL | |
 | email_verified_at | TIMESTAMP | nullable | |
 | password | VARCHAR(255) | NOT NULL | |
-| avatar_path | VARCHAR(255) | nullable | |
+| avatar_path | VARCHAR(255) | nullable | upload storage; null nếu dùng sample |
+| sample_avatar_id | BIGINT UNSIGNED | nullable, FK→sample_avatars SET NULL | avatar mẫu |
+| avatar_frame_id | BIGINT UNSIGNED | nullable, FK→avatar_frames SET NULL | khung đang chọn |
+| premium_expires_at | DATETIME | nullable | cache Premium active; null = không Premium |
 | status | ENUM('active','suspended') | default 'active' | admin có thể khoá |
 | created_at / updated_at / deleted_at | TIMESTAMP | | soft delete |
 
-Index: `username`, `email`.
+Index: `username`, `email`, `premium_expires_at`.
+
+> **Avatar / Premium:** xem [`features/avatar-and-premium.md`](features/avatar-and-premium.md).
+> `hasActivePremium()` ⇔ `premium_expires_at IS NOT NULL AND premium_expires_at > now()`.
 
 ---
 
@@ -84,9 +90,16 @@ Index: `username`, `email`.
 | name | VARCHAR(80) | NOT NULL | vd "món Hàn" |
 | slug | VARCHAR(100) | NOT NULL | |
 | usage_count | INT | default 0 | cache số lần dùng (gợi ý phổ biến) |
+| status | ENUM/VARCHAR `pending` \| `approved` | default `approved` | user tạo → `pending`; admin duyệt → `approved` |
+| created_by | BIGINT UNSIGNED | nullable, FK→users SET NULL | user đề xuất thẻ; null = admin/seed |
 | created_at / updated_at | TIMESTAMP | | |
 
-Index/UNIQUE: `UNIQUE(category_id, slug)` (một slug không trùng trong cùng danh mục).
+Index/UNIQUE: `UNIQUE(category_id, slug)` (một slug không trùng trong cùng danh mục); index `status`.
+
+**Hiển thị / lọc:**
+- `approved`: mọi người thấy & lọc được.
+- `pending`: chỉ **người tạo** (`created_by`) thấy (form đăng, chi tiết bài của mình); **không** vào bộ lọc public / API tags public.
+- Admin: list + filter `status`, `PATCH /api/admin/tags/{id}/status` để duyệt.
 
 ---
 
@@ -104,9 +117,10 @@ Index/UNIQUE: `UNIQUE(category_id, slug)` (một slug không trùng trong cùng 
 | latitude | DECIMAL(10,7) | nullable | vĩ độ |
 | longitude | DECIMAL(10,7) | nullable | kinh độ |
 | google_place_id | VARCHAR(255) | nullable | id Google Places (nếu chọn từ autocomplete) |
+| author_rating | TINYINT UNSIGNED | nullable | điểm tác giả 1–10 = **5 sao × nửa sao** (1=½★ … 10=5★); khác rating cộng đồng |
 | status | ENUM('draft','pending','published','hidden') | default 'draft' | xem vòng đời |
-| rating_avg | DECIMAL(3,2) | default 0 | cache trung bình sao |
-| rating_count | INT | default 0 | cache số đánh giá |
+| rating_avg | DECIMAL(3,2) | default 0 | cache trung bình sao **cộng đồng** (comments) |
+| rating_count | INT | default 0 | cache số đánh giá cộng đồng |
 | reaction_count | INT | default 0 | cache tổng reaction |
 | view_count | INT | default 0 | |
 | published_at | TIMESTAMP | nullable | |
@@ -195,13 +209,61 @@ UNIQUE: `(type, slug)`. Quản lý bởi admin.
 
 ---
 
-## 12. Bảng hệ thống (Laravel mặc định)
+## 12. `sample_avatars` — avatar mẫu (catalog)
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| slug | VARCHAR(60) | UNIQUE, NOT NULL | |
+| name | VARCHAR(100) | NOT NULL | |
+| path | VARCHAR(255) | NOT NULL | relative `public/` (vd `images/sample-avatars/fox.svg`) |
+| sort_order | INT | default 0 | |
+| is_active | BOOLEAN | default true | |
+| created_at / updated_at | TIMESTAMP | | |
+
+## 13. `avatar_frames` — catalog khung avatar
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| slug | VARCHAR(60) | UNIQUE, NOT NULL | |
+| name | VARCHAR(100) | NOT NULL | |
+| description | VARCHAR(255) | nullable | |
+| effect_type | VARCHAR(32) | NOT NULL | engine: soft, gradient, spin, glow, holographic |
+| effect_config | JSON | nullable | colors, thickness, speed_ms, intensity… |
+| is_premium | BOOLEAN | default false | |
+| show_badge | BOOLEAN | default false | huy hiệu ✦ |
+| sort_order | INT | default 0 | |
+| is_active | BOOLEAN | default true | |
+| created_at / updated_at | TIMESTAMP | | |
+
+Index: `(is_active, sort_order)`, `is_premium`.
+
+## 14. `premium_subscriptions` — gói Premium (thời hạn)
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| user_id | BIGINT UNSIGNED | FK→users CASCADE | |
+| starts_at | DATETIME | NOT NULL | |
+| ends_at | DATETIME | nullable | null = lifetime |
+| status | ENUM('active','expired','cancelled') | default 'active' | |
+| source | ENUM('admin','demo','payment') | default 'admin' | |
+| notes | VARCHAR(500) | nullable | ghi chú admin |
+| granted_by_admin_id | BIGINT UNSIGNED | nullable, FK→admins SET NULL | |
+| created_at / updated_at | TIMESTAMP | | |
+
+Index: `(user_id, status)`, `ends_at`.
+
+> Khi grant/extend/cancel: sync `users.premium_expires_at` = max ends_at của các sub
+> `active` còn hiệu lực (hoặc `+50 years` nếu lifetime — dùng DATETIME, không TIMESTAMP).
+
+---
+
+## 15. Bảng hệ thống (Laravel mặc định)
 `password_reset_tokens`, `sessions` (guard web), `jobs` + `failed_jobs` (queue),
 `personal_access_tokens` (Sanctum cho admin), `cache`, `migrations`.
 
 ---
 
-## 13. Sơ đồ khoá ngoại (tóm tắt)
+## 16. Sơ đồ khoá ngoại (tóm tắt)
 
 ```
 users ──1:1── user_profiles
@@ -210,11 +272,14 @@ users ──1:*── experiences ──*:1── categories
                   │  ├──1:*── media
                   │  ├──1:*── comments ──*:1── users
                   │  └──1:*── reactions (morph) ──*:1── users
+users ──*:1── sample_avatars (optional)
+users ──*:1── avatar_frames (optional)
+users ──1:*── premium_subscriptions ──*:1── admins (granted_by)
 admins (guard admin, roles/permissions riêng)
 taste_traits ── (tham chiếu logic từ user_profiles JSON)
 ```
 
-## 14. Chiến lược index & hiệu năng
+## 17. Chiến lược index & hiệu năng
 - Tìm quanh đây: index `(latitude, longitude)`; ở quy mô lớn cân nhắc spatial index
   (`POINT` + `SPATIAL INDEX`) — ghi ADR nếu chuyển.
 - Feed công khai: index `(status, published_at)`.

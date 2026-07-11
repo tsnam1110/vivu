@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Enums\UserStatus;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -24,6 +25,9 @@ class User extends Authenticatable
         'email',
         'password',
         'avatar_path',
+        'sample_avatar_id',
+        'avatar_frame_id',
+        'premium_expires_at',
         'status',
     ];
 
@@ -38,6 +42,7 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'status' => UserStatus::class,
+            'premium_expires_at' => 'datetime',
         ];
     }
 
@@ -61,17 +66,84 @@ class User extends Authenticatable
         return $this->hasMany(Reaction::class);
     }
 
+    public function premiumSubscriptions(): HasMany
+    {
+        return $this->hasMany(PremiumSubscription::class);
+    }
+
+    public function sampleAvatar(): BelongsTo
+    {
+        return $this->belongsTo(SampleAvatar::class);
+    }
+
+    public function avatarFrame(): BelongsTo
+    {
+        return $this->belongsTo(AvatarFrame::class, 'avatar_frame_id');
+    }
+
     public function isActive(): bool
     {
         return $this->status === UserStatus::Active;
     }
 
+    public function hasActivePremium(): bool
+    {
+        return $this->premium_expires_at !== null && $this->premium_expires_at->isFuture();
+    }
+
+    /** @deprecated Use hasActivePremium() */
+    public function getHasPremiumAvatarAttribute(): bool
+    {
+        return $this->hasActivePremium();
+    }
+
     public function avatarUrl(): ?string
     {
-        if (! $this->avatar_path) {
+        if ($this->avatar_path) {
+            return asset('storage/'.$this->avatar_path);
+        }
+
+        if ($this->relationLoaded('sampleAvatar') && $this->sampleAvatar) {
+            return $this->sampleAvatar->url();
+        }
+
+        if ($this->sample_avatar_id) {
+            $sample = $this->sampleAvatar ?? SampleAvatar::query()->find($this->sample_avatar_id);
+
+            return $sample?->url();
+        }
+
+        return null;
+    }
+
+    /**
+     * Frame that should actually render (premium frames require active Premium).
+     */
+    public function resolvedAvatarFrame(): ?AvatarFrame
+    {
+        $frame = $this->relationLoaded('avatarFrame')
+            ? $this->avatarFrame
+            : ($this->avatar_frame_id ? $this->avatarFrame()->first() : null);
+
+        if (! $frame || ! $frame->is_active) {
             return null;
         }
 
-        return asset('storage/'.$this->avatar_path);
+        if ($frame->is_premium && ! $this->hasActivePremium()) {
+            return null;
+        }
+
+        return $frame;
+    }
+
+    public function initials(): string
+    {
+        $parts = preg_split('/\s+/u', trim($this->name)) ?: [];
+        $letters = '';
+        foreach (array_slice($parts, 0, 2) as $part) {
+            $letters .= mb_strtoupper(mb_substr($part, 0, 1));
+        }
+
+        return $letters !== '' ? $letters : '?';
     }
 }

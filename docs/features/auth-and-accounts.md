@@ -37,8 +37,14 @@ Cấu hình trong `config/auth.php`: thêm guard `admin` và provider `admins`.
 - "Quên mật khẩu": luồng reset password mặc định Laravel (nếu bật).
 
 ### Hồ sơ
-- URL công khai: `/u/{username}` (hiển thị bio, taste công khai, experiences).
-- `GET/PATCH /api/me`, `PATCH /api/me/profile` cho chủ tài khoản.
+- **Trang cá nhân (auth):** `/profile` — tên, username, avatar (upload **hoặc** sample), khung,
+  **đổi mật khẩu** (`PATCH /profile/password`: current + new + confirm).
+- **Avatar / Premium:** catalog `avatar_frames` + `sample_avatars`; Premium theo thời hạn
+  (`premium_subscriptions`, cache `users.premium_expires_at`). Chi tiết:
+  [`avatar-and-premium.md`](avatar-and-premium.md). Component: `<x-user-avatar>`.
+- **Hồ sơ gu:** `/profile/edit` — bio, personality, interests, is_matchable.
+- URL công khai: `/u/{username}` (avatar + bio + taste + experiences published).
+- `GET/PATCH /api/me`, `PATCH /api/me/profile` cho chủ tài khoản (API).
 
 ## 4. Luồng quản trị (Admin)
 

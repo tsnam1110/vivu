@@ -16,5 +16,11 @@ class ExampleTest extends TestCase
         // Guest landing (kho cá nhân là mặc định khi đã đăng nhập)
         $this->get('/')->assertStatus(200);
         $this->get('/explore')->assertStatus(200);
+
+        // Văn bản pháp lý công khai
+        $this->get('/terms')->assertOk()->assertSee('Điều khoản sử dụng', false);
+        $this->get('/privacy')->assertOk()->assertSee('bảo vệ dữ liệu cá nhân', false);
+        $this->get('/community')->assertOk()->assertSee('Quy tắc cộng đồng', false);
+        $this->get('/cookies')->assertOk()->assertSee('Cookie', false);
     }
 }

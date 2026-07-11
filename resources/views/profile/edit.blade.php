@@ -53,9 +53,14 @@
         </form>
 
         <div class="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-sm">
-            <a href="{{ route('profile.show', $user->username) }}" class="font-medium text-teal-700 hover:underline">
-                Xem trang công khai (@{{ $user->username }})
-            </a>
+            <div class="flex flex-wrap gap-3">
+                <a href="{{ route('profile.me') }}" class="font-medium text-teal-700 hover:underline">
+                    ← Trang cá nhân & avatar
+                </a>
+                <a href="{{ route('profile.show', $user->username) }}" class="font-medium text-stone-600 hover:underline">
+                    Xem công khai
+                </a>
+            </div>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="text-stone-500 hover:text-red-600">Đăng xuất</button>

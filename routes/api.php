@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\AvatarFrameController as AdminAvatarFrameController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\CommentController as AdminCommentController;
 use App\Http\Controllers\Admin\ExperienceController as AdminExperienceController;
+use App\Http\Controllers\Admin\PremiumSubscriptionController as AdminPremiumSubscriptionController;
+use App\Http\Controllers\Admin\SampleAvatarController as AdminSampleAvatarController;
 use App\Http\Controllers\Admin\TagController as AdminTagController;
 use App\Http\Controllers\Admin\TasteTraitController as AdminTasteTraitController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
@@ -69,15 +72,29 @@ Route::prefix('admin')->group(function () {
 
         Route::get('/users', [AdminUserController::class, 'index']);
         Route::patch('/users/{user}', [AdminUserController::class, 'update']);
+        Route::patch('/users/{user}/premium', [AdminUserController::class, 'grantPremium']);
 
         Route::get('/experiences', [AdminExperienceController::class, 'index']);
         Route::patch('/experiences/{experience}', [AdminExperienceController::class, 'update']);
 
         Route::apiResource('categories', AdminCategoryController::class)->except(['show']);
         Route::apiResource('tags', AdminTagController::class)->except(['show']);
+        Route::patch('/tags/{tag}/status', [AdminTagController::class, 'updateStatus']);
         Route::apiResource('taste-traits', AdminTasteTraitController::class)
             ->parameters(['taste-traits' => 'tasteTrait'])
             ->except(['show']);
+
+        Route::apiResource('avatar-frames', AdminAvatarFrameController::class)
+            ->parameters(['avatar-frames' => 'avatarFrame'])
+            ->except(['show']);
+
+        Route::apiResource('sample-avatars', AdminSampleAvatarController::class)
+            ->parameters(['sample-avatars' => 'sampleAvatar'])
+            ->except(['show']);
+
+        Route::get('/premium-subscriptions', [AdminPremiumSubscriptionController::class, 'index']);
+        Route::post('/premium-subscriptions', [AdminPremiumSubscriptionController::class, 'store']);
+        Route::patch('/premium-subscriptions/{premiumSubscription}', [AdminPremiumSubscriptionController::class, 'update']);
 
         Route::get('/comments', [AdminCommentController::class, 'index']);
         Route::patch('/comments/{comment}', [AdminCommentController::class, 'update']);

@@ -27,9 +27,19 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'avatar_path' => null,
+            'sample_avatar_id' => null,
+            'avatar_frame_id' => null,
+            'premium_expires_at' => null,
             'status' => UserStatus::Active,
             'remember_token' => Str::random(10),
         ];
+    }
+
+    public function withPremiumAvatar(): static
+    {
+        return $this->state(fn () => [
+            'premium_expires_at' => now()->addYear(),
+        ]);
     }
 
     public function configure(): static
@@ -46,7 +56,6 @@ class UserFactory extends Factory
             $user->unsetRelation('profile');
         });
     }
-
 
     public function suspended(): static
     {

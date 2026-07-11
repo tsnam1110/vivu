@@ -37,6 +37,12 @@ class ExperienceController extends Controller
             $this->service->incrementView($experience);
         }
 
+        $viewer = request()->user('web');
+        $experience->setRelation(
+            'tags',
+            $experience->tags->filter(fn ($tag) => $tag->isVisibleTo($viewer))->values(),
+        );
+
         $comments = $this->commentService->listForExperience($experience, 20);
 
         return view('experiences.show', compact('experience', 'comments'));
@@ -46,9 +52,15 @@ class ExperienceController extends Controller
     {
         $this->authorize('create', Experience::class);
 
+        $user = request()->user('web');
+
         return view('experiences.create', [
             'categories' => Category::query()->active()->orderBy('sort_order')->get(),
-            'tags' => Tag::query()->orderBy('name')->get(),
+            'tags' => Tag::query()
+                ->visibleTo($user)
+                ->orderByDesc('usage_count')
+                ->orderBy('name')
+                ->get(['id', 'name', 'category_id', 'usage_count', 'status']),
         ]);
     }
 
@@ -66,6 +78,7 @@ class ExperienceController extends Controller
             $data,
             $request->input('tags'),
             $request->file('images'),
+            $request->input('new_tags'),
         );
 
         return redirect()->route('experiences.show', $experience->slug)
@@ -75,11 +88,16 @@ class ExperienceController extends Controller
     public function edit(Experience $experience): View
     {
         $this->authorize('update', $experience);
+        $user = request()->user('web');
 
         return view('experiences.edit', [
             'experience' => $experience->load(['tags', 'media']),
             'categories' => Category::query()->active()->orderBy('sort_order')->get(),
-            'tags' => Tag::query()->orderBy('name')->get(),
+            'tags' => Tag::query()
+                ->visibleTo($user)
+                ->orderByDesc('usage_count')
+                ->orderBy('name')
+                ->get(['id', 'name', 'category_id', 'usage_count', 'status']),
         ]);
     }
 
@@ -89,6 +107,7 @@ class ExperienceController extends Controller
             $experience,
             $request->validated(),
             $request->has('tags') ? $request->input('tags') : null,
+            $request->input('new_tags'),
         );
 
         return redirect()->route('experiences.show', $experience->slug)

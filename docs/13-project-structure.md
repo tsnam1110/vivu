@@ -38,14 +38,19 @@ ViVu/
 │   └── seeders/              # categories, taste_traits, admin mặc định
 │
 ├── resources/                # === PUBLIC SITE (Blade) — URL: :8000 hoặc vivu.test ===
-│   ├── views/
+│   ├── views/                # Design system: docs/15-design-system.md
 │   │   ├── layouts/
-│   │   ├── components/       # <x-...> Blade components
+│   │   │   └── app.blade.php # brand + sticky footer + floating iOS nav
+│   │   ├── components/
+│   │   │   └── password-input.blade.php
+│   │   ├── home/             # me (kho), guest, explore
 │   │   ├── experiences/
 │   │   ├── auth/
-│   │   └── profile/
+│   │   ├── profile/
+│   │   ├── matches/
+│   │   └── pages/            # terms, privacy, community, cookies
 │   ├── js/                   # Alpine + JS công khai (map, reaction, share)
-│   └── css/                  # Tailwind 4 (@theme)
+│   └── css/app.css           # Tailwind 4 + [x-cloak]
 │
 ├── lang/
 │   └── vi/                   # chuỗi hiển thị tiếng Việt (không hard-code)
@@ -78,6 +83,9 @@ ViVu/
 ## 2. Quy tắc "đặt file mới ở đâu"
 | Bạn đang viết… | Đặt tại |
 |---|---|
+| **UI public (trang mới)** | `resources/views/{domain}/` + `@extends('layouts.app')` — xem [`15-design-system.md`](15-design-system.md) |
+| **Component Blade tái dùng** | `resources/views/components/` (`x-...`) |
+| **UI admin (trang mới)** | `admin/src/pages/` + route `App.tsx` + menu `AdminLayout` |
 | Validate input | `app/Http/Requests/` (Form Request) |
 | Logic nghiệp vụ | `app/Services/` |
 | Biến đổi output API | `app/Http/Resources/` |

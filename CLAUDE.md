@@ -28,7 +28,7 @@ Chi tiết tầm nhìn & phạm vi: [`docs/00-vision-scope.md`](docs/00-vision-s
 | Backend / API | **Laravel 13**, PHP 8.3+ (khuyến nghị 8.4) | REST API + Blade cho public site |
 | CSDL | **MySQL 8** | UTF-8mb4, timezone `Asia/Ho_Chi_Minh` |
 | Admin panel | **React 19 + Ant Design 6 + Vite 7 + TypeScript** | SPA riêng, gọi REST API |
-| Trang người dùng (public) | **Blade + Tailwind CSS 4 + Alpine.js** | Ưu tiên SEO |
+| Trang người dùng (public) | **Blade + Tailwind CSS 4 + Alpine.js** | SEO; kho cá nhân + menu iOS — [`docs/15-design-system.md`](docs/15-design-system.md) |
 | Auth | **Laravel Sanctum** (admin SPA) + **session guard `web`** (public) | 2 guard tách biệt |
 | Bản đồ | **Google Maps JS API** (+ Places, Geocoding) | |
 | Bất đồng bộ | **Laravel Queue** (database driver → Redis khi scale) | Gửi mail, xử lý ảnh |
@@ -55,6 +55,7 @@ Chi tiết: [`docs/01-architecture.md`](docs/01-architecture.md),
 | [`06-setup-development.md`](docs/06-setup-development.md) | Cài đặt & môi trường dev (Laragon) | Dựng máy dev |
 | [`features/`](docs/features/) | Đặc tả từng tính năng | Làm 1 tính năng cụ thể |
 | [`07-coding-standards.md`](docs/07-coding-standards.md) | Quy ước code BE + FE | Mọi lúc viết code |
+| [`15-design-system.md`](docs/15-design-system.md) | **Design system & UI** (menu iOS, token, component) | **Mọi thay đổi giao diện** |
 | [`08-agent-playbook.md`](docs/08-agent-playbook.md) | **Quy tắc dành cho Agent** | **Bắt buộc cho Agent** |
 | [`09-git-workflow.md`](docs/09-git-workflow.md) | Nhánh, commit, PR, review | Trước khi commit |
 | [`10-security-privacy.md`](docs/10-security-privacy.md) | Bảo mật & quyền riêng tư | Xử lý dữ liệu nhạy cảm |
@@ -141,6 +142,7 @@ npm run build:all                 # build cả hai
 - [x] Experiences / categories / tags / nearby map filters
 - [x] Comments, ratings, reactions, moderation
 - [x] Taste profile + matching (Jaccard)
+- [x] Avatar (upload + sample) + khung catalog + Premium theo thời hạn
 - [x] Feature/Unit tests (`php artisan test`)
 - [x] CI workflow (`.github/workflows/ci.yml`)
 

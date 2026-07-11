@@ -10,6 +10,8 @@ import CommentsPage from './pages/CommentsPage';
 import CategoriesPage from './pages/CategoriesPage';
 import TagsPage from './pages/TagsPage';
 import TasteTraitsPage from './pages/TasteTraitsPage';
+import AvatarFramesPage from './pages/AvatarFramesPage';
+import PremiumSubscriptionsPage from './pages/PremiumSubscriptionsPage';
 import { getToken } from './api/http';
 
 const queryClient = new QueryClient();
@@ -43,6 +45,8 @@ export default function App() {
               <Route path="categories" element={<CategoriesPage />} />
               <Route path="tags" element={<TagsPage />} />
               <Route path="taste-traits" element={<TasteTraitsPage />} />
+              <Route path="avatar-frames" element={<AvatarFramesPage />} />
+              <Route path="premium" element={<PremiumSubscriptionsPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

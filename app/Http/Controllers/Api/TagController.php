@@ -15,7 +15,7 @@ class TagController extends Controller
 {
     public function index(Request $request): AnonymousResourceCollection
     {
-        $query = Tag::query()->orderByDesc('usage_count');
+        $query = Tag::query()->approved()->orderByDesc('usage_count');
 
         if ($request->filled('category')) {
             $category = Category::query()->where('slug', $request->string('category'))->first();

@@ -16,6 +16,8 @@ Route::get('/experiences/{slug}', [ExperienceController::class, 'show'])->name('
 Route::get('/u/{username}', [ProfileController::class, 'show'])->name('profile.show');
 Route::get('/terms', [PageController::class, 'terms'])->name('pages.terms');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('pages.privacy');
+Route::get('/community', [PageController::class, 'community'])->name('pages.community');
+Route::get('/cookies', [PageController::class, 'cookies'])->name('pages.cookies');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -32,6 +34,15 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/experiences/{experience}/edit', [ExperienceController::class, 'edit'])->name('experiences.edit');
     Route::put('/experiences/{experience}', [ExperienceController::class, 'update'])->name('experiences.update');
     Route::delete('/experiences/{experience}', [ExperienceController::class, 'destroy'])->name('experiences.destroy');
+
+    Route::get('/profile', [ProfileController::class, 'me'])->name('profile.me');
+    Route::patch('/profile/account', [ProfileController::class, 'updateAccount'])->name('profile.account.update');
+    Route::patch('/profile/password', [ProfileController::class, 'updatePassword'])
+        ->middleware('throttle:10,1')
+        ->name('profile.password.update');
+    Route::post('/profile/premium-avatar', [ProfileController::class, 'enablePremiumAvatar'])
+        ->middleware('throttle:10,1')
+        ->name('profile.premium-avatar');
 
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

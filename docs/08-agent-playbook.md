@@ -13,8 +13,9 @@
 3. **Xác định loại việc** và mở đúng tài liệu:
    - Đụng schema/DB → [`04-database-schema.md`](04-database-schema.md)
    - Đụng API → [`05-api-conventions.md`](05-api-conventions.md)
+   - **Đụng giao diện (Blade/React/layout/menu/form UI)** → [`15-design-system.md`](15-design-system.md) **trước**, rồi [`07-coding-standards.md`](07-coding-standards.md)
    - Làm 1 tính năng → file tương ứng trong [`features/`](features/)
-   - Viết code → [`07-coding-standards.md`](07-coding-standards.md)
+   - Viết code BE/API → [`07-coding-standards.md`](07-coding-standards.md)
 4. **Lập kế hoạch ngắn** trước khi sửa nhiều file.
 5. **Thực hiện** theo chuẩn.
 6. **Kiểm chứng** (test/chạy thử) — không tuyên bố xong nếu chưa kiểm.
@@ -50,6 +51,8 @@
 - ❌ Trả Eloquent model thô ra API (lộ field nhạy cảm như `password`, `email` người khác).
 - ❌ Commit `.env`, khoá API, dump DB, ảnh test dung lượng lớn.
 - ❌ Thêm dependency lớn khi framework/AntD đã có sẵn giải pháp — nếu cần, nêu lý do.
+- ❌ Tự invent palette/layout public (bỏ floating nav, đổi home thành explore, v.v.)
+  mà không cập nhật [`15-design-system.md`](15-design-system.md).
 - ❌ `git push`, tạo PR, hay chạy lệnh phá huỷ dữ liệu (`migrate:fresh` trên non-local,
   `DROP`, xoá file hàng loạt) khi **không** được yêu cầu rõ ràng.
 - ❌ Tuyên bố "đã xong/đã test" khi chưa thực sự chạy.
@@ -71,7 +74,8 @@
 5. Service chứa logic; Controller mỏng; Resource cho output.
 6. Route đúng không gian (`/api`, `/api/admin`, hoặc `web.php`).
 7. Test feature cho luồng chính + biên.
-8. FE: admin (AntD) và/hoặc public (Blade) tuỳ tính năng.
+8. FE: admin (AntD) và/hoặc public (Blade) tuỳ tính năng — **bám** [`15-design-system.md`](15-design-system.md)
+   (token, shell, IA menu, component). Đổi design → cập nhật file 15 trong cùng thay đổi.
 9. Cập nhật `11-glossary.md` nếu có thuật ngữ mới.
 10. Cập nhật checklist trạng thái `CLAUDE.md §6`.
 

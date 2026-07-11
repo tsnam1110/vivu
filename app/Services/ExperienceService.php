@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\ExperienceStatus;
+use App\Enums\TagStatus;
 use App\Jobs\ProcessExperienceImages;
 use App\Models\Experience;
 use App\Models\Tag;
@@ -12,19 +13,25 @@ use App\Models\User;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class ExperienceService
 {
     /**
      * @param  array<string, mixed>  $data
-     * @param  list<int>|null  $tagIds
+     * @param  list<int|string>|null  $tagIds
      * @param  list<UploadedFile>|null  $images
+     * @param  list<string>|null  $newTagNames
      */
-    public function create(User $user, array $data, ?array $tagIds = null, ?array $images = null): Experience
-    {
-        return DB::transaction(function () use ($user, $data, $tagIds, $images) {
+    public function create(
+        User $user,
+        array $data,
+        ?array $tagIds = null,
+        ?array $images = null,
+        ?array $newTagNames = null,
+    ): Experience {
+        return DB::transaction(function () use ($user, $data, $tagIds, $images, $newTagNames) {
             $status = ExperienceStatus::from($data['status'] ?? ExperienceStatus::Draft->value);
             $this->assertPublishable($status, $data);
 
@@ -38,12 +45,19 @@ class ExperienceService
                 'latitude' => $data['latitude'] ?? null,
                 'longitude' => $data['longitude'] ?? null,
                 'google_place_id' => $data['google_place_id'] ?? null,
+                'author_rating' => $data['author_rating'] ?? null,
                 'status' => $status,
                 'published_at' => $status === ExperienceStatus::Published ? now() : null,
             ]);
 
-            if ($tagIds) {
-                $this->syncTags($experience, $tagIds);
+            $resolvedTagIds = $this->resolveTagIds(
+                $user,
+                (int) $data['category_id'],
+                $tagIds,
+                $newTagNames,
+            );
+            if ($resolvedTagIds !== []) {
+                $this->syncTags($experience, $resolvedTagIds);
             }
 
             if ($images) {
@@ -56,25 +70,30 @@ class ExperienceService
 
     /**
      * @param  array<string, mixed>  $data
-     * @param  list<int>|null  $tagIds
+     * @param  list<int|string>|null  $tagIds
+     * @param  list<string>|null  $newTagNames
      */
-    public function update(Experience $experience, array $data, ?array $tagIds = null): Experience
-    {
-        return DB::transaction(function () use ($experience, $data, $tagIds) {
+    public function update(
+        Experience $experience,
+        array $data,
+        ?array $tagIds = null,
+        ?array $newTagNames = null,
+    ): Experience {
+        return DB::transaction(function () use ($experience, $data, $tagIds, $newTagNames) {
             $status = isset($data['status'])
                 ? ExperienceStatus::from($data['status'])
                 : $experience->status;
 
             $merged = array_merge($experience->only([
                 'latitude', 'longitude', 'title', 'content', 'place_name',
-                'address', 'google_place_id', 'category_id',
+                'address', 'google_place_id', 'category_id', 'author_rating',
             ]), $data);
 
             $this->assertPublishable($status, $merged);
 
             $payload = collect($data)->only([
                 'category_id', 'title', 'content', 'place_name', 'address',
-                'latitude', 'longitude', 'google_place_id', 'status',
+                'latitude', 'longitude', 'google_place_id', 'author_rating', 'status',
             ])->all();
 
             if ($status === ExperienceStatus::Published && ! $experience->published_at) {
@@ -83,8 +102,16 @@ class ExperienceService
 
             $experience->update($payload);
 
-            if ($tagIds !== null) {
-                $this->syncTags($experience, $tagIds);
+            if ($tagIds !== null || $newTagNames !== null) {
+                $categoryId = (int) ($payload['category_id'] ?? $experience->category_id);
+                $owner = $experience->user;
+                $resolved = $this->resolveTagIds(
+                    $owner,
+                    $categoryId,
+                    $tagIds ?? $experience->tags()->pluck('tags.id')->all(),
+                    $newTagNames,
+                );
+                $this->syncTags($experience, $resolved);
             }
 
             return $experience->fresh(['category', 'tags', 'media', 'user']);
@@ -117,6 +144,7 @@ class ExperienceService
         if (! empty($filters['tags']) && is_array($filters['tags'])) {
             foreach ($filters['tags'] as $tag) {
                 $query->whereHas('tags', function ($q) use ($tag) {
+                    $q->where('tags.status', TagStatus::Approved);
                     is_numeric($tag)
                         ? $q->where('tags.id', $tag)
                         : $q->where('tags.slug', $tag);
@@ -185,6 +213,96 @@ class ExperienceService
                 'latitude' => [__('validation.published_requires_coordinates')],
             ]);
         }
+    }
+
+    /**
+     * Gộp id thẻ đã chọn + tạo thẻ pending từ tên mới.
+     *
+     * @param  list<int|string>|null  $tagIds
+     * @param  list<string>|null  $newTagNames
+     * @return list<int>
+     */
+    public function resolveTagIds(User $user, int $categoryId, ?array $tagIds, ?array $newTagNames): array
+    {
+        $ids = collect($tagIds ?? [])
+            ->filter(fn ($id) => is_numeric($id))
+            ->map(fn ($id) => (int) $id)
+            ->unique()
+            ->values();
+
+        // Chỉ gắn thẻ approved hoặc pending do chính user tạo
+        if ($ids->isNotEmpty()) {
+            $allowed = Tag::query()
+                ->whereIn('id', $ids->all())
+                ->visibleTo($user)
+                ->pluck('id');
+            $ids = $ids->intersect($allowed)->values();
+        }
+
+        foreach (collect($newTagNames ?? [])->filter() as $name) {
+            $name = trim((string) $name);
+            if ($name === '' || mb_strlen($name) > 80) {
+                continue;
+            }
+
+            $tag = $this->findOrCreateUserTag($user, $categoryId, $name);
+            $ids->push($tag->id);
+        }
+
+        return $ids->unique()->take(10)->values()->all();
+    }
+
+    private function findOrCreateUserTag(User $user, int $categoryId, string $name): Tag
+    {
+        $slug = Str::slug($name) ?: 'tag-'.Str::lower(Str::random(6));
+
+        // Ưu tiên thẻ đã duyệt cùng tên/slug (toàn cục hoặc cùng danh mục)
+        $existing = Tag::query()
+            ->where(function ($q) use ($categoryId) {
+                $q->whereNull('category_id')->orWhere('category_id', $categoryId);
+            })
+            ->where(function ($q) use ($name, $slug) {
+                $q->where('slug', $slug)->orWhereRaw('LOWER(name) = ?', [mb_strtolower($name)]);
+            })
+            ->where(function ($q) use ($user) {
+                $q->where('status', TagStatus::Approved)
+                    ->orWhere(function ($inner) use ($user) {
+                        $inner->where('status', TagStatus::Pending)
+                            ->where('created_by', $user->id);
+                    });
+            })
+            ->orderByRaw("CASE WHEN status = 'approved' THEN 0 ELSE 1 END")
+            ->first();
+
+        if ($existing) {
+            return $existing;
+        }
+
+        return Tag::query()->create([
+            'category_id' => $categoryId,
+            'name' => $name,
+            'slug' => $this->uniqueTagSlug($categoryId, $slug),
+            'status' => TagStatus::Pending,
+            'created_by' => $user->id,
+            'usage_count' => 0,
+        ]);
+    }
+
+    private function uniqueTagSlug(int $categoryId, string $base): string
+    {
+        $slug = $base;
+        $i = 1;
+        while (
+            Tag::query()
+                ->where('category_id', $categoryId)
+                ->where('slug', $slug)
+                ->exists()
+        ) {
+            $slug = $base.'-'.$i;
+            $i++;
+        }
+
+        return $slug;
     }
 
     /**

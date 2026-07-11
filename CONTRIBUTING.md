@@ -25,8 +25,9 @@ trong [`docs/`](docs/).
 ## Quy trình
 1. Tạo nhánh: `feature/...`, `fix/...`, hoặc `docs/...`
    (xem [`docs/09-git-workflow.md`](docs/09-git-workflow.md)).
-2. Viết code theo [`docs/07-coding-standards.md`](docs/07-coding-standards.md) và đặt
-   file đúng chỗ theo [`docs/13-project-structure.md`](docs/13-project-structure.md).
+2. Viết code theo [`docs/07-coding-standards.md`](docs/07-coding-standards.md); UI theo
+   [`docs/15-design-system.md`](docs/15-design-system.md); đặt file đúng chỗ theo
+   [`docs/13-project-structure.md`](docs/13-project-structure.md).
 3. Thêm/cập nhật test ([`docs/12-testing.md`](docs/12-testing.md)).
 4. Chạy kiểm tra:
    ```bash

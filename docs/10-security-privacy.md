@@ -27,6 +27,18 @@
 | Rò rỉ dữ liệu qua API | Dùng Resource, whitelist field; không trả `email`/`password` người khác. |
 
 ## 4. Dữ liệu cá nhân & quyền riêng tư người dùng
+
+### 4.0 Văn bản pháp lý công khai (public site)
+| Route | Nội dung | Căn cứ chính (tham chiếu) |
+|---|---|---|
+| `/terms` | Điều khoản sử dụng dịch vụ | Luật Giao dịch điện tử 2023, An ninh mạng 2018, BLDS 2015, Luật BVQLNTD 2023… |
+| `/privacy` | Chính sách bảo vệ dữ liệu cá nhân | **Nghị định 13/2023/NĐ-CP**, An ninh mạng, ATTTM… |
+| `/community` | Quy tắc cộng đồng / nội dung UGC | An ninh mạng, quy định nội dung bị cấm |
+| `/cookies` | Cookie & lưu trữ trên thiết bị | NĐ 13/2023, minh bạch xử lý dữ liệu |
+
+> Cập nhật email/MST/địa chỉ chủ thể vận hành trước production. Nội dung là khung vận hành —
+> rà soát với tư vấn pháp lý khi thương mại hoá.
+
 - **Taste profile (tính cách/sở thích), email, vị trí** là dữ liệu cá nhân.
   - `email` **không** hiển thị công khai trên hồ sơ.
   - `personality`/`interests` dùng cho taste-match: cho phép user bật/tắt hiển thị

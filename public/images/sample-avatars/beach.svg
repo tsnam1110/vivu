@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beach">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <circle cx="100" cy="78" r="34" fill="#fef9c3"/>
+  <ellipse cx="100" cy="155" rx="46" ry="36" fill="#fef9c3"/>
+  <circle cx="88" cy="76" r="4" fill="#0e7490"/>
+  <circle cx="112" cy="76" r="4" fill="#0e7490"/>
+  <path d="M88 94c5 7 19 7 24 0" stroke="#0e7490" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M55 55c15-20 40-10 50 5" stroke="#fde047" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="148" cy="42" r="16" fill="#fde047"/>
+</svg>

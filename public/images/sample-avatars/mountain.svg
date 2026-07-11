@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Mountain">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <circle cx="100" cy="78" r="34" fill="#dcfce7"/>
+  <ellipse cx="100" cy="155" rx="46" ry="36" fill="#dcfce7"/>
+  <circle cx="88" cy="76" r="4" fill="#14532d"/>
+  <circle cx="112" cy="76" r="4" fill="#14532d"/>
+  <path d="M88 94c5 7 19 7 24 0" stroke="#14532d" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M40 70 L70 30 L100 70 Z" fill="#86efac" opacity="0.9"/>
+  <path d="M85 65 L120 20 L155 65 Z" fill="#bbf7d0" opacity="0.85"/>
+</svg>

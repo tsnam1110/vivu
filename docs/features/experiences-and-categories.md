@@ -11,12 +11,17 @@ gắn **thẻ** chi tiết; người khác duyệt/tìm kiếm theo danh mục, 
 ## 2. Experience (trải nghiệm)
 
 ### Tạo/sửa
-- Trường: `title`, `content`, `category_id` (một), `tags[]` (nhiều), `place_name`,
-  `address`, `latitude`, `longitude`, `google_place_id`, ảnh (`media`).
+- Trường: `title`, `content`, `category_id` (một), `tags[]` (nhiều), `new_tags[]`
+  (tên thẻ mới), `place_name`, `address`, `latitude`, `longitude`,
+  `google_place_id`, `author_rating` (1–10, tuỳ chọn), ảnh (`media`).
+- UI form: layout **2 cột** (desktop), danh mục dạng chip chọn, map gọn,
+  tìm thẻ + tạo thẻ tạm, đánh giá 10 mức có hiệu ứng nhẹ.
 - Chọn vị trí qua Google Maps (autocomplete điền `address` + toạ độ). Xem
   [`maps-and-location.md`](maps-and-location.md).
 - Ảnh: upload nhiều, chọn 1 ảnh bìa (`is_cover`); resize qua queue.
 - `slug` tự sinh từ `title` (spatie/sluggable), đảm bảo duy nhất.
+- `author_rating`: điểm **của tác giả** 1–10 = 5 sao với bước **nửa sao**
+  (UI 5 ngôi sao; 1=½★, 2=1★, …, 10=5★), tách biệt `rating_avg` cộng đồng.
 
 ### Trạng thái
 `draft → pending → published → hidden` (xem
@@ -46,10 +51,12 @@ duyệt trước, cho `draft → published` trực tiếp, admin ẩn khi cần 
 - Gắn theo danh mục: `category_id` trỏ danh mục, **hoặc** `null` = thẻ toàn cục.
 - Ví dụ: "món Hàn", "món Nhật" (thuộc Ăn); "biển", "núi" (Du lịch); "yên tĩnh",
   "sống ảo" (toàn cục).
-- Khi user gắn thẻ cho Experience: UI **NÊN** gợi ý thẻ thuộc danh mục đã chọn +
-  thẻ toàn cục, và cho phép tạo thẻ mới (nếu bật) — thẻ mới chờ admin chuẩn hoá.
+- Khi user gắn thẻ cho Experience: UI gợi ý thẻ thuộc danh mục đã chọn + thẻ
+  toàn cục; **tìm kiếm** thẻ; cho phép **tạo thẻ mới** (`new_tags[]`).
+- Thẻ user tạo: `status = pending`, `created_by = user_id` — **chỉ người tạo**
+  thấy (form + bài của mình). Admin duyệt → `approved` → mọi người thấy & lọc.
 - `usage_count` cache để gợi ý thẻ phổ biến.
-- Admin quản lý (gộp thẻ trùng, đổi tên, gán danh mục).
+- Admin: CRUD + lọc trạng thái + duyệt (`PATCH /api/admin/tags/{id}/status`).
 
 ## 5. Duyệt & tìm kiếm
 - Lọc: theo `category`, `tags[]`, `city`, tìm quanh đây (`lat/lng/radius`), text `q`.
