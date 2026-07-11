@@ -1,0 +1,703 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "soup",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "canh-chua-ca",
+            "name": "Canh chua cá",
+            "emoji": "🐟",
+            "summary": "Canh chua cá — mâm nhà miền Nam / cả nước.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "canh chua",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-kho-qua-nhoi-thit",
+            "name": "Canh khổ qua nhồi thịt",
+            "emoji": "🍲",
+            "summary": "Canh khổ qua nhồi thịt bằm — mâm nhà quen thuộc.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "canh kho qua",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-bi-do",
+            "name": "Canh bí đỏ",
+            "emoji": "🎃",
+            "summary": "Canh bí đỏ nấu tôm hoặc thịt — ngọt thanh.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh bi do",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-rau-ngot-thit-bam",
+            "name": "Canh rau ngót thịt bằm",
+            "emoji": "🥬",
+            "summary": "Canh rau ngót nấu thịt bằm — mâm nhà phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh rau ngot",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-cai-thit-bam",
+            "name": "Canh cải thịt bằm",
+            "emoji": "🥬",
+            "summary": "Canh cải nấu thịt bằm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh cai",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-xuong-rau-cu",
+            "name": "Canh xương rau củ",
+            "emoji": "🦴",
+            "summary": "Canh xương heo nấu rau củ — nền canh gia đình.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh xuong",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "canh-chua-tom",
+            "name": "Canh chua tôm",
+            "emoji": "🦐",
+            "summary": "Canh chua tôm — biến thể canh chua Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "canh chua tom",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "canh-muop-moc",
+            "name": "Canh mướp mọc",
+            "emoji": "🍲",
+            "summary": "Canh mướp nấu mọc — mâm nhà nhẹ.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh muop",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "canh-ga-la-giang",
+            "name": "Canh gà lá giang",
+            "emoji": "🐔",
+            "summary": "Canh gà lá giang — Nam/Trung.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam",
+                "trung"
+            ],
+            "search_keywords": "canh ga la giang",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "canh-cua-rau-day",
+            "name": "Canh cua rau đay",
+            "emoji": "🦀",
+            "summary": "Canh cua rau đay — đặc trưng Bắc.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "bac"
+            ],
+            "search_keywords": "canh cua",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "canh-bau-tom",
+            "name": "Canh bầu tôm",
+            "emoji": "🦐",
+            "summary": "Canh bầu nấu tôm — mâm nhà cả nước.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh bau",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "sup-cua",
+            "name": "Súp cua",
+            "emoji": "🦀",
+            "summary": "Súp cua — khai vị/canh kiểu Hoa–Việt.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia",
+                "hoa_viet"
+            ],
+            "search_keywords": "sup cua",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "canh-chua-ca-loc",
+            "name": "Canh chua cá lóc",
+            "emoji": "🐟",
+            "summary": "Canh chua cá lóc — biến thể canh chua Nam Bộ / Trung–Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam",
+                "trung"
+            ],
+            "search_keywords": "canh chua ca loc",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "canh-khoai-mo",
+            "name": "Canh khoai mỡ",
+            "emoji": "🍲",
+            "summary": "Canh khoai mỡ — canh ngọt mâm Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "canh khoai mo",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "canh-mong-toi-nau-tom",
+            "name": "Canh mồng tơi nấu tôm",
+            "emoji": "🦐",
+            "summary": "Canh mồng tơi nấu tôm — canh mâm nhà.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh mong toi",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "canh-bi-dao",
+            "name": "Canh bí đao",
+            "emoji": "🥒",
+            "summary": "Canh bí đao — canh thanh mâm nhà.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "soup",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "canh bi dao",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

@@ -300,7 +300,14 @@ export type Dish = {
   supports_main: boolean;
   supports_dine_out: boolean;
   supports_cook_home: boolean;
+  dish_role?: string | null;
+  culinary_regions?: string[] | null;
+  culinary_region_labels?: string[] | null;
   five_element?: string | null;
+  thermal_nature?: string | null;
+  protein_source?: string | null;
+  cooking_method?: string | null;
+  flavor_tags?: string[] | null;
   calories_kcal?: number | null;
   serving_grams?: number | null;
   kcal_per_100g?: number | null;
@@ -309,6 +316,8 @@ export type Dish = {
   benefits?: string | null;
   harms?: string | null;
   advice?: string | null;
+  facts_meta?: Record<string, unknown> | null;
+  field_completeness?: Record<string, boolean> | null;
   status: string;
   suggest_count: number;
 };
@@ -334,6 +343,8 @@ export const listDishes = (params?: {
   page?: number;
   meal_slot?: string;
   five_element?: string;
+  culinary_region?: string;
+  dish_role?: string;
 }) => http.get<Paginated<Dish>>('/admin/dishes', { params }).then((r) => r.data);
 
 export const createDish = (payload: Partial<Dish>) =>
@@ -344,7 +355,7 @@ export const updateDish = (id: number, payload: Partial<Dish>) =>
 
 export const deleteDish = (id: number) => http.delete(`/admin/dishes/${id}`);
 
-export const listDishContributions = (params?: { status?: string; type?: string; page?: number }) =>
+export const listDishContributions = (params?: Record<string, unknown>) =>
   http.get<Paginated<DishContribution>>('/admin/dish-contributions', { params }).then((r) => r.data);
 
 export const updateDishContributionStatus = (

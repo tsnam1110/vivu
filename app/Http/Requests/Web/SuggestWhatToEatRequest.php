@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Web;
 
+use App\Enums\CulinaryRegion;
 use App\Enums\MealMode;
 use App\Enums\MealSize;
 use App\Enums\MealSlot;
+use App\Enums\SuggestMode;
 use App\Models\Dish;
 use App\Services\DailyCalorieEstimator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -31,6 +33,8 @@ class SuggestWhatToEatRequest extends FormRequest
             'meal_size' => ['required', 'string', Rule::enum(MealSize::class)],
             'meal_mode' => ['required', 'string', Rule::enum(MealMode::class)],
             'count' => ['nullable', 'integer', 'min:'.Dish::COUNT_MIN, 'max:'.Dish::COUNT_MAX],
+            'suggest_mode' => ['nullable', 'string', Rule::enum(SuggestMode::class)],
+            'culinary_region' => ['nullable', 'string', Rule::enum(CulinaryRegion::class)],
             'exclude_ids' => ['nullable', 'array', 'max:50'],
             'exclude_ids.*' => ['integer', 'min:1'],
             'lat' => ['nullable', 'numeric', 'between:-90,90'],
@@ -79,5 +83,19 @@ class SuggestWhatToEatRequest extends FormRequest
         $v = $this->validated('target_calories');
 
         return $v !== null ? (int) $v : null;
+    }
+
+    public function suggestMode(): SuggestMode
+    {
+        $v = $this->validated('suggest_mode');
+
+        return $v ? SuggestMode::from($v) : SuggestMode::Auto;
+    }
+
+    public function culinaryRegion(): ?string
+    {
+        $v = $this->validated('culinary_region');
+
+        return $v !== null && $v !== '' ? (string) $v : null;
     }
 }

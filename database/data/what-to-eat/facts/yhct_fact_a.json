@@ -1,0 +1,264 @@
+{
+  "kb_version": "0.1.0-yhct",
+  "phase": "YHCT-A",
+  "status": "expert_gated",
+  "description": "Thermal nature + five_element ONLY with tcm_text or expert_tcm. Bulk dishes remain null until expert review. This file seeds a MINIMAL set of single-food / simple-item rows with publicly taught TCM food-property classes (not clinical diagnosis).",
+  "disclaimer": "Tham khảo dưỡng sinh/YHCT — không thay thế khám chữa bệnh. Không dùng để chẩn đoán.",
+  "by_slug": {
+    "com-trang": {
+      "thermal_nature": "neutral",
+      "five_element": "earth",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Tính vị ngũ cốc (gạo tẻ) — bình / vị ngọt → quy Tỳ (tham khảo giáo trình dưỡng sinh phổ thông)",
+          "source_ref": "tcm-food-property:rice-neutral-earth",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap",
+          "notes": "Cần expert_tcm xác nhận trước production claim mạnh."
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Ngũ cốc vị ngọt quy Tỳ — hành Thổ (tham khảo)",
+          "source_ref": "tcm-food-property:rice-neutral-earth",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "com-gao-lut": {
+      "thermal_nature": "neutral",
+      "five_element": "earth",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Gạo lứt — bình, kiện Tỳ (tham khảo dưỡng sinh)",
+          "source_ref": "tcm-food-property:brown-rice-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Ngũ cốc — hành Thổ",
+          "source_ref": "tcm-food-property:brown-rice-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "tra-da": {
+      "thermal_nature": "cool",
+      "five_element": "wood",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Trà (Camellia) — lương/hàn nhẹ tùy loại; trà xanh thường lương (tham khảo)",
+          "source_ref": "tcm-food-property:tea-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap",
+          "limitations": "Trà đá đường phố có đường — tính vị khác."
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Trà vị đắng/thanh — thường xếp Mộc (tham khảo, cần expert)",
+          "source_ref": "tcm-food-property:tea-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "ca-phe-den-da": {
+      "thermal_nature": "warm",
+      "five_element": "fire",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Cà phê — ôn/nhiệt nhẹ, kích thích (tham khảo dưỡng sinh hiện đại + YHCT thực phẩm)",
+          "source_ref": "tcm-food-property:coffee-warm",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap",
+          "limitations": "Chỉ cà phê đen; sữa đá ngọt khác tính."
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Tính ôn vị đắng — thường liên hệ Hỏa (tham khảo)",
+          "source_ref": "tcm-food-property:coffee-warm",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "khoai-lang-nuong": {
+      "thermal_nature": "neutral",
+      "five_element": "earth",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Khoai lang — bình, bổ Tỳ Vị (tham khảo thực liệu)",
+          "source_ref": "tcm-food-property:sweet-potato-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Vị ngọt — hành Thổ",
+          "source_ref": "tcm-food-property:sweet-potato-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "ga-luoc": {
+      "thermal_nature": "warm",
+      "five_element": "earth",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Thịt gà — ôn, bổ khí (tham khảo thực liệu YHCT)",
+          "source_ref": "tcm-food-property:chicken-warm",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Thịt gà vị ngọt — Thổ (tham khảo)",
+          "source_ref": "tcm-food-property:chicken-warm",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "tom-rang-me": {
+      "thermal_nature": "neutral",
+      "five_element": "water",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Tôm — bình/ôn nhẹ (tham khảo); món rang me thêm vị chua",
+          "source_ref": "tcm-food-property:shrimp-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap",
+          "limitations": "Gia vị me/đường/ớt làm lệch tính món — expert nên review."
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Hải sản — thường quy Thủy (tham khảo)",
+          "source_ref": "tcm-food-property:shrimp-neutral",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "dau-phu-sot-ca": {
+      "thermal_nature": "cool",
+      "five_element": "metal",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Đậu phụ — lương (tham khảo thực liệu)",
+          "source_ref": "tcm-food-property:tofu-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Đậu phụ — thường liên hệ Kim/Thổ tùy sách; chọn Kim tham khảo — cần expert",
+          "source_ref": "tcm-food-property:tofu-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "nuoc-dua": {
+      "thermal_nature": "cool",
+      "five_element": "water",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Nước dừa tươi — lương/mát (tham khảo dưỡng sinh nhiệt đới)",
+          "source_ref": "tcm-food-property:coconut-water-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Dịch thể — Thủy (tham khảo)",
+          "source_ref": "tcm-food-property:coconut-water-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    },
+    "sua-chua": {
+      "thermal_nature": "cool",
+      "five_element": "water",
+      "facts": [
+        {
+          "field": "thermal_nature",
+          "method": "tcm_text",
+          "source_title": "Sữa chua — lương (sản phẩm sữa lên men, tham khảo)",
+          "source_ref": "tcm-food-property:yogurt-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        },
+        {
+          "field": "five_element",
+          "method": "tcm_text",
+          "source_title": "Sữa/sản phẩm sữa — thường Thủy (tham khảo)",
+          "source_ref": "tcm-food-property:yogurt-cool",
+          "confidence": "medium",
+          "reviewed_at": "2026-07-11",
+          "reviewed_by": "yhct-bootstrap"
+        }
+      ]
+    }
+  },
+  "expert_queue": {
+    "description": "Danh sách chờ chuyên gia YHCT review (không seed cho đến expert_tcm)",
+    "slugs_pending": [
+      "pho-bo",
+      "bun-bo-hue",
+      "com-tam-suon",
+      "thit-kho-tau",
+      "canh-chua-ca",
+      "lau-thai"
+    ]
+  }
+}

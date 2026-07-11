@@ -68,6 +68,11 @@ composer dev
 - [`what-to-eat.md`](features/what-to-eat.md) — Hôm nay ăn gì (popup trên Kho + kho món + đóng góp)
 - [`what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md) — Bộ quy tắc đánh giá / gợi ý mâm (lớp A–E–S)
 - [`what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md) — Chuẩn seed verified-only, provenance, thêm món hàng loạt
+- [`what-to-eat-dish-catalog.md`](features/what-to-eat-dish-catalog.md) — Danh mục món ứng viên (slug, role, vùng miền, ưu tiên seed)
+- [`what-to-eat-fact-a-calories.md`](features/what-to-eat-fact-a-calories.md) — Fact-A calo verified (overlay FCT)
+- [`what-to-eat-fact-completion-plan.md`](features/what-to-eat-fact-completion-plan.md) — Kế hoạch hoàn thiện fact món (tầng 0–6)
+- [`what-to-eat-fct-vn.md`](features/what-to-eat-fct-vn.md) — Map nguyên liệu FCT Việt Nam (bootstrap)
+- [`what-to-eat-yhct.md`](features/what-to-eat-yhct.md) — YHCT hàn–nhiệt / ngũ hành (expert-gated)
 
 ### Dành cho Agent
 - [`08-agent-playbook.md`](08-agent-playbook.md) — **Quy tắc & quy trình bắt buộc cho AI Agent**

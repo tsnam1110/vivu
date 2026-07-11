@@ -67,8 +67,10 @@
 - **What to Eat / seed món:** fact calo, ngũ hành, hàn–nhiệt, lợi/hại… **chỉ** ghi khi
   có nguồn xác thực. Chưa chắc → `null` (user đóng góp sau). **Cấm** đoán mò hay
   “best-effort” để cho đủ. Đọc
-  [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md) và
-  [`features/what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md).
+  [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md),
+  [`features/what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md) và
+  [`features/what-to-eat-dish-catalog.md`](features/what-to-eat-dish-catalog.md)
+  (inventory món — cập nhật **trước** khi ghi JSON seed).
 
 ## 6. Khi thêm một tính năng mới (checklist)
 

@@ -1,18 +1,24 @@
-import { Button, Form, Input, InputNumber, Modal, Space, Switch, Table, message } from 'antd';
+import { Button, Form, Input, InputNumber, Modal, Select, Space, Switch, Table, message } from 'antd';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { createCategory, deleteCategory, listCategories, updateCategory, type Category } from '../api/resources';
 import { useState } from 'react';
-import ListTotalFooter from '../components/ListTotalFooter';
-import { resolveListTotal, sttIdColumn } from '../utils/listTable';
+import { clientPagination, sttIdColumn } from '../utils/listTable';
 
 export default function CategoriesPage() {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Category | null>(null);
+  const [q, setQ] = useState('');
+  const [isActive, setIsActive] = useState<boolean | undefined>();
   const [form] = Form.useForm();
+
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-categories'],
-    queryFn: listCategories,
+    queryKey: ['admin-categories', q, isActive],
+    queryFn: () =>
+      listCategories({
+        q: q || undefined,
+        is_active: isActive === undefined ? undefined : isActive ? 1 : 0,
+      }),
   });
 
   const closeModal = () => {
@@ -41,13 +47,33 @@ export default function CategoriesPage() {
 
   return (
     <>
-      <Button type="primary" style={{ marginBottom: 16 }} onClick={openCreate}>
-        Thêm danh mục
-      </Button>
+      <Space style={{ marginBottom: 16 }} wrap>
+        <Button type="primary" onClick={openCreate}>
+          Thêm danh mục
+        </Button>
+        <Input.Search
+          placeholder="Tìm tên / slug"
+          allowClear
+          onSearch={setQ}
+          style={{ width: 220 }}
+        />
+        <Select
+          allowClear
+          placeholder="Active"
+          style={{ width: 120 }}
+          value={isActive === undefined ? undefined : isActive ? '1' : '0'}
+          onChange={(v) => setIsActive(v === undefined ? undefined : v === '1')}
+          options={[
+            { value: '1', label: 'Active' },
+            { value: '0', label: 'Inactive' },
+          ]}
+        />
+      </Space>
       <Table
         rowKey="id"
         loading={isLoading}
         dataSource={data}
+        pagination={clientPagination()}
         columns={[
           sttIdColumn<Category>(),
           { title: 'Icon', dataIndex: 'icon', width: 70 },
@@ -94,7 +120,6 @@ export default function CategoriesPage() {
           },
         ]}
       />
-      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
       <Modal
         title={editing ? 'Sửa danh mục' : 'Thêm danh mục'}
         open={open}

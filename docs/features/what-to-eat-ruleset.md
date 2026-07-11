@@ -4,6 +4,7 @@
 > UI popup và khỏi bảng dữ liệu món.  
 > **Liên quan:** [`what-to-eat.md`](what-to-eat.md) (sản phẩm),
 > [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) (chuẩn seed & fact),
+> [`what-to-eat-dish-catalog.md`](what-to-eat-dish-catalog.md) (inventory món & vùng miền),
 > [`../04-database-schema.md`](../04-database-schema.md),
 > [`../10-security-privacy.md`](../10-security-privacy.md).
 
@@ -23,8 +24,8 @@
    ngắn trong file này.
 6. **Không claim chữa bệnh / chẩn đoán.** Output = tham khảo + giải thích rule.
 
-**`ruleset_version` hiện tại (tài liệu):** `0.1.0-draft`  
-*(Chưa gắn code production — đặc tả để implement / audit seed.)*
+**`ruleset_version` hiện tại:** `0.2.0`  
+*(Code: `MealComposer` + `MealTemplateRegistry` + `WhatToEatSuggester` mode pick/compose/auto.)*
 
 ---
 
@@ -210,6 +211,7 @@ cờ `SEED_ALLOW_UNVERIFIED=1` — xem seed-KB).
 | Version | Ngày | Thay đổi |
 |---|---|---|
 | `0.1.0-draft` | 2026-07-11 | Khởi tạo lớp A–E–S, template mâm, data-gate, cấm đoán field |
+| `0.2.0` | 2026-07-11 | Implement compose: vn_home_3/2, standalone, light, dine_out_1; soft fry/kcal/thermal; auto mode; region filter |
 
 Mọi PR đổi rule: **cập nhật bảng này + bump version**.
 

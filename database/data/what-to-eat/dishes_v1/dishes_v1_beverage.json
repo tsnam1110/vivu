@@ -1,0 +1,444 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "beverage",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "ca-phe-sua-da",
+            "name": "Cà phê sữa đá",
+            "emoji": "☕",
+            "summary": "Cà phê sữa đá — đồ uống đặc trưng Việt.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "ca phe sua da",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "ca-phe-den-da",
+            "name": "Cà phê đen đá",
+            "emoji": "☕",
+            "summary": "Cà phê đen đá — đồ uống phổ biến.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "ca phe den",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "tra-da",
+            "name": "Trà đá",
+            "emoji": "🍵",
+            "summary": "Trà đá — đồ uống quán ăn Việt.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "tra da",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "sua-dau-nanh",
+            "name": "Sữa đậu nành",
+            "emoji": "🥛",
+            "summary": "Sữa đậu nành — đồ uống sáng nhẹ.",
+            "meal_slots": [
+                "breakfast",
+                "lunch"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "sua dau nanh",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "nuoc-mia",
+            "name": "Nước mía",
+            "emoji": "🥤",
+            "summary": "Nước mía — đồ uống đường phố.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "nuoc mia",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "sinh-to-bo",
+            "name": "Sinh tố bơ",
+            "emoji": "🥑",
+            "summary": "Sinh tố bơ — đồ uống miền Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "sinh to bo",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "nuoc-chanh",
+            "name": "Nước chanh",
+            "emoji": "🍋",
+            "summary": "Nước chanh — đồ uống giải khát.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "nuoc chanh",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "tra-tac",
+            "name": "Trà tắc",
+            "emoji": "🍊",
+            "summary": "Trà tắc — đồ uống Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "tra tac",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "sinh-to-xoai",
+            "name": "Sinh tố xoài",
+            "emoji": "🥭",
+            "summary": "Sinh tố xoài — đồ uống trái cây.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "beverage",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "sinh to xoai",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "nuoc-dua",
+            "name": "Nước dừa",
+            "emoji": "🥥",
+            "summary": "Nước dừa tươi — đồ uống phổ biến Nam / cả nước.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "beverage",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "nuoc dua",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

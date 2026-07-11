@@ -1,0 +1,398 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "side_extra",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "dau-phu-chien",
+            "name": "Đậu phụ chiên",
+            "emoji": "🧈",
+            "summary": "Đậu phụ chiên vàng — món phụ mâm cơm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "dau phu chien",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "trung-op-la",
+            "name": "Trứng ốp la",
+            "emoji": "🍳",
+            "summary": "Trứng ốp la — phụ bữa sáng/trưa nhanh.",
+            "meal_slots": [
+                "breakfast",
+                "lunch"
+            ],
+            "supports_light": true,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "trung op la",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "nem-ran",
+            "name": "Nem rán",
+            "emoji": "🥟",
+            "summary": "Nem rán (chả giò Bắc) — món phụ/chiên.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "bac"
+            ],
+            "search_keywords": "nem ran",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "cha-gio",
+            "name": "Chả giò",
+            "emoji": "🥟",
+            "summary": "Chả giò chiên — phong cách Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "cha gio",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "trung-kho",
+            "name": "Trứng kho",
+            "emoji": "🥚",
+            "summary": "Trứng kho mặn — món phụ mâm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "trung kho",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "ruoc",
+            "name": "Ruốc",
+            "emoji": "🍖",
+            "summary": "Ruốc/chà bông — phụ cơm/xôi.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "ruoc",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "nem-chua",
+            "name": "Nem chua",
+            "emoji": "🍖",
+            "summary": "Nem chua — món phụ/khai vị Trung Bộ.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "trung"
+            ],
+            "search_keywords": "nem chua",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "tep-rang",
+            "name": "Tép rang",
+            "emoji": "🦐",
+            "summary": "Tép rang — món phụ mâm nhà.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "tep rang",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "cha-lua",
+            "name": "Chả lụa (miếng)",
+            "emoji": "🍖",
+            "summary": "Chả lụa thái miếng — món phụ cơm/bánh.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "side_extra",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "cha lua",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

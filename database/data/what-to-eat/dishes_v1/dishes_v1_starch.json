@@ -1,0 +1,181 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "starch",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "com-trang",
+            "name": "Cơm trắng",
+            "emoji": "🍚",
+            "summary": "Cơm trắng — tinh bột nền mâm Việt.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "starch",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "com trang",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "com-gao-lut",
+            "name": "Cơm gạo lứt",
+            "emoji": "🍚",
+            "summary": "Cơm gạo lứt — tinh bột thay thế.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "starch",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "com gao lut",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "xoi-trang",
+            "name": "Xôi trắng",
+            "emoji": "🍚",
+            "summary": "Xôi trắng — tinh bột nếp.",
+            "meal_slots": [
+                "breakfast",
+                "lunch"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "starch",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "xoi trang",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "bun-tuoi",
+            "name": "Bún tươi",
+            "emoji": "🍜",
+            "summary": "Bún tươi — tinh bột kèm mâm (bún chả, bún thịt…).",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "starch",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "bun tuoi",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

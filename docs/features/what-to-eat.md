@@ -15,19 +15,27 @@ Liên quan: [`../03-domain-model.md`](../03-domain-model.md),
 |---|---|
 | [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md) | Lớp rule A–E–S, template mâm, data-gate, version ruleset |
 | [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) | **Chuẩn seed verified-only**, null khi chưa xác thực, pipeline thêm món hàng loạt, provenance, UGC lấp trống |
+| [`what-to-eat-dish-catalog.md`](what-to-eat-dish-catalog.md) | **Danh mục món ứng viên** (inventory): slug, role, **vùng miền**, ưu tiên seed P0–P3 — chốt trước khi ghi JSON |
+| [`what-to-eat-fact-a-calories.md`](what-to-eat-fact-a-calories.md) | **Fact-A** calo verified (FCT + recipe_sum + vivu-standard-v1) |
+| [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) | **Kế hoạch hoàn thiện** fact (tầng 0–6, FCT VN, DoD) |
+| [`what-to-eat-fct-vn.md`](what-to-eat-fct-vn.md) | Map nguyên liệu FCT Việt Nam (bootstrap) |
+| [`what-to-eat-yhct.md`](what-to-eat-yhct.md) | YHCT hàn–nhiệt / ngũ hành (expert-gated) |
 
-> **Trạng thái:** Phase **A–D đã implement** (popup, catalog, UGC + admin, history/prefs,
-> match Experience). Calo gắn **khối lượng (serving_grams)** + bộ tính quy đổi gram/kcal
-> trên chi tiết món. Popup form: **mục tiêu kcal/ngày** (preset 1500/2000/2500, mặc định
-> từ cân nặng hồ sơ). Phase E social — backlog.  
-> **Chuẩn dữ liệu (2026-07):** seed / fact hệ thống chỉ nhận giá trị **đã xác thực**;
-> field chưa có nguồn → **để trống (`null`)** để đóng góp sau — chi tiết
-> [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md). Seeder cũ có thể còn
-> fact best-effort (nợ kỹ thuật — audit dần).  
-> **Nguyên tắc:** Đơn giản trước, thông minh sau — tách phase rõ; không biến ViVu
-> thành app dinh dưỡng y khoa / không claim chữa bệnh.  
-> **Vị trí sản phẩm:** **Tính năng phụ (utility)** — không cạnh tranh IA chính
-> (Kho / Khám phá / Đăng / Cùng gu / Profile).
+> **Trạng thái:** Phase **A–D** + **engine compose 0.2.0** đã implement (popup, catalog,
+> UGC + admin, history/prefs, match Experience, **MealComposer** mâm canh–mặn–rau,
+> filter vùng miền). Calo gắn **serving_grams** khi có fact. Form: bữa · nhẹ/chính ·
+> ngoài/nấu · **kiểu gợi ý** · **vùng** · count · mục tiêu kcal/ngày. Phase E social — backlog.  
+> **Chuẩn dữ liệu:** verified-only seed — [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md).  
+> **Seed P0+P1+P2+fix:** **182** món skeleton (`1.2.1-fix`) + role + region.  
+> **Fact-A:** **116**/182 calo (`2.3.0-fact-a`; null ~66; high **9**; FCT VN pilot **35**; `com-trang`/implicit rice **206**).  
+> **Ops-A:** **182** `cooking_method` + `protein_source`.  
+> **Recipe text:** **155** cook_home ingredients/steps.  
+> **YHCT:** **10** medium `tcm_text` (chờ expert); queue món phức tạp.  
+> **FCT VN:** ~35 nguyên liệu + yield; standard bowls `1.1.0-vn` (bún/phở/cơm tấm…).  
+> Plan: [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md).  
+> **Ruleset:** `0.2.0` — [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md).  
+> **Nguyên tắc:** không claim chữa bệnh; không bịa fact.  
+> **Vị trí sản phẩm:** **Tính năng phụ (utility)** — popup trên Kho.
 
 ---
 

@@ -1,0 +1,529 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "share_feast",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "lau-thai",
+            "name": "Lẩu thái",
+            "emoji": "🍲",
+            "summary": "Lẩu thái chua cay — món chia sẻ nhóm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "lau thai",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "lau-bo",
+            "name": "Lẩu bò",
+            "emoji": "🍲",
+            "summary": "Lẩu bò — món chia sẻ nhóm phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "lau bo",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "nuong-bbq-set",
+            "name": "Nướng BBQ set",
+            "emoji": "🔥",
+            "summary": "Set thịt nướng BBQ — ăn chia sẻ nhóm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "nuong bbq",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "lau-hai-san",
+            "name": "Lẩu hải sản",
+            "emoji": "🦐",
+            "summary": "Lẩu hải sản — chia sẻ nhóm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "lau hai san",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "lau-mam",
+            "name": "Lẩu mắm",
+            "emoji": "🍲",
+            "summary": "Lẩu mắm — đặc trưng miền Tây.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "lau mam",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "lau-nam",
+            "name": "Lẩu nấm",
+            "emoji": "🍄",
+            "summary": "Lẩu nấm — chia sẻ, có thể chay biến thể.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "lau nam",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "bo-nuong-la-lot",
+            "name": "Bò nướng lá lốt",
+            "emoji": "🌿",
+            "summary": "Bò nướng lá lốt — món nướng chia sẻ.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "nam",
+                "quoc_gia"
+            ],
+            "search_keywords": "bo nuong la lot",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "oc-xao",
+            "name": "Ốc xào",
+            "emoji": "🐌",
+            "summary": "Ốc xào (sa tế/me…) — món chia sẻ/nhậu phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "oc xao",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "lau-ga-la-e",
+            "name": "Lẩu gà lá é",
+            "emoji": "🍲",
+            "summary": "Lẩu gà lá é — đặc trưng Tây Nguyên / Lâm Đồng.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "tay_nguyen",
+                "trung"
+            ],
+            "search_keywords": "lau ga la e",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "lau-rieu-cua-bap-bo",
+            "name": "Lẩu riêu cua bắp bò",
+            "emoji": "🍲",
+            "summary": "Lẩu riêu cua bắp bò — món chia sẻ nhóm.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "lau rieu",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "hai-san-nuong-moi",
+            "name": "Hải sản nướng mọi",
+            "emoji": "🦐",
+            "summary": "Hải sản nướng mọi — nướng chia sẻ ven biển Trung–Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "trung",
+                "nam"
+            ],
+            "search_keywords": "hai san nuong",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "ga-nuong-com-lam",
+            "name": "Gà nướng cơm lam",
+            "emoji": "🔥",
+            "summary": "Gà nướng cơm lam — đặc trưng Tây Nguyên / Trung.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "tay_nguyen",
+                "trung"
+            ],
+            "search_keywords": "ga nuong com lam",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\Admin;
 
+use App\Enums\CookingMethod;
+use App\Enums\CulinaryRegion;
+use App\Enums\DishRole;
 use App\Enums\DishStatus;
 use App\Enums\FiveElement;
 use App\Enums\MealSlot;
+use App\Enums\ProteinSource;
+use App\Enums\ThermalNature;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -38,7 +43,15 @@ class StoreDishRequest extends FormRequest
             'supports_main' => ['boolean'],
             'supports_dine_out' => ['boolean'],
             'supports_cook_home' => ['boolean'],
+            'dish_role' => ['nullable', 'string', Rule::enum(DishRole::class)],
+            'culinary_regions' => ['nullable', 'array'],
+            'culinary_regions.*' => ['string', Rule::enum(CulinaryRegion::class)],
             'five_element' => ['nullable', 'string', Rule::enum(FiveElement::class)],
+            'thermal_nature' => ['nullable', 'string', Rule::enum(ThermalNature::class)],
+            'protein_source' => ['nullable', 'string', Rule::enum(ProteinSource::class)],
+            'cooking_method' => ['nullable', 'string', Rule::enum(CookingMethod::class)],
+            'flavor_tags' => ['nullable', 'array'],
+            'flavor_tags.*' => ['string', 'max:32'],
             'calories_kcal' => ['nullable', 'integer', 'min:0', 'max:5000'],
             'serving_grams' => ['nullable', 'integer', 'min:1', 'max:2000'],
             'cook_minutes' => ['nullable', 'integer', 'min:0', 'max:600'],

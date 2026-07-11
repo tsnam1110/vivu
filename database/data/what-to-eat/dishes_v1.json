@@ -1,0 +1,7 @@
+{
+    "kb_version": "1.2.0-p2",
+    "ruleset_min": "0.1.0-draft",
+    "description": "Deprecated single-file entry. Prefer dishes_v1\/manifest.json.",
+    "redirect_manifest": "dishes_v1\/manifest.json",
+    "dishes": []
+}

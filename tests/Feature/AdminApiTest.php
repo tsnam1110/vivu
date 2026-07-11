@@ -82,4 +82,52 @@ class AdminApiTest extends TestCase
 
         $this->assertEquals(UserStatus::Suspended, $user->fresh()->status);
     }
+
+    public function test_admin_list_filters_by_date_preset_this_month(): void
+    {
+        $this->actingAsAdmin();
+
+        $thisMonth = Experience::factory()->create([
+            'status' => ExperienceStatus::Published,
+            'created_at' => now()->startOfMonth()->addDay(),
+        ]);
+        $lastMonth = Experience::factory()->create([
+            'status' => ExperienceStatus::Published,
+            'created_at' => now()->subMonthNoOverflow()->startOfMonth()->addDay(),
+        ]);
+
+        $ids = collect(
+            $this->getJson('/api/admin/experiences?date_preset=this_month')
+                ->assertOk()
+                ->json('data')
+        )->pluck('id');
+
+        $this->assertTrue($ids->contains($thisMonth->id));
+        $this->assertFalse($ids->contains($lastMonth->id));
+    }
+
+    public function test_admin_list_filters_users_by_status_and_search(): void
+    {
+        $this->actingAsAdmin();
+
+        $active = User::factory()->create([
+            'username' => 'filteruser_active',
+            'status' => UserStatus::Active,
+            'created_at' => now(),
+        ]);
+        User::factory()->create([
+            'username' => 'filteruser_suspended',
+            'status' => UserStatus::Suspended,
+            'created_at' => now(),
+        ]);
+
+        $ids = collect(
+            $this->getJson('/api/admin/users?status=active&q=filteruser&date_preset=this_month')
+                ->assertOk()
+                ->json('data')
+        )->pluck('id');
+
+        $this->assertTrue($ids->contains($active->id));
+        $this->assertCount(1, $ids);
+    }
 }

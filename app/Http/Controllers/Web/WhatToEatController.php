@@ -43,7 +43,20 @@ class WhatToEatController extends Controller
             lat: $lat,
             lng: $lng,
             targetCalories: $request->targetCalories(),
+            suggestMode: $request->suggestMode(),
+            culinaryRegion: $request->culinaryRegion(),
         );
+
+        $catalogEmpty = \App\Models\Dish::query()->published()->count() === 0;
+
+        $message = $result['message'] ?? null;
+        if ($result['dishes'] === []) {
+            $message = $catalogEmpty
+                ? __('what_to_eat.empty_catalog')
+                : __('what_to_eat.empty');
+        } elseif ($result['partial'] && $message === null) {
+            $message = __('what_to_eat.partial', ['count' => count($result['dishes'])]);
+        }
 
         return response()->json([
             'data' => $result['dishes'],
@@ -54,11 +67,11 @@ class WhatToEatController extends Controller
                 'log_id' => $result['log_id'],
                 'target_calories' => $result['target_calories'],
                 'meal_budget' => $result['meal_budget'],
-                'message' => $result['dishes'] === []
-                    ? __('what_to_eat.empty')
-                    : ($result['partial']
-                        ? __('what_to_eat.partial', ['count' => count($result['dishes'])])
-                        : null),
+                'catalog_empty' => $catalogEmpty,
+                'ruleset_version' => config('what_to_eat.ruleset_version'),
+                'suggest_mode' => $result['suggest_mode'],
+                'composition' => $result['composition'],
+                'message' => $message,
             ],
         ]);
     }

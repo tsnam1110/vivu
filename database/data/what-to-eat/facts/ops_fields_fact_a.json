@@ -1,0 +1,4375 @@
+{
+    "kb_version": "2.0.0-ops",
+    "phase": "Ops-A-max",
+    "description": "Broad cooking_method + protein_source for catalog; committee. Heuristic + manual overrides. Enables A05\/E01\/S02.",
+    "by_slug": {
+        "ca-phe-sua-da": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ca-phe-den-da": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tra-da": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sua-dau-nanh": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nuoc-mia": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sinh-to-bo": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nuoc-chanh": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tra-tac": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sinh-to-xoai": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nuoc-dua": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "pho-chay": {
+            "cooking_method": "soup_base",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-chay": {
+            "cooking_method": "boil",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-chay-thap-cam": {
+            "cooking_method": "steam",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "xoi-chay": {
+            "cooking_method": "mixed",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dau-hu-kho-nam": {
+            "cooking_method": "braise",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nam-kho-tieu": {
+            "cooking_method": "braise",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-rau-cu-chay": {
+            "cooking_method": "boil",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-bi-do-chay": {
+            "cooking_method": "boil",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-cu-luoc-cham-tuong": {
+            "cooking_method": "boil",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "goi-cuon-chay": {
+            "cooking_method": "raw",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "hu-tieu-chay": {
+            "cooking_method": "soup_base",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-tam-chay": {
+            "cooking_method": "braise",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mien-xao-chay": {
+            "cooking_method": "boil",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nem-chay-ran": {
+            "cooking_method": "fry",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-thap-cam-chay": {
+            "cooking_method": "steam",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-dau-xanh": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sua-chua": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "khoai-lang-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "trai-cay-dia": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-ba-mau": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-thai": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-chuoi": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-flan": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "chuoi-nep-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "xoi-dau-xanh": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "che-bap": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-cam": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "suong-sao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-chuoi-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "thit-kho-tau": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "thit-kho-trung": {
+            "cooking_method": "braise",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ca-kho-to": {
+            "cooking_method": "braise",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "suon-ram-man": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ga-kho-gung": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ga-luoc": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dau-phu-sot-ca": {
+            "cooking_method": "mixed",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "trung-chien": {
+            "cooking_method": "fry",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ca-kho-rieng": {
+            "cooking_method": "braise",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ga-rang-muoi": {
+            "cooking_method": "fry",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tom-rang-me": {
+            "cooking_method": "fry",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "muc-xao-chua-ngot": {
+            "cooking_method": "mixed",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bo-xao-luc-lac": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cha-la-lot": {
+            "cooking_method": "grill",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cha-trung-hap": {
+            "cooking_method": "steam",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ca-chien": {
+            "cooking_method": "fry",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "thit-xao-nam": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "vit-om-sau": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "heo-quay": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tom-chien-bot": {
+            "cooking_method": "fry",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "suon-chua-ngot": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ca-loc-kho": {
+            "cooking_method": "braise",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ga-kho-sa": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tom-rim": {
+            "cooking_method": "braise",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "thit-rang-chay-canh": {
+            "cooking_method": "fry",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "pho-bo": {
+            "cooking_method": "soup_base",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "pho-ga": {
+            "cooking_method": "soup_base",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-bo-hue": {
+            "cooking_method": "soup_base",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-rieu-cua": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-cha": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-thit-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "hu-tieu-nam-vang": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mi-quang": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bo-kho": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "chao-ga": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-mi-thit": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-mi-trung": {
+            "cooking_method": "mixed",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "xoi-man": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "xoi-ga": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-cuon": {
+            "cooking_method": "steam",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-xeo": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-tam-suon": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "goi-cuon": {
+            "cooking_method": "raw",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-mam": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-oc": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-moc": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-thang": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-bo-nam-bo": {
+            "cooking_method": "soup_base",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cao-lau": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-canh-cua": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-canh-gio-heo": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mien-ga": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "chao-long": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "chao-suon": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-mi-xiu-mai": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-uot": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-beo": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-tam-bi-cha": {
+            "cooking_method": "braise",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-ga-hoi-an": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-ga-xoi-mo": {
+            "cooking_method": "fry",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-rang-thap-cam": {
+            "cooking_method": "fry",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-dau-mam-tom": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bot-chien": {
+            "cooking_method": "fry",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bo-ne": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mi-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-gio": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-bao": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-ca": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mien-luon": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-bot-loc": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-can": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nem-nuong-nha-trang": {
+            "cooking_method": "fry",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cha-ca-la-vong": {
+            "cooking_method": "mixed",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "pho-tron": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-hen": {
+            "cooking_method": "braise",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-hoi-thit-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-khoai": {
+            "cooking_method": "braise",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "banh-trang-tron": {
+            "cooking_method": "fry",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "pizza": {
+            "cooking_method": "mixed",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sushi-set": {
+            "cooking_method": "raw",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "mi-y-so-cot-bo": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-thai": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-bo": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nuong-bbq-set": {
+            "cooking_method": "grill",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-hai-san": {
+            "cooking_method": "soup_base",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-mam": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-nam": {
+            "cooking_method": "soup_base",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bo-nuong-la-lot": {
+            "cooking_method": "grill",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "oc-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-ga-la-e": {
+            "cooking_method": "soup_base",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "lau-rieu-cua-bap-bo": {
+            "cooking_method": "soup_base",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "hai-san-nuong-moi": {
+            "cooking_method": "grill",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ga-nuong-com-lam": {
+            "cooking_method": "grill",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dau-phu-chien": {
+            "cooking_method": "fry",
+            "protein_source": "plant",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "trung-op-la": {
+            "cooking_method": "fry",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nem-ran": {
+            "cooking_method": "fry",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cha-gio": {
+            "cooking_method": "fry",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "trung-kho": {
+            "cooking_method": "braise",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "ruoc": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nem-chua": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "tep-rang": {
+            "cooking_method": "fry",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cha-lua": {
+            "cooking_method": "mixed",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-muong-xao-toi": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cai-xao-toi": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "su-su-xao-toi": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-luoc-kho-quet": {
+            "cooking_method": "braise",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dua-mon": {
+            "cooking_method": "raw",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dau-que-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bi-dao-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bau-xao-trung": {
+            "cooking_method": "mixed",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "muop-xao-trung": {
+            "cooking_method": "mixed",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-mong-toi-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "cai-thia-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "goi-du-du": {
+            "cooking_method": "raw",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "goi-ga-bap-cai": {
+            "cooking_method": "raw",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nam-xao-toi": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "salad-dua-leo-ca-chua": {
+            "cooking_method": "raw",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "nom-hoa-chuoi": {
+            "cooking_method": "braise",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-lang-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dau-bap-xao": {
+            "cooking_method": "mixed",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bap-cai-luoc": {
+            "cooking_method": "boil",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "dua-mon-hue": {
+            "cooking_method": "raw",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "rau-cai-luoc": {
+            "cooking_method": "boil",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-chua-ca": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-kho-qua-nhoi-thit": {
+            "cooking_method": "braise",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-bi-do": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-rau-ngot-thit-bam": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-cai-thit-bam": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-xuong-rau-cu": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-chua-tom": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-muop-moc": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-ga-la-giang": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-cua-rau-day": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-bau-tom": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "sup-cua": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-chua-ca-loc": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-khoai-mo": {
+            "cooking_method": "braise",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-mong-toi-nau-tom": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-bi-dao": {
+            "cooking_method": "boil",
+            "protein_source": "mixed",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-trang": {
+            "cooking_method": "steam",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "com-gao-lut": {
+            "cooking_method": "steam",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "xoi-trang": {
+            "cooking_method": "steam",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "bun-tuoi": {
+            "cooking_method": "boil",
+            "protein_source": "none",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07",
+                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "ops-build"
+                }
+            ]
+        }
+    }
+}

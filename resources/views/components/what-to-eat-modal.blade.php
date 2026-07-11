@@ -25,6 +25,23 @@
             'mode_dine_out' => __('what_to_eat.mode_dine_out'),
             'mode_cook_home' => __('what_to_eat.mode_cook_home'),
             'count_label' => __('what_to_eat.count_label'),
+            'count_label_compose' => __('what_to_eat.count_label_compose'),
+            'suggest_mode_label' => __('what_to_eat.suggest_mode_label'),
+            'mode_suggest_auto' => __('what_to_eat.mode_suggest_auto'),
+            'mode_suggest_compose' => __('what_to_eat.mode_suggest_compose'),
+            'mode_suggest_pick' => __('what_to_eat.mode_suggest_pick'),
+            'region_filter_label' => __('what_to_eat.region_filter_label'),
+            'region_filter_any' => __('what_to_eat.region_filter_any'),
+            'region_bac' => __('what_to_eat.region_bac'),
+            'region_trung' => __('what_to_eat.region_trung'),
+            'region_nam' => __('what_to_eat.region_nam'),
+            'region_tay_nguyen' => __('what_to_eat.region_tay_nguyen'),
+            'region_quoc_gia' => __('what_to_eat.region_quoc_gia'),
+            'region_hoa_viet' => __('what_to_eat.region_hoa_viet'),
+            'region_ngoai' => __('what_to_eat.region_ngoai'),
+            'results_plate' => __('what_to_eat.results_plate'),
+            'plate_totals' => __('what_to_eat.plate_totals'),
+            'plate_implicit' => __('what_to_eat.plate_implicit'),
             'target_cal_label' => __('what_to_eat.target_cal_label'),
             'target_cal_hint' => __('what_to_eat.target_cal_hint'),
             'target_cal_from_weight' => __('what_to_eat.target_cal_from_weight', [
@@ -55,6 +72,12 @@
             'kcal_per_100g' => __('what_to_eat.kcal_per_100g', ['value' => '__V__']),
             'calories_calc_title' => __('what_to_eat.calories_calc_title'),
             'calories_calc_hint' => __('what_to_eat.calories_calc_hint'),
+            'calorie_source_title' => __('what_to_eat.calorie_source_title'),
+            'calorie_limitations' => __('what_to_eat.calorie_limitations'),
+            'explain_why' => __('what_to_eat.explain_why'),
+            'role_label' => __('what_to_eat.role_label'),
+            'cooking_label' => __('what_to_eat.cooking_label'),
+            'protein_label' => __('what_to_eat.protein_label'),
             'portion_grams' => __('what_to_eat.portion_grams'),
             'portion_kcal' => __('what_to_eat.portion_kcal'),
             'cook_minutes' => __('what_to_eat.cook_minutes', ['value' => '__V__']),
@@ -65,6 +88,8 @@
             'ingredients' => __('what_to_eat.ingredients'),
             'steps' => __('what_to_eat.steps'),
             'no_recipe' => __('what_to_eat.no_recipe'),
+            'unverified_invite' => __('what_to_eat.unverified_invite'),
+            'region_label' => __('what_to_eat.region_label'),
             'disclaimer' => __('what_to_eat.disclaimer'),
             'error_generic' => __('what_to_eat.error_generic'),
             'error_detail' => __('what_to_eat.error_detail'),
@@ -90,6 +115,8 @@
             'meal_mode' => 'dine_out',
             'count' => 3,
             'target_calories' => $wteCalorieMeta['target_calories'],
+            'suggest_mode' => 'auto',
+            'culinary_region' => null,
         ],
     ];
 @endphp
@@ -195,7 +222,34 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <legend class="text-sm font-semibold text-stone-800" x-text="labels.count_label"></legend>
+                            <legend class="text-sm font-semibold text-stone-800" x-text="labels.suggest_mode_label"></legend>
+                            <div class="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
+                                <template x-for="opt in suggestModeOptions" :key="opt.value">
+                                    <button type="button" @click="suggest_mode = opt.value"
+                                            class="rounded-2xl px-2 py-2.5 text-left text-xs font-medium ring-1 transition sm:text-sm"
+                                            :class="suggest_mode === opt.value ? 'bg-teal-600 text-white ring-teal-600' : 'bg-stone-50 text-stone-700 ring-stone-200'"
+                                            x-text="opt.label"></button>
+                                </template>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="text-sm font-semibold text-stone-800" x-text="labels.region_filter_label"></legend>
+                            <div class="mt-2 flex flex-wrap gap-2">
+                                <button type="button" @click="culinary_region = null"
+                                        class="rounded-full px-3 py-1.5 text-xs font-semibold ring-1"
+                                        :class="!culinary_region ? 'bg-sky-600 text-white ring-sky-600' : 'bg-stone-50 text-stone-700 ring-stone-200'"
+                                        x-text="labels.region_filter_any"></button>
+                                <template x-for="opt in regionOptions" :key="opt.value">
+                                    <button type="button" @click="culinary_region = opt.value"
+                                            class="rounded-full px-3 py-1.5 text-xs font-semibold ring-1"
+                                            :class="culinary_region === opt.value ? 'bg-sky-600 text-white ring-sky-600' : 'bg-stone-50 text-stone-700 ring-stone-200'"
+                                            x-text="opt.label"></button>
+                                </template>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="text-sm font-semibold text-stone-800"
+                                    x-text="suggest_mode === 'compose' || (suggest_mode === 'auto' && meal_mode === 'cook_home' && meal_size === 'main') ? labels.count_label_compose : labels.count_label"></legend>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 <template x-for="n in [1,2,3,4,5]" :key="n">
                                     <button type="button" @click="count = n"
@@ -244,13 +298,83 @@
                     {{-- RESULTS --}}
                     <div x-show="view === 'results' && !loading" x-cloak class="space-y-3">
                         <div class="flex items-center justify-between gap-2">
-                            <h3 class="text-sm font-semibold text-stone-800" x-text="labels.results"></h3>
-                            <button type="button" @click="view = 'form'; dishes = []; metaMessage = null; error = null"
+                            <h3 class="text-sm font-semibold text-stone-800"
+                                x-text="composition ? labels.results_plate : labels.results"></h3>
+                            <button type="button" @click="view = 'form'; dishes = []; composition = null; metaMessage = null; error = null"
                                     class="text-xs font-medium text-teal-700">Đổi lựa chọn</button>
                         </div>
                         <p x-show="metaMessage" x-text="metaMessage" class="rounded-xl bg-amber-50 px-3 py-2 text-xs text-amber-900"></p>
                         <p x-show="error" x-text="error" class="rounded-xl bg-red-50 px-3 py-2 text-xs text-red-800"></p>
-                        <ul class="space-y-2.5">
+
+                        {{-- Mâm có cấu trúc --}}
+                        <div x-show="composition" class="space-y-2.5 rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50/50 to-white p-3 ring-1 ring-teal-100/80">
+                            <p class="text-sm font-semibold text-teal-900" x-text="composition?.template_label"></p>
+                            <p class="text-xs text-teal-800/80" x-text="composition?.template_summary"></p>
+                            <ul class="space-y-2">
+                                <template x-for="slot in (composition?.slots || [])" :key="slot.key">
+                                    <li class="rounded-xl bg-white/90 p-2.5 ring-1 ring-stone-200/70">
+                                        <p class="text-[11px] font-semibold uppercase tracking-wide text-teal-700" x-text="slot.label"></p>
+                                        <template x-if="slot.dish">
+                                            <div class="mt-1 flex items-start gap-2">
+                                                <span class="text-xl" x-text="slot.dish.emoji"></span>
+                                                <div class="min-w-0 flex-1">
+                                                    <p class="font-semibold text-stone-900" x-text="slot.dish.name"></p>
+                                                    <p class="text-[11px] text-stone-500" x-text="(slot.reasons || []).join(' · ')"></p>
+                                                    <div class="mt-1.5 flex flex-wrap gap-1.5">
+                                                        <button type="button" @click="openDetail(slot.dish)"
+                                                                class="rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-teal-700 ring-1 ring-teal-200"
+                                                                x-text="labels.detail"></button>
+                                                        <button type="button" @click="chooseDish(slot.dish)"
+                                                                class="rounded-full bg-teal-600 px-2.5 py-1 text-[11px] font-semibold text-white"
+                                                                x-text="chosenId === slot.dish.id ? labels.chosen : labels.choose"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                        <p x-show="!slot.dish" class="mt-1 text-xs text-amber-800" x-text="(slot.reasons || [])[0]"></p>
+                                    </li>
+                                </template>
+                            </ul>
+                            <div x-show="composition?.implicit?.length" class="text-[11px] text-stone-600">
+                                <span class="font-medium" x-text="labels.plate_implicit + ':'"></span>
+                                <template x-for="(imp, i) in (composition?.implicit || [])" :key="i">
+                                    <span class="ml-1" x-text="imp.label + (imp.kcal_estimate ? ' (~' + imp.kcal_estimate + ' kcal)' : '')"></span>
+                                </template>
+                            </div>
+                            <div x-show="composition?.totals" class="text-[11px] text-stone-600">
+                                <span class="font-medium" x-text="labels.plate_totals + ':'"></span>
+                                <span x-show="composition?.totals?.kcal != null" class="ml-1 tabular-nums"
+                                      x-text="composition.totals.kcal + ' kcal'"></span>
+                                <span x-show="composition?.totals?.meal_budget" class="ml-1 text-stone-400"
+                                      x-text="'(mục tiêu bữa ~' + composition.totals.meal_budget + ')'"></span>
+                            </div>
+                            <ul x-show="composition?.plate_reasons?.length" class="list-inside list-disc text-[11px] text-stone-500">
+                                <template x-for="(pr, i) in (composition?.plate_reasons || [])" :key="i">
+                                    <li x-text="pr"></li>
+                                </template>
+                            </ul>
+                            <details x-show="composition?.explanations?.length" class="rounded-xl border border-stone-200 bg-white/80 px-3 py-2">
+                                <summary class="cursor-pointer text-xs font-semibold text-stone-700" x-text="labels.explain_why || 'Vì sao gợi ý mâm này'"></summary>
+                                <ul class="mt-2 space-y-1.5">
+                                    <template x-for="(ex, i) in (composition?.explanations || [])" :key="i">
+                                        <li class="text-[11px] leading-relaxed text-stone-600">
+                                            <span class="mr-1 rounded px-1 py-0.5 text-[10px] font-medium uppercase tracking-wide"
+                                                  :class="{
+                                                    'bg-teal-100 text-teal-800': ex.status === 'pass',
+                                                    'bg-amber-100 text-amber-900': ex.status === 'soft_fail',
+                                                    'bg-stone-100 text-stone-500': ex.status === 'skipped_missing_data' || ex.status === 'info',
+                                                    'bg-rose-100 text-rose-800': ex.status === 'fail'
+                                                  }"
+                                                  x-text="ex.status || ex.severity || 'rule'"></span>
+                                            <span x-text="ex.message || ex.rule_id"></span>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </details>
+                        </div>
+
+                        {{-- List pick (khi không có composition hoặc kèm list phẳng) --}}
+                        <ul x-show="!composition" class="space-y-2.5">
                             <template x-for="dish in dishes" :key="dish.id">
                                 <li class="rounded-2xl bg-stone-50/90 p-3 ring-1 ring-stone-200/80">
                                     <div class="flex items-stretch gap-3">
@@ -284,6 +408,10 @@
                         <div x-show="!detailLoading && detail" class="space-y-4">
                             <p class="text-sm leading-relaxed text-stone-600" x-text="detail.summary"></p>
                             <div class="flex flex-wrap gap-2">
+                                <span x-show="detail.dish_role_label" class="rounded-full bg-indigo-50 px-2.5 py-1 text-xs text-indigo-900 ring-1 ring-indigo-100" x-text="(labels.role_label ? labels.role_label + ': ' : '') + detail.dish_role_label"></span>
+                                <span x-show="detail.cooking_method" class="rounded-full bg-orange-50 px-2.5 py-1 text-xs text-orange-900 ring-1 ring-orange-100" x-text="(labels.cooking_label || 'Chế biến') + ': ' + detail.cooking_method"></span>
+                                <span x-show="detail.protein_source" class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs text-emerald-900 ring-1 ring-emerald-100" x-text="(labels.protein_label || 'Đạm') + ': ' + detail.protein_source"></span>
+                                <span x-show="detail.thermal_nature_label" class="rounded-full bg-rose-50 px-2.5 py-1 text-xs text-rose-900 ring-1 ring-rose-100" x-text="detail.thermal_nature_label"></span>
                                 <span x-show="detail.calories_basis_label" class="rounded-full bg-stone-100 px-2.5 py-1 text-xs" x-text="detail.calories_basis_label"></span>
                                 <span x-show="detail.kcal_per_100g != null" class="rounded-full bg-stone-100 px-2.5 py-1 text-xs" x-text="fmtKcalPer100(detail.kcal_per_100g)"></span>
                                 <span x-show="detail.cook_minutes" class="rounded-full bg-stone-100 px-2.5 py-1 text-xs" x-text="fmtCook(detail.cook_minutes)"></span>
@@ -291,6 +419,9 @@
                                     <span x-text="detail.five_element_emoji"></span>
                                     <span x-text="detail.five_element_label"></span>
                                 </span>
+                                <template x-for="(reg, rIdx) in (detail.culinary_region_labels || [])" :key="rIdx">
+                                    <span class="rounded-full bg-sky-50 px-2.5 py-1 text-xs text-sky-900 ring-1 ring-sky-100" x-text="reg"></span>
+                                </template>
                             </div>
 
                             {{-- Bộ tính calo theo khối lượng --}}
@@ -350,6 +481,19 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div x-show="detail.calorie_source" class="mt-3 rounded-xl border border-teal-100/80 bg-white/70 px-3 py-2.5 text-[11px] leading-relaxed text-stone-600">
+                                    <p class="font-semibold text-teal-900" x-text="labels.calorie_source_title"></p>
+                                    <p class="mt-1" x-show="detail.calorie_source?.method_label">
+                                        <span class="text-stone-500">Phương pháp:</span>
+                                        <span class="font-medium text-stone-700" x-text="detail.calorie_source?.method_label"></span>
+                                        <span x-show="detail.calorie_source?.confidence" class="ml-1 rounded-full bg-stone-100 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-stone-500" x-text="detail.calorie_source?.confidence"></span>
+                                    </p>
+                                    <p class="mt-0.5 text-stone-500" x-show="detail.calorie_source?.portion_note" x-text="detail.calorie_source?.portion_note"></p>
+                                    <p class="mt-1 text-amber-900/80" x-show="detail.calorie_source?.limitations">
+                                        <span class="font-medium" x-text="labels.calorie_limitations"></span>:
+                                        <span x-text="detail.calorie_source?.limitations"></span>
+                                    </p>
+                                </div>
                             </section>
 
                             <section x-show="detail.benefits">
@@ -384,6 +528,14 @@
                                 </ol>
                             </section>
                             <p x-show="!detail.has_recipe" class="rounded-xl bg-stone-50 px-3 py-2 text-xs text-stone-500" x-text="labels.no_recipe"></p>
+                            <section x-show="detail.unverified_labels?.length" class="rounded-xl border border-dashed border-stone-200 bg-stone-50/80 px-3 py-2.5">
+                                <p class="text-[11px] font-medium text-stone-600" x-text="labels.unverified_invite"></p>
+                                <ul class="mt-1 list-inside list-disc text-[11px] text-stone-500">
+                                    <template x-for="(label, idx) in (detail.unverified_labels || [])" :key="idx">
+                                        <li x-text="label"></li>
+                                    </template>
+                                </ul>
+                            </section>
 
                             <section>
                                 <h3 class="text-sm font-semibold text-stone-800" x-text="labels.places"></h3>
@@ -525,12 +677,15 @@
                     meal_mode: config.defaults?.meal_mode ?? 'dine_out',
                     count: config.defaults?.count ?? 3,
                     target_calories: config.defaults?.target_calories ?? 2000,
+                    suggest_mode: config.defaults?.suggest_mode ?? 'auto',
+                    culinary_region: config.defaults?.culinary_region ?? null,
                     defaults: config.defaults ?? {},
                     calorieMeta: config.calorieMeta ?? { presets: [1500, 2000, 2500], has_body_metrics: false },
                     caloriePresets: config.calorieMeta?.presets ?? [1500, 2000, 2500],
                     profileEditUrl: config.profileEditUrl ?? '/profile/edit',
                     lastMealBudget: null,
                     dishes: [],
+                    composition: null,
                     detail: null,
                     activeDish: null,
                     error: null,
@@ -577,6 +732,24 @@
                         return [
                             { value: 'dine_out', label: this.labels.mode_dine_out },
                             { value: 'cook_home', label: this.labels.mode_cook_home },
+                        ];
+                    },
+                    get suggestModeOptions() {
+                        return [
+                            { value: 'auto', label: this.labels.mode_suggest_auto },
+                            { value: 'compose', label: this.labels.mode_suggest_compose },
+                            { value: 'pick', label: this.labels.mode_suggest_pick },
+                        ];
+                    },
+                    get regionOptions() {
+                        return [
+                            { value: 'bac', label: this.labels.region_bac },
+                            { value: 'trung', label: this.labels.region_trung },
+                            { value: 'nam', label: this.labels.region_nam },
+                            { value: 'tay_nguyen', label: this.labels.region_tay_nguyen },
+                            { value: 'quoc_gia', label: this.labels.region_quoc_gia },
+                            { value: 'hoa_viet', label: this.labels.region_hoa_viet },
+                            { value: 'ngoai', label: this.labels.region_ngoai },
                         ];
                     },
 
@@ -680,9 +853,13 @@
                                 meal_size: this.meal_size,
                                 meal_mode: this.meal_mode,
                                 count: this.count,
+                                suggest_mode: this.suggest_mode || 'auto',
                                 target_calories: this.target_calories || this.defaults.target_calories || 2000,
                                 exclude_ids,
                             };
+                            if (this.culinary_region) {
+                                body.culinary_region = this.culinary_region;
+                            }
                             if (this.lat != null && this.lng != null) {
                                 body.lat = this.lat;
                                 body.lng = this.lng;
@@ -701,10 +878,12 @@
                             if (!res.ok) {
                                 this.error = json.message || (json.errors && Object.values(json.errors).flat()[0]) || this.labels.error_generic;
                                 this.dishes = [];
+                                this.composition = null;
                                 this.view = 'form';
                                 return;
                             }
                             this.dishes = json.data || [];
+                            this.composition = json.meta?.composition || null;
                             this.metaMessage = json.meta?.message || null;
                             this.logId = json.meta?.log_id || null;
                             this.lastMealBudget = json.meta?.meal_budget ?? null;

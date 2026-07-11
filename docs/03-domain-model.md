@@ -139,10 +139,12 @@ Audit mọi lần cycle ô.
 ### 2.17 Dish (món ăn — kho hệ thống)
 Catalog món dùng chung cho tính năng **Hôm nay ăn gì** — **khác** Experience
 (Experience = trải nghiệm tại địa điểm của một user).
-- Gắn trục gợi ý: `meal_slots`, ăn nhẹ/chính, ăn ngoài/tự nấu; tuỳ chọn `five_element`.
+- Gắn trục gợi ý: `meal_slots`, ăn nhẹ/chính, ăn ngoài/tự nấu; tuỳ chọn `dish_role`,
+  `five_element`, `thermal_nature` — **chỉ khi fact đã xác thực** (null = chưa có).
 - `hasMany` **DishContribution**; cache calo / thời gian nấu từ contribution canonical.
-- Quản lý: admin + seed; user đề xuất món mới qua `source = user` (có duyệt).
-- Chi tiết: [`features/what-to-eat.md`](features/what-to-eat.md).
+- Quản lý: admin + seed dataset JSON verified-only; user đóng góp lấp field null.
+- Chi tiết: [`features/what-to-eat.md`](features/what-to-eat.md),
+  [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md).
 
 ### 2.18 DishContribution (đóng góp tri thức món)
 UGC có kiểm duyệt về một Dish: `recipe`, `calories`, `harm`, `benefit`, `advice`,

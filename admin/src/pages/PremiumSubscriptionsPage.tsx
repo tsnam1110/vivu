@@ -19,8 +19,9 @@ import {
   updatePremiumSubscription,
   type PremiumSubscription,
 } from '../api/resources';
-import ListTotalFooter from '../components/ListTotalFooter';
-import { resolveListTotal, sttIdColumn } from '../utils/listTable';
+import DatePresetSelect from '../components/DatePresetSelect';
+import { DEFAULT_DATE_PRESET, type DatePreset } from '../utils/datePresets';
+import { serverPagination, sttIdColumn } from '../utils/listTable';
 
 function formatDate(iso?: string | null) {
   if (!iso) return 'Lifetime';
@@ -36,16 +37,18 @@ export default function PremiumSubscriptionsPage() {
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState<string | undefined>();
   const [q, setQ] = useState('');
+  const [datePreset, setDatePreset] = useState<DatePreset>(DEFAULT_DATE_PRESET);
   const [open, setOpen] = useState(false);
   const [form] = Form.useForm();
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-premium', page, status, q],
+    queryKey: ['admin-premium', page, status, q, datePreset],
     queryFn: () =>
       listPremiumSubscriptions({
         page,
         status,
         q: q || undefined,
+        date_preset: datePreset,
       }),
   });
 
@@ -83,6 +86,13 @@ export default function PremiumSubscriptionsPage() {
               { value: 'cancelled', label: 'Cancelled' },
             ]}
           />
+          <DatePresetSelect
+            value={datePreset}
+            onChange={(v) => {
+              setDatePreset(v);
+              setPage(1);
+            }}
+          />
           <Button type="primary" onClick={() => setOpen(true)}>
             Cấp Premium
           </Button>
@@ -93,12 +103,7 @@ export default function PremiumSubscriptionsPage() {
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
-        pagination={{
-          current: data?.meta.current_page,
-          total: data?.meta.total,
-          pageSize: data?.meta.per_page,
-          onChange: setPage,
-        }}
+        pagination={serverPagination(data?.meta, setPage)}
         columns={[
           sttIdColumn<PremiumSubscription>(data?.meta),
           {
@@ -175,10 +180,6 @@ export default function PremiumSubscriptionsPage() {
             ),
           },
         ]}
-      />
-      <ListTotalFooter
-        total={resolveListTotal(data?.meta.total, data?.data?.length)}
-        loading={isLoading}
       />
 
       <Modal

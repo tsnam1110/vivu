@@ -343,21 +343,28 @@ UNIQUE: `(user_id, user_habit_item_id, entry_date)`.
 | supports_main | BOOLEAN | default true | ăn chính |
 | supports_dine_out | BOOLEAN | default true | ăn ngoài |
 | supports_cook_home | BOOLEAN | default true | tự nấu |
-| five_element | VARCHAR(16) | nullable | wood/fire/earth/metal/water |
-| calories_kcal | SMALLINT UNSIGNED | nullable | kcal của **khẩu phần chuẩn** |
-| serving_grams | SMALLINT UNSIGNED | nullable | khối lượng (g) tương ứng `calories_kcal` — UI quy đổi theo gram/kcal |
+| dish_role | VARCHAR(32) | nullable | soup/main_protein/side_veg/… — chỉ khi verified |
+| culinary_regions | JSON | nullable | region_tags: `bac`/`trung`/`nam`/`tay_nguyen`/`quoc_gia`/`hoa_viet`/`ngoai` |
+| five_element | VARCHAR(16) | nullable | wood/fire/earth/metal/water — verified only |
+| thermal_nature | VARCHAR(16) | nullable | cold/cool/neutral/warm/hot — verified only |
+| protein_source | VARCHAR(16) | nullable | meat/seafood/egg/plant/mixed/none |
+| cooking_method | VARCHAR(16) | nullable | boil/steam/grill/fry/raw/braise/soup_base/mixed |
+| flavor_tags | JSON | nullable | vd `["spicy","sour"]` |
+| calories_kcal | SMALLINT UNSIGNED | nullable | kcal của **khẩu phần chuẩn** (verified) |
+| serving_grams | SMALLINT UNSIGNED | nullable | khối lượng (g) tương ứng `calories_kcal` |
 | cook_minutes | SMALLINT UNSIGNED | nullable | |
 | ingredients | JSON | nullable | `[{name, amount}]` |
 | steps | JSON | nullable | mảng bước nấu |
-| benefits / harms / advice / notes | TEXT | nullable | tham khảo (disclaimer UI) |
+| benefits / harms / advice / notes | TEXT | nullable | tham khảo (disclaimer UI); null nếu chưa verified |
 | search_keywords | VARCHAR(255) | nullable | |
+| facts_meta | JSON | nullable | provenance / kb_version khi import seed |
 | status | VARCHAR(20) | default `published` | draft/published/hidden |
 | source | VARCHAR(20) | default `system` | system/user |
 | created_by | FK users | nullable SET NULL | |
 | suggest_count | INT UNSIGNED | default 0 | |
 | created_at / updated_at / deleted_at | TIMESTAMP | | soft delete |
 
-Index: `status`, `five_element`, `(supports_light, supports_main)`, `(supports_dine_out, supports_cook_home)`.
+Index: `status`, `five_element`, `dish_role`, `thermal_nature`, `(supports_light, supports_main)`, `(supports_dine_out, supports_cook_home)`.
 
 > Đặc tả: [`features/what-to-eat.md`](features/what-to-eat.md). UI: **popup trên Kho**.  
 > Chuẩn seed/fact: [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md)

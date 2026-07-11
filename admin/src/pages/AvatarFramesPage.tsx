@@ -22,8 +22,7 @@ import {
   type AvatarFrame,
 } from '../api/resources';
 import AvatarFramePreview from '../components/AvatarFramePreview';
-import ListTotalFooter from '../components/ListTotalFooter';
-import { resolveListTotal, sttIdColumn } from '../utils/listTable';
+import { clientPagination, sttIdColumn } from '../utils/listTable';
 
 const EFFECT_OPTIONS = [
   { value: 'soft', label: 'Viền mềm' },
@@ -82,12 +81,20 @@ export default function AvatarFramesPage() {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<AvatarFrame | null>(null);
+  const [q, setQ] = useState('');
+  const [isActive, setIsActive] = useState<boolean | undefined>();
+  const [isPremium, setIsPremium] = useState<boolean | undefined>();
   const [form] = Form.useForm<FormValues>();
   const watched = Form.useWatch([], form);
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-avatar-frames'],
-    queryFn: listAvatarFrames,
+    queryKey: ['admin-avatar-frames', q, isActive, isPremium],
+    queryFn: () =>
+      listAvatarFrames({
+        q: q || undefined,
+        is_active: isActive === undefined ? undefined : isActive ? 1 : 0,
+        is_premium: isPremium === undefined ? undefined : isPremium ? 1 : 0,
+      }),
   });
 
   const previewFrame = useMemo(() => {
@@ -153,22 +160,53 @@ export default function AvatarFramesPage() {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16, gap: 12, flexWrap: 'wrap' }}>
         <div>
           <strong>Khung avatar</strong>
           <div style={{ color: '#78716c', fontSize: 13 }}>
             Catalog khung + engine hiệu ứng. Thêm khung mới không cần deploy code.
           </div>
         </div>
-        <Button type="primary" onClick={openCreate}>
-          Thêm khung
-        </Button>
+        <Space wrap>
+          <Input.Search
+            placeholder="Tìm tên / slug"
+            allowClear
+            onSearch={setQ}
+            style={{ width: 200 }}
+          />
+          <Select
+            allowClear
+            placeholder="Active"
+            style={{ width: 120 }}
+            value={isActive === undefined ? undefined : isActive ? '1' : '0'}
+            onChange={(v) => setIsActive(v === undefined ? undefined : v === '1')}
+            options={[
+              { value: '1', label: 'Active' },
+              { value: '0', label: 'Inactive' },
+            ]}
+          />
+          <Select
+            allowClear
+            placeholder="Premium"
+            style={{ width: 120 }}
+            value={isPremium === undefined ? undefined : isPremium ? '1' : '0'}
+            onChange={(v) => setIsPremium(v === undefined ? undefined : v === '1')}
+            options={[
+              { value: '1', label: 'Premium' },
+              { value: '0', label: 'Free' },
+            ]}
+          />
+          <Button type="primary" onClick={openCreate}>
+            Thêm khung
+          </Button>
+        </Space>
       </div>
 
       <Table
         rowKey="id"
         loading={isLoading}
         dataSource={data}
+        pagination={clientPagination()}
         columns={[
           sttIdColumn<AvatarFrame>(),
           {
@@ -229,7 +267,6 @@ export default function AvatarFramesPage() {
           },
         ]}
       />
-      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
 
       <Modal
         title={editing ? 'Sửa khung' : 'Thêm khung'}

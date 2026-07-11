@@ -172,6 +172,32 @@ class WhatToEatExtendedTest extends TestCase
         $this->assertSame('Ăn nóng sẽ ngon hơn.', $dish->fresh()->advice);
     }
 
+    public function test_admin_can_filter_dishes_by_culinary_region(): void
+    {
+        $admin = Admin::factory()->create();
+        Sanctum::actingAs($admin, ['*'], 'admin');
+
+        $north = Dish::factory()->create([
+            'status' => DishStatus::Published,
+            'culinary_regions' => ['bac'],
+            'name' => 'Phở test Bắc',
+        ]);
+        $south = Dish::factory()->create([
+            'status' => DishStatus::Published,
+            'culinary_regions' => ['nam'],
+            'name' => 'Hủ tiếu test Nam',
+        ]);
+
+        $ids = collect(
+            $this->getJson('/api/admin/dishes?culinary_region=bac')
+                ->assertOk()
+                ->json('data')
+        )->pluck('id');
+
+        $this->assertTrue($ids->contains($north->id));
+        $this->assertFalse($ids->contains($south->id));
+    }
+
     public function test_admin_can_crud_dishes(): void
     {
         $admin = Admin::factory()->create();

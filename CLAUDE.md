@@ -146,6 +146,6 @@ npm run build:all                 # build cả hai
 - [x] Feature/Unit tests (`php artisan test`)
 - [x] CI workflow (`.github/workflows/ci.yml`)
 - [x] Habit Tracker: bảng Excel; admin = mẫu; user chọn/tạo đầu mục riêng; cycle ✓/✗; history
-- [x] Hôm nay ăn gì (popup, catalog, đóng góp+admin, history/prefs, match Experience)
+- [x] Hôm nay ăn gì (popup, catalog, đóng góp+admin, history/prefs, match Experience; Fact-A 116 kcal + FDC high; cook_home recipes 155; FCT VN bootstrap; YHCT 10 medium)
 
 > Cập nhật checklist này khi hoàn thành từng phần.

@@ -21,8 +21,9 @@ import {
   type Tag,
 } from '../api/resources';
 import { useMemo, useState } from 'react';
-import ListTotalFooter from '../components/ListTotalFooter';
-import { resolveListTotal, sttIdColumn } from '../utils/listTable';
+import DatePresetSelect from '../components/DatePresetSelect';
+import { DEFAULT_DATE_PRESET, type DatePreset } from '../utils/datePresets';
+import { serverPagination, sttIdColumn } from '../utils/listTable';
 
 type StatusFilter = 'all' | 'pending' | 'approved';
 
@@ -31,22 +32,28 @@ export default function TagsPage() {
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Tag | null>(null);
   const [status, setStatus] = useState<StatusFilter>('all');
+  const [categoryId, setCategoryId] = useState<number | undefined>();
+  const [q, setQ] = useState('');
+  const [datePreset, setDatePreset] = useState<DatePreset>(DEFAULT_DATE_PRESET);
   const [page, setPage] = useState(1);
   const [statusLoadingId, setStatusLoadingId] = useState<number | null>(null);
   const [form] = Form.useForm();
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-tags', status, page],
+    queryKey: ['admin-tags', status, categoryId, q, datePreset, page],
     queryFn: () =>
       listTags({
         ...(status === 'all' ? {} : { status }),
+        category_id: categoryId,
+        q: q || undefined,
+        date_preset: datePreset,
         page,
       }),
   });
 
   const { data: categories } = useQuery({
     queryKey: ['admin-categories'],
-    queryFn: listCategories,
+    queryFn: () => listCategories(),
   });
 
   const categoryOptions = useMemo(
@@ -111,9 +118,18 @@ export default function TagsPage() {
         <Button type="primary" onClick={openCreate}>
           Thêm thẻ
         </Button>
+        <Input.Search
+          placeholder="Tìm tên / slug"
+          allowClear
+          onSearch={(v) => {
+            setQ(v);
+            setPage(1);
+          }}
+          style={{ width: 200 }}
+        />
         <Select
           value={status}
-          style={{ width: 180 }}
+          style={{ width: 160 }}
           onChange={(v) => {
             setStatus(v);
             setPage(1);
@@ -124,6 +140,27 @@ export default function TagsPage() {
             { value: 'approved', label: 'Đã duyệt' },
           ]}
         />
+        <Select
+          allowClear
+          placeholder="Danh mục"
+          style={{ width: 170 }}
+          value={categoryId}
+          onChange={(v) => {
+            setCategoryId(v);
+            setPage(1);
+          }}
+          options={(categories ?? []).map((c) => ({
+            value: c.id,
+            label: `${c.icon ? `${c.icon} ` : ''}${c.name}`,
+          }))}
+        />
+        <DatePresetSelect
+          value={datePreset}
+          onChange={(v) => {
+            setDatePreset(v);
+            setPage(1);
+          }}
+        />
         {status === 'all' && pendingCount > 0 && (
           <AntTag color="orange">{pendingCount} thẻ chờ duyệt (trang này)</AntTag>
         )}
@@ -133,12 +170,7 @@ export default function TagsPage() {
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
-        pagination={{
-          current: data?.meta.current_page,
-          total: data?.meta.total,
-          pageSize: data?.meta.per_page,
-          onChange: setPage,
-        }}
+        pagination={serverPagination(data?.meta, setPage)}
         columns={[
           sttIdColumn<Tag>(data?.meta),
           { title: 'Tên', dataIndex: 'name' },
@@ -211,10 +243,6 @@ export default function TagsPage() {
             ),
           },
         ]}
-      />
-      <ListTotalFooter
-        total={resolveListTotal(data?.meta.total, data?.data?.length)}
-        loading={isLoading}
       />
 
       <Modal

@@ -6,20 +6,25 @@ import {
   type DishContribution,
 } from '../api/resources';
 import { useState } from 'react';
-import ListTotalFooter from '../components/ListTotalFooter';
-import { resolveListTotal, sttIdColumn } from '../utils/listTable';
+import DatePresetSelect from '../components/DatePresetSelect';
+import { DEFAULT_DATE_PRESET, type DatePreset } from '../utils/datePresets';
+import { serverPagination, sttIdColumn } from '../utils/listTable';
 
 export default function DishContributionsPage() {
   const qc = useQueryClient();
   const [status, setStatus] = useState<string>('pending');
+  const [type, setType] = useState<string | undefined>();
+  const [datePreset, setDatePreset] = useState<DatePreset>(DEFAULT_DATE_PRESET);
   const [page, setPage] = useState(1);
   const [loadingId, setLoadingId] = useState<number | null>(null);
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-dish-contributions', status, page],
+    queryKey: ['admin-dish-contributions', status, type, datePreset, page],
     queryFn: () =>
       listDishContributions({
         status: status === 'all' ? undefined : status,
+        type,
+        date_preset: datePreset,
         page,
       }),
   });
@@ -45,30 +50,53 @@ export default function DishContributionsPage() {
       <div style={{ marginBottom: 8, color: '#666', fontSize: 13 }}>
         Duyệt đóng góp user (công thức, calo, lợi/hại, ngũ hành…). Approve canonical → cập nhật dish.
       </div>
-      <Select
-        style={{ width: 160, marginBottom: 16 }}
-        value={status}
-        onChange={(v) => {
-          setStatus(v);
-          setPage(1);
-        }}
-        options={[
-          { value: 'pending', label: 'Chờ duyệt' },
-          { value: 'approved', label: 'Đã duyệt' },
-          { value: 'rejected', label: 'Từ chối' },
-          { value: 'all', label: 'Tất cả' },
-        ]}
-      />
+      <Space style={{ marginBottom: 16 }} wrap>
+        <Select
+          style={{ width: 150 }}
+          value={status}
+          onChange={(v) => {
+            setStatus(v);
+            setPage(1);
+          }}
+          options={[
+            { value: 'pending', label: 'Chờ duyệt' },
+            { value: 'approved', label: 'Đã duyệt' },
+            { value: 'rejected', label: 'Từ chối' },
+            { value: 'all', label: 'Tất cả' },
+          ]}
+        />
+        <Select
+          allowClear
+          placeholder="Loại đóng góp"
+          style={{ width: 160 }}
+          value={type}
+          onChange={(v) => {
+            setType(v);
+            setPage(1);
+          }}
+          options={[
+            { value: 'recipe', label: 'Công thức' },
+            { value: 'calories', label: 'Calo' },
+            { value: 'harm', label: 'Lưu ý' },
+            { value: 'benefit', label: 'Có lợi' },
+            { value: 'advice', label: 'Lời khuyên' },
+            { value: 'note', label: 'Ghi chú' },
+            { value: 'five_element', label: 'Ngũ hành' },
+          ]}
+        />
+        <DatePresetSelect
+          value={datePreset}
+          onChange={(v) => {
+            setDatePreset(v);
+            setPage(1);
+          }}
+        />
+      </Space>
       <Table
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
-        pagination={{
-          current: data?.meta.current_page,
-          total: data?.meta.total,
-          pageSize: data?.meta.per_page,
-          onChange: setPage,
-        }}
+        pagination={serverPagination(data?.meta, setPage)}
         columns={[
           sttIdColumn<DishContribution>(data?.meta),
           {
@@ -126,10 +154,6 @@ export default function DishContributionsPage() {
             ),
           },
         ]}
-      />
-      <ListTotalFooter
-        total={resolveListTotal(data?.meta.total, data?.data?.length)}
-        loading={isLoading}
       />
     </>
   );

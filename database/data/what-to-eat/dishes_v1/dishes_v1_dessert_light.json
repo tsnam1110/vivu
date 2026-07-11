@@ -1,0 +1,613 @@
+{
+    "kb_version": "1.2.1-fix",
+    "ruleset_min": "0.2.0",
+    "shard": "dessert_light",
+    "seed_phase": "P0+P1+P2",
+    "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
+    "dishes": [
+        {
+            "slug": "che-dau-xanh",
+            "name": "Chè đậu xanh",
+            "emoji": "🍮",
+            "summary": "Chè đậu xanh — tráng miệng/ăn nhẹ phổ biến.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "che",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "sua-chua",
+            "name": "Sữa chua",
+            "emoji": "🥛",
+            "summary": "Sữa chua — ăn nhẹ gọn.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "sua chua",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "khoai-lang-nuong",
+            "name": "Khoai lang nướng",
+            "emoji": "🍠",
+            "summary": "Khoai lang nướng — ăn nhẹ no vừa.",
+            "meal_slots": [
+                "breakfast",
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "khoai lang",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "trai-cay-dia",
+            "name": "Trái cây dĩa",
+            "emoji": "🍎",
+            "summary": "Dĩa trái cây theo mùa — ăn nhẹ tươi.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "trai cay",
+            "seed_phase": "P0",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P0",
+                    "source_title": "ViVu dish catalog inventory Seed-P0",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P0"
+                }
+            ]
+        },
+        {
+            "slug": "che-ba-mau",
+            "name": "Chè ba màu",
+            "emoji": "🍮",
+            "summary": "Chè ba màu — tráng miệng miền Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "che ba mau",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "che-thai",
+            "name": "Chè Thái",
+            "emoji": "🍮",
+            "summary": "Chè Thái — tráng miệng phổ biến Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "che thai",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "che-chuoi",
+            "name": "Chè chuối",
+            "emoji": "🍌",
+            "summary": "Chè chuối — tráng miệng cả nước.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "che chuoi",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "banh-flan",
+            "name": "Bánh flan",
+            "emoji": "🍮",
+            "summary": "Bánh flan caramen — tráng miệng phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "banh flan",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "chuoi-nep-nuong",
+            "name": "Chuối nếp nướng",
+            "emoji": "🍌",
+            "summary": "Chuối nếp nướng — ăn nhẹ Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "chuoi nep nuong",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "xoi-dau-xanh",
+            "name": "Xôi đậu xanh",
+            "emoji": "🍚",
+            "summary": "Xôi đậu xanh ngọt — ăn nhẹ/sáng.",
+            "meal_slots": [
+                "breakfast"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "xoi dau xanh",
+            "seed_phase": "P1",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P1",
+                    "source_title": "ViVu dish catalog inventory Seed-P1",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P1"
+                }
+            ]
+        },
+        {
+            "slug": "che-bap",
+            "name": "Chè bắp",
+            "emoji": "🍮",
+            "summary": "Chè bắp — tráng miệng miền Nam.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "nam"
+            ],
+            "search_keywords": "che bap",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "banh-cam",
+            "name": "Bánh cam",
+            "emoji": "🍩",
+            "summary": "Bánh cam/bánh rán — bánh chiên ngọt phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "banh cam",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "suong-sao",
+            "name": "Sương sáo",
+            "emoji": "🍮",
+            "summary": "Sương sáo/sương sa — tráng miệng mát.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "suong sao",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "banh-chuoi-nuong",
+            "name": "Bánh chuối nướng",
+            "emoji": "🍌",
+            "summary": "Bánh chuối nướng — tráng miệng phổ biến.",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": true,
+            "supports_main": false,
+            "supports_dine_out": true,
+            "supports_cook_home": true,
+            "dish_role": "dessert_light",
+            "region_tags": [
+                "quoc_gia"
+            ],
+            "search_keywords": "banh chuoi nuong",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-P2",
+                    "source_title": "ViVu dish catalog inventory Seed-P2",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "seed-P2"
+                }
+            ]
+        }
+    ]
+}

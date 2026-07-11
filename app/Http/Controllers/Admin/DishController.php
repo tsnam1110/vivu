@@ -43,6 +43,14 @@ class DishController extends Controller
             $query->where('five_element', $request->string('five_element')->toString());
         }
 
+        if ($request->filled('culinary_region')) {
+            $query->forCulinaryRegion($request->string('culinary_region')->toString());
+        }
+
+        if ($request->filled('dish_role')) {
+            $query->where('dish_role', $request->string('dish_role')->toString());
+        }
+
         return DishResource::collection($query->paginate(50));
     }
 

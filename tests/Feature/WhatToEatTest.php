@@ -41,16 +41,97 @@ class WhatToEatTest extends TestCase
                 'meal_size' => 'main',
                 'meal_mode' => 'dine_out',
                 'count' => 3,
+                'suggest_mode' => 'pick',
             ])
             ->assertOk()
             ->assertJsonPath('meta.count_requested', 3)
+            ->assertJsonPath('meta.suggest_mode', 'pick')
             ->assertJsonCount(3, 'data')
             ->assertJsonStructure([
                 'data' => [
                     ['id', 'name', 'slug', 'emoji', 'reason'],
                 ],
-                'meta' => ['partial', 'total_available', 'count_requested'],
+                'meta' => ['partial', 'total_available', 'count_requested', 'suggest_mode'],
             ]);
+    }
+
+    public function test_compose_returns_plate_composition(): void
+    {
+        $user = User::factory()->create();
+        Dish::factory()->create([
+            'meal_slots' => ['dinner'],
+            'supports_light' => true,
+            'supports_main' => false,
+            'supports_cook_home' => true,
+            'dish_role' => \App\Enums\DishRole::Soup,
+            'status' => DishStatus::Published,
+        ]);
+        Dish::factory()->create([
+            'meal_slots' => ['dinner'],
+            'supports_main' => true,
+            'supports_cook_home' => true,
+            'dish_role' => \App\Enums\DishRole::MainProtein,
+            'status' => DishStatus::Published,
+        ]);
+        Dish::factory()->create([
+            'meal_slots' => ['dinner'],
+            'supports_light' => true,
+            'supports_main' => false,
+            'supports_cook_home' => true,
+            'dish_role' => \App\Enums\DishRole::SideVeg,
+            'status' => DishStatus::Published,
+        ]);
+
+        $this->actingAs($user, 'web')
+            ->postJson(route('what-to-eat.suggest'), [
+                'meal_slot' => 'dinner',
+                'meal_size' => 'main',
+                'meal_mode' => 'cook_home',
+                'count' => 3,
+                'suggest_mode' => 'compose',
+            ])
+            ->assertOk()
+            ->assertJsonPath('meta.suggest_mode', 'compose')
+            ->assertJsonPath('meta.composition.template_id', 'vn_home_3')
+            ->assertJsonCount(3, 'data');
+    }
+
+    public function test_suggest_filters_by_culinary_region(): void
+    {
+        $user = User::factory()->create();
+        Dish::factory()->create([
+            'name' => 'Bắc only',
+            'meal_slots' => ['lunch'],
+            'supports_main' => true,
+            'supports_dine_out' => true,
+            'culinary_regions' => ['bac'],
+            'status' => DishStatus::Published,
+        ]);
+        Dish::factory()->create([
+            'name' => 'Nam only',
+            'meal_slots' => ['lunch'],
+            'supports_main' => true,
+            'supports_dine_out' => true,
+            'culinary_regions' => ['nam'],
+            'status' => DishStatus::Published,
+        ]);
+
+        $names = collect(
+            $this->actingAs($user, 'web')
+                ->postJson(route('what-to-eat.suggest'), [
+                    'meal_slot' => 'lunch',
+                    'meal_size' => 'main',
+                    'meal_mode' => 'dine_out',
+                    'count' => 5,
+                    'suggest_mode' => 'pick',
+                    'culinary_region' => 'bac',
+                ])
+                ->assertOk()
+                ->json('data')
+        )->pluck('name');
+
+        $this->assertTrue($names->contains('Bắc only'));
+        $this->assertFalse($names->contains('Nam only'));
     }
 
     public function test_count_validation(): void

@@ -5,6 +5,7 @@
 > sau.  
 > **Liên quan:** [`what-to-eat.md`](what-to-eat.md),
 > [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md),
+> [`what-to-eat-dish-catalog.md`](what-to-eat-dish-catalog.md) (**danh sách món / vùng miền / prio**),
 > [`../04-database-schema.md`](../04-database-schema.md),
 > [`../07-coding-standards.md`](../07-coding-standards.md),
 > [`../08-agent-playbook.md`](../08-agent-playbook.md).
@@ -68,6 +69,7 @@ Seed **production path** chỉ chấp nhận **Verified** hoặc **null**.
 | `meal_slots` | Món **thực tế** hay dùng bữa đó | Chỉ gán slot chắc; không gán cả 3 “cho rộng” nếu sai |
 | `supports_light` / `supports_main` | Vai trò no rõ | `false` mặc định an toàn hơn gán bừa `true` cả hai |
 | `supports_dine_out` / `supports_cook_home` | Chắc chắn | |
+| `culinary_regions` | Vùng miền (`region_tags`: bac/trung/nam/tay_nguyen/quoc_gia/hoa_viet/ngoai) | `null`/`[]` nếu chưa chắc; multi-label OK; xem dish-catalog §2 |
 | `dish_role` *(khi có cột)* | Có định nghĩa trong ruleset + review | **`null`** — món đó **không** vào template compose cần role |
 | `search_keywords` | Từ khoá match Experience (trung tính) | null ok |
 | `cook_minutes` | Chỉ khi có công thức verified / nguồn thời gian rõ | null |
@@ -174,6 +176,11 @@ notes: "Khẩu phần 1 tô chuẩn X"
 ---
 
 ## 6. Quy trình bổ sung **số lượng lớn** món vào seed
+
+> **Inventory bắt buộc:** mọi món mới phải có dòng trong
+> [`what-to-eat-dish-catalog.md`](what-to-eat-dish-catalog.md) (slug, role, region_tags,
+> prio) **trước hoặc cùng** PR dataset JSON. Catalog quy mô lớn được phép; fact III
+> vẫn verified-only.
 
 ### 6.1 Không làm
 
@@ -287,7 +294,7 @@ Cho phép import 100+ món **chỉ Nhóm I+II** trong một PR:
 Tránh: mỗi lần `migrate:fresh --seed` **xoá** tri thức user đã được admin duyệt — thiết kế
 merge phải tôn trọng canonical.
 
-*(Implement chi tiết khi viết seeder đọc JSON; đến đó cập nhật file này + schema.)*
+*Đã implement: `App\Services\DishCatalogImporter` — null seed không ghi đè field sensitive đang có trên DB.*
 
 ---
 
@@ -372,19 +379,26 @@ php artisan what-to-eat:seed-report
 
 ---
 
-## 11. Trạng thái seed hiện tại (nợ kỹ thuật)
+## 11. Trạng thái seed hiện tại
 
-`database/seeders/DishSeeder.php` (trước chuẩn này) chứa nhiều giá trị **best-effort**
-(calo, ngũ hành, benefits/harms, recipe) **chưa** có provenance đầy đủ theo §5.
-
-| Hướng xử lý | Mô tả |
+| Hạng mục | Trạng thái |
 |---|---|
-| **A. Audit** | Rà từng field III → giữ nếu tìm được nguồn, không thì set null trong lô refactor |
-| **B. Tách dataset** | Chuyển dần sang JSON `dishes_v*` + provenance |
-| **C. Không mở rộng đoán** | Món mới **bắt buộc** theo file này; không copy pattern “đoán element” cũ |
+| Món best-effort cũ trong seeder PHP | **Đã gỡ** |
+| Dataset multi-file | `database/data/what-to-eat/dishes_v1/manifest.json` + shards (+ `chay`) |
+| Seed P0+P1+P2+fix | **182 món** skeleton (`1.2.1-fix`); I+II + role + region |
+| P3 | 5 món inventory `candidate` — **chưa** seed |
+| Import | `importDefault()` = skeleton + calo overlay + ops overlay |
+| Generator | `php database/data/what-to-eat/generate_seed_catalog.php` |
+| Fact-A merge | `php database/data/what-to-eat/merge_fact_a_batch.php` |
+| Báo cáo | `php artisan what-to-eat:seed-report` |
+| Fact-A calo | **~116 món** `facts/calories_fact_a.json` (`2.0.0-fact-a`) + standard bowls |
+| Ops-A | **182 món** cooking_method + protein_source (`2.0.0-ops`) |
+| Recipe registry | `facts/recipes_standard_v1.json` (khẩu phần chuẩn ViVu v1) |
+| Build overlays | `php database/data/what-to-eat/build_fact_overlays.php` |
+| Plan hoàn thiện | [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) |
+| Fact YHCT | **0** — cấm đoán |
 
-Mọi lô món **mới** sau ngày ban hành doc này: **theo §1–§10**.  
-Refactor seeder cũ: ticket/PR riêng, không chặn feature khác nhưng **không** nhân rộng nợ.
+`SEED_ALLOW_UNVERIFIED=true` chỉ cho local thử nghiệm — **không** dùng production.
 
 ---
 

@@ -1,0 +1,1670 @@
+{
+    "kb_version": "1.1.0-fct-vn-pilot",
+    "phase": "FCT-VN-phase-B",
+    "description": "Pilot A + rice yield + standard bowls VN + extra home recipe_sum.",
+    "fct_table_ref": "facts\/fct_vn_ingredients.json",
+    "yield_standard": "vivu-yield-v1",
+    "by_slug": {
+        "trung-op-la": {
+            "calories_kcal": 110,
+            "serving_grams": 53,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN 2007 recipe_sum — trứng ốp la (9001 + 6002)",
+                    "source_ref": "vivu-fct-vn-pilot-v1:trung-op-la",
+                    "serving_grams": 53,
+                    "portion_note": "Egg edible 50g (9001 166kcal\/100g)=83; oil absorbed 3g (6002 897)=27; total 110",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Trứng gà toàn phần",
+                            "ingredient_id": "vn-trung-ga-toan-phan",
+                            "food_code": "9001",
+                            "grams": 50,
+                            "kcal_per_100g": 166,
+                            "kcal": 83
+                        },
+                        {
+                            "name": "Dầu thảo mộc (hấp thụ)",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 3,
+                            "kcal_per_100g": 897,
+                            "kcal": 27
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Trứng FCT là raw; dầu hấp thụ 3g ước lượng — chiên nhiều dầu cao hơn."
+                }
+            ]
+        },
+        "trung-chien": {
+            "calories_kcal": 211,
+            "serving_grams": 105,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN 2007 recipe_sum — trứng chiên (9001 + 6002)",
+                    "source_ref": "vivu-fct-vn-pilot-v1:trung-chien",
+                    "serving_grams": 105,
+                    "portion_note": "Egg 100g×1.66=166; oil 5g×8.97=45; total 211",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Trứng gà toàn phần",
+                            "ingredient_id": "vn-trung-ga-toan-phan",
+                            "food_code": "9001",
+                            "grams": 100,
+                            "kcal_per_100g": 166,
+                            "kcal": 166
+                        },
+                        {
+                            "name": "Dầu thảo mộc (hấp thụ)",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Oil absorption varies."
+                }
+            ]
+        },
+        "rau-muong-xao-toi": {
+            "calories_kcal": 140,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN 2007 recipe_sum — rau muống xào tỏi (4083 + 6002)",
+                    "source_ref": "vivu-fct-vn-pilot-v1:rau-muong-xao-toi",
+                    "serving_grams": 150,
+                    "portion_note": "Rau muống edible 200g×0.25=50; oil 10g×8.97=90; total 140 (khối lượng sau xào ~150g)",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Rau muống",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 200,
+                            "kcal_per_100g": 25,
+                            "kcal": 50
+                        },
+                        {
+                            "name": "Dầu thảo mộc",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Quán xào nhiều dầu cao hơn; tỏi\/nước mắm kcal bỏ qua."
+                }
+            ]
+        },
+        "dau-phu-sot-ca": {
+            "calories_kcal": 251,
+            "serving_grams": 250,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN 2007 recipe_sum — đậu phụ sốt cà (3025 + 4005 + 6002)",
+                    "source_ref": "vivu-fct-vn-pilot-v1:dau-phu-sot-ca",
+                    "serving_grams": 250,
+                    "portion_note": "Đậu phụ 200g×0.95=190; cà chua 80g×0.20=16; dầu 5g×8.97=45; total 251",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Đậu phụ",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 200,
+                            "kcal_per_100g": 95,
+                            "kcal": 190
+                        },
+                        {
+                            "name": "Cà chua",
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005",
+                            "grams": 80,
+                            "kcal_per_100g": 20,
+                            "kcal": 16
+                        },
+                        {
+                            "name": "Dầu thảo mộc",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Sốt cà đường\/nước mắm thêm chưa tính; chiên đậu trước làm tăng dầu."
+                }
+            ]
+        },
+        "canh-cai-thit-bam": {
+            "calories_kcal": 85,
+            "serving_grams": 350,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN 2007 recipe_sum — canh cải thịt bằm (4010 + 7017)",
+                    "source_ref": "vivu-fct-vn-pilot-v1:canh-cai-thit-bam",
+                    "serving_grams": 350,
+                    "portion_note": "Cải bắp 100g×0.29=29; thịt lợn nạc 40g×1.39=56; nước 210g=0; total 85",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cải bắp",
+                            "ingredient_id": "vn-bap-cai",
+                            "food_code": "4010",
+                            "grams": 100,
+                            "kcal_per_100g": 29,
+                            "kcal": 29
+                        },
+                        {
+                            "name": "Thịt lợn nạc",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 40,
+                            "kcal_per_100g": 139,
+                            "kcal": 56
+                        },
+                        {
+                            "name": "Nước canh",
+                            "grams": 210,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Thịt nửa nạc\/mỡ (7018=260kcal\/100g) làm tăng rõ; nước dùng xương chưa tách béo."
+                }
+            ]
+        },
+        "ga-luoc": {
+            "calories_kcal": 299,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "fct_table",
+                    "fct_source": "vn_2007",
+                    "source_title": "Bảng TPTP VN 2007 — 7013 Thịt gà ta (trung bình), phần ăn được",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=317",
+                    "food_code": "7013",
+                    "ingredient_id": "vn-thit-ga-ta",
+                    "per_100g_kcal": 199,
+                    "serving_grams": 150,
+                    "portion_note": "150g thịt gà ta edible raw FCT; 199×1.5≈298.5→299",
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "FCT là thịt raw trung bình (có da\/mỡ biến thiên); luộc hao nước chưa chỉnh; bỏ da\/gà công nghiệp khác."
+                }
+            ]
+        },
+        "bap-cai-luoc": {
+            "calories_kcal": 29,
+            "serving_grams": 100,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "fct_table",
+                    "fct_source": "vn_2007",
+                    "source_title": "Bảng TPTP VN 2007 — 4010 Cải bắp",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=112",
+                    "food_code": "4010",
+                    "ingredient_id": "vn-bap-cai",
+                    "per_100g_kcal": 29,
+                    "serving_grams": 100,
+                    "portion_note": "100g cải bắp raw FCT (luộc plain ≈ cùng class; không dầu)",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Raw vs boiled water shift nhỏ; không kho quẹt\/dầu."
+                }
+            ]
+        },
+        "sua-chua": {
+            "calories_kcal": 92,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "fct_table",
+                    "fct_source": "vn_2007",
+                    "source_title": "Bảng TPTP VN 2007 — 10004 Sữa chua (whole milk)",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=466",
+                    "food_code": "10004",
+                    "ingredient_id": "vn-sua-chua",
+                    "per_100g_kcal": 61,
+                    "serving_grams": 150,
+                    "portion_note": "150g yogurt; 61×1.5≈91.5→92",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-pilot",
+                    "limitations": "Sữa chua có đường\/trái cây cao hơn."
+                }
+            ]
+        },
+        "com-trang": {
+            "calories_kcal": 206,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "Derived cooked from FCT VN 1004 ÷ yield 2.5",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=17",
+                    "food_code": "1004",
+                    "ingredient_id": "vn-com-trang-chin",
+                    "per_100g_kcal": 137.6,
+                    "serving_grams": 150,
+                    "portion_note": "150g × 137.6\/100g = 206 (yield-derived)",
+                    "yield_factor": 2.5,
+                    "yield_standard": "vivu-yield-v1",
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Gạo chín suy ra từ gạo khô FCT ÷ vivu-yield-v1 — không phải dòng nấu sẵn trong bảng."
+                }
+            ]
+        },
+        "com-gao-lut": {
+            "calories_kcal": 207,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "Derived cooked from FCT VN 1005 ÷ yield 2.5",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=18",
+                    "food_code": "1005",
+                    "ingredient_id": "vn-com-gao-lut-chin",
+                    "per_100g_kcal": 138,
+                    "serving_grams": 150,
+                    "portion_note": "150g × 138.0\/100g = 207 (yield-derived)",
+                    "yield_factor": 2.5,
+                    "yield_standard": "vivu-yield-v1",
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Gạo chín suy ra từ gạo khô FCT ÷ vivu-yield-v1 — không phải dòng nấu sẵn trong bảng."
+                }
+            ]
+        },
+        "xoi-trang": {
+            "calories_kcal": 235,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "Derived cooked from FCT VN 1001 ÷ yield 2.2",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=14",
+                    "food_code": "1001",
+                    "ingredient_id": "vn-xoi-nep-chin",
+                    "per_100g_kcal": 156.4,
+                    "serving_grams": 150,
+                    "portion_note": "150g × 156.4\/100g = 235 (yield-derived)",
+                    "yield_factor": 2.2,
+                    "yield_standard": "vivu-yield-v1",
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Gạo chín suy ra từ gạo khô FCT ÷ vivu-yield-v1 — không phải dòng nấu sẵn trong bảng."
+                }
+            ]
+        },
+        "bun-tuoi": {
+            "calories_kcal": 110,
+            "serving_grams": 100,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "fct_table",
+                    "fct_source": "vn_2007",
+                    "source_title": "Bảng TPTP VN 2007 — 1020 Bún",
+                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=33",
+                    "food_code": "1020",
+                    "ingredient_id": "vn-bun",
+                    "per_100g_kcal": 110,
+                    "serving_grams": 100,
+                    "portion_note": "100g × 110.0\/100g = 110",
+                    "yield_factor": null,
+                    "yield_standard": null,
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Nước 72g\/100g — dạng bún ẩm, không phải bún khô."
+                }
+            ]
+        },
+        "cai-xao-toi": {
+            "calories_kcal": 124,
+            "serving_grams": 150,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN recipe_sum — cải xào tỏi (4015+6002)",
+                    "source_ref": "vivu-fct-vn-phase-b:cai-xao-toi",
+                    "serving_grams": 150,
+                    "portion_note": "Cải thìa 200g→34; Dầu 10g→90; total 124",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cải thìa",
+                            "ingredient_id": "vn-cai-thia",
+                            "food_code": "4015",
+                            "grams": 200,
+                            "kcal_per_100g": 17,
+                            "kcal": 34
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Tỏi\/nước mắm bỏ qua; dầu quán cao hơn.",
+                    "standard_id": null
+                }
+            ]
+        },
+        "tom-rang-me": {
+            "calories_kcal": 268,
+            "serving_grams": 180,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN recipe_sum — tôm rang me (8051+12013+6002)",
+                    "source_ref": "vivu-fct-vn-phase-b:tom-rang-me",
+                    "serving_grams": 180,
+                    "portion_note": "Tôm biển 200g→164; Đường 15g→59; Dầu 5g→45; total 268",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Tôm biển",
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051",
+                            "grams": 200,
+                            "kcal_per_100g": 82,
+                            "kcal": 164
+                        },
+                        {
+                            "name": "Đường",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 15,
+                            "kcal_per_100g": 390,
+                            "kcal": 59
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Me\/nước mắm kcal thấp bỏ qua; đường 15g ước lượng.",
+                    "standard_id": null
+                }
+            ]
+        },
+        "canh-chua-ca": {
+            "calories_kcal": 220,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN recipe_sum — canh chua cá (8022+4005+…)",
+                    "source_ref": "vivu-fct-vn-phase-b:canh-chua-ca",
+                    "serving_grams": 500,
+                    "portion_note": "Cá quả\/lóc 150g→146; Cà chua 80g→16; Đường 8g→31; Dầu 3g→27; total 220",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cá quả\/lóc",
+                            "ingredient_id": "vn-ca-qua",
+                            "food_code": "8022",
+                            "grams": 150,
+                            "kcal_per_100g": 97,
+                            "kcal": 146
+                        },
+                        {
+                            "name": "Cà chua",
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005",
+                            "grams": 80,
+                            "kcal_per_100g": 20,
+                            "kcal": 16
+                        },
+                        {
+                            "name": "Đường",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 8,
+                            "kcal_per_100g": 390,
+                            "kcal": 31
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 3,
+                            "kcal_per_100g": 897,
+                            "kcal": 27
+                        },
+                        {
+                            "name": "Nước canh + rau",
+                            "grams": 259,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Rau canh chua (đậu bắp, giá…) gần 0 kcal bỏ gộp nước; me bỏ qua.",
+                    "standard_id": null
+                }
+            ]
+        },
+        "ca-kho-to": {
+            "calories_kcal": 424,
+            "serving_grams": 180,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN recipe_sum — cá kho tộ (8026+12013+6002)",
+                    "source_ref": "vivu-fct-vn-phase-b:ca-kho-to",
+                    "serving_grams": 180,
+                    "portion_note": "Cá thu\/proxy cá kho 200g→332; Đường kho 12g→47; Dầu 5g→45; total 424",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cá thu\/proxy cá kho",
+                            "ingredient_id": "vn-ca-thu",
+                            "food_code": "8026",
+                            "grams": 200,
+                            "kcal_per_100g": 166,
+                            "kcal": 332
+                        },
+                        {
+                            "name": "Đường kho",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 12,
+                            "kcal_per_100g": 390,
+                            "kcal": 47
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Cá basa\/lóc thay bằng thu class; nước mắm bỏ qua.",
+                    "standard_id": null
+                }
+            ]
+        },
+        "canh-mong-toi-nau-tom": {
+            "calories_kcal": 94,
+            "serving_grams": 350,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN recipe_sum — canh mồng tơi tôm (4080+8051)",
+                    "source_ref": "vivu-fct-vn-phase-b:canh-mong-toi-nau-tom",
+                    "serving_grams": 350,
+                    "portion_note": "Mồng tơi 200g→28; Tôm 80g→66; total 94",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Mồng tơi",
+                            "ingredient_id": "vn-rau-mong-toi",
+                            "food_code": "4080",
+                            "grams": 200,
+                            "kcal_per_100g": 14,
+                            "kcal": 28
+                        },
+                        {
+                            "name": "Tôm",
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051",
+                            "grams": 80,
+                            "kcal_per_100g": 82,
+                            "kcal": 66
+                        },
+                        {
+                            "name": "Nước",
+                            "grams": 220,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "Canh loãng; tôm bóc vỏ.",
+                    "standard_id": null
+                }
+            ]
+        },
+        "pho-bo": {
+            "calories_kcal": 412,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — pho-bo",
+                    "source_ref": "vivu-standard-v1+vn:pho-bo",
+                    "serving_grams": 500,
+                    "portion_note": "Bánh phở 180g→257; Thịt bò loại I (tái\/chín mỏng) 70g→83; Mỡ nước dùng (oil-eq) 8g→72; total 412",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh phở",
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013",
+                            "grams": 180,
+                            "kcal_per_100g": 143,
+                            "kcal": 257
+                        },
+                        {
+                            "name": "Thịt bò loại I (tái\/chín mỏng)",
+                            "ingredient_id": "vn-thit-bo-loai-1",
+                            "food_code": "7003",
+                            "grams": 70,
+                            "kcal_per_100g": 118,
+                            "kcal": 83
+                        },
+                        {
+                            "name": "Mỡ nước dùng (oil-eq)",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 8,
+                            "kcal_per_100g": 897,
+                            "kcal": 72
+                        },
+                        {
+                            "name": "Nước dùng + rau thơm",
+                            "grams": 242,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 + FCT VN; bò raw grade-I (tái). Không quẩy\/gầu\/sa tế ngoài. Bánh phở 1013 (143kcal) khác bún 1020.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "pho-ga": {
+            "calories_kcal": 470,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — pho-ga",
+                    "source_ref": "vivu-standard-v1+vn:pho-ga",
+                    "serving_grams": 500,
+                    "portion_note": "Bánh phở 180g→257; Thịt gà ta 80g→159; Mỡ nước dùng (oil-eq) 6g→54; total 470",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh phở",
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013",
+                            "grams": 180,
+                            "kcal_per_100g": 143,
+                            "kcal": 257
+                        },
+                        {
+                            "name": "Thịt gà ta",
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013",
+                            "grams": 80,
+                            "kcal_per_100g": 199,
+                            "kcal": 159
+                        },
+                        {
+                            "name": "Mỡ nước dùng (oil-eq)",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54
+                        },
+                        {
+                            "name": "Nước dùng",
+                            "grams": 234,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 + FCT VN; gà raw average 7013 — da\/mỡ quán cao hơn.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "pho-chay": {
+            "calories_kcal": 359,
+            "serving_grams": 480,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — pho-chay",
+                    "source_ref": "vivu-standard-v1+vn:pho-chay",
+                    "serving_grams": 480,
+                    "portion_note": "Bánh phở 180g→257; Đậu phụ \/ topping chay 60g→57; Dầu 5g→45; total 359",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh phở",
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013",
+                            "grams": 180,
+                            "kcal_per_100g": 143,
+                            "kcal": 257
+                        },
+                        {
+                            "name": "Đậu phụ \/ topping chay",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 60,
+                            "kcal_per_100g": 95,
+                            "kcal": 57
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        },
+                        {
+                            "name": "Nước dùng chay",
+                            "grams": 235,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 + FCT VN vegan pho.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-cha": {
+            "calories_kcal": 485,
+            "serving_grams": 450,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-cha",
+                    "source_ref": "vivu-standard-v1+vn:bun-cha",
+                    "serving_grams": 450,
+                    "portion_note": "Bún 150g→165; Thịt nướng (nửa nạc) 100g→260; Đường trong nước chấm (ước) 5g→20; Dầu\/mỡ chả 3g→27; Rau sống proxy 50g→13; total 485",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún",
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020",
+                            "grams": 150,
+                            "kcal_per_100g": 110,
+                            "kcal": 165
+                        },
+                        {
+                            "name": "Thịt nướng (nửa nạc)",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 100,
+                            "kcal_per_100g": 260,
+                            "kcal": 260
+                        },
+                        {
+                            "name": "Đường trong nước chấm (ước)",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 5,
+                            "kcal_per_100g": 390,
+                            "kcal": 20
+                        },
+                        {
+                            "name": "Dầu\/mỡ chả",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 3,
+                            "kcal_per_100g": 897,
+                            "kcal": 27
+                        },
+                        {
+                            "name": "Rau sống proxy",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 50,
+                            "kcal_per_100g": 25,
+                            "kcal": 13
+                        },
+                        {
+                            "name": "Nước chấm + nước",
+                            "grams": 142,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 HN; nem rán thêm riêng. Nước chấm chỉ ước đường 5g.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-thit-nuong": {
+            "calories_kcal": 515,
+            "serving_grams": 420,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-thit-nuong",
+                    "source_ref": "vivu-standard-v1+vn:bun-thit-nuong",
+                    "serving_grams": 420,
+                    "portion_note": "Bún 150g→165; Thịt nướng 90g→234; Dầu + đậu phộng eq 8g→72; Rau sống proxy 50g→13; Đường nước mắm 8g→31; total 515",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún",
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020",
+                            "grams": 150,
+                            "kcal_per_100g": 110,
+                            "kcal": 165
+                        },
+                        {
+                            "name": "Thịt nướng",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 90,
+                            "kcal_per_100g": 260,
+                            "kcal": 234
+                        },
+                        {
+                            "name": "Dầu + đậu phộng eq",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 8,
+                            "kcal_per_100g": 897,
+                            "kcal": 72
+                        },
+                        {
+                            "name": "Rau sống proxy",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 50,
+                            "kcal_per_100g": 25,
+                            "kcal": 13
+                        },
+                        {
+                            "name": "Đường nước mắm",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 8,
+                            "kcal_per_100g": 390,
+                            "kcal": 31
+                        },
+                        {
+                            "name": "Nước mắm loãng mass",
+                            "grams": 114,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; chả giò thêm riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-bo-hue": {
+            "calories_kcal": 382,
+            "serving_grams": 550,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-bo-hue",
+                    "source_ref": "vivu-standard-v1+vn:bun-bo-hue",
+                    "serving_grams": 550,
+                    "portion_note": "Bún (proxy sợi to) 180g→198; Thịt bò 80g→94; Dầu điều\/sả 10g→90; total 382",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún (proxy sợi to)",
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020",
+                            "grams": 180,
+                            "kcal_per_100g": 110,
+                            "kcal": 198
+                        },
+                        {
+                            "name": "Thịt bò",
+                            "ingredient_id": "vn-thit-bo-loai-1",
+                            "food_code": "7003",
+                            "grams": 80,
+                            "kcal_per_100g": 118,
+                            "kcal": 94
+                        },
+                        {
+                            "name": "Dầu điều\/sả",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        },
+                        {
+                            "name": "Nước dùng",
+                            "grams": 280,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; giò\/huyết\/chả chưa full — medium. Bún 1020 proxy sợi Huế.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-rieu-cua": {
+            "calories_kcal": 323,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-rieu-cua",
+                    "source_ref": "vivu-standard-v1+vn:bun-rieu-cua",
+                    "serving_grams": 500,
+                    "portion_note": "Bún 160g→176; Đậu phụ 40g→38; Thịt\/riêu class 40g→56; Cà chua 40g→8; Dầu 5g→45; total 323",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún",
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020",
+                            "grams": 160,
+                            "kcal_per_100g": 110,
+                            "kcal": 176
+                        },
+                        {
+                            "name": "Đậu phụ",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 40,
+                            "kcal_per_100g": 95,
+                            "kcal": 38
+                        },
+                        {
+                            "name": "Thịt\/riêu class",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 40,
+                            "kcal_per_100g": 139,
+                            "kcal": 56
+                        },
+                        {
+                            "name": "Cà chua",
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005",
+                            "grams": 40,
+                            "kcal_per_100g": 20,
+                            "kcal": 8
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45
+                        },
+                        {
+                            "name": "Nước dùng",
+                            "grams": 215,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; cua đồng không có dòng FCT riêng — dùng thịt+đậu proxy.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-chay": {
+            "calories_kcal": 329,
+            "serving_grams": 400,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-chay",
+                    "source_ref": "vivu-standard-v1+vn:bun-chay",
+                    "serving_grams": 400,
+                    "portion_note": "Bún 160g→176; Đậu phụ 50g→48; Dầu 8g→72; Rau 50g→13; Đường nước chấm 5g→20; total 329",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún",
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020",
+                            "grams": 160,
+                            "kcal_per_100g": 110,
+                            "kcal": 176
+                        },
+                        {
+                            "name": "Đậu phụ",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 50,
+                            "kcal_per_100g": 95,
+                            "kcal": 48
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 8,
+                            "kcal_per_100g": 897,
+                            "kcal": 72
+                        },
+                        {
+                            "name": "Rau",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 50,
+                            "kcal_per_100g": 25,
+                            "kcal": 13
+                        },
+                        {
+                            "name": "Đường nước chấm",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 5,
+                            "kcal_per_100g": 390,
+                            "kcal": 20
+                        },
+                        {
+                            "name": "Nước chấm mass",
+                            "grams": 127,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 chay.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "hu-tieu-nam-vang": {
+            "calories_kcal": 400,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — hu-tieu-nam-vang",
+                    "source_ref": "vivu-standard-v1+vn:hu-tieu-nam-vang",
+                    "serving_grams": 500,
+                    "portion_note": "Hủ tiếu \/ bánh phở class 170g→243; Thịt heo 50g→70; Tôm 40g→33; Dầu 6g→54; total 400",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Hủ tiếu \/ bánh phở class",
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013",
+                            "grams": 170,
+                            "kcal_per_100g": 143,
+                            "kcal": 243
+                        },
+                        {
+                            "name": "Thịt heo",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 50,
+                            "kcal_per_100g": 139,
+                            "kcal": 70
+                        },
+                        {
+                            "name": "Tôm",
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051",
+                            "grams": 40,
+                            "kcal_per_100g": 82,
+                            "kcal": 33
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54
+                        },
+                        {
+                            "name": "Nước dùng",
+                            "grams": 234,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; lòng\/offal thêm riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-tam-suon": {
+            "calories_kcal": 667,
+            "serving_grams": 450,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-tam-suon",
+                    "source_ref": "vivu-standard-v1+vn:com-tam-suon",
+                    "serving_grams": 450,
+                    "portion_note": "Cơm tấm (com yield) 200g→275; Sườn nướng class 120g→312; Mỡ hành 8g→72; Đồ chua proxy 40g→8; total 667",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm tấm (com yield)",
+                            "ingredient_id": "vn-com-trang-chin",
+                            "food_code": "1004",
+                            "grams": 200,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 275
+                        },
+                        {
+                            "name": "Sườn nướng class",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 120,
+                            "kcal_per_100g": 260,
+                            "kcal": 312
+                        },
+                        {
+                            "name": "Mỡ hành",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 8,
+                            "kcal_per_100g": 897,
+                            "kcal": 72
+                        },
+                        {
+                            "name": "Đồ chua proxy",
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005",
+                            "grams": 40,
+                            "kcal_per_100g": 20,
+                            "kcal": 8
+                        },
+                        {
+                            "name": "Rest plate",
+                            "grams": 82,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 single sườn; bì\/chả\/trứng thêm riêng. Cơm từ yield gạo 1004.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-tam-bi-cha": {
+            "calories_kcal": 597,
+            "serving_grams": 430,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-tam-bi-cha",
+                    "source_ref": "vivu-standard-v1+vn:com-tam-bi-cha",
+                    "serving_grams": 430,
+                    "portion_note": "Cơm tấm 200g→275; Bì + chả class 100g→260; Mỡ hành 6g→54; Đồ chua proxy 40g→8; total 597",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm tấm",
+                            "ingredient_id": "vn-com-trang-chin",
+                            "food_code": "1004",
+                            "grams": 200,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 275
+                        },
+                        {
+                            "name": "Bì + chả class",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 100,
+                            "kcal_per_100g": 260,
+                            "kcal": 260
+                        },
+                        {
+                            "name": "Mỡ hành",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54
+                        },
+                        {
+                            "name": "Đồ chua proxy",
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005",
+                            "grams": 40,
+                            "kcal_per_100g": 20,
+                            "kcal": 8
+                        },
+                        {
+                            "name": "Rest",
+                            "grams": 84,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "banh-mi-thit": {
+            "calories_kcal": 332,
+            "serving_grams": 180,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — banh-mi-thit",
+                    "source_ref": "vivu-standard-v1+vn:banh-mi-thit",
+                    "serving_grams": 180,
+                    "portion_note": "Bánh mì 80g→199; Thịt nguội class 40g→104; Pate proxy nạc 15g→21; Rau\/đồ chua proxy 30g→8; total 332",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh mì",
+                            "ingredient_id": "vn-banh-mi",
+                            "food_code": "1012",
+                            "grams": 80,
+                            "kcal_per_100g": 249,
+                            "kcal": 199
+                        },
+                        {
+                            "name": "Thịt nguội class",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 40,
+                            "kcal_per_100g": 260,
+                            "kcal": 104
+                        },
+                        {
+                            "name": "Pate proxy nạc",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 15,
+                            "kcal_per_100g": 139,
+                            "kcal": 21
+                        },
+                        {
+                            "name": "Rau\/đồ chua proxy",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 30,
+                            "kcal_per_100g": 25,
+                            "kcal": 8
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 no mayo; pate proxy bằng thịt — shop mayo cao hơn.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "xoi-man": {
+            "calories_kcal": 502,
+            "serving_grams": 250,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — xoi-man",
+                    "source_ref": "vivu-standard-v1+vn:xoi-man",
+                    "serving_grams": 250,
+                    "portion_note": "Xôi nếp 180g→282; Topping mặn 50g→130; Mỡ hành 10g→90; total 502",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Xôi nếp",
+                            "ingredient_id": "vn-xoi-nep-chin",
+                            "food_code": "1001",
+                            "grams": 180,
+                            "kcal_per_100g": 156.4,
+                            "kcal": 282
+                        },
+                        {
+                            "name": "Topping mặn",
+                            "ingredient_id": "vn-thit-heo-nua-nac",
+                            "food_code": "7018",
+                            "grams": 50,
+                            "kcal_per_100g": 260,
+                            "kcal": 130
+                        },
+                        {
+                            "name": "Mỡ hành",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        },
+                        {
+                            "name": "Rest",
+                            "grams": 10,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; topping mix varies. Xôi yield 2.2.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "xoi-ga": {
+            "calories_kcal": 491,
+            "serving_grams": 250,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — xoi-ga",
+                    "source_ref": "vivu-standard-v1+vn:xoi-ga",
+                    "serving_grams": 250,
+                    "portion_note": "Xôi nếp 180g→282; Gà 60g→119; Mỡ hành 10g→90; total 491",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Xôi nếp",
+                            "ingredient_id": "vn-xoi-nep-chin",
+                            "food_code": "1001",
+                            "grams": 180,
+                            "kcal_per_100g": 156.4,
+                            "kcal": 282
+                        },
+                        {
+                            "name": "Gà",
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013",
+                            "grams": 60,
+                            "kcal_per_100g": 199,
+                            "kcal": 119
+                        },
+                        {
+                            "name": "Mỡ hành",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "goi-cuon": {
+            "calories_kcal": 148,
+            "serving_grams": 135,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — goi-cuon",
+                    "source_ref": "vivu-standard-v1+vn:goi-cuon",
+                    "serving_grams": 135,
+                    "portion_note": "Bánh tráng (khô eq) 12g→40; Tôm 30g→25; Thịt 20g→28; Rau 30g→8; Tương\/đường proxy 5g→20; Dầu\/đậu phộng eq 3g→27; total 148",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh tráng (khô eq)",
+                            "ingredient_id": "vn-banh-da-nem",
+                            "food_code": "1010",
+                            "grams": 12,
+                            "kcal_per_100g": 333,
+                            "kcal": 40
+                        },
+                        {
+                            "name": "Tôm",
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051",
+                            "grams": 30,
+                            "kcal_per_100g": 82,
+                            "kcal": 25
+                        },
+                        {
+                            "name": "Thịt",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 20,
+                            "kcal_per_100g": 139,
+                            "kcal": 28
+                        },
+                        {
+                            "name": "Rau",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 30,
+                            "kcal_per_100g": 25,
+                            "kcal": 8
+                        },
+                        {
+                            "name": "Tương\/đường proxy",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 5,
+                            "kcal_per_100g": 390,
+                            "kcal": 20
+                        },
+                        {
+                            "name": "Dầu\/đậu phộng eq",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 3,
+                            "kcal_per_100g": 897,
+                            "kcal": 27
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 ~2 cuốn; bánh tráng quy về gram khô FCT 1010.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "goi-cuon-chay": {
+            "calories_kcal": 122,
+            "serving_grams": 120,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — goi-cuon-chay",
+                    "source_ref": "vivu-standard-v1+vn:goi-cuon-chay",
+                    "serving_grams": 120,
+                    "portion_note": "Bánh tráng khô eq 12g→40; Đậu phụ 40g→38; Rau 40g→10; Tương ngọt proxy 4g→16; Dầu 2g→18; total 122",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh tráng khô eq",
+                            "ingredient_id": "vn-banh-da-nem",
+                            "food_code": "1010",
+                            "grams": 12,
+                            "kcal_per_100g": 333,
+                            "kcal": 40
+                        },
+                        {
+                            "name": "Đậu phụ",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 40,
+                            "kcal_per_100g": 95,
+                            "kcal": 38
+                        },
+                        {
+                            "name": "Rau",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 40,
+                            "kcal_per_100g": 25,
+                            "kcal": 10
+                        },
+                        {
+                            "name": "Tương ngọt proxy",
+                            "ingredient_id": "vn-duong-trang",
+                            "food_code": "12013",
+                            "grams": 4,
+                            "kcal_per_100g": 390,
+                            "kcal": 16
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 2,
+                            "kcal_per_100g": 897,
+                            "kcal": 18
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 vegan rolls.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-chay-thap-cam": {
+            "calories_kcal": 456,
+            "serving_grams": 400,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-chay-thap-cam",
+                    "source_ref": "vivu-standard-v1+vn:com-chay-thap-cam",
+                    "serving_grams": 400,
+                    "portion_note": "Cơm 200g→275; Đậu\/nấm proxy 80g→76; Dầu 10g→90; Rau củ 60g→15; total 456",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm",
+                            "ingredient_id": "vn-com-trang-chin",
+                            "food_code": "1004",
+                            "grams": 200,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 275
+                        },
+                        {
+                            "name": "Đậu\/nấm proxy",
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025",
+                            "grams": 80,
+                            "kcal_per_100g": 95,
+                            "kcal": 76
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90
+                        },
+                        {
+                            "name": "Rau củ",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 60,
+                            "kcal_per_100g": 25,
+                            "kcal": 15
+                        },
+                        {
+                            "name": "Rest",
+                            "grams": 50,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1 vegan rice plate.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-rang-thap-cam": {
+            "calories_kcal": 543,
+            "serving_grams": 350,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-rang-thap-cam",
+                    "source_ref": "vivu-standard-v1+vn:com-rang-thap-cam",
+                    "serving_grams": 350,
+                    "portion_note": "Cơm 220g→303; Trứng 40g→66; Thịt 40g→56; Dầu 12g→108; Rau 38g→10; total 543",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm",
+                            "ingredient_id": "vn-com-trang-chin",
+                            "food_code": "1004",
+                            "grams": 220,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 303
+                        },
+                        {
+                            "name": "Trứng",
+                            "ingredient_id": "vn-trung-ga-toan-phan",
+                            "food_code": "9001",
+                            "grams": 40,
+                            "kcal_per_100g": 166,
+                            "kcal": 66
+                        },
+                        {
+                            "name": "Thịt",
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017",
+                            "grams": 40,
+                            "kcal_per_100g": 139,
+                            "kcal": 56
+                        },
+                        {
+                            "name": "Dầu",
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002",
+                            "grams": 12,
+                            "kcal_per_100g": 897,
+                            "kcal": 108
+                        },
+                        {
+                            "name": "Rau",
+                            "ingredient_id": "vn-rau-muong",
+                            "food_code": "4083",
+                            "grams": 38,
+                            "kcal_per_100g": 25,
+                            "kcal": 10
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-11",
+                    "reviewed_by": "fct-vn-phase-b",
+                    "limitations": "ViVu v1; quán dầu cao hơn.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        }
+    }
+}

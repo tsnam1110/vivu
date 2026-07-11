@@ -25,3 +25,9 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Local FCT VN PDF + extract caches (curator tooling; do not commit multi‑MB PDF)
+/database/data/what-to-eat/facts/_vtn_fct_2007.pdf
+/database/data/what-to-eat/facts/_fct_vn_pdf_extract.json
+/database/data/what-to-eat/facts/_fct_vn_pdf_catalog.json
+/database/data/what-to-eat/facts/_extract_fct_names.py
