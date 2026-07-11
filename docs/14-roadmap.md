@@ -53,7 +53,7 @@ chạy được end-to-end. Cập nhật trạng thái khi tiến triển; đồ
 - Lưới tháng Excel; cycle trống → ✓ → ✗ → trống; history; không ghi custom vào admin.
 - **DoD:** Feature + Unit test xanh. Xem [`features/habit-tracker.md`](features/habit-tracker.md).
 
-## M8 — Hôm nay ăn gì (What to Eat) 📋 (đặc tả)
+## M8 — Hôm nay ăn gì (What to Eat) ✅ core / 📋 polish
 
 Phân pha — chi tiết [`features/what-to-eat.md`](features/what-to-eat.md):
 
@@ -63,10 +63,16 @@ Phân pha — chi tiết [`features/what-to-eat.md`](features/what-to-eat.md):
 | **B** | `dish_contributions` + form user + admin duyệt/canonical sync + admin CRUD dishes | ✅ |
 | **C** | `meal_suggestion_logs`, chọn món, history `/what-to-eat/history`, `user_food_preferences` | ✅ |
 | **D** | Soft-match Experience theo keywords + GPS (nếu cho phép) | ✅ |
+| **Compose 0.2** | MealComposer mâm canh–mặn–rau; auto/compose/pick; filter vùng | ✅ |
+| **Seed ~182** | Multi-file verified skeleton + Fact-A calo / ops / recipe (partial) | ✅ baseline |
 | **E** | Social feed — backlog | Chưa |
 
+**Kế hoạch polish / data / engine tiếp (S0–S5):**  
+[`features/what-to-eat-next-plan.md`](features/what-to-eat-next-plan.md) ·  
+prompt Agent: [`agent-prompts/what-to-eat/`](agent-prompts/what-to-eat/).
+
 - Entry UI: **popup trên trang chính user (Kho)** — tính năng phụ; **không** tab floating nav.
-- **DoD Phase A:** mở/đóng popup; `count` 1–5; list tóm tắt; Chi tiết từng món; test suggester xanh.
+- **DoD core:** popup; compose dinner cook; seed-report; test WhatToEat xanh.
 
 ## Ngoài phạm vi v1 (backlog)
 Chat, booking/thanh toán, mobile native, gợi ý ML nâng cao, i18n nội dung,

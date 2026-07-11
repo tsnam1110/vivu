@@ -1,7 +1,7 @@
 {
-    "kb_version": "2.0.0-ops",
+    "kb_version": "2.0.1-ops-s5",
     "phase": "Ops-A-max",
-    "description": "Broad cooking_method + protein_source for catalog; committee. Heuristic + manual overrides. Enables A05\/E01\/S02.",
+    "description": "Broad cooking_method + protein_source for catalog; committee. Heuristic + manual overrides. Enables A05/E01/S02.",
     "by_slug": {
         "ca-phe-sua-da": {
             "cooking_method": "mixed",
@@ -11,7 +11,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -20,7 +20,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -35,7 +35,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -44,7 +44,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -59,7 +59,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -68,7 +68,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -83,7 +83,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -92,7 +92,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -107,7 +107,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -116,7 +116,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -131,7 +131,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -140,7 +140,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -155,7 +155,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -164,7 +164,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -179,7 +179,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -188,7 +188,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -203,7 +203,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -212,7 +212,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -227,7 +227,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -236,7 +236,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -251,7 +251,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -260,7 +260,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -275,7 +275,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -284,7 +284,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -299,7 +299,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -308,7 +308,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -323,7 +323,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -332,7 +332,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -347,7 +347,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -356,7 +356,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -371,7 +371,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -380,7 +380,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -395,7 +395,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -404,7 +404,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -419,7 +419,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -428,7 +428,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -443,7 +443,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -452,7 +452,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -467,7 +467,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -476,7 +476,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -491,7 +491,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -500,7 +500,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -515,7 +515,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -524,7 +524,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -539,7 +539,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -548,7 +548,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -563,7 +563,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -572,7 +572,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -587,7 +587,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -596,7 +596,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -611,7 +611,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -620,7 +620,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -635,7 +635,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -644,7 +644,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -659,7 +659,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -668,7 +668,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -683,7 +683,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -692,7 +692,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -707,7 +707,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -716,7 +716,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -731,7 +731,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -740,7 +740,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -755,7 +755,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -764,7 +764,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -779,7 +779,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -788,7 +788,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -803,7 +803,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -812,7 +812,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -827,7 +827,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -836,7 +836,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -851,7 +851,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -860,7 +860,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -875,7 +875,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -884,7 +884,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -899,7 +899,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -908,7 +908,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -923,7 +923,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -932,7 +932,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -947,7 +947,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -956,7 +956,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -971,7 +971,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -980,7 +980,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -995,7 +995,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1004,7 +1004,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1019,7 +1019,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1028,7 +1028,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1043,7 +1043,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1052,7 +1052,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1067,7 +1067,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1076,7 +1076,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1091,7 +1091,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1100,7 +1100,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1115,7 +1115,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1124,7 +1124,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1139,7 +1139,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1148,7 +1148,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1163,7 +1163,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1172,7 +1172,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1187,7 +1187,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1196,7 +1196,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1211,7 +1211,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1220,7 +1220,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1235,7 +1235,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1244,7 +1244,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1259,7 +1259,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1268,7 +1268,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1283,7 +1283,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1292,7 +1292,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1307,7 +1307,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1316,7 +1316,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1331,7 +1331,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1340,7 +1340,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1355,7 +1355,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1364,7 +1364,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1379,7 +1379,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1388,7 +1388,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1403,7 +1403,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1412,7 +1412,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1427,7 +1427,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1436,7 +1436,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1451,7 +1451,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1460,7 +1460,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1475,7 +1475,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1484,7 +1484,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1499,7 +1499,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1508,7 +1508,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1523,7 +1523,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1532,7 +1532,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1547,7 +1547,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1556,7 +1556,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1571,7 +1571,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1580,7 +1580,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1595,7 +1595,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1604,7 +1604,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1619,7 +1619,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1628,7 +1628,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1643,7 +1643,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1652,7 +1652,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1667,7 +1667,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1676,7 +1676,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1691,7 +1691,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1700,7 +1700,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1715,7 +1715,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1724,7 +1724,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1739,7 +1739,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1748,7 +1748,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1763,7 +1763,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1772,7 +1772,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1787,7 +1787,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1796,7 +1796,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1811,7 +1811,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1820,7 +1820,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1835,7 +1835,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1844,7 +1844,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1859,7 +1859,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1868,7 +1868,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1883,7 +1883,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1892,7 +1892,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1907,7 +1907,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1916,7 +1916,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1931,7 +1931,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1940,7 +1940,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1955,7 +1955,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1964,7 +1964,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1979,7 +1979,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -1988,7 +1988,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2003,7 +2003,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2012,7 +2012,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2027,7 +2027,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2036,7 +2036,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2051,7 +2051,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2060,7 +2060,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2075,7 +2075,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2084,7 +2084,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2099,7 +2099,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2108,7 +2108,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2123,7 +2123,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2132,7 +2132,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2147,7 +2147,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2156,7 +2156,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2171,7 +2171,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2180,7 +2180,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2195,7 +2195,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2204,7 +2204,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2219,7 +2219,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2228,7 +2228,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2243,7 +2243,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2252,7 +2252,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2267,7 +2267,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2276,7 +2276,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2291,7 +2291,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2300,7 +2300,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2315,7 +2315,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2324,7 +2324,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2339,7 +2339,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2348,7 +2348,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2363,7 +2363,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2372,7 +2372,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2387,7 +2387,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2396,7 +2396,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2411,7 +2411,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2420,7 +2420,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2435,7 +2435,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2444,7 +2444,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2459,7 +2459,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2468,7 +2468,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2483,7 +2483,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2492,7 +2492,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2507,7 +2507,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2516,7 +2516,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2531,7 +2531,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2540,7 +2540,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2555,7 +2555,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2564,7 +2564,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2579,7 +2579,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2588,7 +2588,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2603,7 +2603,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2612,7 +2612,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2627,7 +2627,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2636,7 +2636,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2651,7 +2651,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2660,7 +2660,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2675,7 +2675,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2684,7 +2684,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2699,7 +2699,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2708,7 +2708,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2723,7 +2723,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2732,7 +2732,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2747,7 +2747,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2756,7 +2756,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2771,7 +2771,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2780,7 +2780,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2795,7 +2795,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2804,7 +2804,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2819,7 +2819,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2828,7 +2828,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2843,7 +2843,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2852,7 +2852,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2867,7 +2867,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2876,7 +2876,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2891,7 +2891,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2900,7 +2900,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2915,7 +2915,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2924,7 +2924,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2939,7 +2939,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2948,7 +2948,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2963,7 +2963,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2972,7 +2972,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2987,7 +2987,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -2996,7 +2996,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3011,7 +3011,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3020,7 +3020,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3035,7 +3035,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3044,7 +3044,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3059,7 +3059,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3068,7 +3068,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3083,7 +3083,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3092,7 +3092,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3107,7 +3107,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3116,7 +3116,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3131,7 +3131,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3140,7 +3140,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3155,7 +3155,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3164,7 +3164,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3179,7 +3179,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3188,7 +3188,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3203,7 +3203,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3212,7 +3212,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3227,7 +3227,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3236,7 +3236,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3251,7 +3251,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3260,7 +3260,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3275,7 +3275,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3284,7 +3284,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3299,7 +3299,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3308,7 +3308,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3323,7 +3323,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3332,7 +3332,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3347,7 +3347,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3356,7 +3356,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3371,7 +3371,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3380,7 +3380,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3395,7 +3395,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3404,7 +3404,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3419,7 +3419,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3428,7 +3428,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3443,7 +3443,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3452,7 +3452,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3467,7 +3467,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3476,7 +3476,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3491,7 +3491,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3500,7 +3500,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3515,7 +3515,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3524,7 +3524,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3539,7 +3539,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3548,7 +3548,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3563,7 +3563,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3572,7 +3572,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3587,7 +3587,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3596,7 +3596,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3611,7 +3611,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3620,7 +3620,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3635,7 +3635,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3644,7 +3644,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3659,7 +3659,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3668,7 +3668,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3683,7 +3683,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3692,7 +3692,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3707,7 +3707,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3716,7 +3716,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3731,7 +3731,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3740,7 +3740,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3755,7 +3755,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3764,7 +3764,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3779,7 +3779,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3788,7 +3788,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3803,7 +3803,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3812,7 +3812,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3827,7 +3827,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3836,7 +3836,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3851,7 +3851,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3860,7 +3860,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3875,7 +3875,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3884,7 +3884,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3899,7 +3899,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3908,7 +3908,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3923,7 +3923,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3932,7 +3932,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3947,7 +3947,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3956,7 +3956,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3971,7 +3971,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3980,7 +3980,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -3995,7 +3995,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4004,7 +4004,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4019,7 +4019,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4028,7 +4028,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4043,7 +4043,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4052,7 +4052,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4067,7 +4067,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4076,7 +4076,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4091,7 +4091,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4100,7 +4100,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4115,7 +4115,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4124,7 +4124,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4139,7 +4139,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4148,7 +4148,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4163,7 +4163,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4172,7 +4172,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4187,7 +4187,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4196,7 +4196,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4211,7 +4211,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4220,7 +4220,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4235,7 +4235,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4244,7 +4244,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4259,7 +4259,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4268,7 +4268,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4283,7 +4283,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4292,7 +4292,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4307,7 +4307,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4316,7 +4316,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4331,7 +4331,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4340,7 +4340,7 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4355,7 +4355,7 @@
                     "field": "cooking_method",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
@@ -4364,10 +4364,178 @@
                     "field": "protein_source",
                     "method": "committee",
                     "source_ref": "vivu-ops-committee-2026-07",
-                    "source_title": "ViVu catalog ops review (clear single method\/protein)",
+                    "source_title": "ViVu catalog ops review (clear single method/protein)",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "ops-build"
+                }
+            ]
+        },
+        "canh-ca-chua-trung": {
+            "cooking_method": "boil",
+            "protein_source": "egg",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "canh-cai-ngot-nau-thit": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "canh-mang-nau-suon": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "canh-bi-xanh-thit-bam": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "com-lam-ga-nuong": {
+            "cooking_method": "grill",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "bun-ca-dak-lak": {
+            "cooking_method": "boil",
+            "protein_source": "seafood",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                }
+            ]
+        },
+        "lau-bo-kho-tay-nguyen": {
+            "cooking_method": "boil",
+            "protein_source": "meat",
+            "facts": [
+                {
+                    "field": "cooking_method",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
+                },
+                {
+                    "field": "protein_source",
+                    "method": "committee",
+                    "source_ref": "vivu-ops-committee-2026-07-s5",
+                    "source_title": "ViVu catalog ops S5 Bắc/Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "ops-s5"
                 }
             ]
         }

@@ -162,7 +162,10 @@ npm run build:all      # cả hai
 | `/cookies` | Chính sách cookie | Công khai |
 
 > Ưu tiên sản phẩm: **lưu trữ cá nhân** trước, khám phá là phụ. Menu floating iOS ở cuối màn hình.  
-> Chi tiết token, component, checklist UI: [`15-design-system.md`](15-design-system.md).
+> Chi tiết token, component, checklist UI: [`15-design-system.md`](15-design-system.md).  
+> **What to Eat** (verify seed/engine/UI): checklist release tại
+> [`features/what-to-eat.md`](features/what-to-eat.md) §18 +
+> [`features/what-to-eat-next-plan.md`](features/what-to-eat-next-plan.md) §7.
 
 Source routes: `routes/web.php`.
 

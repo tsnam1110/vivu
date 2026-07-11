@@ -110,4 +110,57 @@ class WhatToEatSuggesterTest extends TestCase
         $this->assertSame([], $result['dishes']);
         $this->assertSame(0, $result['total_available']);
     }
+
+    public function test_soft_relaxes_region_with_message_and_code(): void
+    {
+        // Only "nam" dishes exist for this slot/mode — request bac → must relax
+        Dish::factory()->create([
+            'name' => 'Nam only dish',
+            'meal_slots' => [MealSlot::Lunch->value],
+            'supports_main' => true,
+            'supports_dine_out' => true,
+            'supports_cook_home' => true,
+            'culinary_regions' => ['nam'],
+        ]);
+
+        $result = app(WhatToEatSuggester::class)->suggest(
+            mealSlot: MealSlot::Lunch,
+            mealSize: MealSize::Main,
+            mealMode: MealMode::DineOut,
+            count: 1,
+            log: false,
+            suggestMode: \App\Enums\SuggestMode::Pick,
+            culinaryRegion: 'bac',
+        );
+
+        $this->assertCount(1, $result['dishes']);
+        $this->assertSame('Nam only dish', $result['dishes'][0]['name']);
+        $this->assertContains('culinary_region', $result['relaxations']);
+        $this->assertNotNull($result['message']);
+        $this->assertStringContainsString('nới', mb_strtolower($result['message']));
+    }
+
+    public function test_strict_region_match_has_no_region_relaxation(): void
+    {
+        Dish::factory()->create([
+            'name' => 'Bắc dish',
+            'meal_slots' => [MealSlot::Lunch->value],
+            'supports_main' => true,
+            'supports_dine_out' => true,
+            'culinary_regions' => ['bac'],
+        ]);
+
+        $result = app(WhatToEatSuggester::class)->suggest(
+            mealSlot: MealSlot::Lunch,
+            mealSize: MealSize::Main,
+            mealMode: MealMode::DineOut,
+            count: 1,
+            log: false,
+            suggestMode: \App\Enums\SuggestMode::Pick,
+            culinaryRegion: 'bac',
+        );
+
+        $this->assertCount(1, $result['dishes']);
+        $this->assertNotContains('culinary_region', $result['relaxations']);
+    }
 }

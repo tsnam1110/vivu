@@ -355,6 +355,15 @@ Sau approve canonical: đồng bộ cache dish (đã có hướng Phase B).
 - **Không được:** tuyên bố field III là verified nếu user không cung cấp nguồn.  
 - Nếu user yêu cầu “seed full calo/element”: **từ chối đoán** — để null + nêu cần nguồn.
 
+### 9.1 SOP admin curator (S5-02)
+
+1. **Seed JSON** = verified-only + provenance; Admin hand-edit = **curator trusted** (bạn chịu trách nhiệm).  
+2. Chỉ điền calo khi có nguồn (FCT / recipe_sum / label); **luôn cặp** `serving_grams`.  
+3. Xóa calo → để `null` (không ghi 0 giả). UI admin cảnh báo.  
+4. YHCT / thermal: chỉ khi có biên bản `expert_tcm` / `tcm_text` — mặc định null.  
+5. Duyệt contribution: kiểm claim chữa bệnh → reject; approve → set `is_canonical` khi đủ.  
+6. Banner policy trên `admin` DishesPage.
+
 ---
 
 ## 10. Kiểm tra chất lượng seed (DoD mỗi lô)
@@ -381,22 +390,23 @@ php artisan what-to-eat:seed-report
 
 ## 11. Trạng thái seed hiện tại
 
+> **Số live:** `php artisan what-to-eat:seed-report` (bảng dưới = chốt 2026-07-12 sau S5 + Fact-A 2.4.0).
+
 | Hạng mục | Trạng thái |
 |---|---|
 | Món best-effort cũ trong seeder PHP | **Đã gỡ** |
-| Dataset multi-file | `database/data/what-to-eat/dishes_v1/manifest.json` + shards (+ `chay`) |
-| Seed P0+P1+P2+fix | **182 món** skeleton (`1.2.1-fix`); I+II + role + region |
-| P3 | 5 món inventory `candidate` — **chưa** seed |
-| Import | `importDefault()` = skeleton + calo overlay + ops overlay |
-| Generator | `php database/data/what-to-eat/generate_seed_catalog.php` |
-| Fact-A merge | `php database/data/what-to-eat/merge_fact_a_batch.php` |
+| Dataset multi-file | `dishes_v1/manifest.json` (`1.2.2-s5`) + shards (+ `chay`) |
+| Seed P0+P1+P2+S5 | **189 món** skeleton; role + region 100% |
+| P3 | 5 món inventory `candidate` — chưa seed |
+| Import | `importDefault()` = skeleton + calo + ops (+ recipe/YHCT overlays) |
 | Báo cáo | `php artisan what-to-eat:seed-report` |
-| Fact-A calo | **~116 món** `facts/calories_fact_a.json` (`2.0.0-fact-a`) + standard bowls |
-| Ops-A | **182 món** cooking_method + protein_source (`2.0.0-ops`) |
-| Recipe registry | `facts/recipes_standard_v1.json` (khẩu phần chuẩn ViVu v1) |
-| Build overlays | `php database/data/what-to-eat/build_fact_overlays.php` |
-| Plan hoàn thiện | [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) |
-| Fact YHCT | **0** — cấm đoán |
+| Fact-A calo | **130** / 189 — `facts/calories_fact_a.json` (`2.4.0-fact-a`) |
+| Ops-A | **189** / 189 cooking_method + protein_source |
+| Recipe text | **155** / 189 |
+| Fact YHCT | **10** pilot medium (`yhct_fact_a.json`) — không scale; UI opt-in |
+| Ruleset min (manifest) | `0.3.0` |
+| Plan hoàn thiện fact dài | [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) |
+| Sprint S0–S5 | [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md) |
 
 `SEED_ALLOW_UNVERIFIED=true` chỉ cho local thử nghiệm — **không** dùng production.
 

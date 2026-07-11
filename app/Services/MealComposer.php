@@ -47,6 +47,8 @@ class MealComposer
         array $recentIds = [],
         array $missingElements = [],
         ?int $mealBudget = null,
+        array $excludePlateSignatures = [],
+        bool $softYhct = false,
     ): array {
         $template = $this->templates->resolve($slot, $size, $mode, $count);
         if ($template === null) {
@@ -67,6 +69,59 @@ class MealComposer
             ]]);
         }
 
+        $maxAttempts = $excludePlateSignatures !== [] ? 6 : 1;
+        $lastResult = null;
+
+        for ($attempt = 0; $attempt < $maxAttempts; $attempt++) {
+            $built = $this->buildPlate(
+                $template,
+                $withRole,
+                $mode,
+                $mealBudget,
+                $recentIds,
+                $missingElements,
+                $softYhct,
+            );
+            $lastResult = $built;
+
+            if (! $built['ok']) {
+                return $built;
+            }
+
+            $sig = $built['composition']['signature'] ?? '';
+            if ($sig === '' || ! in_array($sig, $excludePlateSignatures, true)) {
+                return $built;
+            }
+            // Signature excluded — retry with extra jitter (band shuffle already random)
+        }
+
+        // Hết attempt: trả mâm cuối (có thể trùng signature) — UI/message xử lý nới pool
+        return $lastResult ?? $this->emptyResult(fallback: true);
+    }
+
+    /**
+     * @param  array<string, mixed>  $template
+     * @param  Collection<int, Dish>  $withRole
+     * @param  list<int>  $recentIds
+     * @param  list<string>  $missingElements
+     * @return array{
+     *     ok: bool,
+     *     partial: bool,
+     *     dishes: list<Dish>,
+     *     composition: array<string, mixed>|null,
+     *     explanations: list<array<string, mixed>>,
+     *     fallback_to_pick: bool
+     * }
+     */
+    private function buildPlate(
+        array $template,
+        Collection $withRole,
+        MealMode $mode,
+        ?int $mealBudget,
+        array $recentIds,
+        array $missingElements,
+        bool $softYhct,
+    ): array {
         $slotsOut = [];
         $usedIds = [];
         $explanations = [];
@@ -95,7 +150,6 @@ class MealComposer
                     $mealBudget,
                     $recentIds,
                     $missingElements,
-                    $usedIds,
                     $dishes,
                 ) {
                     return [
@@ -164,7 +218,7 @@ class MealComposer
         }
 
         // Soft plate rules
-        $plateSoft = $this->evaluatePlateSoft($dishes, $mealBudget, $template);
+        $plateSoft = $this->evaluatePlateSoft($dishes, $mealBudget, $template, $softYhct);
         $explanations = array_merge($explanations, $plateSoft['explanations']);
 
         if ($filledRequired === $requiredCount) {
@@ -180,7 +234,7 @@ class MealComposer
 
         $kcalSum = collect($dishes)->sum(fn (Dish $d) => (int) ($d->calories_kcal ?? 0));
         $allHaveKcal = collect($dishes)->every(fn (Dish $d) => $d->calories_kcal !== null);
-        $signature = collect($dishes)->pluck('id')->sort()->implode('-');
+        $signature = collect($dishes)->pluck('id')->sort()->values()->implode('-');
 
         $composition = [
             'template_id' => $template['id'],
@@ -252,22 +306,41 @@ class MealComposer
             $score += 3;
         }
 
-        // Soft: avoid same protein_source as already picked
+        // Soft diversity: avoid same animal protein_source; reward different source
         if ($dish->protein_source !== null) {
+            $animalDup = false;
+            $hasKnownProtein = false;
             foreach ($already as $prev) {
+                if ($prev->protein_source === null) {
+                    continue;
+                }
+                $hasKnownProtein = true;
                 if ($prev->protein_source === $dish->protein_source
                     && $dish->protein_source !== ProteinSource::None
                     && $dish->protein_source !== ProteinSource::Plant) {
-                    $score -= 12;
+                    $animalDup = true;
+                    $score -= 14;
+                } elseif ($prev->protein_source !== $dish->protein_source) {
+                    $score += 6; // reward diversity when both known
                 }
+            }
+            if ($hasKnownProtein && ! $animalDup
+                && ! in_array($dish->protein_source, [ProteinSource::None, ProteinSource::Plant], true)) {
+                $score += 2;
             }
         }
 
-        // Soft: avoid second fry
+        // Soft: avoid second fry (null cooking_method → skip)
         if ($dish->cooking_method === CookingMethod::Fry) {
             foreach ($already as $prev) {
                 if ($prev->cooking_method === CookingMethod::Fry) {
-                    $score -= 20;
+                    $score -= 22;
+                }
+            }
+        } elseif ($dish->cooking_method !== null) {
+            foreach ($already as $prev) {
+                if ($prev->cooking_method === CookingMethod::Fry) {
+                    $score += 4; // prefer non-fry after a fry already picked
                 }
             }
         }
@@ -310,7 +383,7 @@ class MealComposer
      * @param  array<string, mixed>  $template
      * @return array{explanations: list<array<string, mixed>>, plate_reasons: list<string>, within_band: bool|null}
      */
-    private function evaluatePlateSoft(array $dishes, ?int $mealBudget, array $template): array
+    private function evaluatePlateSoft(array $dishes, ?int $mealBudget, array $template, bool $softYhct = false): array
     {
         $explanations = [];
         $plateReasons = [];
@@ -336,6 +409,40 @@ class MealComposer
                 'message' => __('what_to_eat.explain_fry_ok'),
                 'fields_used' => ['cooking_method'],
             ];
+        }
+
+        // Soft protein diversity (skip nulls)
+        $proteinKnown = collect($dishes)->filter(fn (Dish $d) => $d->protein_source !== null);
+        if ($proteinKnown->count() >= 2) {
+            $animal = $proteinKnown->filter(fn (Dish $d) => ! in_array(
+                $d->protein_source,
+                [ProteinSource::None, ProteinSource::Plant],
+                true,
+            ));
+            $dup = $animal->groupBy(fn (Dish $d) => $d->protein_source?->value)
+                ->filter(fn ($g) => $g->count() >= 2)
+                ->keys()
+                ->first();
+            if ($dup !== null) {
+                $explanations[] = [
+                    'rule_id' => 'E01_protein_diversity',
+                    'layer' => 'diversity',
+                    'severity' => 'soft',
+                    'status' => 'soft_fail',
+                    'message' => __('what_to_eat.explain_protein_dup', ['protein' => $dup]),
+                    'fields_used' => ['protein_source'],
+                ];
+                $plateReasons[] = __('what_to_eat.explain_protein_dup', ['protein' => $dup]);
+            } else {
+                $explanations[] = [
+                    'rule_id' => 'E01_protein_diversity',
+                    'layer' => 'diversity',
+                    'severity' => 'soft',
+                    'status' => 'pass',
+                    'message' => __('what_to_eat.explain_protein_ok'),
+                    'fields_used' => ['protein_source'],
+                ];
+            }
         }
 
         $allKcal = collect($dishes)->every(fn (Dish $d) => $d->calories_kcal !== null);
@@ -368,28 +475,30 @@ class MealComposer
             ];
         }
 
-        // Thermal soft only if all have thermal
-        $allThermal = collect($dishes)->every(fn (Dish $d) => $d->thermal_nature !== null);
-        if ($allThermal && count($dishes) >= 2) {
-            $hots = collect($dishes)->filter(fn (Dish $d) => in_array($d->thermal_nature?->value, ['hot', 'warm'], true))->count();
-            if ($hots === count($dishes)) {
-                $explanations[] = [
-                    'rule_id' => 'C01_no_all_hot',
-                    'layer' => 'thermal',
-                    'severity' => 'soft',
-                    'status' => 'soft_fail',
-                    'message' => __('what_to_eat.explain_all_hot'),
-                    'fields_used' => ['thermal_nature'],
-                ];
-            } else {
-                $explanations[] = [
-                    'rule_id' => 'C01_no_all_hot',
-                    'layer' => 'thermal',
-                    'severity' => 'soft',
-                    'status' => 'pass',
-                    'message' => __('what_to_eat.explain_thermal_ok'),
-                    'fields_used' => ['thermal_nature'],
-                ];
+        // Thermal soft ONLY when user opt-in (balance_elements / soft YHCT) + all have thermal
+        if ($softYhct) {
+            $allThermal = collect($dishes)->every(fn (Dish $d) => $d->thermal_nature !== null);
+            if ($allThermal && count($dishes) >= 2) {
+                $hots = collect($dishes)->filter(fn (Dish $d) => in_array($d->thermal_nature?->value, ['hot', 'warm'], true))->count();
+                if ($hots === count($dishes)) {
+                    $explanations[] = [
+                        'rule_id' => 'C01_no_all_hot',
+                        'layer' => 'thermal',
+                        'severity' => 'soft',
+                        'status' => 'soft_fail',
+                        'message' => __('what_to_eat.explain_all_hot'),
+                        'fields_used' => ['thermal_nature'],
+                    ];
+                } else {
+                    $explanations[] = [
+                        'rule_id' => 'C01_no_all_hot',
+                        'layer' => 'thermal',
+                        'severity' => 'soft',
+                        'status' => 'pass',
+                        'message' => __('what_to_eat.explain_thermal_ok'),
+                        'fields_used' => ['thermal_nature'],
+                    ];
+                }
             }
         }
 

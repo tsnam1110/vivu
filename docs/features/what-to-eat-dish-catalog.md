@@ -253,10 +253,13 @@ database/data/what-to-eat/
 | 51 | Bánh hỏi thịt nướng | `banh-hoi-thit-nuong` | trung\|nam | L,D | ·/• | •/• | P2 | skeleton_ready |
 | 52 | Bánh khoái | `banh-khoai` | trung | L,D | ·/• | •/△ | P2 | skeleton_ready |
 | 53 | Bánh tráng trộn | `banh-trang-tron` | nam | L | •/· | •/△ | P2 | skeleton_ready |
+| 53a | Cơm lam gà nướng | `com-lam-ga-nuong` | tay_nguyen | L,D | ·/• | •/△ | P2 | skeleton_ready |
+| 53b | Bún cá Đắk Lắk | `bun-ca-dak-lak` | tay_nguyen | L,D | ·/• | •/△ | P2 | skeleton_ready |
 | 54 | Phở chua | `pho-chua` | bac | L | ·/• | •/△ | P3 | candidate |
 | 55 | Hủ tiếu Mỹ Tho | `hu-tieu-my-tho` | nam | B,L | ·/• | •/△ | P3 | candidate |
 
-> Ký hiệu D/C: `•` = true chắc; `△` = cook_home hạn chế / tuỳ biến (vẫn có thể true nhẹ khi skeleton).
+> Ký hiệu D/C: `•` = true chắc; `△` = cook_home hạn chế / tuỳ biến (vẫn có thể true nhẹ khi skeleton).  
+> **S5:** 53a–53b one_bowl Tây Nguyên (skeleton, `cook_home=false`).
 
 ---
 
@@ -282,6 +285,12 @@ database/data/what-to-eat/
 | 69 | Canh khoai mỡ | `canh-khoai-mo` | nam | L,D | •/· | •/• | P2 | skeleton_ready |
 | 70 | Canh mồng tơi nấu tôm | `canh-mong-toi-nau-tom` | quoc_gia | L,D | •/· | •/• | P2 | skeleton_ready |
 | 71 | Canh bí đao | `canh-bi-dao` | quoc_gia | L,D | •/· | •/• | P2 | skeleton_ready |
+| 71a | Canh cà chua trứng | `canh-ca-chua-trung` | bac\|quoc_gia | L,D | •/· | •/• | P2 | skeleton_ready |
+| 71b | Canh cải ngọt nấu thịt | `canh-cai-ngot-nau-thit` | bac\|quoc_gia | L,D | •/· | •/• | P2 | skeleton_ready |
+| 71c | Canh măng nấu sườn | `canh-mang-nau-suon` | bac | L,D | •/· | •/• | P2 | skeleton_ready |
+| 71d | Canh bí xanh thịt bằm | `canh-bi-xanh-thit-bam` | bac\|quoc_gia | L,D | •/· | •/• | P2 | skeleton_ready |
+
+> **S5 (2026-07-12):** +4 soup Bắc (71a–71d) trong `dishes_v1_soup.json` — skeleton I+II, fact III null.
 
 ---
 
@@ -437,9 +446,12 @@ database/data/what-to-eat/
 | 157 | Bò nướng lá lốt | `bo-nuong-la-lot` | nam\|quoc_gia | L,D | ·/• | •/• | P1 | skeleton_ready |
 | 158 | Hải sản nướng mọi | `hai-san-nuong-moi` | trung\|nam | L,D | ·/• | •/△ | P2 | skeleton_ready |
 | 159 | Gà nướng cơm lam | `ga-nuong-com-lam` | tay_nguyen\|trung | L,D | ·/• | •/△ | P2 | skeleton_ready |
+| 159a | Lẩu bò kho Tây Nguyên | `lau-bo-kho-tay-nguyen` | tay_nguyen | L,D | ·/• | •/△ | P2 | skeleton_ready |
 | 160 | Ốc xào | `oc-xao` | quoc_gia | L,D | •/• | •/△ | P1 | skeleton_ready |
 | 161 | Lẩu cá kèo | `lau-ca-keo` | nam | L,D | ·/• | •/△ | P3 | candidate |
 | 162 | Dê nướng | `de-nuong` | quoc_gia | L,D | ·/• | •/△ | P3 | candidate |
+
+> **S5:** 159a share_feast Tây Nguyên demo dine-out.
 
 ---
 
@@ -470,32 +482,33 @@ Món chay **có `dish_role` riêng** + `flavor_tags` / diet flag `vegetarian` kh
 
 ## 14. Tổng hợp số lượng
 
-| Nhóm (file) | # range | Count | P0+P1 (ước) | P2 full |
-|---|---|---:|---:|---:|
-| one_bowl | 1–55 | 55 | ~40 | 55 |
-| soup | 56–71 | 16 | ~12 | 16 |
-| main_protein | 72–92 | 21 | ~16 | 21 |
-| side_veg | 93–110 | 18 | ~14 | 18 |
-| side_extra | 111–120 | 10 | ~7 | 10 |
-| starch | 121–124 | 4 | ~3 | 4 |
-| dessert_light | 125–138 | 14 | ~10 | 14 |
-| beverage | 139–148 | 10 | ~8 | 10 |
-| share_feast | 149–162 | 14 | ~8 | 14 |
-| chay | 163–177 | 15 | ~12 | 15 |
-| **Tổng unique** | | **177** | **~130** | **~170** |
+| Nhóm (file) | # range | Count (inventory rows) | Seed JSON live (`1.2.2-s5`) |
+|---|---|---:|---:|
+| one_bowl | 1–55 + S5 | 55 + 2 | **58** |
+| soup | 56–71 + S5 | 16 + 4 | **20** |
+| main_protein | 72–92 | 21 | 25* |
+| side_veg | 93–110 | 18 | 21* |
+| side_extra | 111–120 | 10 | 9* |
+| starch | 121–124 | 4 | 4 |
+| dessert_light | 125–138 | 14 | 14 |
+| beverage | 139–148 | 10 | 10 |
+| share_feast | 149–162 + S5 | 14 + 1 | **13** |
+| chay | 163–177 | 15 | 15 |
+| **Tổng seed system** | | | **189** |
 
-P3 (scale sau, không liệt kê hết trong file này): biến thể topping, chè theo loại,
-món vùng hẹp — chỉ thêm khi có curator + dòng inventory mới.
+\* Một số shard JSON có món bổ sung sau inventory lô 1 (P2 fix / quality) — **số live lấy `what-to-eat:seed-report`**, không chỉ cộng dãy # inventory cũ.
 
-### 14.1 Theo vùng (ước tag xuất hiện, multi-tag được đếm nhiều lần)
+P3 (scale sau): biến thể topping, chè theo loại, món vùng hẹp — chỉ thêm khi có curator + dòng inventory mới.
+
+### 14.1 Theo vùng (ước; multi-tag; sau S5)
 
 | Tag | ~món có tag | Ghi chú |
 |---|---:|---|
 | `quoc_gia` | ~110+ | Nền |
 | `nam` | ~45+ | |
-| `bac` | ~30+ | |
+| `bac` | ~34+ | +4 soup S5 |
 | `trung` | ~28+ | |
-| `tay_nguyen` | ~2–4 | |
+| `tay_nguyen` | **~5–7** | +3 S5 (one_bowl×2, feast×1) + lô cũ |
 | `hoa_viet` | ~8 | tag phụ |
 
 ---
@@ -508,10 +521,11 @@ món vùng hẹp — chỉ thêm khi có curator + dòng inventory mới.
 | **Seed-P0** | Prio P0 | **51** | null | ✅ trong `1.2.0-p2` |
 | **Seed-P1** | + P1 (+ chay) | **80** | null | ✅ |
 | **Seed-P2** | + P2 curated | **41** → **172 total** | null | ✅ `1.2.0-p2` catalog lô 1 |
+| **Seed-S5** | + soup Bắc + Tây Nguyên | **+7** → **189** | null III | ✅ `1.2.2-s5` |
 | **P3** | scale later | **5** inventory only | — | `candidate` (không seed) |
-| **Fact-A** | FCT + recipe_sum + standard bowl v1 | **~116** / 182 | medium–high | ✅ `2.0.0-fact-a` |
-| **Ops-A** | cooking_method + protein_source | **182** / 182 | committee | ✅ |
-| **Fact-C/D** | thermal / element | 0 | verified YHCT | Chưa — **không bịa** |
+| **Fact-A** | FCT + recipe_sum + standard bowl + S2 one_bowl | **130** / 189 | medium–high | ✅ `2.4.0-fact-a` |
+| **Ops-A** | cooking_method + protein_source | **189** / 189 | committee | ✅ |
+| **Fact-C/D** | thermal / element | **10** pilot | tcm_text medium | ✅ YHCT-A opt-in UI |
 
 **Thứ tự file khi seed P0:**  
 `soup` + `main_protein` + `side_veg` + `one_bowl` (breakfast) + `starch` + vài `beverage`/`dessert_light` + 3 `share_feast`.
@@ -556,6 +570,7 @@ món vùng hẹp — chỉ thêm khi có curator + dòng inventory mới.
 | 2026-07-11 | **Fact-A 1.1:** + recipe_sum → ~17 món; UI `calorie_source`; `implicit_rice_kcal=195` (cũ) |
 | 2026-07-12 | `implicit_rice_kcal=206` khớp `com-trang` FCT VN yield (`2.3.0-fact-a`) |
 | 2026-07-11 | **Hoàn thiện plan (multi-agent):** Fact-A 27; Ops-A 23; S02 hygiene; UI explanations/prefs; catalog 182 |
+| 2026-07-12 | **S5 inventory sync:** +4 soup Bắc, +2 one_bowl TN, +1 feast TN; seed **189**; Fact-A **130**; bảng §14 live-aligned |
 
 ---
 

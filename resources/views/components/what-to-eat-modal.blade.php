@@ -40,8 +40,17 @@
             'region_hoa_viet' => __('what_to_eat.region_hoa_viet'),
             'region_ngoai' => __('what_to_eat.region_ngoai'),
             'results_plate' => __('what_to_eat.results_plate'),
+            'results_list' => __('what_to_eat.results_list'),
+            'results_plate_hint' => __('what_to_eat.results_plate_hint'),
+            'results_list_hint' => __('what_to_eat.results_list_hint'),
             'plate_totals' => __('what_to_eat.plate_totals'),
+            'plate_totals_incomplete' => __('what_to_eat.plate_totals_incomplete'),
+            'plate_band_ok' => __('what_to_eat.plate_band_ok'),
+            'plate_band_off' => __('what_to_eat.plate_band_off'),
             'plate_implicit' => __('what_to_eat.plate_implicit'),
+            'empty_hint_actions' => __('what_to_eat.empty_hint_actions'),
+            'disclaimer_short' => __('what_to_eat.disclaimer_short'),
+            'fact_missing' => __('what_to_eat.fact_missing'),
             'target_cal_label' => __('what_to_eat.target_cal_label'),
             'target_cal_hint' => __('what_to_eat.target_cal_hint'),
             'target_cal_from_weight' => __('what_to_eat.target_cal_from_weight', [
@@ -187,7 +196,9 @@
                 <div class="min-h-0 flex-1 overflow-y-auto px-5 py-4">
                     {{-- FORM --}}
                     <div x-show="view === 'form'" class="space-y-5">
-                        <p x-show="error" x-text="error" x-cloak class="rounded-xl bg-red-50 px-3 py-2 text-xs text-red-800"></p>
+                        <p x-show="error" x-text="error" x-cloak class="rounded-xl bg-red-50 px-3 py-2 text-xs text-red-800" role="alert"></p>
+                        <p class="rounded-2xl border border-stone-200 bg-stone-50/80 px-3 py-2 text-[11px] leading-relaxed text-stone-600"
+                           x-text="labels.disclaimer_short || labels.disclaimer"></p>
                         <fieldset>
                             <legend class="text-sm font-semibold text-stone-800" x-text="labels.slot_label"></legend>
                             <div class="mt-2 grid grid-cols-3 gap-2">
@@ -299,12 +310,22 @@
                     <div x-show="view === 'results' && !loading" x-cloak class="space-y-3">
                         <div class="flex items-center justify-between gap-2">
                             <h3 class="text-sm font-semibold text-stone-800"
-                                x-text="composition ? labels.results_plate : labels.results"></h3>
-                            <button type="button" @click="view = 'form'; dishes = []; composition = null; metaMessage = null; error = null"
+                                x-text="composition ? (labels.results_plate || labels.results) : (labels.results_list || labels.results)"></h3>
+                            <button type="button" @click="view = 'form'; dishes = []; composition = null; metaMessage = null; error = null; lastPlateSignature = null"
                                     class="text-xs font-medium text-teal-700">Đổi lựa chọn</button>
                         </div>
-                        <p x-show="metaMessage" x-text="metaMessage" class="rounded-xl bg-amber-50 px-3 py-2 text-xs text-amber-900"></p>
-                        <p x-show="error" x-text="error" class="rounded-xl bg-red-50 px-3 py-2 text-xs text-red-800"></p>
+                        <p class="text-[11px] leading-relaxed text-stone-500"
+                           x-text="composition ? labels.results_plate_hint : labels.results_list_hint"></p>
+                        <p x-show="metaMessage" x-text="metaMessage" class="rounded-xl bg-amber-50 px-3 py-2 text-xs text-amber-900" role="status"></p>
+                        <p x-show="error" x-text="error" class="rounded-xl bg-red-50 px-3 py-2 text-xs text-red-800" role="alert"></p>
+
+                        {{-- Empty / partial filter state --}}
+                        <div x-show="!dishes.length && !composition" class="rounded-2xl border border-dashed border-stone-300 bg-stone-50/80 px-4 py-6 text-center" role="status">
+                            <p class="text-sm font-medium text-stone-800" x-text="metaMessage || labels.error_generic"></p>
+                            <p class="mt-2 text-[11px] leading-relaxed text-stone-500" x-text="labels.empty_hint_actions"></p>
+                            <button type="button" @click="view = 'form'; error = null"
+                                    class="mt-3 rounded-full bg-teal-600 px-4 py-2 text-xs font-semibold text-white">Đổi bộ lọc</button>
+                        </div>
 
                         {{-- Mâm có cấu trúc --}}
                         <div x-show="composition" class="space-y-2.5 rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50/50 to-white p-3 ring-1 ring-teal-100/80">
@@ -341,15 +362,28 @@
                                     <span class="ml-1" x-text="imp.label + (imp.kcal_estimate ? ' (~' + imp.kcal_estimate + ' kcal)' : '')"></span>
                                 </template>
                             </div>
-                            <div x-show="composition?.totals" class="text-[11px] text-stone-600">
-                                <span class="font-medium" x-text="labels.plate_totals + ':'"></span>
-                                <span x-show="composition?.totals?.kcal != null" class="ml-1 tabular-nums"
-                                      x-text="composition.totals.kcal + ' kcal'"></span>
-                                <span x-show="composition?.totals?.meal_budget" class="ml-1 text-stone-400"
-                                      x-text="'(mục tiêu bữa ~' + composition.totals.meal_budget + ')'"></span>
+                            <div x-show="composition?.totals" class="space-y-1 rounded-xl bg-white/80 px-2.5 py-2 text-[11px] text-stone-700 ring-1 ring-stone-100">
+                                <template x-if="composition?.totals?.all_have_kcal && composition?.totals?.kcal != null">
+                                    <p>
+                                        <span class="font-medium" x-text="labels.plate_totals + ':'"></span>
+                                        <span class="ml-1 tabular-nums font-semibold text-teal-800"
+                                              x-text="'~' + composition.totals.kcal + ' kcal'"></span>
+                                        <span x-show="composition?.totals?.meal_budget" class="ml-1 text-stone-500"
+                                              x-text="'· mục tiêu ~' + composition.totals.meal_budget + ' kcal'"></span>
+                                        <span x-show="composition?.totals?.within_band === true"
+                                              class="ml-1.5 rounded-full bg-teal-100 px-1.5 py-0.5 text-[10px] font-semibold text-teal-900"
+                                              x-text="labels.plate_band_ok"></span>
+                                        <span x-show="composition?.totals?.within_band === false"
+                                              class="ml-1.5 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-950"
+                                              x-text="labels.plate_band_off"></span>
+                                    </p>
+                                </template>
+                                <template x-if="composition?.totals && !composition.totals.all_have_kcal">
+                                    <p class="text-amber-900/90" x-text="labels.plate_totals_incomplete || labels.fact_missing"></p>
+                                </template>
                             </div>
                             <ul x-show="composition?.plate_reasons?.length" class="list-inside list-disc text-[11px] text-stone-500">
-                                <template x-for="(pr, i) in (composition?.plate_reasons || [])" :key="i">
+                                <template x-for="(pr, i) in (composition?.plate_reasons || []).slice(0, 3)" :key="i">
                                     <li x-text="pr"></li>
                                 </template>
                             </ul>
@@ -684,6 +718,7 @@
                     caloriePresets: config.calorieMeta?.presets ?? [1500, 2000, 2500],
                     profileEditUrl: config.profileEditUrl ?? '/profile/edit',
                     lastMealBudget: null,
+                    lastPlateSignature: null,
                     dishes: [],
                     composition: null,
                     detail: null,
@@ -846,7 +881,11 @@
                         this.error = null;
                         this.metaMessage = null;
                         this.view = 'results';
-                        const exclude_ids = reroll ? this.dishes.map((d) => d.id) : [];
+                        const exclude_ids = reroll ? this.dishes.map((d) => d.id).filter(Boolean) : [];
+                        const exclude_plate_signatures = [];
+                        if (reroll && this.lastPlateSignature) {
+                            exclude_plate_signatures.push(this.lastPlateSignature);
+                        }
                         try {
                             const body = {
                                 meal_slot: this.meal_slot,
@@ -857,6 +896,9 @@
                                 target_calories: this.target_calories || this.defaults.target_calories || 2000,
                                 exclude_ids,
                             };
+                            if (exclude_plate_signatures.length) {
+                                body.exclude_plate_signatures = exclude_plate_signatures;
+                            }
                             if (this.culinary_region) {
                                 body.culinary_region = this.culinary_region;
                             }
@@ -887,10 +929,14 @@
                             this.metaMessage = json.meta?.message || null;
                             this.logId = json.meta?.log_id || null;
                             this.lastMealBudget = json.meta?.meal_budget ?? null;
+                            this.lastPlateSignature = this.composition?.signature || null;
                             this.chosenId = null;
-                            if (!this.dishes.length) {
-                                this.view = 'form';
-                                this.error = json.meta?.message || this.labels.error_generic;
+                            // Keep results view for empty state UI (filter hints); only bounce on hard error
+                            if (!this.dishes.length && !this.composition) {
+                                this.error = null;
+                                if (!this.metaMessage) {
+                                    this.metaMessage = this.labels.error_generic;
+                                }
                             }
                         } catch (e) {
                             this.error = this.labels.error_generic;

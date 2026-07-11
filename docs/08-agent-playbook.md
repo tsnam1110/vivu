@@ -71,6 +71,10 @@
   [`features/what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md) và
   [`features/what-to-eat-dish-catalog.md`](features/what-to-eat-dish-catalog.md)
   (inventory món — cập nhật **trước** khi ghi JSON seed).
+- **What to Eat — việc tiếp theo:** backlog S0–S5 + checklist tại
+  [`features/what-to-eat-next-plan.md`](features/what-to-eat-next-plan.md);
+  **một task = một prompt** trong [`agent-prompts/what-to-eat/`](agent-prompts/what-to-eat/).
+  Khi xong task: cập nhật checklist §6 của next-plan.
 
 ## 6. Khi thêm một tính năng mới (checklist)
 

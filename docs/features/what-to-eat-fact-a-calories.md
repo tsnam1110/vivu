@@ -44,16 +44,16 @@ php artisan what-to-eat:seed-report
 
 ---
 
-## 3. Lô hiện tại (`2.3.0-fact-a`) — **116 / 182** có calo
+## 3. Lô hiện tại (`2.4.0-fact-a`) — **~130 / 189** có calo
 
 | Metric | Count | Ghi chú |
 |---|---:|---|
-| Có `calories_kcal` | **116** | ~64% published |
-| Null calo | **~66** | chủ đích (share feast, biến thiên cao…) |
+| Có `calories_kcal` | **~130** | overlay by_slug; seed catalog ~189 (S5) |
+| Null calo | còn lại | chủ đích (share feast, biến thiên cao…) |
 | `confidence: high` | **9** | sau phase B |
 | Còn `fdc_id` trên fact calo | **~13** | nhiều dòng VN ghi đè mất FDC |
-| `fct_source: vn_2007` | **35** | pilot phase A+B |
-| `method: recipe_sum` | **~99** | |
+| `fct_source: vn_2007` | tăng sau S2-01 | bowls + one_bowl mới |
+| `method: recipe_sum` | **~113** | +14 one_bowl S2-01 |
 | `method: fct_table` | **~17** | |
 
 ### 3.0 Phân tầng
@@ -122,16 +122,33 @@ UI: `calorie_source` (method, portion_note, limitations).
 
 ---
 
-## 4. Việc tiếp theo
+## 4. Audit provenance (S2-02 — 2026-07-12)
+
+| Nhóm | Đánh giá | Hành động |
+|---|---|---|
+| `method` ∈ {`fct_table`,`recipe_sum`} | strong | Giữ |
+| `source_ref` dạng `vivu-standard-v1+vn:{slug}` + breakdown FCT | strong (medium conf) | Giữ |
+| `source_ref` FDC id / food_code VN cố định | strong | Giữ high/medium |
+| Proxy ingredient (miến→bún, cao lầu→bánh phở, ốc→heo) | weak-medium | Ghi `limitations`; **không** nâng high |
+| Share-feast / lẩu | null | Không bịa |
+
+**S2-01 thêm 14 one_bowl** (medium, recipe_sum, FCT VN components):  
+`mi-quang`, `bo-kho`, `banh-xeo`, `bun-moc`, `bun-thang`, `mien-ga`, `banh-bao`,  
+`banh-gio`, `com-ga-hoi-an`, `bun-dau-mam-tom`, `cao-lau`, `banh-canh-cua`,  
+`bun-oc`, `com-ga-xoi-mo`.
+
+Outlier check: trà/cà phê ~0–2 kcal/250ml — expected; bánh bao ~2.3 kcal/g — still medium street estimate.
+
+## 5. Việc tiếp theo
 
 1. Đo yield cơm/xôi thực tế → siết high cho gạo chín.  
 2. Giữ / mở rộng `fdc_id` trên dòng **không** bị pilot VN thay.  
-3. Chuyển nốt bánh cuốn / mì khi có FCT phù hợp.  
+3. Thay proxy miến/ốc khi có food_code FCT.  
 4. Inventory Status → `partial_facts` cho slug đã overlay.
 
 ---
 
-## 5. Changelog
+## 6. Changelog
 
 | Ngày | Thay đổi |
 |---|---|
@@ -140,3 +157,4 @@ UI: `calorie_source` (method, portion_note, limitations).
 | 2026-07-11 | `2.1.0`: FDC lock ~29 / pure high ~14 (peak trước VN overwrite) |
 | 2026-07-11 | `2.2.0`–`2.3.0`: FCT VN pilot + yield + bowls; **high còn 9**, vn=35 |
 | 2026-07-12 | Sync doc + `implicit_rice_kcal=206`; bảng mẫu theo data 2.3.0 |
+| 2026-07-12 | `2.4.0-fact-a`: +14 one_bowl S2-01; audit provenance S2-02 |

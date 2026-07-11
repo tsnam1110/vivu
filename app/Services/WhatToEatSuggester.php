@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Enums\CulinaryRegion;
 use App\Enums\FiveElement;
 use App\Enums\MealMode;
 use App\Enums\MealSize;
@@ -35,7 +36,8 @@ class WhatToEatSuggester
      *     meal_budget: int|null,
      *     suggest_mode: string,
      *     composition: array<string, mixed>|null,
-     *     message: string|null
+     *     message: string|null,
+     *     relaxations: list<string>
      * }
      */
     public function suggest(
@@ -51,6 +53,7 @@ class WhatToEatSuggester
         ?int $targetCalories = null,
         SuggestMode|string $suggestMode = SuggestMode::Auto,
         ?string $culinaryRegion = null,
+        array $excludePlateSignatures = [],
     ): array {
         $slot = $mealSlot instanceof MealSlot ? $mealSlot : MealSlot::from($mealSlot);
         $size = $mealSize instanceof MealSize ? $mealSize : MealSize::from($mealSize);
@@ -58,6 +61,7 @@ class WhatToEatSuggester
         $modeReq = $suggestMode instanceof SuggestMode ? $suggestMode : SuggestMode::from($suggestMode);
         $count = max(Dish::COUNT_MIN, min(Dish::COUNT_MAX, $count));
         $excludeIds = array_values(array_unique(array_map('intval', $excludeIds)));
+        $excludePlateSignatures = array_values(array_unique(array_filter(array_map('strval', $excludePlateSignatures))));
         $culinaryRegion = $culinaryRegion !== null && $culinaryRegion !== '' ? $culinaryRegion : null;
 
         if ($targetCalories === null && $user) {
@@ -71,8 +75,9 @@ class WhatToEatSuggester
             : null;
 
         $pref = $user ? $this->preferenceFor($user) : null;
+        $softYhct = (bool) ($pref?->balance_elements);
         $recentIds = $user ? $this->recentDishIds($user, 7) : [];
-        $missingElements = ($user && $pref?->balance_elements)
+        $missingElements = ($user && $softYhct)
             ? $this->missingElements($user, 7)
             : [];
 
@@ -86,7 +91,7 @@ class WhatToEatSuggester
         $resolvedMode = $this->resolveSuggestMode($modeReq, $slot, $size, $mode, $count);
 
         // Compose: không lọc meal_size (canh/rau có thể supports_light only nhưng thuộc mâm chính).
-        $candidates = $this->loadCandidates(
+        $loaded = $this->loadCandidates(
             $slot,
             $size,
             $mode,
@@ -96,9 +101,11 @@ class WhatToEatSuggester
             $culinaryRegion,
             skipSizeFilter: $resolvedMode === SuggestMode::Compose,
         );
+        $candidates = $loaded['candidates'];
+        $relaxations = $loaded['relaxations'];
 
         if ($candidates->isEmpty()) {
-            return $this->emptyResponse($count, $targetCalories, $mealBudget, $resolvedMode);
+            return $this->emptyResponse($count, $targetCalories, $mealBudget, $resolvedMode, $relaxations);
         }
 
         $composition = null;
@@ -117,6 +124,8 @@ class WhatToEatSuggester
                 recentIds: $recentIds,
                 missingElements: $missingElements,
                 mealBudget: $mealBudget,
+                excludePlateSignatures: $excludePlateSignatures,
+                softYhct: $softYhct,
             );
 
             if ($composed['ok'] && $composed['dishes'] !== [] && ! $composed['partial']) {
@@ -134,6 +143,12 @@ class WhatToEatSuggester
                 $resolvedMode = SuggestMode::Pick;
                 $message = __('what_to_eat.compose_fallback_pick');
             }
+
+            // Reroll: pool hẹp → signature có thể trùng exclude list
+            $sig = $composition['signature'] ?? null;
+            if (is_string($sig) && $sig !== '' && in_array($sig, $excludePlateSignatures, true)) {
+                $relaxations[] = 'plate_signature';
+            }
         }
 
         if ($resolvedMode === SuggestMode::Pick || $pickedDishes->isEmpty()) {
@@ -145,10 +160,20 @@ class WhatToEatSuggester
                 ->sortByDesc('score')
                 ->values();
 
-            $picked = $this->pickTopWithJitter($scored, $count);
+            $picked = $this->pickTopWithJitterDiversity($scored, $count);
             $pickedDishes = $picked->map(fn (array $row) => $row['dish']);
             $partial = $pickedDishes->count() < $count;
             $resolvedMode = SuggestMode::Pick;
+        }
+
+        $relaxations = array_values(array_unique($relaxations));
+        if ($message === null && $relaxations !== []) {
+            $message = $this->buildRelaxationMessage($relaxations, $culinaryRegion);
+        } elseif ($message !== null && $relaxations !== []) {
+            $relaxMsg = $this->buildRelaxationMessage($relaxations, $culinaryRegion);
+            if ($relaxMsg !== null) {
+                $message = $message.' '.$relaxMsg;
+            }
         }
 
         $reason = $this->buildReason($slot, $size, $mode, $mealBudget, $resolvedMode);
@@ -211,6 +236,8 @@ class WhatToEatSuggester
                         'template_id' => $composition['template_id'],
                         'signature' => $composition['signature'],
                     ] : null,
+                    'exclude_plate_signatures' => $excludePlateSignatures,
+                    'soft_yhct' => $softYhct,
                     'ruleset_version' => config('what_to_eat.ruleset_version'),
                 ],
                 'suggested_dish_ids' => array_column($cards, 'id'),
@@ -231,6 +258,7 @@ class WhatToEatSuggester
             'suggest_mode' => $resolvedMode->value,
             'composition' => $composition,
             'message' => $message,
+            'relaxations' => $relaxations,
         ];
     }
 
@@ -333,12 +361,21 @@ class WhatToEatSuggester
             return SuggestMode::Compose; // standalone_1
         }
 
+        // Auto: dine_out + count≥2 → feast template (share_feast); pool thiếu → fallback pick
+        if ($mode === MealMode::DineOut && $size === MealSize::Main && $count >= 2) {
+            return SuggestMode::Compose;
+        }
+
         return SuggestMode::Pick;
     }
 
     /**
+     * Load candidates with ordered soft-relax. Never silent: each step appends a relaxation code.
+     *
+     * Order: strict → drop exclude_ids → drop meal_budget cap → drop culinary_region.
+     *
      * @param  list<int>  $excludeIds
-     * @return Collection<int, Dish>
+     * @return array{candidates: Collection<int, Dish>, relaxations: list<string>}
      */
     private function loadCandidates(
         MealSlot $slot,
@@ -349,19 +386,35 @@ class WhatToEatSuggester
         array $excludeIds,
         ?string $culinaryRegion,
         bool $skipSizeFilter = false,
-    ): Collection {
+    ): array {
+        $relaxations = [];
+
         $candidates = $this->baseQuery($slot, $size, $mode, $pref, $mealBudget, $culinaryRegion, $skipSizeFilter)
             ->when($excludeIds !== [], fn ($q) => $q->whereNotIn('id', $excludeIds))
             ->get();
 
         if ($candidates->isEmpty() && $excludeIds !== []) {
             $candidates = $this->baseQuery($slot, $size, $mode, $pref, $mealBudget, $culinaryRegion, $skipSizeFilter)->get();
+            if ($candidates->isNotEmpty()) {
+                $relaxations[] = 'exclude_ids';
+            }
         }
 
         if ($candidates->isEmpty() && $mealBudget !== null) {
             $candidates = $this->baseQuery($slot, $size, $mode, $pref, null, $culinaryRegion, $skipSizeFilter)
                 ->when($excludeIds !== [], fn ($q) => $q->whereNotIn('id', $excludeIds))
                 ->get();
+            if ($candidates->isNotEmpty()) {
+                $relaxations[] = 'meal_budget';
+            }
+            // If still empty with excludes, try budget drop without excludes
+            if ($candidates->isEmpty() && $excludeIds !== []) {
+                $candidates = $this->baseQuery($slot, $size, $mode, $pref, null, $culinaryRegion, $skipSizeFilter)->get();
+                if ($candidates->isNotEmpty()) {
+                    $relaxations[] = 'meal_budget';
+                    $relaxations[] = 'exclude_ids';
+                }
+            }
         }
 
         // Region filter soft-relax if empty
@@ -369,12 +422,69 @@ class WhatToEatSuggester
             $candidates = $this->baseQuery($slot, $size, $mode, $pref, $mealBudget, null, $skipSizeFilter)
                 ->when($excludeIds !== [], fn ($q) => $q->whereNotIn('id', $excludeIds))
                 ->get();
+            if ($candidates->isNotEmpty()) {
+                $relaxations[] = 'culinary_region';
+            }
+            if ($candidates->isEmpty()) {
+                $candidates = $this->baseQuery($slot, $size, $mode, $pref, null, null, $skipSizeFilter)->get();
+                if ($candidates->isNotEmpty()) {
+                    $relaxations[] = 'culinary_region';
+                    if ($mealBudget !== null) {
+                        $relaxations[] = 'meal_budget';
+                    }
+                    if ($excludeIds !== []) {
+                        $relaxations[] = 'exclude_ids';
+                    }
+                }
+            }
         }
 
-        return $candidates;
+        return [
+            'candidates' => $candidates,
+            'relaxations' => array_values(array_unique($relaxations)),
+        ];
     }
 
     /**
+     * @param  list<string>  $relaxations
+     */
+    private function buildRelaxationMessage(array $relaxations, ?string $culinaryRegion): ?string
+    {
+        if ($relaxations === []) {
+            return null;
+        }
+
+        $parts = [];
+        if (in_array('culinary_region', $relaxations, true)) {
+            $label = '';
+            if ($culinaryRegion !== null) {
+                try {
+                    $label = CulinaryRegion::from($culinaryRegion)->label();
+                } catch (\ValueError) {
+                    $label = $culinaryRegion;
+                }
+            }
+            $parts[] = $label !== ''
+                ? __('what_to_eat.relax_region', ['region' => $label])
+                : __('what_to_eat.relax_region_generic');
+        }
+        if (in_array('meal_budget', $relaxations, true)) {
+            $parts[] = __('what_to_eat.relax_budget');
+        }
+        if (in_array('exclude_ids', $relaxations, true)) {
+            $parts[] = __('what_to_eat.relax_exclude');
+        }
+        if (in_array('plate_signature', $relaxations, true)) {
+            $parts[] = __('what_to_eat.reroll_same_plate');
+        }
+
+        $parts = array_values(array_filter($parts));
+
+        return $parts === [] ? null : implode(' ', $parts);
+    }
+
+    /**
+     * @param  list<string>  $relaxations
      * @return array{
      *     dishes: list<array<string, mixed>>,
      *     partial: bool,
@@ -385,11 +495,17 @@ class WhatToEatSuggester
      *     meal_budget: int|null,
      *     suggest_mode: string,
      *     composition: null,
-     *     message: null
+     *     message: null,
+     *     relaxations: list<string>
      * }
      */
-    private function emptyResponse(int $count, ?int $targetCalories, ?int $mealBudget, SuggestMode $mode): array
-    {
+    private function emptyResponse(
+        int $count,
+        ?int $targetCalories,
+        ?int $mealBudget,
+        SuggestMode $mode,
+        array $relaxations = [],
+    ): array {
         return [
             'dishes' => [],
             'partial' => true,
@@ -401,6 +517,7 @@ class WhatToEatSuggester
             'suggest_mode' => $mode->value,
             'composition' => null,
             'message' => null,
+            'relaxations' => array_values(array_unique($relaxations)),
         ];
     }
 
@@ -538,6 +655,70 @@ class WhatToEatSuggester
         $bandSize = min($scored->count(), max($count * 3, $count + 4));
 
         return $scored->take($bandSize)->shuffle()->take($count)->values();
+    }
+
+    /**
+     * Pick with soft diversity on protein_source / cooking_method inside top band.
+     *
+     * @param  Collection<int, array{dish: Dish, score: float}>  $scored
+     * @return Collection<int, array{dish: Dish, score: float}>
+     */
+    private function pickTopWithJitterDiversity(Collection $scored, int $count): Collection
+    {
+        if ($scored->count() <= $count) {
+            return $scored;
+        }
+
+        $bandSize = min($scored->count(), max($count * 4, $count + 6));
+        $band = $scored->take($bandSize)->values();
+        $picked = collect();
+        $usedIds = [];
+        $proteins = [];
+        $fryCount = 0;
+
+        // Greedy soft: prefer diverse protein, avoid second fry when alternatives exist
+        $remaining = $band->shuffle()->values();
+        while ($picked->count() < $count && $remaining->isNotEmpty()) {
+            $bestIdx = 0;
+            $bestAdj = -INF;
+            foreach ($remaining as $i => $row) {
+                /** @var Dish $dish */
+                $dish = $row['dish'];
+                if (in_array($dish->id, $usedIds, true)) {
+                    continue;
+                }
+                $adj = (float) $row['score'];
+                $ps = $dish->protein_source?->value;
+                if ($ps !== null && in_array($ps, $proteins, true) && ! in_array($ps, ['plant', 'none'], true)) {
+                    $adj -= 12;
+                } elseif ($ps !== null && $proteins !== [] && ! in_array($ps, $proteins, true)) {
+                    $adj += 5;
+                }
+                if ($dish->cooking_method?->value === 'fry' && $fryCount >= 1) {
+                    $adj -= 18;
+                }
+                if ($adj > $bestAdj) {
+                    $bestAdj = $adj;
+                    $bestIdx = $i;
+                }
+            }
+            $chosen = $remaining->get($bestIdx);
+            if ($chosen === null) {
+                break;
+            }
+            $picked->push($chosen);
+            $dish = $chosen['dish'];
+            $usedIds[] = $dish->id;
+            if ($dish->protein_source !== null) {
+                $proteins[] = $dish->protein_source->value;
+            }
+            if ($dish->cooking_method?->value === 'fry') {
+                $fryCount++;
+            }
+            $remaining = $remaining->reject(fn ($r, $i) => $i === $bestIdx)->values();
+        }
+
+        return $picked->values();
     }
 
     private function buildReason(

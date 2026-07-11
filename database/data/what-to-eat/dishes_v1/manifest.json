@@ -1,23 +1,25 @@
 {
-    "kb_version": "1.2.1-fix",
-    "ruleset_min": "0.2.0",
+    "kb_version": "1.2.2-s5",
+    "ruleset_min": "0.3.0",
     "split": "dish_role",
     "seed_phase": "P0+P1+P2",
     "region_field": "region_tags",
     "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
-    "description": "Seed P0+P1+P2 + fix: lẩu cook_home=false; bổ sung main/veg/soup Trung–Bắc; món ngoai demo. Fact III mostly null.",
+    "description": "Seed P0+P1+P2 + S5: soup Bắc + món Tây Nguyên skeleton. Counts = seed_phase sum. Fact-A overlay riêng.",
     "quality_notes": [
         "no_invented_calories_or_tcm",
         "p3_remains_inventory_candidate",
         "cook_home_false_for_hard_restaurant_signatures",
         "share_feast_hotpot_cook_home_false",
         "compose_pool_trung_bac_reinforced",
-        "ngoai_demo_dishes"
+        "ngoai_demo_dishes",
+        "phase_counts_match_seed_phase_field",
+        "s5_bac_soup_and_tay_nguyen"
     ],
-    "dish_count": 182,
+    "dish_count": 189,
     "p0_count": 51,
     "p1_count": 80,
-    "p2_count": 41,
+    "p2_count": 58,
     "files": [
         "dishes_v1_one_bowl.json",
         "dishes_v1_soup.json",

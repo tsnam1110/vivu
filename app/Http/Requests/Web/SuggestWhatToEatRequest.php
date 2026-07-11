@@ -37,6 +37,8 @@ class SuggestWhatToEatRequest extends FormRequest
             'culinary_region' => ['nullable', 'string', Rule::enum(CulinaryRegion::class)],
             'exclude_ids' => ['nullable', 'array', 'max:50'],
             'exclude_ids.*' => ['integer', 'min:1'],
+            'exclude_plate_signatures' => ['nullable', 'array', 'max:20'],
+            'exclude_plate_signatures.*' => ['string', 'max:120'],
             'lat' => ['nullable', 'numeric', 'between:-90,90'],
             'lng' => ['nullable', 'numeric', 'between:-180,180'],
             'target_calories' => [
@@ -76,6 +78,17 @@ class SuggestWhatToEatRequest extends FormRequest
         $ids = $this->validated('exclude_ids');
 
         return array_values($ids ?? []);
+    }
+
+    /**
+     * @return list<string>
+     */
+    public function excludePlateSignatures(): array
+    {
+        /** @var list<string>|null $sigs */
+        $sigs = $this->validated('exclude_plate_signatures');
+
+        return array_values(array_filter(array_map('strval', $sigs ?? [])));
     }
 
     public function targetCalories(): ?int

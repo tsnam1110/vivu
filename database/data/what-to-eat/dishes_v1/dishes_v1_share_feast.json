@@ -1,6 +1,6 @@
 {
-    "kb_version": "1.2.1-fix",
-    "ruleset_min": "0.2.0",
+    "kb_version": "1.2.2-s5",
+    "ruleset_min": "0.3.0",
     "shard": "share_feast",
     "seed_phase": "P0+P1+P2",
     "inventory_doc": "docs/features/what-to-eat-dish-catalog.md",
@@ -522,6 +522,49 @@
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "seed-P2"
+                }
+            ]
+        },
+        {
+            "slug": "lau-bo-kho-tay-nguyen",
+            "name": "Lẩu bò kho Tây Nguyên",
+            "emoji": "🍲",
+            "summary": "Lẩu bò / bò kho kiểu chia sẻ — Tây Nguyên (demo dine-out).",
+            "meal_slots": [
+                "lunch",
+                "dinner"
+            ],
+            "supports_light": false,
+            "supports_main": true,
+            "supports_dine_out": true,
+            "supports_cook_home": false,
+            "dish_role": "share_feast",
+            "region_tags": [
+                "tay_nguyen"
+            ],
+            "search_keywords": "lau bo kho tay nguyen",
+            "seed_phase": "P2",
+            "calories_kcal": null,
+            "serving_grams": null,
+            "five_element": null,
+            "thermal_nature": null,
+            "protein_source": null,
+            "cooking_method": null,
+            "flavor_tags": null,
+            "ingredients": null,
+            "steps": null,
+            "benefits": null,
+            "harms": null,
+            "advice": null,
+            "facts": [
+                {
+                    "field": "dish_role",
+                    "method": "committee",
+                    "source_ref": "docs/features/what-to-eat-dish-catalog.md#seed-S5",
+                    "source_title": "ViVu dish catalog S5 Bắc / Tây Nguyên",
+                    "confidence": "high",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "seed-S5"
                 }
             ]
         }

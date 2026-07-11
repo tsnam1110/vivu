@@ -33,6 +33,8 @@ class WhatToEatController extends Controller
         $lat = $request->filled('lat') ? (float) $request->validated('lat') : null;
         $lng = $request->filled('lng') ? (float) $request->validated('lng') : null;
 
+        $culinaryRegion = $request->culinaryRegion();
+
         $result = $this->suggester->suggest(
             mealSlot: $request->validated('meal_slot'),
             mealSize: $request->validated('meal_size'),
@@ -44,16 +46,26 @@ class WhatToEatController extends Controller
             lng: $lng,
             targetCalories: $request->targetCalories(),
             suggestMode: $request->suggestMode(),
-            culinaryRegion: $request->culinaryRegion(),
+            culinaryRegion: $culinaryRegion,
+            excludePlateSignatures: $request->excludePlateSignatures(),
         );
 
         $catalogEmpty = \App\Models\Dish::query()->published()->count() === 0;
+        /** @var list<string> $relaxations */
+        $relaxations = $result['relaxations'] ?? [];
 
         $message = $result['message'] ?? null;
         if ($result['dishes'] === []) {
-            $message = $catalogEmpty
-                ? __('what_to_eat.empty_catalog')
-                : __('what_to_eat.empty');
+            if ($catalogEmpty) {
+                $message = __('what_to_eat.empty_catalog');
+            } elseif ($culinaryRegion !== null) {
+                // Strict empty for region only if we never relaxed region successfully
+                $message = in_array('culinary_region', $relaxations, true)
+                    ? __('what_to_eat.empty_filter')
+                    : __('what_to_eat.empty_region');
+            } else {
+                $message = __('what_to_eat.empty_filter');
+            }
         } elseif ($result['partial'] && $message === null) {
             $message = __('what_to_eat.partial', ['count' => count($result['dishes'])]);
         }
@@ -72,6 +84,7 @@ class WhatToEatController extends Controller
                 'suggest_mode' => $result['suggest_mode'],
                 'composition' => $result['composition'],
                 'message' => $message,
+                'relaxations' => $relaxations,
             ],
         ]);
     }

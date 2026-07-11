@@ -17,25 +17,21 @@ Liên quan: [`../03-domain-model.md`](../03-domain-model.md),
 | [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) | **Chuẩn seed verified-only**, null khi chưa xác thực, pipeline thêm món hàng loạt, provenance, UGC lấp trống |
 | [`what-to-eat-dish-catalog.md`](what-to-eat-dish-catalog.md) | **Danh mục món ứng viên** (inventory): slug, role, **vùng miền**, ưu tiên seed P0–P3 — chốt trước khi ghi JSON |
 | [`what-to-eat-fact-a-calories.md`](what-to-eat-fact-a-calories.md) | **Fact-A** calo verified (FCT + recipe_sum + vivu-standard-v1) |
-| [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) | **Kế hoạch hoàn thiện** fact (tầng 0–6, FCT VN, DoD) |
+| [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md) | **Kế hoạch data dài** fact (tầng 0–6, FCT VN, DoD) |
+| [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md) | **⭐ Kế hoạch sprint tiếp theo** (S0–S5, 15 task, Agent) |
+| [`../agent-prompts/what-to-eat/`](../agent-prompts/what-to-eat/) | **Prompt copy-paste** từng task cho AI Agent |
 | [`what-to-eat-fct-vn.md`](what-to-eat-fct-vn.md) | Map nguyên liệu FCT Việt Nam (bootstrap) |
 | [`what-to-eat-yhct.md`](what-to-eat-yhct.md) | YHCT hàn–nhiệt / ngũ hành (expert-gated) |
 
-> **Trạng thái:** Phase **A–D** + **engine compose 0.2.0** đã implement (popup, catalog,
-> UGC + admin, history/prefs, match Experience, **MealComposer** mâm canh–mặn–rau,
-> filter vùng miền). Calo gắn **serving_grams** khi có fact. Form: bữa · nhẹ/chính ·
-> ngoài/nấu · **kiểu gợi ý** · **vùng** · count · mục tiêu kcal/ngày. Phase E social — backlog.  
-> **Chuẩn dữ liệu:** verified-only seed — [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md).  
-> **Seed P0+P1+P2+fix:** **182** món skeleton (`1.2.1-fix`) + role + region.  
-> **Fact-A:** **116**/182 calo (`2.3.0-fact-a`; null ~66; high **9**; FCT VN pilot **35**; `com-trang`/implicit rice **206**).  
-> **Ops-A:** **182** `cooking_method` + `protein_source`.  
-> **Recipe text:** **155** cook_home ingredients/steps.  
-> **YHCT:** **10** medium `tcm_text` (chờ expert); queue món phức tạp.  
-> **FCT VN:** ~35 nguyên liệu + yield; standard bowls `1.1.0-vn` (bún/phở/cơm tấm…).  
-> Plan: [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md).  
-> **Ruleset:** `0.2.0` — [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md).  
-> **Nguyên tắc:** không claim chữa bệnh; không bịa fact.  
-> **Vị trí sản phẩm:** **Tính năng phụ (utility)** — popup trên Kho.
+> **Trạng thái (2026-07-12, sau S0–S5 + P0 follow-up):** Phase **A–D** + **engine compose `0.3.0`** ✅  
+> (popup Kho, catalog, UGC, history/prefs, Experience match, MealComposer, filter vùng, soft diversity, dine-out feast).  
+> **Seed:** **189** món (`1.2.2-s5`; manifest P0=51 · P1=80 · P2=58) — role/region/ops **100%**; calo overlay **130** (~69%); recipe **155** (~82%); YHCT pilot **10**.  
+> Chạy `php artisan what-to-eat:seed-report` để số liệu live.  
+> **Kế hoạch sprint:** [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md) (S0–S5 done).  
+> **Data dài hạn (tầng fact):** [`what-to-eat-fact-completion-plan.md`](what-to-eat-fact-completion-plan.md).  
+> **Ruleset:** `0.3.0` (`config/what_to_eat.php` + meta API). Soft-relax filter **có message** (`meta.relaxations`).  
+> **Nguyên tắc:** verified-only; không claim y khoa.  
+> **Vị trí:** tính năng **phụ** trên Kho — không tab floating nav. Phase E social — backlog.
 
 ---
 
@@ -342,11 +338,21 @@ Nguyên tắc giống taste-matching: **không ML** ở v1.
 | Tình huống | Xử lý |
 |---|---|
 | `count` ngoài 1–5 | Clamp hoặc 422 Form Request |
-| Pool < count | Trả số món có được; UI: “Chỉ tìm thấy N món phù hợp” |
-| Không còn món sau filter | Nới lần lượt: bỏ max_calories → bỏ element → cho phép món thiếu recipe (cook) → empty state trong popup |
-| User spam “Gợi ý lại” | Exclude `suggested_dish_ids` của phiên popup hiện tại; hết pool thì reset + báo |
-| Guest | Phase A: nút chỉ trên Kho (auth). Endpoint suggest CÓ THỂ public cho sau |
-| Món hidden giữa chừng | Bỏ khỏi gợi ý; chi tiết 404/410 |
+| Pool < count | Trả số món có được; UI: “Chỉ tìm thấy N món phù hợp” (`partial`) |
+| Không còn món sau filter **strict** | **Soft-relax có thứ tự** (không im lặng): (1) bỏ `exclude_ids` → (2) bỏ trần `meal_budget` → (3) bỏ `culinary_region`. Mỗi bước ghi code vào `meta.relaxations` + câu `meta.message` tiếng Việt. |
+| Vẫn rỗng sau nới | Empty state: `empty_catalog` / `empty_region` / `empty_filter` + gợi ý đổi filter |
+| User spam “Gợi ý lại” | `exclude_ids` + `exclude_plate_signatures`; retry compose; hết combo → có thể lặp + `reroll_same_plate` / `relax_exclude` |
+| Guest | Nút chỉ trên Kho (auth) |
+| Món hidden giữa chừng | Bỏ khỏi gợi ý; chi tiết 404 |
+
+**Mã `meta.relaxations` (0.3.0+):**
+
+| Code | Ý nghĩa UI |
+|---|---|
+| `culinary_region` | Đã nới vùng đã chọn → mọi vùng |
+| `meal_budget` | Đã nới trần calo theo budget bữa |
+| `exclude_ids` | Đã nới danh sách loại trừ (reroll / dislike) |
+| `plate_signature` | Mâm trùng signature exclude (pool hẹp) |
 
 ### 5.3 “Cân bằng ngũ hành” (v1.2 optional)
 
@@ -554,12 +560,24 @@ UI chính **không** cần trang riêng: modal gắn trên Kho. Backend endpoint
 
 | Method | Path | Auth | Mô tả |
 |---|---|---|---|
-| POST | `/what-to-eat/suggest` | auth (v1) | Body: slot, size, mode, `count` → JSON list tóm tắt |
-| GET | `/what-to-eat/dishes/{slug}` | auth hoặc public | Chi tiết đầy đủ (panel fetch hoặc full page) |
-| GET | `/what-to-eat/dishes/{slug}/fragment` | auth | (Tuỳ chọn) HTML partial cho panel Chi tiết |
-| POST | `/what-to-eat/choose` | auth | (Phase C) Ghi món đã chọn |
-| POST | `/what-to-eat/dishes/{dish}/contributions` | auth | (Phase B) Đóng góp |
-| GET | `/what-to-eat/history` | auth | (Phase C) Lịch sử — trang phụ, không phải entry chính |
+| POST | `/what-to-eat/suggest` | auth | Body: slot, size, mode, `count`, optional `culinary_region`, `exclude_ids`, `exclude_plate_signatures`, `target_calories`, `suggest_mode` → `data[]` + `meta` |
+| GET | `/what-to-eat/dishes/{slug}` | auth | Chi tiết (panel fetch) |
+| POST | `/what-to-eat/choose` | auth | Ghi món đã chọn |
+| POST | `/what-to-eat/dishes/{dish}/contributions` | auth | Đóng góp |
+| GET | `/what-to-eat/history` | auth | Lịch sử + prefs (trang phụ) |
+
+**`meta` gợi ý (suggest) — contract hiện tại:**
+
+| Key | Ý nghĩa |
+|---|---|
+| `ruleset_version` | Semver, vd `0.3.0` |
+| `suggest_mode` | `pick` \| `compose` (sau resolve auto) |
+| `composition` | Mâm (null nếu pick) — có `signature`, `totals`, `explanations` |
+| `message` | Thông báo user (partial, compose fallback, **soft-relax**, empty) |
+| `relaxations` | `string[]` mã nới filter (có thể rỗng) |
+| `partial` | Pool < count hoặc mâm thiếu slot |
+| `meal_budget` / `target_calories` | Ngân sách bữa / ngày |
+| `catalog_empty` | true nếu 0 published dishes |
 
 **Không** coi `GET /what-to-eat` full-page wizard là DoD.
 
@@ -730,3 +748,49 @@ Tóm tắt:
 8. **Seed / rule / fact món:** tuân
    [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) +
    [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md) — không đoán field nhạy cảm.
+
+---
+
+## 18. Checklist release / verify local (What to Eat)
+
+> Dùng trước khi merge hoặc sau khi đụng seed / engine / UX modal.  
+> Lệnh chạy từ **root repo**. Không chạy `migrate:fresh` ngoài máy local.
+
+### 18.1 Lệnh bắt buộc
+
+```bash
+php artisan migrate
+php artisan db:seed --class=DishSeeder
+php artisan what-to-eat:seed-report
+php artisan test --filter="WhatToEat|MealComposer|DishCatalog|DishCalorie"
+```
+
+**Ngưỡng seed-report kỳ vọng (system dishes):**
+
+| Chỉ số | Ngưỡng |
+|---|---|
+| `dish_role` coverage | **100%** |
+| `region_tags` / vùng | **100%** |
+| `cooking_method` + `protein_source` (ops) | ~100% |
+| `calories_kcal` + `serving_grams` | có thể <100% (null = chưa verified) |
+| `skipped_sensitive` khi import | **0** |
+
+### 18.2 Manual smoke (sau task UX / engine)
+
+1. Login user → **Kho** → «Hôm nay ăn gì?»
+2. **Tự nấu · Ăn chính · count 3 · auto/compose** → mâm canh–mặn–rau (hoặc partial rõ ràng)
+3. Lọc vùng **Trung / Bắc / Ngoại** — nếu pool vùng hẹp: vẫn có món **và** banner `meta.message` nói đã nới vùng (`relaxations` chứa `culinary_region`)
+4. Chi tiết món có calo → slider gram / kcal
+5. **Gợi ý lại** — mâm/list khác khi pool đủ; pool hẹp có thể báo lặp signature
+6. History + đóng góp (smoke 1 contribution pending); bật/tắt pref dưỡng sinh (default off)
+
+### 18.3 Cấm
+
+- `php artisan migrate:fresh` / `--seed` full reset **ngoài local**
+- Commit `.env`, secret Google Maps, token
+- Bịa calo / YHCT không provenance (verified-only)
+
+### 18.4 Liên kết
+
+- Sprint backlog: [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md) §7  
+- Setup tổng: [`../06-setup-development.md`](../06-setup-development.md)

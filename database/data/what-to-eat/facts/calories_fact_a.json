@@ -1,8 +1,8 @@
 {
-    "kb_version": "2.3.0-fact-a",
+    "kb_version": "2.4.0-fact-a",
     "phase": "Fact-A-max",
-    "description": "Maximum quality-safe calories: fct_table + recipe_sum home + vivu-standard-v1 bowls. Complex share-feast mostly deferred. Not lab-VN certified.",
-    "plan_doc": "docs\/features\/what-to-eat-fact-completion-plan.md",
+    "description": "Maximum quality-safe calories: fct_table + recipe_sum home + vivu-standard-v1 bowls. S2-01 +one_bowl popular. Complex share-feast mostly deferred.",
+    "plan_doc": "docs/features/what-to-eat-fact-completion-plan.md",
     "rules": [
         "fct_table | recipe_sum only",
         "vivu-standard-v1 for street bowls with limitations",
@@ -19,12 +19,12 @@
                     "method": "recipe_sum",
                     "fct_source": "vn_2007",
                     "source_title": "Derived cooked from FCT VN 1004 ÷ yield 2.5",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=17",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=17",
                     "food_code": "1004",
                     "ingredient_id": "vn-com-trang-chin",
                     "per_100g_kcal": 137.6,
                     "serving_grams": 150,
-                    "portion_note": "150g × 137.6\/100g = 206 (yield-derived)",
+                    "portion_note": "150g × 137.6/100g = 206 (yield-derived)",
                     "yield_factor": 2.5,
                     "yield_standard": "vivu-yield-v1",
                     "confidence": "medium",
@@ -47,12 +47,12 @@
                     "method": "recipe_sum",
                     "fct_source": "vn_2007",
                     "source_title": "Derived cooked from FCT VN 1005 ÷ yield 2.5",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=18",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=18",
                     "food_code": "1005",
                     "ingredient_id": "vn-com-gao-lut-chin",
                     "per_100g_kcal": 138,
                     "serving_grams": 150,
-                    "portion_note": "150g × 138.0\/100g = 207 (yield-derived)",
+                    "portion_note": "150g × 138.0/100g = 207 (yield-derived)",
                     "yield_factor": 2.5,
                     "yield_standard": "vivu-yield-v1",
                     "confidence": "medium",
@@ -75,7 +75,7 @@
                     "method": "fct_table",
                     "fct_source": "vn_2007",
                     "source_title": "Bảng TPTP VN 2007 — 10004 Sữa chua (whole milk)",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=466",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=466",
                     "food_code": "10004",
                     "ingredient_id": "vn-sua-chua",
                     "per_100g_kcal": 61,
@@ -84,7 +84,7 @@
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "Sữa chua có đường\/trái cây cao hơn.",
+                    "limitations": "Sữa chua có đường/trái cây cao hơn.",
                     "replaced_from": {
                         "calories_kcal": 92,
                         "method": "fct_table"
@@ -100,7 +100,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Sweet potato, cooked, baked in skin, flesh, without salt",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/168483\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168483/nutrients",
                     "per_100g_kcal": 90,
                     "serving_grams": 200,
                     "portion_note": "200g; 90×2=180",
@@ -108,7 +108,7 @@
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fdc-lock-high",
                     "fdc_id": "168483",
-                    "limitations": "No butter\/sugar.",
+                    "limitations": "No butter/sugar.",
                     "fdc_locked_at": "2026-07-11"
                 }
             ]
@@ -124,7 +124,7 @@
                     "source_title": "FCT VN 2007 recipe_sum — trứng ốp la (9001 + 6002)",
                     "source_ref": "vivu-fct-vn-pilot-v1:trung-op-la",
                     "serving_grams": 53,
-                    "portion_note": "Egg edible 50g (9001 166kcal\/100g)=83; oil absorbed 3g (6002 897)=27; total 110",
+                    "portion_note": "Egg edible 50g (9001 166kcal/100g)=83; oil absorbed 3g (6002 897)=27; total 110",
                     "ingredients_breakdown": [
                         {
                             "name": "Trứng gà toàn phần",
@@ -162,7 +162,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Nuts, coconut water (liquid from coconuts)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/170174\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170174/nutrients",
                     "per_100g_kcal": 19,
                     "serving_grams": 250,
                     "portion_note": "250ml; 19×2.5≈48",
@@ -183,7 +183,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Soymilk original unfortified",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/174270\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174270/nutrients",
                     "per_100g_kcal": 54,
                     "serving_grams": 200,
                     "portion_note": "200ml plain; 54×2=108",
@@ -204,10 +204,10 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Beverages, coffee, brewed, prepared with tap water",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/171890\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171890/nutrients",
                     "per_100g_kcal": 1,
                     "serving_grams": 240,
-                    "portion_note": "240ml black no sugar\/milk",
+                    "portion_note": "240ml black no sugar/milk",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fdc-lock-high",
@@ -225,7 +225,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Beverages, tea, black, brewed, prepared with tap water",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/174873\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174873/nutrients",
                     "per_100g_kcal": 1,
                     "serving_grams": 250,
                     "portion_note": "250ml plain tea",
@@ -247,7 +247,7 @@
                     "method": "fct_table",
                     "fct_source": "vn_2007",
                     "source_title": "Bảng TPTP VN 2007 — 7013 Thịt gà ta (trung bình), phần ăn được",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=317",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=317",
                     "food_code": "7013",
                     "ingredient_id": "vn-thit-ga-ta",
                     "per_100g_kcal": 199,
@@ -256,7 +256,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "FCT là thịt raw trung bình (có da\/mỡ biến thiên); luộc hao nước chưa chỉnh; bỏ da\/gà công nghiệp khác.",
+                    "limitations": "FCT là thịt raw trung bình (có da/mỡ biến thiên); luộc hao nước chưa chỉnh; bỏ da/gà công nghiệp khác.",
                     "replaced_from": {
                         "calories_kcal": 299,
                         "method": "fct_table"
@@ -273,12 +273,12 @@
                     "method": "recipe_sum",
                     "fct_source": "vn_2007",
                     "source_title": "Derived cooked from FCT VN 1001 ÷ yield 2.2",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=14",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=14",
                     "food_code": "1001",
                     "ingredient_id": "vn-xoi-nep-chin",
                     "per_100g_kcal": 156.4,
                     "serving_grams": 150,
-                    "portion_note": "150g × 156.4\/100g = 235 (yield-derived)",
+                    "portion_note": "150g × 156.4/100g = 235 (yield-derived)",
                     "yield_factor": 2.2,
                     "yield_standard": "vivu-yield-v1",
                     "confidence": "medium",
@@ -341,7 +341,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "USDA FoodData Central — Bread, french or vienna (baguette class component)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=bread%20french",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=bread%20french",
                     "serving_grams": 120,
                     "portion_note": "White baguette 70g→192kcal; Fried egg 50g→98kcal; total 290 for 120g | sum_check=290",
                     "ingredients_breakdown": [
@@ -361,7 +361,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fdc-lock-primary",
-                    "limitations": "No pate\/mayo.",
+                    "limitations": "No pate/mayo.",
                     "fdc_id": "174930",
                     "per_100g_kcal": 274,
                     "fdc_locked_at": "2026-07-11",
@@ -402,7 +402,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "Quán xào nhiều dầu cao hơn; tỏi\/nước mắm kcal bỏ qua.",
+                    "limitations": "Quán xào nhiều dầu cao hơn; tỏi/nước mắm kcal bỏ qua.",
                     "replaced_from": {
                         "calories_kcal": 140,
                         "method": "recipe_sum"
@@ -443,7 +443,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "Tỏi\/nước mắm bỏ qua; dầu quán cao hơn.",
+                    "limitations": "Tỏi/nước mắm bỏ qua; dầu quán cao hơn.",
                     "replaced_from": {
                         "calories_kcal": 124,
                         "method": "recipe_sum"
@@ -492,7 +492,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "Sốt cà đường\/nước mắm thêm chưa tính; chiên đậu trước làm tăng dầu.",
+                    "limitations": "Sốt cà đường/nước mắm thêm chưa tính; chiên đậu trước làm tăng dầu.",
                     "replaced_from": {
                         "calories_kcal": 251,
                         "method": "recipe_sum"
@@ -507,8 +507,8 @@
                 {
                     "field": "calories_kcal",
                     "method": "fct_table",
-                    "source_title": "USDA pickle class ~31\/100g",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pickle%20cucumber",
+                    "source_title": "USDA pickle class ~31/100g",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pickle%20cucumber",
                     "per_100g_kcal": 31,
                     "serving_grams": 80,
                     "portion_note": "80g side pickle; 31×0.8≈25",
@@ -527,7 +527,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: chayote + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=chayote",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=chayote",
                     "serving_grams": 150,
                     "portion_note": "Chayote 200g→38kcal; Oil 10g→88kcal; total 126 for 150g | sum_check=126",
                     "ingredients_breakdown": [
@@ -559,7 +559,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: mushrooms + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mushrooms%20white",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mushrooms%20white",
                     "serving_grams": 150,
                     "portion_note": "White mushrooms 180g→40kcal; Oil 10g→88kcal; total 128 for 150g | sum_check=128",
                     "ingredients_breakdown": [
@@ -591,7 +591,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: cucumber tomato oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=cucumber",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=cucumber",
                     "serving_grams": 185,
                     "portion_note": "Cucumber 100g→15kcal; Tomato 80g→14kcal; Oil 5g→44kcal; total 73 for 185g | sum_check=73",
                     "ingredients_breakdown": [
@@ -617,7 +617,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "No mayo\/sugar."
+                    "limitations": "No mayo/sugar."
                 }
             ]
         },
@@ -629,7 +629,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: pumpkin shrimp soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pumpkin%20boiled",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pumpkin%20boiled",
                     "serving_grams": 320,
                     "portion_note": "Pumpkin 120g→24kcal; Shrimp 40g→40kcal; Oil 3g→27kcal; Water 157g→0kcal; total 91 for 320g | sum_check=91",
                     "ingredients_breakdown": [
@@ -704,7 +704,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "Thịt nửa nạc\/mỡ (7018=260kcal\/100g) làm tăng rõ; nước dùng xương chưa tách béo.",
+                    "limitations": "Thịt nửa nạc/mỡ (7018=260kcal/100g) làm tăng rõ; nước dùng xương chưa tách béo.",
                     "replaced_from": {
                         "calories_kcal": 85,
                         "method": "recipe_sum"
@@ -720,7 +720,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: leafy pork soup proxy",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=spinach%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=spinach%20cooked",
                     "serving_grams": 340,
                     "portion_note": "Leafy proxy 80g→18kcal; Ground pork cooked 40g→119kcal; Water 220g→0kcal; total 137 for 340g | sum_check=137",
                     "ingredients_breakdown": [
@@ -758,7 +758,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "USDA FoodData Central — Tofu, raw, firm (component before fry)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/172476\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172476/nutrients",
                     "serving_grams": 160,
                     "portion_note": "Firm tofu 150g→114kcal; Oil absorbed 12g→106kcal; total 220 for 160g | sum_check=220",
                     "ingredients_breakdown": [
@@ -794,7 +794,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: braised eggs",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=egg%20hard%20boiled",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=egg%20hard%20boiled",
                     "serving_grams": 140,
                     "portion_note": "Hard-boiled egg 100g→155kcal; Sugar 8g→31kcal; Oil 5g→44kcal; total 230 for 140g | sum_check=230",
                     "ingredients_breakdown": [
@@ -832,7 +832,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "USDA FoodData Central — Rice cooked (primary solid) + chicken FDC 171477",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/168878\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168878/nutrients",
                     "serving_grams": 400,
                     "portion_note": "Cooked rice 100g→130kcal; Chicken meat 50g→83kcal; Water 250g→0kcal; total 213 for 400g | sum_check=213",
                     "ingredients_breakdown": [
@@ -858,7 +858,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fdc-lock-primary",
-                    "limitations": "Street oil\/skin higher.",
+                    "limitations": "Street oil/skin higher.",
                     "fdc_id": "168878",
                     "per_100g_kcal": 130,
                     "fdc_locked_at": "2026-07-11",
@@ -874,7 +874,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: steamed eggs plain",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=egg%20whole%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=egg%20whole%20raw",
                     "serving_grams": 180,
                     "portion_note": "Whole egg raw 150g→215kcal; Water 30g→0kcal; total 215 for 180g | sum_check=215",
                     "ingredients_breakdown": [
@@ -907,16 +907,16 @@
                     "method": "fct_table",
                     "fct_source": "vn_2007",
                     "source_title": "Bảng TPTP VN 2007 — 1020 Bún",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=33",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=33",
                     "food_code": "1020",
                     "ingredient_id": "vn-bun",
                     "per_100g_kcal": 110,
                     "serving_grams": 100,
-                    "portion_note": "100g × 110.0\/100g = 110",
+                    "portion_note": "100g × 110.0/100g = 110",
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "Nước 72g\/100g — dạng bún ẩm, không phải bún khô.",
+                    "limitations": "Nước 72g/100g — dạng bún ẩm, không phải bún khô.",
                     "replaced_from": {
                         "calories_kcal": 110,
                         "method": "fct_table"
@@ -932,7 +932,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Lemonade, frozen concentrate, white, prepared with water (light class)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=lemonade",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=lemonade",
                     "per_100g_kcal": 12,
                     "serving_grams": 250,
                     "portion_note": "250ml light lemon drink ~30 kcal if mild sugar",
@@ -954,7 +954,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Fruit cocktail, (peach and pineapple and pear and grape and cherry), canned, juice pack, solids and liquids",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=fruit%20cocktail",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=fruit%20cocktail",
                     "per_100g_kcal": 52,
                     "serving_grams": 150,
                     "portion_note": "150g mixed seasonal fruit ≈90",
@@ -977,7 +977,7 @@
                     "method": "fct_table",
                     "fct_source": "vn_2007",
                     "source_title": "Bảng TPTP VN 2007 — 4010 Cải bắp",
-                    "source_ref": "https:\/\/www.fao.org\/fileadmin\/templates\/food_composition\/documents\/pdf\/VTN_FCT_2007.pdf#page=112",
+                    "source_ref": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf#page=112",
                     "food_code": "4010",
                     "ingredient_id": "vn-bap-cai",
                     "per_100g_kcal": 29,
@@ -986,7 +986,7 @@
                     "confidence": "high",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-pilot",
-                    "limitations": "Raw vs boiled water shift nhỏ; không kho quẹt\/dầu.",
+                    "limitations": "Raw vs boiled water shift nhỏ; không kho quẹt/dầu.",
                     "replaced_from": {
                         "calories_kcal": 29,
                         "method": "fct_table"
@@ -1001,8 +1001,8 @@
                 {
                     "field": "calories_kcal",
                     "method": "fct_table",
-                    "source_title": "USDA leafy boiled ~20\/100g class",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=spinach%20cooked",
+                    "source_title": "USDA leafy boiled ~20/100g class",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=spinach%20cooked",
                     "per_100g_kcal": 20,
                     "serving_grams": 100,
                     "portion_note": "100g boiled greens",
@@ -1020,8 +1020,8 @@
                 {
                     "field": "calories_kcal",
                     "method": "fct_table",
-                    "source_title": "Grass jelly drink class ~25\/100g with light syrup mid",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=jelly",
+                    "source_title": "Grass jelly drink class ~25/100g with light syrup mid",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=jelly",
                     "per_100g_kcal": 25,
                     "serving_grams": 200,
                     "portion_note": "200g lightly sweetened sương sáo ≈50",
@@ -1039,8 +1039,8 @@
                 {
                     "field": "calories_kcal",
                     "method": "fct_table",
-                    "source_title": "USDA custard\/flan class ~160\/100g",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=flan%20caramel",
+                    "source_title": "USDA custard/flan class ~160/100g",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=flan%20caramel",
                     "per_100g_kcal": 160,
                     "serving_grams": 100,
                     "portion_note": "100g flan portion",
@@ -1059,7 +1059,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: grilled banana sticky rice",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=banana",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=banana",
                     "serving_grams": 150,
                     "portion_note": "Banana 80g→71kcal; Sticky rice cooked 50g→49kcal; Coconut milk class 20g→46kcal; total 166 for 150g | sum_check=166",
                     "ingredients_breakdown": [
@@ -1097,7 +1097,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: bok choy + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=bok%20choy",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=bok%20choy",
                     "serving_grams": 150,
                     "portion_note": "Bok choy 180g→23kcal; Oil 10g→88kcal; total 111 for 150g | sum_check=111",
                     "ingredients_breakdown": [
@@ -1129,7 +1129,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: malabar spinach proxy + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=spinach",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=spinach",
                     "serving_grams": 150,
                     "portion_note": "Leafy green proxy 180g→41kcal; Oil 10g→88kcal; total 129 for 150g | sum_check=129",
                     "ingredients_breakdown": [
@@ -1161,7 +1161,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sweet potato leaves proxy + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=spinach",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=spinach",
                     "serving_grams": 150,
                     "portion_note": "Leafy green proxy 180g→41kcal; Oil 10g→88kcal; total 129 for 150g | sum_check=129",
                     "ingredients_breakdown": [
@@ -1193,7 +1193,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: green beans + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=green%20beans%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=green%20beans%20cooked",
                     "serving_grams": 150,
                     "portion_note": "Green beans 180g→63kcal; Oil 8g→71kcal; total 134 for 150g | sum_check=134",
                     "ingredients_breakdown": [
@@ -1225,7 +1225,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: wax gourd + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=wax%20gourd",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=wax%20gourd",
                     "serving_grams": 150,
                     "portion_note": "Wax gourd class 200g→26kcal; Oil 8g→71kcal; total 97 for 150g | sum_check=97",
                     "ingredients_breakdown": [
@@ -1257,7 +1257,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: okra + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=okra%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=okra%20cooked",
                     "serving_grams": 150,
                     "portion_note": "Okra cooked class 180g→59kcal; Oil 8g→71kcal; total 130 for 150g | sum_check=130",
                     "ingredients_breakdown": [
@@ -1289,7 +1289,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: gourd + egg + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=egg%20whole%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=egg%20whole%20raw",
                     "serving_grams": 180,
                     "portion_note": "Gourd class 150g→23kcal; Egg 50g→72kcal; Oil 8g→71kcal; total 166 for 180g | sum_check=166",
                     "ingredients_breakdown": [
@@ -1315,7 +1315,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "Oil\/egg ratio varies."
+                    "limitations": "Oil/egg ratio varies."
                 }
             ]
         },
@@ -1327,12 +1327,12 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: loofah + egg + oil",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=egg%20whole%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=egg%20whole%20raw",
                     "serving_grams": 180,
-                    "portion_note": "Loofah\/sponge gourd class 150g→26kcal; Egg 50g→72kcal; Oil 8g→71kcal; total 169 for 180g | sum_check=169",
+                    "portion_note": "Loofah/sponge gourd class 150g→26kcal; Egg 50g→72kcal; Oil 8g→71kcal; total 169 for 180g | sum_check=169",
                     "ingredients_breakdown": [
                         {
-                            "name": "Loofah\/sponge gourd class",
+                            "name": "Loofah/sponge gourd class",
                             "grams": 150,
                             "kcal_per_100g": 17,
                             "kcal": 26
@@ -1353,7 +1353,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "Oil\/egg ratio varies."
+                    "limitations": "Oil/egg ratio varies."
                 }
             ]
         },
@@ -1365,7 +1365,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: tofu braised with mushrooms",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=tofu%20firm",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=tofu%20firm",
                     "serving_grams": 220,
                     "portion_note": "Firm tofu 150g→114kcal; Mushrooms 50g→11kcal; Oil 8g→71kcal; total 196 for 220g | sum_check=196",
                     "ingredients_breakdown": [
@@ -1403,7 +1403,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: braised mushrooms",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mushrooms",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mushrooms",
                     "serving_grams": 150,
                     "portion_note": "Mushrooms 120g→26kcal; Oil 8g→71kcal; total 97 for 150g | sum_check=97",
                     "ingredients_breakdown": [
@@ -1423,7 +1423,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "Oil\/sauce varies."
+                    "limitations": "Oil/sauce varies."
                 }
             ]
         },
@@ -1435,7 +1435,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: pork rib porridge simplified",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 400,
                     "portion_note": "Cooked rice 100g→130kcal; Pork meat class 40g→97kcal; Water 260g→0kcal; total 227 for 400g | sum_check=227",
                     "ingredients_breakdown": [
@@ -1473,7 +1473,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: wax gourd soup light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=wax%20gourd",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=wax%20gourd",
                     "serving_grams": 320,
                     "portion_note": "Wax gourd 150g→20kcal; Pork lean 20g→29kcal; Water 150g→0kcal; total 49 for 320g | sum_check=49",
                     "ingredients_breakdown": [
@@ -1511,7 +1511,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: gourd shrimp soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=shrimp%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=shrimp%20cooked",
                     "serving_grams": 320,
                     "portion_note": "Gourd 120g→18kcal; Shrimp 40g→40kcal; Water 160g→0kcal; total 58 for 320g | sum_check=58",
                     "ingredients_breakdown": [
@@ -1549,7 +1549,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: loofah pork ball soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 330,
                     "portion_note": "Loofah class 100g→17kcal; Pork mince cooked 35g→104kcal; Water 195g→0kcal; total 121 for 330g | sum_check=121",
                     "ingredients_breakdown": [
@@ -1637,10 +1637,10 @@
                     "source_title": "FCT VN recipe_sum — canh chua cá (8022+4005+…)",
                     "source_ref": "vivu-fct-vn-phase-b:canh-chua-ca",
                     "serving_grams": 500,
-                    "portion_note": "Cá quả\/lóc 150g→146; Cà chua 80g→16; Đường 8g→31; Dầu 3g→27; total 220",
+                    "portion_note": "Cá quả/lóc 150g→146; Cà chua 80g→16; Đường 8g→31; Dầu 3g→27; total 220",
                     "ingredients_breakdown": [
                         {
-                            "name": "Cá quả\/lóc",
+                            "name": "Cá quả/lóc",
                             "ingredient_id": "vn-ca-qua",
                             "food_code": "8022",
                             "grams": 150,
@@ -1697,7 +1697,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sour shrimp soup home v1",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=shrimp%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=shrimp%20cooked",
                     "serving_grams": 350,
                     "portion_note": "Shrimp 70g→69kcal; Tomato 50g→9kcal; Pineapple 30g→15kcal; Oil 3g→27kcal; Water 197g→0kcal; total 120 for 350g | sum_check=120",
                     "ingredients_breakdown": [
@@ -1747,7 +1747,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sour snakehead soup home v1",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=fish%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=fish%20cooked",
                     "serving_grams": 350,
                     "portion_note": "Fish 80g→102kcal; Tomato 50g→9kcal; Vegetables proxy 40g→10kcal; Oil 3g→27kcal; Water 177g→0kcal; total 148 for 350g | sum_check=148",
                     "ingredients_breakdown": [
@@ -1797,7 +1797,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: bitter melon stuffed soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 300,
                     "portion_note": "Bitter melon class 80g→14kcal; Ground pork 50g→149kcal; Water 170g→0kcal; total 163 for 300g | sum_check=163",
                     "ingredients_breakdown": [
@@ -1835,7 +1835,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: light bone veg soup (veg+lean only)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=carrot%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=carrot%20cooked",
                     "serving_grams": 350,
                     "portion_note": "Mixed veg 100g→35kcal; Lean meat scraps 20g→29kcal; Water 230g→0kcal; total 64 for 350g | sum_check=64",
                     "ingredients_breakdown": [
@@ -1873,7 +1873,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: pumpkin soup vegan",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pumpkin%20boiled",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pumpkin%20boiled",
                     "serving_grams": 300,
                     "portion_note": "Pumpkin 150g→30kcal; Tofu 30g→23kcal; Water 120g→0kcal; total 53 for 300g | sum_check=53",
                     "ingredients_breakdown": [
@@ -1911,7 +1911,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: mixed veg soup vegan",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=vegetable%20soup",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=vegetable%20soup",
                     "serving_grams": 300,
                     "portion_note": "Mixed vegetables 150g→53kcal; Tofu 20g→15kcal; Water 130g→0kcal; total 68 for 300g | sum_check=68",
                     "ingredients_breakdown": [
@@ -1949,7 +1949,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: boiled veg + light soy",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=cabbage%20boiled",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=cabbage%20boiled",
                     "serving_grams": 150,
                     "portion_note": "Mixed boiled veg 140g→35kcal; Soy sauce class 10g→5kcal; total 40 for 150g | sum_check=40",
                     "ingredients_breakdown": [
@@ -1981,7 +1981,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: boiled veg + shrimp paste dip energy mid",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=cabbage%20boiled",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=cabbage%20boiled",
                     "serving_grams": 160,
                     "portion_note": "Boiled veg 140g→35kcal; Oil in kho quẹt 5g→44kcal; total 79 for 160g | sum_check=79",
                     "ingredients_breakdown": [
@@ -2013,7 +2013,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: braised pork + egg simplified",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 200,
                     "portion_note": "Pork cooked class 100g→242kcal; Hard egg 50g→78kcal; Sugar 10g→39kcal; Oil 3g→27kcal; total 386 for 200g | sum_check=386",
                     "ingredients_breakdown": [
@@ -2057,7 +2057,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: thit kho tau simplified (pork+egg+sugar)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 220,
                     "portion_note": "Pork 120g→290kcal; Egg 50g→78kcal; Sugar 12g→46kcal; Oil 3g→27kcal; total 441 for 220g | sum_check=441",
                     "ingredients_breakdown": [
@@ -2101,7 +2101,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: caramel pork ribs meat portion",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20ribs%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20ribs%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Pork rib meat class 120g→332kcal; Sugar 8g→31kcal; Oil 3g→27kcal; total 390 for 180g | sum_check=390",
                     "ingredients_breakdown": [
@@ -2139,7 +2139,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sweet sour ribs meat",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Pork 120g→290kcal; Sugar 12g→46kcal; Oil 5g→44kcal; total 380 for 180g | sum_check=380",
                     "ingredients_breakdown": [
@@ -2177,7 +2177,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "USDA FoodData Central — Chicken breast cooked primary component",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/171477\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171477/nutrients",
                     "serving_grams": 200,
                     "portion_note": "Chicken meat 150g→248kcal; Oil 5g→44kcal; Sugar 3g→12kcal; total 304 for 200g | sum_check=304",
                     "ingredients_breakdown": [
@@ -2219,7 +2219,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: salt-fried chicken pieces",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=chicken%20fried",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=chicken%20fried",
                     "serving_grams": 180,
                     "portion_note": "Chicken 140g→280kcal; Oil absorbed 8g→71kcal; total 351 for 180g | sum_check=351",
                     "ingredients_breakdown": [
@@ -2254,10 +2254,10 @@
                     "source_title": "FCT VN recipe_sum — cá kho tộ (8026+12013+6002)",
                     "source_ref": "vivu-fct-vn-phase-b:ca-kho-to",
                     "serving_grams": 180,
-                    "portion_note": "Cá thu\/proxy cá kho 200g→332; Đường kho 12g→47; Dầu 5g→45; total 424",
+                    "portion_note": "Cá thu/proxy cá kho 200g→332; Đường kho 12g→47; Dầu 5g→45; total 424",
                     "ingredients_breakdown": [
                         {
-                            "name": "Cá thu\/proxy cá kho",
+                            "name": "Cá thu/proxy cá kho",
                             "ingredient_id": "vn-ca-thu",
                             "food_code": "8026",
                             "grams": 200,
@@ -2284,7 +2284,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "Cá basa\/lóc thay bằng thu class; nước mắm bỏ qua.",
+                    "limitations": "Cá basa/lóc thay bằng thu class; nước mắm bỏ qua.",
                     "replaced_from": {
                         "calories_kcal": 424,
                         "method": "recipe_sum"
@@ -2300,7 +2300,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: galangal fish braise",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=fish%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=fish%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Fish 120g→154kcal; Oil 5g→44kcal; Sugar 5g→19kcal; total 217 for 180g | sum_check=217",
                     "ingredients_breakdown": [
@@ -2338,7 +2338,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: fried fish fillet",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=fish%20fried",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=fish%20fried",
                     "serving_grams": 150,
                     "portion_note": "Fish 120g→154kcal; Oil absorbed 10g→88kcal; total 242 for 150g | sum_check=242",
                     "ingredients_breakdown": [
@@ -2358,7 +2358,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "Breading\/deep-fry higher."
+                    "limitations": "Breading/deep-fry higher."
                 }
             ]
         },
@@ -2403,7 +2403,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "Me\/nước mắm kcal thấp bỏ qua; đường 15g ước lượng.",
+                    "limitations": "Me/nước mắm kcal thấp bỏ qua; đường 15g ước lượng.",
                     "replaced_from": {
                         "calories_kcal": 268,
                         "method": "recipe_sum"
@@ -2419,7 +2419,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: caramel shrimp",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=shrimp%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=shrimp%20cooked",
                     "serving_grams": 160,
                     "portion_note": "Shrimp 120g→119kcal; Sugar 10g→39kcal; Oil 5g→44kcal; total 202 for 160g | sum_check=202",
                     "ingredients_breakdown": [
@@ -2457,7 +2457,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: battered fried shrimp",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=shrimp%20fried",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=shrimp%20fried",
                     "serving_grams": 150,
                     "portion_note": "Shrimp 80g→79kcal; Batter flour class 30g→109kcal; Oil absorbed 12g→106kcal; total 294 for 150g | sum_check=294",
                     "ingredients_breakdown": [
@@ -2495,7 +2495,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sweet sour squid",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=squid%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=squid%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Squid 120g→110kcal; Sugar 8g→31kcal; Oil 6g→53kcal; total 194 for 180g | sum_check=194",
                     "ingredients_breakdown": [
@@ -2533,7 +2533,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: shaking beef home",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=beef%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=beef%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Beef cooked 120g→300kcal; Oil 8g→71kcal; total 371 for 180g | sum_check=371",
                     "ingredients_breakdown": [
@@ -2565,7 +2565,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: pork mushroom stir-fry",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=pork%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=pork%20cooked",
                     "serving_grams": 180,
                     "portion_note": "Pork 100g→242kcal; Mushroom 50g→11kcal; Oil 8g→71kcal; total 324 for 180g | sum_check=324",
                     "ingredients_breakdown": [
@@ -2603,12 +2603,12 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: betel leaf beef rolls",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=beef%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=beef%20cooked",
                     "serving_grams": 120,
-                    "portion_note": "Beef\/pork mince 80g→200kcal; Oil 5g→44kcal; total 244 for 120g | sum_check=244",
+                    "portion_note": "Beef/pork mince 80g→200kcal; Oil 5g→44kcal; total 244 for 120g | sum_check=244",
                     "ingredients_breakdown": [
                         {
-                            "name": "Beef\/pork mince",
+                            "name": "Beef/pork mince",
                             "grams": 80,
                             "kcal_per_100g": 250,
                             "kcal": 200
@@ -2634,8 +2634,8 @@
                 {
                     "field": "calories_kcal",
                     "method": "recipe_sum",
-                    "source_title": "recipe_sum: small shrimp\/dried shrimp stir",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=shrimp",
+                    "source_title": "recipe_sum: small shrimp/dried shrimp stir",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=shrimp",
                     "serving_grams": 80,
                     "portion_note": "Shrimp 60g→59kcal; Oil 5g→44kcal; total 103 for 80g | sum_check=103",
                     "ingredients_breakdown": [
@@ -2667,7 +2667,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: green papaya salad light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=papaya%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=papaya%20raw",
                     "serving_grams": 150,
                     "portion_note": "Green papaya class 120g→47kcal; Peanuts class 10g→57kcal; Sugar 5g→19kcal; total 123 for 150g | sum_check=123",
                     "ingredients_breakdown": [
@@ -2705,9 +2705,9 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: chicken cabbage salad",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=chicken%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=chicken%20cooked",
                     "serving_grams": 180,
-                    "portion_note": "Cabbage 100g→25kcal; Chicken 60g→99kcal; Oil\/dressing 5g→44kcal; total 168 for 180g | sum_check=168",
+                    "portion_note": "Cabbage 100g→25kcal; Chicken 60g→99kcal; Oil/dressing 5g→44kcal; total 168 for 180g | sum_check=168",
                     "ingredients_breakdown": [
                         {
                             "name": "Cabbage",
@@ -2722,7 +2722,7 @@
                             "kcal": 99
                         },
                         {
-                            "name": "Oil\/dressing",
+                            "name": "Oil/dressing",
                             "grams": 5,
                             "kcal_per_100g": 884,
                             "kcal": 44
@@ -2743,7 +2743,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: banana flower salad light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=cabbage%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=cabbage%20raw",
                     "serving_grams": 150,
                     "portion_note": "Banana flower proxy leafy 100g→30kcal; Peanut 10g→57kcal; Oil 3g→27kcal; total 114 for 150g | sum_check=114",
                     "ingredients_breakdown": [
@@ -2781,7 +2781,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: mung bean sweet soup light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mung%20beans",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mung%20beans",
                     "serving_grams": 250,
                     "portion_note": "Mung bean cooked class 80g→84kcal; Sugar 20g→77kcal; Water 150g→0kcal; total 161 for 250g | sum_check=161",
                     "ingredients_breakdown": [
@@ -2819,7 +2819,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: banana sweet soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=banana",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=banana",
                     "serving_grams": 250,
                     "portion_note": "Banana 80g→71kcal; Sugar 15g→58kcal; Coconut milk 30g→69kcal; Water 125g→0kcal; total 198 for 250g | sum_check=198",
                     "ingredients_breakdown": [
@@ -2863,9 +2863,9 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sticky rice mung bean",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=glutinous%20rice",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=glutinous%20rice",
                     "serving_grams": 180,
-                    "portion_note": "Sticky rice 120g→116kcal; Mung bean 40g→42kcal; Oil\/coconut 10g→23kcal; total 181 for 180g | sum_check=181",
+                    "portion_note": "Sticky rice 120g→116kcal; Mung bean 40g→42kcal; Oil/coconut 10g→23kcal; total 181 for 180g | sum_check=181",
                     "ingredients_breakdown": [
                         {
                             "name": "Sticky rice",
@@ -2880,7 +2880,7 @@
                             "kcal": 42
                         },
                         {
-                            "name": "Oil\/coconut",
+                            "name": "Oil/coconut",
                             "grams": 10,
                             "kcal_per_100g": 230,
                             "kcal": 23
@@ -2889,7 +2889,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-recipe-sum",
-                    "limitations": "Savory\/sweet toppings extra."
+                    "limitations": "Savory/sweet toppings extra."
                 }
             ]
         },
@@ -2901,7 +2901,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: mango smoothie light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mango%20raw",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mango%20raw",
                     "serving_grams": 300,
                     "portion_note": "Mango 150g→90kcal; Milk whole class 100g→61kcal; Sugar 10g→39kcal; total 190 for 300g | sum_check=190",
                     "ingredients_breakdown": [
@@ -2939,7 +2939,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: avocado smoothie light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=avocado",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=avocado",
                     "serving_grams": 300,
                     "portion_note": "Avocado 100g→160kcal; Milk 100g→61kcal; Sugar 15g→58kcal; total 279 for 300g | sum_check=279",
                     "ingredients_breakdown": [
@@ -2977,7 +2977,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: iced milk coffee VN light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=coffee",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=coffee",
                     "serving_grams": 250,
                     "portion_note": "Coffee brew 150g→2kcal; Sweetened condensed milk class 30g→96kcal; Ice water 70g→0kcal; total 98 for 250g | sum_check=98",
                     "ingredients_breakdown": [
@@ -3015,7 +3015,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "USDA FoodData Central — Sugarcane, juice (class)",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=sugarcane",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=sugarcane",
                     "serving_grams": 300,
                     "portion_note": "Sugarcane juice class 300g→183kcal; total 183 for 300g | sum_check=183",
                     "ingredients_breakdown": [
@@ -3029,7 +3029,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fdc-lock-primary",
-                    "limitations": "USDA\/class ~61\/100ml — medium; kumquat not included.",
+                    "limitations": "USDA/class ~61/100ml — medium; kumquat not included.",
                     "fdc_id": "168136",
                     "per_100g_kcal": 61,
                     "fdc_locked_at": "2026-07-11",
@@ -3045,7 +3045,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: kumquat tea light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=tea%20brewed",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=tea%20brewed",
                     "serving_grams": 300,
                     "portion_note": "Tea 250g→3kcal; Sugar 12g→46kcal; Citrus juice class 30g→9kcal; total 58 for 300g | sum_check=58",
                     "ingredients_breakdown": [
@@ -3083,7 +3083,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: sesame fried ball",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=dough%20fried",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=dough%20fried",
                     "serving_grams": 60,
                     "portion_note": "Dough flour class 35g→127kcal; Sugar 8g→31kcal; Oil absorbed 10g→88kcal; total 246 for 60g | sum_check=246",
                     "ingredients_breakdown": [
@@ -3121,7 +3121,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: banana cake slice",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=banana%20bread",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=banana%20bread",
                     "serving_grams": 80,
                     "portion_note": "Banana bread class 80g→261kcal; total 261 for 80g | sum_check=261",
                     "ingredients_breakdown": [
@@ -3147,12 +3147,12 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: three color dessert light",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mung%20beans",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mung%20beans",
                     "serving_grams": 250,
-                    "portion_note": "Beans\/jellies proxy 80g→84kcal; Sugar syrup 25g→97kcal; Coconut milk 40g→92kcal; Ice water 105g→0kcal; total 273 for 250g | sum_check=273",
+                    "portion_note": "Beans/jellies proxy 80g→84kcal; Sugar syrup 25g→97kcal; Coconut milk 40g→92kcal; Ice water 105g→0kcal; total 273 for 250g | sum_check=273",
                     "ingredients_breakdown": [
                         {
-                            "name": "Beans\/jellies proxy",
+                            "name": "Beans/jellies proxy",
                             "grams": 80,
                             "kcal_per_100g": 105,
                             "kcal": 84
@@ -3191,7 +3191,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: corn sweet soup",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=corn%20sweet%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=corn%20sweet%20cooked",
                     "serving_grams": 250,
                     "portion_note": "Sweet corn 80g→77kcal; Sugar 15g→58kcal; Coconut milk 30g→69kcal; Water 125g→0kcal; total 204 for 250g | sum_check=204",
                     "ingredients_breakdown": [
@@ -3235,7 +3235,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: che thai fruit dessert",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=fruit%20cocktail",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=fruit%20cocktail",
                     "serving_grams": 250,
                     "portion_note": "Fruit mix 100g→60kcal; Syrup sugar 20g→77kcal; Coconut milk 40g→92kcal; Ice 90g→0kcal; total 229 for 250g | sum_check=229",
                     "ingredients_breakdown": [
@@ -3279,12 +3279,12 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "recipe_sum: mixed vegan che",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=mung%20beans",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=mung%20beans",
                     "serving_grams": 250,
-                    "portion_note": "Beans\/jellies 80g→84kcal; Sugar 20g→77kcal; Coconut milk 40g→92kcal; Water 110g→0kcal; total 253 for 250g | sum_check=253",
+                    "portion_note": "Beans/jellies 80g→84kcal; Sugar 20g→77kcal; Coconut milk 40g→92kcal; Water 110g→0kcal; total 253 for 250g | sum_check=253",
                     "ingredients_breakdown": [
                         {
-                            "name": "Beans\/jellies",
+                            "name": "Beans/jellies",
                             "grams": 80,
                             "kcal_per_100g": 105,
                             "kcal": 84
@@ -3326,7 +3326,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — pho-bo",
                     "source_ref": "vivu-standard-v1+vn:pho-bo",
                     "serving_grams": 500,
-                    "portion_note": "Bánh phở 180g→257; Thịt bò loại I (tái\/chín mỏng) 70g→83; Mỡ nước dùng (oil-eq) 8g→72; total 412",
+                    "portion_note": "Bánh phở 180g→257; Thịt bò loại I (tái/chín mỏng) 70g→83; Mỡ nước dùng (oil-eq) 8g→72; total 412",
                     "ingredients_breakdown": [
                         {
                             "name": "Bánh phở",
@@ -3337,7 +3337,7 @@
                             "kcal": 257
                         },
                         {
-                            "name": "Thịt bò loại I (tái\/chín mỏng)",
+                            "name": "Thịt bò loại I (tái/chín mỏng)",
                             "ingredient_id": "vn-thit-bo-loai-1",
                             "food_code": "7003",
                             "grams": 70,
@@ -3362,7 +3362,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "ViVu v1 + FCT VN; bò raw grade-I (tái). Không quẩy\/gầu\/sa tế ngoài. Bánh phở 1013 (143kcal) khác bún 1020.",
+                    "limitations": "ViVu v1 + FCT VN; bò raw grade-I (tái). Không quẩy/gầu/sa tế ngoài. Bánh phở 1013 (143kcal) khác bún 1020.",
                     "standard_id": "vivu-standard-v1",
                     "replaced_from": {
                         "calories_kcal": 412,
@@ -3418,7 +3418,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "ViVu v1 + FCT VN; gà raw average 7013 — da\/mỡ quán cao hơn.",
+                    "limitations": "ViVu v1 + FCT VN; gà raw average 7013 — da/mỡ quán cao hơn.",
                     "standard_id": "vivu-standard-v1",
                     "replaced_from": {
                         "calories_kcal": 470,
@@ -3438,7 +3438,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — bun-cha",
                     "source_ref": "vivu-standard-v1+vn:bun-cha",
                     "serving_grams": 450,
-                    "portion_note": "Bún 150g→165; Thịt nướng (nửa nạc) 100g→260; Đường trong nước chấm (ước) 5g→20; Dầu\/mỡ chả 3g→27; Rau sống proxy 50g→13; total 485",
+                    "portion_note": "Bún 150g→165; Thịt nướng (nửa nạc) 100g→260; Đường trong nước chấm (ước) 5g→20; Dầu/mỡ chả 3g→27; Rau sống proxy 50g→13; total 485",
                     "ingredients_breakdown": [
                         {
                             "name": "Bún",
@@ -3465,7 +3465,7 @@
                             "kcal": 20
                         },
                         {
-                            "name": "Dầu\/mỡ chả",
+                            "name": "Dầu/mỡ chả",
                             "ingredient_id": "vn-dau-thao-moc",
                             "food_code": "6002",
                             "grams": 3,
@@ -3510,7 +3510,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — bun-bo-hue",
                     "source_ref": "vivu-standard-v1+vn:bun-bo-hue",
                     "serving_grams": 550,
-                    "portion_note": "Bún (proxy sợi to) 180g→198; Thịt bò 80g→94; Dầu điều\/sả 10g→90; total 382",
+                    "portion_note": "Bún (proxy sợi to) 180g→198; Thịt bò 80g→94; Dầu điều/sả 10g→90; total 382",
                     "ingredients_breakdown": [
                         {
                             "name": "Bún (proxy sợi to)",
@@ -3529,7 +3529,7 @@
                             "kcal": 94
                         },
                         {
-                            "name": "Dầu điều\/sả",
+                            "name": "Dầu điều/sả",
                             "ingredient_id": "vn-dau-thao-moc",
                             "food_code": "6002",
                             "grams": 10,
@@ -3546,7 +3546,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "ViVu v1; giò\/huyết\/chả chưa full — medium. Bún 1020 proxy sợi Huế.",
+                    "limitations": "ViVu v1; giò/huyết/chả chưa full — medium. Bún 1020 proxy sợi Huế.",
                     "standard_id": "vivu-standard-v1",
                     "replaced_from": {
                         "calories_kcal": 382,
@@ -3638,7 +3638,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — bun-rieu-cua",
                     "source_ref": "vivu-standard-v1+vn:bun-rieu-cua",
                     "serving_grams": 500,
-                    "portion_note": "Bún 160g→176; Đậu phụ 40g→38; Thịt\/riêu class 40g→56; Cà chua 40g→8; Dầu 5g→45; total 323",
+                    "portion_note": "Bún 160g→176; Đậu phụ 40g→38; Thịt/riêu class 40g→56; Cà chua 40g→8; Dầu 5g→45; total 323",
                     "ingredients_breakdown": [
                         {
                             "name": "Bún",
@@ -3657,7 +3657,7 @@
                             "kcal": 38
                         },
                         {
-                            "name": "Thịt\/riêu class",
+                            "name": "Thịt/riêu class",
                             "ingredient_id": "vn-thit-heo-nac",
                             "food_code": "7017",
                             "grams": 40,
@@ -3710,10 +3710,10 @@
                     "source_title": "FCT VN + vivu-standard-v1 — hu-tieu-nam-vang",
                     "source_ref": "vivu-standard-v1+vn:hu-tieu-nam-vang",
                     "serving_grams": 500,
-                    "portion_note": "Hủ tiếu \/ bánh phở class 170g→243; Thịt heo 50g→70; Tôm 40g→33; Dầu 6g→54; total 400",
+                    "portion_note": "Hủ tiếu / bánh phở class 170g→243; Thịt heo 50g→70; Tôm 40g→33; Dầu 6g→54; total 400",
                     "ingredients_breakdown": [
                         {
-                            "name": "Hủ tiếu \/ bánh phở class",
+                            "name": "Hủ tiếu / bánh phở class",
                             "ingredient_id": "vn-banh-pho",
                             "food_code": "1013",
                             "grams": 170,
@@ -3754,7 +3754,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "ViVu v1; lòng\/offal thêm riêng.",
+                    "limitations": "ViVu v1; lòng/offal thêm riêng.",
                     "standard_id": "vivu-standard-v1",
                     "replaced_from": {
                         "calories_kcal": 400,
@@ -3818,7 +3818,7 @@
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fct-vn-phase-b",
-                    "limitations": "ViVu v1 single sườn; bì\/chả\/trứng thêm riêng. Cơm từ yield gạo 1004.",
+                    "limitations": "ViVu v1 single sườn; bì/chả/trứng thêm riêng. Cơm từ yield gạo 1004.",
                     "standard_id": "vivu-standard-v1",
                     "replaced_from": {
                         "calories_kcal": 667,
@@ -3902,7 +3902,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — banh-mi-thit",
                     "source_ref": "vivu-standard-v1+vn:banh-mi-thit",
                     "serving_grams": 180,
-                    "portion_note": "Bánh mì 80g→199; Thịt nguội class 40g→104; Pate proxy nạc 15g→21; Rau\/đồ chua proxy 30g→8; total 332",
+                    "portion_note": "Bánh mì 80g→199; Thịt nguội class 40g→104; Pate proxy nạc 15g→21; Rau/đồ chua proxy 30g→8; total 332",
                     "ingredients_breakdown": [
                         {
                             "name": "Bánh mì",
@@ -3929,7 +3929,7 @@
                             "kcal": 21
                         },
                         {
-                            "name": "Rau\/đồ chua proxy",
+                            "name": "Rau/đồ chua proxy",
                             "ingredient_id": "vn-rau-muong",
                             "food_code": "4083",
                             "grams": 30,
@@ -4063,9 +4063,9 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "vivu-standard-v1 bánh cuốn",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=rice%20flour",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=rice%20flour",
                     "serving_grams": 220,
-                    "portion_note": "Rice sheet 140×120=168; pork 40×297=119; oil 4×884\/100=35; nuoc cham 36×40\/100≈14; total 336 for ~220g | sum_check=336",
+                    "portion_note": "Rice sheet 140×120=168; pork 40×297=119; oil 4×884/100=35; nuoc cham 36×40/100≈14; total 336 for ~220g | sum_check=336",
                     "ingredients_breakdown": [
                         {
                             "name": "Rice sheet class",
@@ -4080,7 +4080,7 @@
                             "kcal": 119
                         },
                         {
-                            "name": "Oil\/fried shallot",
+                            "name": "Oil/fried shallot",
                             "grams": 4,
                             "kcal_per_100g": 884,
                             "kcal": 35
@@ -4108,7 +4108,7 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "vivu-standard-v1 mì xào thập cẩm",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=noodles%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=noodles%20cooked",
                     "serving_grams": 350,
                     "portion_note": "Noodles 200×138=276; mix protein 60×200=120; oil 10=88; veg 40; ~500→480 | sum_check=512",
                     "ingredients_breakdown": [
@@ -4228,7 +4228,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — goi-cuon",
                     "source_ref": "vivu-standard-v1+vn:goi-cuon",
                     "serving_grams": 135,
-                    "portion_note": "Bánh tráng (khô eq) 12g→40; Tôm 30g→25; Thịt 20g→28; Rau 30g→8; Tương\/đường proxy 5g→20; Dầu\/đậu phộng eq 3g→27; total 148",
+                    "portion_note": "Bánh tráng (khô eq) 12g→40; Tôm 30g→25; Thịt 20g→28; Rau 30g→8; Tương/đường proxy 5g→20; Dầu/đậu phộng eq 3g→27; total 148",
                     "ingredients_breakdown": [
                         {
                             "name": "Bánh tráng (khô eq)",
@@ -4263,7 +4263,7 @@
                             "kcal": 8
                         },
                         {
-                            "name": "Tương\/đường proxy",
+                            "name": "Tương/đường proxy",
                             "ingredient_id": "vn-duong-trang",
                             "food_code": "12013",
                             "grams": 5,
@@ -4271,7 +4271,7 @@
                             "kcal": 20
                         },
                         {
-                            "name": "Dầu\/đậu phộng eq",
+                            "name": "Dầu/đậu phộng eq",
                             "ingredient_id": "vn-dau-thao-moc",
                             "food_code": "6002",
                             "grams": 3,
@@ -4368,7 +4368,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — pho-chay",
                     "source_ref": "vivu-standard-v1+vn:pho-chay",
                     "serving_grams": 480,
-                    "portion_note": "Bánh phở 180g→257; Đậu phụ \/ topping chay 60g→57; Dầu 5g→45; total 359",
+                    "portion_note": "Bánh phở 180g→257; Đậu phụ / topping chay 60g→57; Dầu 5g→45; total 359",
                     "ingredients_breakdown": [
                         {
                             "name": "Bánh phở",
@@ -4379,7 +4379,7 @@
                             "kcal": 257
                         },
                         {
-                            "name": "Đậu phụ \/ topping chay",
+                            "name": "Đậu phụ / topping chay",
                             "ingredient_id": "vn-dau-phu",
                             "food_code": "3025",
                             "grams": 60,
@@ -4496,7 +4496,7 @@
                     "source_title": "FCT VN + vivu-standard-v1 — com-chay-thap-cam",
                     "source_ref": "vivu-standard-v1+vn:com-chay-thap-cam",
                     "serving_grams": 400,
-                    "portion_note": "Cơm 200g→275; Đậu\/nấm proxy 80g→76; Dầu 10g→90; Rau củ 60g→15; total 456",
+                    "portion_note": "Cơm 200g→275; Đậu/nấm proxy 80g→76; Dầu 10g→90; Rau củ 60g→15; total 456",
                     "ingredients_breakdown": [
                         {
                             "name": "Cơm",
@@ -4507,7 +4507,7 @@
                             "kcal": 275
                         },
                         {
-                            "name": "Đậu\/nấm proxy",
+                            "name": "Đậu/nấm proxy",
                             "ingredient_id": "vn-dau-phu",
                             "food_code": "3025",
                             "grams": 80,
@@ -4557,9 +4557,9 @@
                     "field": "calories_kcal",
                     "method": "recipe_sum",
                     "source_title": "vivu-standard-v1 spaghetti beef sauce",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=spaghetti%20cooked",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=spaghetti%20cooked",
                     "serving_grams": 350,
-                    "portion_note": "Pasta 200×158=316; beef sauce 100×150=150; oil\/cheese 15×600\/100=90; total 556 | sum_check=556",
+                    "portion_note": "Pasta 200×158=316; beef sauce 100×150=150; oil/cheese 15×600/100=90; total 556 | sum_check=556",
                     "ingredients_breakdown": [
                         {
                             "name": "Spaghetti cooked",
@@ -4574,7 +4574,7 @@
                             "kcal": 150
                         },
                         {
-                            "name": "Oil\/parmesan light",
+                            "name": "Oil/parmesan light",
                             "grams": 15,
                             "kcal_per_100g": 600,
                             "kcal": 90
@@ -4596,7 +4596,7 @@
                     "field": "calories_kcal",
                     "method": "fct_table",
                     "source_title": "USDA FoodData Central — Pizza, cheese topping, regular crust, frozen, cooked",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/fdc-app.html#\/food-details\/173292\/nutrients",
+                    "source_ref": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/173292/nutrients",
                     "per_100g_kcal": 266,
                     "serving_grams": 100,
                     "portion_note": "100g slice cheese pizza class",
@@ -4616,20 +4616,786 @@
                 {
                     "field": "calories_kcal",
                     "method": "fct_table",
-                    "source_title": "USDA sushi with fish class ~150\/100g mid",
-                    "source_ref": "https:\/\/fdc.nal.usda.gov\/food-search?query=sushi",
+                    "source_title": "USDA sushi with fish class ~150/100g mid",
+                    "source_ref": "https://fdc.nal.usda.gov/food-search?query=sushi",
                     "per_100g_kcal": 150,
                     "serving_grams": 100,
-                    "portion_note": "100g mixed nigiri\/maki mid",
+                    "portion_note": "100g mixed nigiri/maki mid",
                     "confidence": "medium",
                     "reviewed_at": "2026-07-11",
                     "reviewed_by": "fact-a-build",
                     "limitations": "Set composition varies."
                 }
             ]
+        },
+        "mi-quang": {
+            "calories_kcal": 464,
+            "serving_grams": 480,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — mi-quang",
+                    "source_ref": "vivu-standard-v1+vn:mi-quang",
+                    "serving_grams": 480,
+                    "portion_note": "Bún (proxy sợi mì Quảng ẩm) 180g→198; Thịt heo nạc 60g→83; Tôm biển 40g→33; Dầu lạc (proxy) 12g→108; Trứng gà 25g→42; nước/rau 163g→0; total 464",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún (proxy sợi mì Quảng ẩm)",
+                            "grams": 180,
+                            "kcal_per_100g": 110,
+                            "kcal": 198,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Thịt heo nạc",
+                            "grams": 60,
+                            "kcal_per_100g": 139,
+                            "kcal": 83,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Tôm biển",
+                            "grams": 40,
+                            "kcal_per_100g": 82,
+                            "kcal": 33,
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051"
+                        },
+                        {
+                            "name": "Dầu lạc (proxy)",
+                            "grams": 12,
+                            "kcal_per_100g": 897,
+                            "kcal": 108,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Trứng gà",
+                            "grams": 25,
+                            "kcal_per_100g": 166,
+                            "kcal": 42,
+                            "ingredient_id": "vn-trung-ga-toan-phan",
+                            "food_code": "9001"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 163,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: sợi mì Quảng ≈ bún 1020; không tính bánh tráng/đậu phộng rang riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bo-kho": {
+            "calories_kcal": 413,
+            "serving_grams": 450,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bo-kho",
+                    "source_ref": "vivu-standard-v1+vn:bo-kho",
+                    "serving_grams": 450,
+                    "portion_note": "Thịt bò loại I 120g→142; Bánh mì 80g→199; Dầu (proxy nước sốt) 8g→72; nước/rau 242g→0; total 413",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Thịt bò loại I",
+                            "grams": 120,
+                            "kcal_per_100g": 118,
+                            "kcal": 142,
+                            "ingredient_id": "vn-thit-bo-loai-1",
+                            "food_code": "7003"
+                        },
+                        {
+                            "name": "Bánh mì",
+                            "grams": 80,
+                            "kcal_per_100g": 249,
+                            "kcal": 199,
+                            "ingredient_id": "vn-banh-mi",
+                            "food_code": "1012"
+                        },
+                        {
+                            "name": "Dầu (proxy nước sốt)",
+                            "grams": 8,
+                            "kcal_per_100g": 897,
+                            "kcal": 72,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 242,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: bò kho + 1/3 bánh mì; không tính gân/sụn riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "banh-xeo": {
+            "calories_kcal": 395,
+            "serving_grams": 280,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — banh-xeo",
+                    "source_ref": "vivu-standard-v1+vn:banh-xeo",
+                    "serving_grams": 280,
+                    "portion_note": "Bột gạo (proxy bánh phở khô quy đổi ẩm) 100g→143; Thịt heo nạc 40g→56; Tôm biển 30g→25; Dầu chiên 18g→161; Giá / rau 50g→10; nước/rau 42g→0; total 395",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bột gạo (proxy bánh phở khô quy đổi ẩm)",
+                            "grams": 100,
+                            "kcal_per_100g": 143,
+                            "kcal": 143,
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013"
+                        },
+                        {
+                            "name": "Thịt heo nạc",
+                            "grams": 40,
+                            "kcal_per_100g": 139,
+                            "kcal": 56,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Tôm biển",
+                            "grams": 30,
+                            "kcal_per_100g": 82,
+                            "kcal": 25,
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051"
+                        },
+                        {
+                            "name": "Dầu chiên",
+                            "grams": 18,
+                            "kcal_per_100g": 897,
+                            "kcal": 161,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Giá / rau",
+                            "grams": 50,
+                            "kcal_per_100g": 20,
+                            "kcal": 10,
+                            "ingredient_id": "vn-ca-chua",
+                            "food_code": "4005"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 42,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: 1 bánh vừa; dầu thấm biến thiên cao → medium.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-moc": {
+            "calories_kcal": 363,
+            "serving_grams": 500,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-moc",
+                    "source_ref": "vivu-standard-v1+vn:bun-moc",
+                    "serving_grams": 500,
+                    "portion_note": "Bún tươi 180g→198; Thịt heo nạc (mọc) 80g→111; Dầu / mỡ nước dùng 6g→54; nước/rau 234g→0; total 363",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún tươi",
+                            "grams": 180,
+                            "kcal_per_100g": 110,
+                            "kcal": 198,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Thịt heo nạc (mọc)",
+                            "grams": 80,
+                            "kcal_per_100g": 139,
+                            "kcal": 111,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Dầu / mỡ nước dùng",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 234,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: bún mọc không giò quết riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-thang": {
+            "calories_kcal": 409,
+            "serving_grams": 480,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-thang",
+                    "source_ref": "vivu-standard-v1+vn:bun-thang",
+                    "serving_grams": 480,
+                    "portion_note": "Bún tươi 180g→198; Thịt gà ta 50g→100; Trứng gà (sợi) 40g→66; Mỡ nước dùng 5g→45; nước/rau 205g→0; total 409",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún tươi",
+                            "grams": 180,
+                            "kcal_per_100g": 110,
+                            "kcal": 198,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Thịt gà ta",
+                            "grams": 50,
+                            "kcal_per_100g": 199,
+                            "kcal": 100,
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013"
+                        },
+                        {
+                            "name": "Trứng gà (sợi)",
+                            "grams": 40,
+                            "kcal_per_100g": 166,
+                            "kcal": 66,
+                            "ingredient_id": "vn-trung-ga-toan-phan",
+                            "food_code": "9001"
+                        },
+                        {
+                            "name": "Mỡ nước dùng",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 205,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: Hà Nội rút gọn; không tính tôm khô/giò lụa riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "mien-ga": {
+            "calories_kcal": 369,
+            "serving_grams": 450,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — mien-ga",
+                    "source_ref": "vivu-standard-v1+vn:mien-ga",
+                    "serving_grams": 450,
+                    "portion_note": "Miến (proxy bún 1020 — gần kcal tinh bột ướt) 150g→165; Thịt gà ta 80g→159; Mỡ nước dùng 5g→45; nước/rau 215g→0; total 369",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Miến (proxy bún 1020 — gần kcal tinh bột ướt)",
+                            "grams": 150,
+                            "kcal_per_100g": 110,
+                            "kcal": 165,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Thịt gà ta",
+                            "grams": 80,
+                            "kcal_per_100g": 199,
+                            "kcal": 159,
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013"
+                        },
+                        {
+                            "name": "Mỡ nước dùng",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 215,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: miến dùng proxy bún 1020 (chưa có food_code miến riêng).",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "banh-bao": {
+            "calories_kcal": 364,
+            "serving_grams": 160,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — banh-bao",
+                    "source_ref": "vivu-standard-v1+vn:banh-bao",
+                    "serving_grams": 160,
+                    "portion_note": "Vỏ bột (proxy bánh mì) 100g→249; Thịt heo nạc nhân 50g→70; Dầu mỡ nhân 5g→45; nước/rau 5g→0; total 364",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Vỏ bột (proxy bánh mì)",
+                            "grams": 100,
+                            "kcal_per_100g": 249,
+                            "kcal": 249,
+                            "ingredient_id": "vn-banh-mi",
+                            "food_code": "1012"
+                        },
+                        {
+                            "name": "Thịt heo nạc nhân",
+                            "grams": 50,
+                            "kcal_per_100g": 139,
+                            "kcal": 70,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Dầu mỡ nhân",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 5,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: 1 cái vừa; vỏ hấp proxy bánh mì 1012.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "banh-gio": {
+            "calories_kcal": 264,
+            "serving_grams": 180,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — banh-gio",
+                    "source_ref": "vivu-standard-v1+vn:banh-gio",
+                    "serving_grams": 180,
+                    "portion_note": "Bột gạo (proxy bánh phở) 120g→172; Thịt heo nạc 40g→56; Dầu mỡ 4g→36; nước/rau 16g→0; total 264",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bột gạo (proxy bánh phở)",
+                            "grams": 120,
+                            "kcal_per_100g": 143,
+                            "kcal": 172,
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013"
+                        },
+                        {
+                            "name": "Thịt heo nạc",
+                            "grams": 40,
+                            "kcal_per_100g": 139,
+                            "kcal": 56,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Dầu mỡ",
+                            "grams": 4,
+                            "kcal_per_100g": 897,
+                            "kcal": 36,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 16,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: 1 cái; bột nếp thực tế có thể lệch.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-ga-hoi-an": {
+            "calories_kcal": 519,
+            "serving_grams": 400,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-ga-hoi-an",
+                    "source_ref": "vivu-standard-v1+vn:com-ga-hoi-an",
+                    "serving_grams": 400,
+                    "portion_note": "Cơm trắng chín (yield VN) 200g→275; Thịt gà ta 100g→199; Dầu mỡ 5g→45; nước/rau 95g→0; total 519",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm trắng chín (yield VN)",
+                            "grams": 200,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 275,
+                            "ingredient_id": "vn-com-trang-chin"
+                        },
+                        {
+                            "name": "Thịt gà ta",
+                            "grams": 100,
+                            "kcal_per_100g": 199,
+                            "kcal": 199,
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013"
+                        },
+                        {
+                            "name": "Dầu mỡ",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 95,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: suất cơm gà Hội An rút gọn; không tính nước chấm riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-dau-mam-tom": {
+            "calories_kcal": 387,
+            "serving_grams": 400,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-dau-mam-tom",
+                    "source_ref": "vivu-standard-v1+vn:bun-dau-mam-tom",
+                    "serving_grams": 400,
+                    "portion_note": "Bún tươi 150g→165; Đậu phụ 120g→114; Dầu chiên đậu 12g→108; nước/rau 118g→0; total 387",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún tươi",
+                            "grams": 150,
+                            "kcal_per_100g": 110,
+                            "kcal": 165,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Đậu phụ",
+                            "grams": 120,
+                            "kcal_per_100g": 95,
+                            "kcal": 114,
+                            "ingredient_id": "vn-dau-phu",
+                            "food_code": "3025"
+                        },
+                        {
+                            "name": "Dầu chiên đậu",
+                            "grams": 12,
+                            "kcal_per_100g": 897,
+                            "kcal": 108,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 118,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: không tính chả cốm/nem chua/mắm tôm calo đầy đủ.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "cao-lau": {
+            "calories_kcal": 408,
+            "serving_grams": 420,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — cao-lau",
+                    "source_ref": "vivu-standard-v1+vn:cao-lau",
+                    "serving_grams": 420,
+                    "portion_note": "Sợi cao lầu (proxy bánh phở) 180g→257; Thịt heo nạc 70g→97; Dầu 6g→54; nước/rau 164g→0; total 408",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Sợi cao lầu (proxy bánh phở)",
+                            "grams": 180,
+                            "kcal_per_100g": 143,
+                            "kcal": 257,
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013"
+                        },
+                        {
+                            "name": "Thịt heo nạc",
+                            "grams": 70,
+                            "kcal_per_100g": 139,
+                            "kcal": 97,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Dầu",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 164,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: sợi cao lầu proxy bánh phở 1013.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "banh-canh-cua": {
+            "calories_kcal": 360,
+            "serving_grams": 480,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — banh-canh-cua",
+                    "source_ref": "vivu-standard-v1+vn:banh-canh-cua",
+                    "serving_grams": 480,
+                    "portion_note": "Bánh canh (proxy bánh phở) 180g→257; Tôm/cua proxy tôm biển 60g→49; Mỡ nước dùng 6g→54; nước/rau 234g→0; total 360",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bánh canh (proxy bánh phở)",
+                            "grams": 180,
+                            "kcal_per_100g": 143,
+                            "kcal": 257,
+                            "ingredient_id": "vn-banh-pho",
+                            "food_code": "1013"
+                        },
+                        {
+                            "name": "Tôm/cua proxy tôm biển",
+                            "grams": 60,
+                            "kcal_per_100g": 82,
+                            "kcal": 49,
+                            "ingredient_id": "vn-tom-bien",
+                            "food_code": "8051"
+                        },
+                        {
+                            "name": "Mỡ nước dùng",
+                            "grams": 6,
+                            "kcal_per_100g": 897,
+                            "kcal": 54,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 234,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: cua proxy tôm 8051; không gạch cua riêng.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "bun-oc": {
+            "calories_kcal": 313,
+            "serving_grams": 480,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — bun-oc",
+                    "source_ref": "vivu-standard-v1+vn:bun-oc",
+                    "serving_grams": 480,
+                    "portion_note": "Bún tươi 180g→198; Thịt heo nạc (giò/ốc proxy) 50g→70; Mỡ nước dùng 5g→45; nước/rau 245g→0; total 313",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Bún tươi",
+                            "grams": 180,
+                            "kcal_per_100g": 110,
+                            "kcal": 198,
+                            "ingredient_id": "vn-bun",
+                            "food_code": "1020"
+                        },
+                        {
+                            "name": "Thịt heo nạc (giò/ốc proxy)",
+                            "grams": 50,
+                            "kcal_per_100g": 139,
+                            "kcal": 70,
+                            "ingredient_id": "vn-thit-heo-nac",
+                            "food_code": "7017"
+                        },
+                        {
+                            "name": "Mỡ nước dùng",
+                            "grams": 5,
+                            "kcal_per_100g": 897,
+                            "kcal": 45,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 245,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: ốc chưa có food_code — protein proxy heo nạc; medium.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
+        },
+        "com-ga-xoi-mo": {
+            "calories_kcal": 544,
+            "serving_grams": 380,
+            "facts": [
+                {
+                    "field": "calories_kcal",
+                    "method": "recipe_sum",
+                    "fct_source": "vn_2007",
+                    "source_title": "FCT VN + vivu-standard-v1 — com-ga-xoi-mo",
+                    "source_ref": "vivu-standard-v1+vn:com-ga-xoi-mo",
+                    "serving_grams": 380,
+                    "portion_note": "Cơm trắng chín 200g→275; Thịt gà ta 90g→179; Mỡ gà (proxy dầu) 10g→90; nước/rau 80g→0; total 544",
+                    "ingredients_breakdown": [
+                        {
+                            "name": "Cơm trắng chín",
+                            "grams": 200,
+                            "kcal_per_100g": 137.6,
+                            "kcal": 275,
+                            "ingredient_id": "vn-com-trang-chin"
+                        },
+                        {
+                            "name": "Thịt gà ta",
+                            "grams": 90,
+                            "kcal_per_100g": 199,
+                            "kcal": 179,
+                            "ingredient_id": "vn-thit-ga-ta",
+                            "food_code": "7013"
+                        },
+                        {
+                            "name": "Mỡ gà (proxy dầu)",
+                            "grams": 10,
+                            "kcal_per_100g": 897,
+                            "kcal": 90,
+                            "ingredient_id": "vn-dau-thao-moc",
+                            "food_code": "6002"
+                        },
+                        {
+                            "name": "Nước / rau / gia vị loãng",
+                            "grams": 80,
+                            "kcal_per_100g": 0,
+                            "kcal": 0
+                        }
+                    ],
+                    "confidence": "medium",
+                    "reviewed_at": "2026-07-12",
+                    "reviewed_by": "fct-vn-s2-01",
+                    "limitations": "ViVu v1: cơm gà xối mỡ; mỡ biến thiên cao.",
+                    "standard_id": "vivu-standard-v1"
+                }
+            ]
         }
     },
-    "fdc_lock_note": "Top rows have fdc_id locked. Pure fct_table → high; recipe_sum\/standard bowls keep medium with fdc_primary_component.",
+    "fdc_lock_note": "Top rows have fdc_id locked. Pure fct_table → high; recipe_sum/standard bowls keep medium with fdc_primary_component.",
     "fct_vn_pilot": {
         "kb_version": "1.1.0-fct-vn-pilot",
         "applied_at": "2026-07-11",
@@ -4673,5 +5439,6 @@
         ],
         "yield_standard": "vivu-yield-v1",
         "note": "Rice yield + standard bowls + home recipes use VN FCT 2007"
-    }
+    },
+    "s2_01_note": "Added 14 one_bowl recipe_sum medium on 2026-07-12"
 }

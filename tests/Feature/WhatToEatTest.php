@@ -46,13 +46,19 @@ class WhatToEatTest extends TestCase
             ->assertOk()
             ->assertJsonPath('meta.count_requested', 3)
             ->assertJsonPath('meta.suggest_mode', 'pick')
+            ->assertJsonPath('meta.ruleset_version', config('what_to_eat.ruleset_version'))
             ->assertJsonCount(3, 'data')
             ->assertJsonStructure([
                 'data' => [
                     ['id', 'name', 'slug', 'emoji', 'reason'],
                 ],
-                'meta' => ['partial', 'total_available', 'count_requested', 'suggest_mode'],
+                'meta' => ['partial', 'total_available', 'count_requested', 'suggest_mode', 'ruleset_version'],
             ]);
+    }
+
+    public function test_ruleset_version_is_semver_synced(): void
+    {
+        $this->assertSame('0.3.0', config('what_to_eat.ruleset_version'));
     }
 
     public function test_compose_returns_plate_composition(): void
@@ -116,22 +122,63 @@ class WhatToEatTest extends TestCase
             'status' => DishStatus::Published,
         ]);
 
-        $names = collect(
-            $this->actingAs($user, 'web')
-                ->postJson(route('what-to-eat.suggest'), [
-                    'meal_slot' => 'lunch',
-                    'meal_size' => 'main',
-                    'meal_mode' => 'dine_out',
-                    'count' => 5,
-                    'suggest_mode' => 'pick',
-                    'culinary_region' => 'bac',
-                ])
-                ->assertOk()
-                ->json('data')
-        )->pluck('name');
+        $response = $this->actingAs($user, 'web')
+            ->postJson(route('what-to-eat.suggest'), [
+                'meal_slot' => 'lunch',
+                'meal_size' => 'main',
+                'meal_mode' => 'dine_out',
+                'count' => 5,
+                'suggest_mode' => 'pick',
+                'culinary_region' => 'bac',
+            ])
+            ->assertOk()
+            ->assertJsonPath('meta.relaxations', []);
+
+        $names = collect($response->json('data'))->pluck('name');
 
         $this->assertTrue($names->contains('Bắc only'));
         $this->assertFalse($names->contains('Nam only'));
+    }
+
+    public function test_suggest_exposes_region_relaxation_in_meta(): void
+    {
+        $user = User::factory()->create();
+        Dish::factory()->create([
+            'name' => 'Only Nam',
+            'meal_slots' => ['lunch'],
+            'supports_main' => true,
+            'supports_dine_out' => true,
+            'culinary_regions' => ['nam'],
+            'status' => DishStatus::Published,
+        ]);
+
+        $this->actingAs($user, 'web')
+            ->postJson(route('what-to-eat.suggest'), [
+                'meal_slot' => 'lunch',
+                'meal_size' => 'main',
+                'meal_mode' => 'dine_out',
+                'count' => 2,
+                'suggest_mode' => 'pick',
+                'culinary_region' => 'bac',
+            ])
+            ->assertOk()
+            ->assertJsonPath('data.0.name', 'Only Nam')
+            ->assertJsonPath('meta.relaxations.0', 'culinary_region');
+
+        $message = $this->actingAs($user, 'web')
+            ->postJson(route('what-to-eat.suggest'), [
+                'meal_slot' => 'lunch',
+                'meal_size' => 'main',
+                'meal_mode' => 'dine_out',
+                'count' => 1,
+                'suggest_mode' => 'pick',
+                'culinary_region' => 'bac',
+            ])
+            ->assertOk()
+            ->json('meta.message');
+
+        $this->assertIsString($message);
+        $this->assertNotSame('', $message);
     }
 
     public function test_count_validation(): void

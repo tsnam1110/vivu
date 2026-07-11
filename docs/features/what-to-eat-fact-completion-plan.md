@@ -2,6 +2,9 @@
 
 > **Mục tiêu:** Đưa tri thức món (calo, ops, sau là YHCT) lên mức **tốt nhất có thể**
 > mà vẫn **verified-only** — không blog-guess, không claim y khoa giả.  
+> **Phạm vi file này:** chiến lược **data dài** (tầng 0–6).  
+> **Sprint / chia Agent (S0–S5):** xem [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md)  
+> (task Fact-A = S2; YHCT = S4 — map vào tầng 2 & 4 bên dưới).  
 > **Liên quan:**  
 > [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) ·  
 > [`what-to-eat-fact-a-calories.md`](what-to-eat-fact-a-calories.md) ·  
@@ -106,6 +109,9 @@ Khi curator đổi recipe → bump `vivu-standard-v2` + tính lại, không im l
 
 ## 5. Lộ trình & trạng thái
 
+> **Sprint Agent (UX/engine/vùng):** [`what-to-eat-next-plan.md`](what-to-eat-next-plan.md)  
+> — S2 ≈ mở rộng/siết tầng 2; S4 ≈ tầng 4 expert.
+
 | Phase | Nội dung | Status |
 |---|---|---|
 | **P-fact-0** | Plan + registry rules (file này) | ✅ |
@@ -115,6 +121,7 @@ Khi curator đổi recipe → bump `vivu-standard-v2` + tính lại, không im l
 | **P-fact-4** | Recipe text UI lô cook_home | ✅ `recipes_cook_home_v1.json` (~155, đủ `supports_cook_home`) |
 | **P-fact-5** | Map FCT VN chính thức | ✅ `1.1.0-vn-fct` (~35 ing + yield); pilot **35** món; standard bowls `1.1.0-vn` |
 | **P-fact-6** | YHCT thermal/element | ✅ pipeline + bootstrap ~10 `tcm_text` medium; expert_queue chờ `expert_tcm` |
+| **P-fact-next** | One-bowl null calo + harden provenance + expert YHCT | 📋 S2/S4 next-plan |
 
 ---
 

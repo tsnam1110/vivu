@@ -143,9 +143,11 @@ export default function DishesPage() {
             color: '#9a3412',
           }}
         >
-          <strong>Curator:</strong> Calo, ngũ hành, hàn–nhiệt, dish_role… khi lưu qua Admin được coi là
-          đã review (khác seed JSON bắt provenance). Chỉ điền field chắc chắn — còn lại để trống để
-          user đóng góp. Vùng miền: multi-tag <code>bac|trung|nam|…</code>.
+          <strong>Curator policy:</strong> Field nhạy cảm (calo, serving_grams, ngũ hành, hàn–nhiệt,
+          dish_role, recipe) khi lưu qua Admin = <em>curator trusted</em> (khác seed JSON bắt
+          provenance). Chỉ điền khi chắc chắn — null = «chưa có dữ liệu xác thực». Không bịa số.
+          Vùng miền: multi-tag <code>bac|trung|nam|tay_nguyen|…</code>. Duyệt contribution → set
+          canonical khi đủ nguồn. SOP: docs/features/what-to-eat-seed-and-kb.md + § admin curator.
         </p>
       </div>
       <Space style={{ marginBottom: 16 }} wrap>
@@ -373,14 +375,23 @@ export default function DishesPage() {
             <Form.Item
               name="calories_kcal"
               label="Kcal (cho khẩu phần)"
-              tooltip="Lượng calo của serving_grams bên cạnh"
+              tooltip="Lượng calo của serving_grams. Xóa = null (chưa verified) — không điền số đoán."
+              rules={[
+                {
+                  validator: async (_, value) => {
+                    if (value === 0) {
+                      return Promise.reject(new Error('0 kcal hiếm — để trống nếu chưa có dữ liệu xác thực'));
+                    }
+                  },
+                },
+              ]}
             >
-              <InputNumber min={0} max={5000} />
+              <InputNumber min={0} max={5000} placeholder="null = chưa có" />
             </Form.Item>
             <Form.Item
               name="serving_grams"
               label="Khối lượng cơ sở (g)"
-              tooltip="calories_kcal tương ứng bao nhiêu gram"
+              tooltip="Phải cặp với calories_kcal. Không để một bên null một bên có số."
             >
               <InputNumber min={1} max={2000} />
             </Form.Item>

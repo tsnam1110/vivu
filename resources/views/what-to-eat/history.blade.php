@@ -80,9 +80,12 @@
                            @change="toggleFlag('vegetarian')">
                     {{ __('what_to_eat.pref_vegetarian') }}
                 </label>
-                <label class="flex items-center gap-2 text-sm text-stone-700">
-                    <input type="checkbox" class="rounded border-stone-300 text-teal-600" x-model="balance">
-                    {{ __('what_to_eat.pref_balance') }}
+                <label class="flex items-start gap-2 text-sm text-stone-700">
+                    <input type="checkbox" class="mt-0.5 rounded border-stone-300 text-teal-600" x-model="balance">
+                    <span>
+                        {{ __('what_to_eat.pref_balance') }}
+                        <span class="mt-0.5 block text-[11px] font-normal leading-relaxed text-stone-500">{{ __('what_to_eat.pref_balance_hint') }}</span>
+                    </span>
                 </label>
                 <div>
                     <label class="text-sm text-stone-700">{{ __('what_to_eat.pref_max_kcal') }}</label>

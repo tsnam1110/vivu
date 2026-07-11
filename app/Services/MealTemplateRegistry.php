@@ -33,9 +33,10 @@ class MealTemplateRegistry
         }
 
         if ($mode === MealMode::DineOut) {
-            return $count <= 1
-                ? $this->templateDineOut1()
-                : $this->templateDineOut1(); // v0.2: multi dine_out vẫn one-bowl pick qua fallback
+            // count ≥ 2 → ưu tiên món chia sẻ (lẩu/nướng); count 1 → một suất
+            return $count >= 2
+                ? $this->templateDineOutFeast()
+                : $this->templateDineOut1();
         }
 
         // cook_home · main
@@ -134,6 +135,26 @@ class MealTemplateRegistry
             'implicit' => [],
             'rules' => ['B01_template_roles'],
             'fallback_roles' => [DishRole::ShareFeast->value, DishRole::MainProtein->value],
+        ];
+    }
+
+    /**
+     * Ăn ngoài nhóm: 1× share_feast (lẩu/nướng), fallback one_bowl nếu thiếu feast.
+     *
+     * @return array<string, mixed>
+     */
+    private function templateDineOutFeast(): array
+    {
+        return [
+            'id' => 'dine_out_feast_1',
+            'label' => __('what_to_eat.template_dine_out_feast'),
+            'summary' => __('what_to_eat.template_dine_out_feast_summary'),
+            'slots' => [
+                $this->slot('feast', DishRole::ShareFeast, __('what_to_eat.role_share_feast'), true, 1.0),
+            ],
+            'implicit' => [],
+            'rules' => ['B01_template_roles', 'B06_dine_out_feast'],
+            'fallback_roles' => [DishRole::OneBowl->value, DishRole::MainProtein->value],
         ];
     }
 

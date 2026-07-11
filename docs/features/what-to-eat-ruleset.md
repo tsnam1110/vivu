@@ -24,8 +24,8 @@
    ngắn trong file này.
 6. **Không claim chữa bệnh / chẩn đoán.** Output = tham khảo + giải thích rule.
 
-**`ruleset_version` hiện tại:** `0.2.0`  
-*(Code: `MealComposer` + `MealTemplateRegistry` + `WhatToEatSuggester` mode pick/compose/auto.)*
+**`ruleset_version` hiện tại:** `0.3.0`  
+*(Code: `MealComposer` + `MealTemplateRegistry` + `WhatToEatSuggester` mode pick/compose/auto; soft diversity protein/fry; dine_out feast; YHCT soft opt-in.)*
 
 ---
 
@@ -212,6 +212,8 @@ cờ `SEED_ALLOW_UNVERIFIED=1` — xem seed-KB).
 |---|---|---|
 | `0.1.0-draft` | 2026-07-11 | Khởi tạo lớp A–E–S, template mâm, data-gate, cấm đoán field |
 | `0.2.0` | 2026-07-11 | Implement compose: vn_home_3/2, standalone, light, dine_out_1; soft fry/kcal/thermal; auto mode; region filter |
+| `0.3.0` | 2026-07-12 | Soft diversity protein (E01) + mạnh penalty double fry; template `dine_out_feast_1`; exclude plate signature reroll; thermal soft **chỉ** khi pref YHCT opt-in |
+| `0.3.0` *(patch ops)* | 2026-07-12 | Soft-relax filter **không im lặng**: `meta.relaxations` + `meta.message` (region / budget / exclude / plate_signature). Không bump minor — hành vi minh bạch, hard rules giữ. |
 
 Mọi PR đổi rule: **cập nhật bảng này + bump version**.
 
