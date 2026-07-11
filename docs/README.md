@@ -64,6 +64,8 @@ composer dev
 - [`social-sharing.md`](features/social-sharing.md) — Chia sẻ mạng xã hội
 - [`taste-matching.md`](features/taste-matching.md) — Ghép "gu" người dùng
 - [`avatar-and-premium.md`](features/avatar-and-premium.md) — Avatar, khung, Premium
+- [`habit-tracker.md`](features/habit-tracker.md) — Theo dõi thói quen (kho cá nhân)
+- [`what-to-eat.md`](features/what-to-eat.md) — Hôm nay ăn gì (popup trên Kho + kho món + đóng góp)
 
 ### Dành cho Agent
 - [`08-agent-playbook.md`](08-agent-playbook.md) — **Quy tắc & quy trình bắt buộc cho AI Agent**

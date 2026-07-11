@@ -37,6 +37,7 @@ tests/
 | Tag/Category | admin CRUD; không xoá category còn experience |
 | Taste-match | trùng nhiều nhãn điểm cao hơn; không tự match; dưới ngưỡng bị loại; `shared_traits` đúng |
 | Map | toạ độ ngoài khoảng → 422; nearby trả đúng bán kính |
+| Habit | Grid tháng; cycle null→done→missed→null; history; per-user isolation; admin CRUD habit-items |
 
 ## 3. Frontend Admin (React + Vitest — tuỳ chọn)
 - Test component quan trọng (form CRUD) và hàm util.

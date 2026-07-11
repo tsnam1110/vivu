@@ -155,6 +155,7 @@ npm run build:all      # cả hai
 | `/profile` | Trang cá nhân + avatar / Avatar Premium | User |
 | `/profile/edit` | Sửa hồ sơ gu (taste) | User |
 | `/matches` | Tìm người cùng gu | User |
+| `/habits` | Habit tracker (thói quen cá nhân) | User |
 | `/terms` | Điều khoản sử dụng dịch vụ | Công khai |
 | `/privacy` | Chính sách bảo vệ dữ liệu cá nhân (NĐ 13/2023) | Công khai |
 | `/community` | Quy tắc cộng đồng & nội dung | Công khai |

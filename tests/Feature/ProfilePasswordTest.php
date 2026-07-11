@@ -24,7 +24,7 @@ class ProfilePasswordTest extends TestCase
                 'password' => 'new-secret-99',
                 'password_confirmation' => 'new-secret-99',
             ])
-            ->assertRedirect(route('profile.me'))
+            ->assertRedirect(route('profile.me', ['tab' => 'security']))
             ->assertSessionHas('success');
 
         $user->refresh();

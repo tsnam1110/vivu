@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\ActivityLevel;
+use App\Enums\Gender;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -18,6 +20,11 @@ class UserProfile extends Model
         'personality',
         'interests',
         'location_city',
+        'weight_kg',
+        'height_cm',
+        'gender',
+        'birth_year',
+        'activity_level',
         'is_matchable',
     ];
 
@@ -27,6 +34,11 @@ class UserProfile extends Model
             'personality' => 'array',
             'interests' => 'array',
             'is_matchable' => 'boolean',
+            'weight_kg' => 'float',
+            'height_cm' => 'integer',
+            'gender' => Gender::class,
+            'birth_year' => 'integer',
+            'activity_level' => ActivityLevel::class,
         ];
     }
 

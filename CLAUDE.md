@@ -145,5 +145,7 @@ npm run build:all                 # build cả hai
 - [x] Avatar (upload + sample) + khung catalog + Premium theo thời hạn
 - [x] Feature/Unit tests (`php artisan test`)
 - [x] CI workflow (`.github/workflows/ci.yml`)
+- [x] Habit Tracker: bảng Excel; admin = mẫu; user chọn/tạo đầu mục riêng; cycle ✓/✗; history
+- [x] Hôm nay ăn gì (popup, catalog, đóng góp+admin, history/prefs, match Experience)
 
 > Cập nhật checklist này khi hoàn thành từng phần.

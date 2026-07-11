@@ -159,7 +159,7 @@ class ProfileService
     }
 
     /**
-     * @param  array{bio?: string|null, personality?: list<string>, interests?: list<string>, location_city?: string|null, is_matchable?: bool}  $data
+     * @param  array<string, mixed>  $data
      */
     public function updateProfile(User $user, array $data): UserProfile
     {
@@ -176,18 +176,24 @@ class ProfileService
             $this->assertValidTraits($data['interests'], TraitType::Interest);
         }
 
-        if (array_key_exists('bio', $data)) {
-            $profile->bio = $data['bio'];
+        $scalarKeys = [
+            'bio',
+            'personality',
+            'interests',
+            'location_city',
+            'weight_kg',
+            'height_cm',
+            'gender',
+            'birth_year',
+            'activity_level',
+        ];
+
+        foreach ($scalarKeys as $key) {
+            if (array_key_exists($key, $data)) {
+                $profile->{$key} = $data[$key];
+            }
         }
-        if (array_key_exists('personality', $data)) {
-            $profile->personality = $data['personality'];
-        }
-        if (array_key_exists('interests', $data)) {
-            $profile->interests = $data['interests'];
-        }
-        if (array_key_exists('location_city', $data)) {
-            $profile->location_city = $data['location_city'];
-        }
+
         if (array_key_exists('is_matchable', $data)) {
             $profile->is_matchable = (bool) $data['is_matchable'];
         }

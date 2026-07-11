@@ -34,6 +34,11 @@ SQL (xem [`04-database-schema.md`](04-database-schema.md)).
 
 Ảnh:  Experience 1 ──── * Media (ảnh)
 Theo dõi gu: User * ──── * User (qua taste-match, tính toán; không lưu quan hệ cứng ở v1)
+Habit:       Admin → HabitItem* (templates); User 1 ──── * UserHabitItem (optional template);
+             User 1 ──── * HabitEntry * ──── 1 UserHabitItem; + HabitEntryHistory
+What-to-eat: User 1 ──── * DishContribution; User 1 ──── * MealSuggestionLog (riêng tư)
+             Dish (catalog) 1 ──── * DishContribution
+             Dish ≈ soft-link → Experience (ăn ngoài; không FK cứng v1)
 ```
 
 ## 2. Danh sách thực thể
@@ -118,6 +123,36 @@ Catalog khung trang trí quanh avatar (kiểu Discord/LoL).
 - User có `premium_expires_at` denormalized để check O(1).
 - Admin grant / extend / cancel.
 
+### 2.13 HabitItem (mẫu habit — catalog admin)
+Template gợi ý. Admin CRUD. User **chọn** → copy sang **UserHabitItem** (không dùng trực tiếp làm hàng).
+
+### 2.14 UserHabitItem (đầu mục cá nhân)
+Hàng trên bảng của **một user**: từ mẫu (`template_habit_item_id`) hoặc **text tự tạo** (null template).
+User sửa/ẩn/xoá; custom **không** ghi vào admin catalog.
+
+### 2.15 HabitEntry (ô kết quả)
+Trạng thái user tại (UserHabitItem × ngày): `done` / `missed`. Không row = trống.
+
+### 2.16 HabitEntryHistory (lịch sử)
+Audit mọi lần cycle ô.
+
+### 2.17 Dish (món ăn — kho hệ thống)
+Catalog món dùng chung cho tính năng **Hôm nay ăn gì** — **khác** Experience
+(Experience = trải nghiệm tại địa điểm của một user).
+- Gắn trục gợi ý: `meal_slots`, ăn nhẹ/chính, ăn ngoài/tự nấu; tuỳ chọn `five_element`.
+- `hasMany` **DishContribution**; cache calo / thời gian nấu từ contribution canonical.
+- Quản lý: admin + seed; user đề xuất món mới qua `source = user` (có duyệt).
+- Chi tiết: [`features/what-to-eat.md`](features/what-to-eat.md).
+
+### 2.18 DishContribution (đóng góp tri thức món)
+UGC có kiểm duyệt về một Dish: `recipe`, `calories`, `harm`, `benefit`, `advice`,
+`note`, `five_element`.
+- `status`: `pending` → `approved` / `rejected` (pattern tương tự Tag).
+- `is_canonical`: bản hiển thị chính theo từng type.
+
+### 2.19 MealSuggestionLog
+Lịch sử gợi ý/chọn món — **riêng tư** 100%, phục vụ tránh lặp và cá nhân hoá nhẹ.
+
 ## 3. Quy tắc miền quan trọng (business rules)
 
 1. **User ≠ Admin:** hai loại tài khoản tách bảng, tách guard, tách endpoint.
@@ -138,6 +173,12 @@ Catalog khung trang trí quanh avatar (kiểu Discord/LoL).
    [`features/taste-matching.md`](features/taste-matching.md).
 9. **Khung premium chỉ khi Premium còn hạn:** `premium_expires_at > now()`. Hết hạn
    → fallback khung free / none. Xem [`features/avatar-and-premium.md`](features/avatar-and-premium.md).
+10. **Habit Tracker:** đầu mục do admin; ô kết quả per-user; cycle 3 trạng thái;
+    mọi đổi ghi history. Xem [`features/habit-tracker.md`](features/habit-tracker.md).
+11. **Dish ≠ Experience:** kho món là tri thức dùng chung; không yêu cầu toạ độ.
+    Gợi ý chỉ `dishes.status = published`. Đóng góp món: duyệt như tag pending.
+    Thông tin calo/lợi-hại/ngũ hành là **tham khảo**, bắt buộc disclaimer UI.
+    Xem [`features/what-to-eat.md`](features/what-to-eat.md).
 
 ## 4. Vòng đời trạng thái Experience
 

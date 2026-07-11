@@ -49,8 +49,14 @@ Liên quan: [`02-tech-stack.md`](02-tech-stack.md) · [`07-coding-standards.md`]
 | `/experiences/{slug}` | Chi tiết | Mọi người | SEO, OG |
 | `/experiences/{id}/edit` | Sửa | Chủ sở hữu | Form |
 | `/matches` | Người cùng gu | Auth | Danh sách |
-| `/profile` | **Trang cá nhân** (avatar + premium frames) | Auth | Tab “Profile” |
-| `/profile/edit` | Hồ sơ gu (taste) + đăng xuất | Auth | Từ Profile |
+| `/habits` | **Habit Tracker** (bảng Excel theo tháng) | Auth | Entry từ kho/profile — **không** tab nav |
+| `/habits/items` | Chọn mẫu / tự tạo / sửa đầu mục cá nhân | Auth | |
+| `/habits/history` | Lịch sử đổi ô | Auth | Riêng tư per user |
+| `/` (Kho) + modal | **Hôm nay ăn gì** (tính năng **phụ**) | Auth | Nút trên Kho → **popup** chọn bữa/số món → list; **Chi tiết** từng món |
+| `/what-to-eat/dishes/{slug}` | Chi tiết món (khi user bấm Chi tiết / deep link) | Auth hoặc public | Disclaimer calo/ngũ hành; không phải entry chính |
+| `/what-to-eat/history` | Lịch sử gợi ý (phase sau) | Auth | Riêng tư; không tab nav |
+| `/profile` | **Hồ sơ** — layout trang như cũ + **tab bar dọc trái** (tổng quan / tài khoản / thể trạng / gu / bảo mật) | Auth | Tab “Profile” |
+| `/profile/edit` | Redirect → `/profile?tab=taste` | Auth | Tương thích link cũ |
 | `/u/{username}` | Hồ sơ công khai | Mọi người | Avatar + experiences published |
 | `/login`, `/register` | Auth | Guest | `x-password-input` |
 | `/terms`, `/privacy`, `/community`, `/cookies` | Pháp lý | Mọi người | Layout legal (card + mục lục) |
@@ -68,6 +74,10 @@ Liên quan: [`02-tech-stack.md`](02-tech-stack.md) · [`07-coding-standards.md`]
 | 3 | **+** (nổi) | `experiences.create` | Dấu cộng tròn teal |
 | 4 | Cùng gu | `matches.index` | Nhóm người |
 | 5 | Profile | `profile.me` (`/profile`) | User |
+
+> **Không** thêm tab thứ 6 cho Habit hay What-to-eat. Habit: thẻ trên Kho → trang
+> `/habits`. What-to-eat: **nút trên Kho → popup** (không full-page làm luồng chính).
+> Giữ menu 5 mục (cảm giác iOS).
 
 **Guest:** Trang chủ · Khám phá · Đăng nhập · Đăng ký (CTA teal).
 

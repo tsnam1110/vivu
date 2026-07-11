@@ -48,9 +48,30 @@ chạy được end-to-end. Cập nhật trạng thái khi tiến triển; đồ
 - Còn lại khi deploy thật: staging/prod, storage S3, HTTPS, PHPStan nghiêm ngặt.
 
 
+## M7 — Habit Tracker (bảng theo ngày) ✅
+- Admin: mẫu `habit_items` (gợi ý). User: `user_habit_items` (chọn mẫu / tự nhập text).
+- Lưới tháng Excel; cycle trống → ✓ → ✗ → trống; history; không ghi custom vào admin.
+- **DoD:** Feature + Unit test xanh. Xem [`features/habit-tracker.md`](features/habit-tracker.md).
+
+## M8 — Hôm nay ăn gì (What to Eat) 📋 (đặc tả)
+
+Phân pha — chi tiết [`features/what-to-eat.md`](features/what-to-eat.md):
+
+| Phase | Nội dung | Trạng thái |
+|---|---|---|
+| **A** | Catalog `dishes` + seeder + **nút Kho → popup** (bữa / nhẹ–chính / ngoài–nấu / **số lượng**) + list + nút Chi tiết | ✅ |
+| **B** | `dish_contributions` + form user + admin duyệt/canonical sync + admin CRUD dishes | ✅ |
+| **C** | `meal_suggestion_logs`, chọn món, history `/what-to-eat/history`, `user_food_preferences` | ✅ |
+| **D** | Soft-match Experience theo keywords + GPS (nếu cho phép) | ✅ |
+| **E** | Social feed — backlog | Chưa |
+
+- Entry UI: **popup trên trang chính user (Kho)** — tính năng phụ; **không** tab floating nav.
+- **DoD Phase A:** mở/đóng popup; `count` 1–5; list tóm tắt; Chi tiết từng món; test suggester xanh.
+
 ## Ngoài phạm vi v1 (backlog)
-Chat, booking/thanh toán, mobile native, gợi ý ML nâng cao, i18n nội dung. Xem
-[`00-vision-scope.md`](00-vision-scope.md) §4.
+Chat, booking/thanh toán, mobile native, gợi ý ML nâng cao, i18n nội dung,
+reminder habit / habit công khai, what-to-eat Phase E (social / mệnh cá nhân).
+Xem [`00-vision-scope.md`](00-vision-scope.md) §4.
 
 > Thứ tự M1→M6 có thể điều chỉnh, nhưng **M1 (nền tảng) và M2 (auth 2 guard) nên làm
 > trước** vì mọi thứ khác phụ thuộc.

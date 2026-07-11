@@ -134,7 +134,7 @@ class ExperienceTest extends TestCase
             ->assertSee('Đăng trải nghiệm', false)
             ->assertSee('name="title"', false)
             ->assertSee('experience-map', false)
-            ->assertSee('Lưu nháp', false)
+            ->assertSee('Lưu cá nhân', false)
             ->assertSee('Đăng công khai', false);
     }
 

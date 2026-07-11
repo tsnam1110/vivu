@@ -34,6 +34,11 @@ class ProfileController extends Controller
         ];
 
         $frames = AvatarFrame::cachedActive();
+        $allowedTabs = ['overview', 'account', 'body', 'taste', 'security'];
+        $tab = (string) $request->query('tab', 'overview');
+        if (! in_array($tab, $allowedTabs, true)) {
+            $tab = 'overview';
+        }
 
         return view('profile.me', [
             'user' => $user,
@@ -41,6 +46,9 @@ class ProfileController extends Controller
             'freeFrames' => $frames->where('is_premium', false)->values(),
             'premiumFrames' => $frames->where('is_premium', true)->values(),
             'sampleAvatars' => SampleAvatar::cachedActive(),
+            'personalities' => TasteTrait::query()->active()->where('type', 'personality')->orderBy('name')->get(),
+            'interests' => TasteTrait::query()->active()->where('type', 'interest')->orderBy('name')->get(),
+            'initialTab' => $tab,
         ]);
     }
 
@@ -49,7 +57,7 @@ class ProfileController extends Controller
         $this->profileService->updateAccount($request->user('web'), $request->validated());
 
         return redirect()
-            ->route('profile.me')
+            ->route('profile.me', ['tab' => 'account'])
             ->with('success', __('messages.account_profile_updated'));
     }
 
@@ -58,7 +66,7 @@ class ProfileController extends Controller
         $this->profileService->enablePremiumDemo($request->user('web'), 30);
 
         return redirect()
-            ->route('profile.me')
+            ->route('profile.me', ['tab' => 'overview'])
             ->with('success', __('messages.premium_avatar_enabled'));
     }
 
@@ -70,7 +78,7 @@ class ProfileController extends Controller
         );
 
         return redirect()
-            ->route('profile.me')
+            ->route('profile.me', ['tab' => 'security'])
             ->with('success', __('messages.password_updated'));
     }
 
@@ -91,21 +99,28 @@ class ProfileController extends Controller
         return view('profile.show', compact('user', 'experiences'));
     }
 
-    public function edit(Request $request): View
+    public function edit(Request $request): RedirectResponse
     {
-        $user = $request->user('web')->load('profile');
+        // Gộp vào popup/panel Hồ sơ — tab Gu (hoặc body nếu chỉ định)
+        $tab = $request->query('tab', 'taste');
+        if (! in_array($tab, ['overview', 'account', 'body', 'taste', 'security'], true)) {
+            $tab = 'taste';
+        }
 
-        return view('profile.edit', [
-            'user' => $user,
-            'personalities' => TasteTrait::query()->active()->where('type', 'personality')->orderBy('name')->get(),
-            'interests' => TasteTrait::query()->active()->where('type', 'interest')->orderBy('name')->get(),
-        ]);
+        return redirect()->route('profile.me', ['tab' => $tab]);
     }
 
     public function update(UpdateProfileRequest $request): RedirectResponse
     {
         $this->profileService->updateProfile($request->user('web'), $request->validated());
 
-        return redirect()->route('profile.edit')->with('success', __('messages.profile_updated'));
+        $tab = $request->input('_tab', 'taste');
+        if (! in_array($tab, ['body', 'taste', 'account'], true)) {
+            $tab = 'taste';
+        }
+
+        return redirect()
+            ->route('profile.me', ['tab' => $tab])
+            ->with('success', __('messages.profile_updated'));
     }
 }

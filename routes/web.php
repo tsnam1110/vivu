@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\ExperienceController;
+use App\Http\Controllers\Web\HabitController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\MatchController;
 use App\Http\Controllers\Web\PageController;
 use App\Http\Controllers\Web\ProfileController;
+use App\Http\Controllers\Web\WhatToEatController;
 use Illuminate\Support\Facades\Route;
 
 // Mặc định: kho cá nhân (auth) / landing (guest). Khám phá là route riêng.
@@ -48,4 +50,32 @@ Route::middleware('auth:web')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::get('/matches', MatchController::class)->name('matches.index');
+
+    Route::get('/habits', [HabitController::class, 'index'])->name('habits.index');
+    Route::get('/habits/items', [HabitController::class, 'items'])->name('habits.items');
+    Route::post('/habits/items', [HabitController::class, 'storeItem'])->name('habits.items.store');
+    Route::put('/habits/items/{userHabitItem}', [HabitController::class, 'updateItem'])->name('habits.items.update');
+    Route::delete('/habits/items/{userHabitItem}', [HabitController::class, 'destroyItem'])->name('habits.items.destroy');
+    Route::get('/habits/history', [HabitController::class, 'history'])->name('habits.history');
+    Route::post('/habits/cycle', [HabitController::class, 'cycle'])
+        ->middleware('throttle:120,1')
+        ->name('habits.cycle');
+
+    Route::post('/what-to-eat/suggest', [WhatToEatController::class, 'suggest'])
+        ->middleware('throttle:30,1')
+        ->name('what-to-eat.suggest');
+    Route::get('/what-to-eat/dishes/{dish:slug}', [WhatToEatController::class, 'show'])
+        ->name('what-to-eat.dishes.show');
+    Route::post('/what-to-eat/dishes/{dish:slug}/contributions', [WhatToEatController::class, 'contribute'])
+        ->middleware('throttle:10,1')
+        ->name('what-to-eat.dishes.contribute');
+    Route::post('/what-to-eat/choose', [WhatToEatController::class, 'choose'])
+        ->middleware('throttle:30,1')
+        ->name('what-to-eat.choose');
+    Route::get('/what-to-eat/history', [WhatToEatController::class, 'history'])
+        ->name('what-to-eat.history');
+    Route::get('/what-to-eat/preferences', [WhatToEatController::class, 'showPreferences'])
+        ->name('what-to-eat.preferences.show');
+    Route::put('/what-to-eat/preferences', [WhatToEatController::class, 'updatePreferences'])
+        ->name('what-to-eat.preferences.update');
 });

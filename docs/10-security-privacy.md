@@ -39,6 +39,9 @@
 > Cập nhật email/MST/địa chỉ chủ thể vận hành trước production. Nội dung là khung vận hành —
 > rà soát với tư vấn pháp lý khi thương mại hoá.
 
+- **HabitEntry / HabitEntryHistory** là dữ liệu **riêng tư tuyệt đối** (theo user).
+  `habit_items` là catalog admin (không phải PII). Không hiển thị habit trên hồ sơ
+  công khai. Xem [`features/habit-tracker.md`](features/habit-tracker.md).
 - **Taste profile (tính cách/sở thích), email, vị trí** là dữ liệu cá nhân.
   - `email` **không** hiển thị công khai trên hồ sơ.
   - `personality`/`interests` dùng cho taste-match: cho phép user bật/tắt hiển thị

@@ -115,6 +115,16 @@ export interface Tag {
   creator?: { id: number; name: string; username?: string } | null;
 }
 
+export interface HabitItem {
+  id: number;
+  name: string;
+  slug: string;
+  description?: string | null;
+  icon?: string | null;
+  sort_order: number;
+  is_active: boolean;
+}
+
 export interface TasteTrait {
   id: number;
   type: string;
@@ -134,6 +144,53 @@ export const listUsers = (params?: Record<string, unknown>) =>
 
 export const updateUserStatus = (id: number, status: string) =>
   http.patch(`/admin/users/${id}`, { status }).then((r) => r.data);
+
+export interface AdminUserHabitItem {
+  id: number;
+  name: string;
+  icon?: string | null;
+  description?: string | null;
+  is_active: boolean;
+  is_custom: boolean;
+  template_habit_item_id?: number | null;
+  sort_order: number;
+  created_at?: string | null;
+}
+
+export interface AdminUserHabitSummary {
+  user: { id: number; name: string; username: string; email?: string };
+  month: {
+    done: number;
+    missed: number;
+    empty: number;
+    items_count: number;
+    month_label: string;
+    rate: number;
+  };
+  items: AdminUserHabitItem[];
+  items_count: number;
+  active_items_count: number;
+}
+
+export interface AdminHabitHistoryRow {
+  id: number;
+  habit_item: { id: number; name: string; icon?: string | null } | null;
+  entry_date: string | null;
+  from_status: string | null;
+  to_status: string | null;
+  from_label: string;
+  to_label: string;
+  source: string;
+  changed_at: string | null;
+}
+
+export const getUserHabitSummary = (userId: number) =>
+  http.get<{ data: AdminUserHabitSummary }>(`/admin/users/${userId}/habits/summary`).then((r) => r.data.data);
+
+export const listUserHabitHistory = (userId: number, params?: Record<string, unknown>) =>
+  http
+    .get<Paginated<AdminHabitHistoryRow>>(`/admin/users/${userId}/habits/history`, { params })
+    .then((r) => r.data);
 
 export const grantUserPremium = (
   id: number,
@@ -220,3 +277,75 @@ export const listTasteTraits = () =>
 
 export const createTasteTrait = (payload: { type: string; name: string }) =>
   http.post('/admin/taste-traits', payload).then((r) => r.data);
+
+export const listHabitItems = () =>
+  http.get<{ data: HabitItem[] }>('/admin/habit-items').then((r) => r.data.data);
+
+export const createHabitItem = (payload: Partial<HabitItem>) =>
+  http.post('/admin/habit-items', payload).then((r) => r.data);
+
+export const updateHabitItem = (id: number, payload: Partial<HabitItem>) =>
+  http.patch(`/admin/habit-items/${id}`, payload).then((r) => r.data);
+
+export const deleteHabitItem = (id: number) => http.delete(`/admin/habit-items/${id}`);
+
+export type Dish = {
+  id: number;
+  name: string;
+  slug: string;
+  emoji?: string | null;
+  summary?: string | null;
+  meal_slots: string[];
+  supports_light: boolean;
+  supports_main: boolean;
+  supports_dine_out: boolean;
+  supports_cook_home: boolean;
+  five_element?: string | null;
+  calories_kcal?: number | null;
+  serving_grams?: number | null;
+  kcal_per_100g?: number | null;
+  cook_minutes?: number | null;
+  search_keywords?: string | null;
+  benefits?: string | null;
+  harms?: string | null;
+  advice?: string | null;
+  status: string;
+  suggest_count: number;
+};
+
+export type DishContribution = {
+  id: number;
+  dish_id: number;
+  user_id?: number | null;
+  type: string;
+  type_label?: string;
+  payload: Record<string, unknown>;
+  status: string;
+  is_canonical: boolean;
+  review_note?: string | null;
+  created_at?: string;
+  dish?: { id: number; name: string; slug: string; emoji?: string | null } | null;
+  user?: { id: number; name: string; username: string } | null;
+};
+
+export const listDishes = (params?: { status?: string; q?: string; page?: number }) =>
+  http.get<Paginated<Dish>>('/admin/dishes', { params }).then((r) => r.data);
+
+export const createDish = (payload: Partial<Dish>) =>
+  http.post<{ data: Dish }>('/admin/dishes', payload).then((r) => r.data);
+
+export const updateDish = (id: number, payload: Partial<Dish>) =>
+  http.put<{ data: Dish }>(`/admin/dishes/${id}`, payload).then((r) => r.data);
+
+export const deleteDish = (id: number) => http.delete(`/admin/dishes/${id}`);
+
+export const listDishContributions = (params?: { status?: string; type?: string; page?: number }) =>
+  http.get<Paginated<DishContribution>>('/admin/dish-contributions', { params }).then((r) => r.data);
+
+export const updateDishContributionStatus = (
+  id: number,
+  payload: { status: string; set_canonical?: boolean; review_note?: string },
+) =>
+  http
+    .patch<{ data: DishContribution }>(`/admin/dish-contributions/${id}/status`, payload)
+    .then((r) => r.data);

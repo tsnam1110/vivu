@@ -79,7 +79,7 @@
                                 <td class="py-2">Họ tên hiển thị, username, email, mật khẩu (đã băm), trạng thái tài khoản</td>
                             </tr>
                             <tr class="border-b border-stone-100">
-                                <td class="py-2 pr-3 font-medium text-stone-800">Hồ sơ gu</td>
+                                <td class="py-2 pr-3 font-medium text-stone-800">Hồ sơ</td>
                                 <td class="py-2">Bio, thành phố, nhãn tính cách/sở thích, tuỳ chọn tham gia gợi ý match</td>
                             </tr>
                             <tr class="border-b border-stone-100">

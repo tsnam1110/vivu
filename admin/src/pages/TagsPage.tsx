@@ -143,7 +143,7 @@ export default function TagsPage() {
                 value={s === 'pending' ? 'pending' : 'approved'}
                 style={{ width: 132 }}
                 loading={statusLoadingId === row.id}
-                onChange={(v) => changeStatus(row, v)}
+                onChange={(v) => changeStatus(row, v as 'pending' | 'approved')}
                 options={[
                   { value: 'pending', label: 'Chờ duyệt' },
                   { value: 'approved', label: 'Đã duyệt' },

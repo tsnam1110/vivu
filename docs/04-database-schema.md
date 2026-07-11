@@ -60,11 +60,19 @@ Index: `username`, `email`, `premium_expires_at`.
 | personality | JSON | nullable | mảng nhãn tính cách, vd `["huong_noi","phieu_luu"]` |
 | interests | JSON | nullable | mảng nhãn sở thích, vd `["am_thuc","nhiep_anh"]` |
 | location_city | VARCHAR(100) | nullable | thành phố (lọc/gợi ý theo vùng) |
+| weight_kg | DECIMAL(5,2) | nullable | cân nặng — **riêng tư**; ước lượng calo ngày |
+| height_cm | SMALLINT UNSIGNED | nullable | chiều cao cm — riêng tư |
+| gender | VARCHAR(20) | nullable | male/female/other/prefer_not |
+| birth_year | SMALLINT UNSIGNED | nullable | năm sinh (tính tuổi cho Mifflin) |
+| activity_level | VARCHAR(20) | nullable | sedentary/light/moderate/active/very_active |
 | is_matchable | BOOLEAN | default true | tham gia gợi ý "người cùng gu" |
 | created_at / updated_at | TIMESTAMP | | |
 
 > `personality` & `interests` lưu **JSON mảng slug nhãn**. Danh mục nhãn chuẩn hoá
 > quản lý ở bảng `taste_traits` (§10) để tìm kiếm & gợi ý nhất quán.
+>
+> Thể trạng (cân/cao/giới tính…) **không** lộ public profile; chỉ dùng hồ sơ gu +
+> «Hôm nay ăn gì» (mặc định calo ngày).
 
 ---
 
@@ -263,7 +271,138 @@ Index: `(user_id, status)`, `ends_at`.
 
 ---
 
-## 16. Sơ đồ khoá ngoại (tóm tắt)
+## 16. `habit_items` — mẫu Habit (catalog admin)
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| name | VARCHAR(120) | NOT NULL | tên mẫu gợi ý |
+| slug | VARCHAR(140) | UNIQUE, NOT NULL | |
+| description | VARCHAR(500) | nullable | |
+| icon | VARCHAR(16) | nullable | emoji |
+| sort_order | INT | default 0 | |
+| is_active | BOOLEAN | default true | tắt → không cho user chọn mới |
+| created_at / updated_at | TIMESTAMP | | |
+
+> Chỉ là **template**. User adopt → copy sang `user_habit_items`, không dùng trực tiếp làm hàng bảng.
+
+## 16b. `user_habit_items` — đầu mục cá nhân (hàng trên bảng user)
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| user_id | BIGINT UNSIGNED | FK→users CASCADE | |
+| template_habit_item_id | BIGINT UNSIGNED | nullable, FK→habit_items SET NULL | null = tự tạo text |
+| name | VARCHAR(120) | NOT NULL | user có thể sửa |
+| description | VARCHAR(500) | nullable | |
+| icon | VARCHAR(16) | nullable | |
+| sort_order | INT | default 0 | |
+| is_active | BOOLEAN | default true | ẩn khỏi grid |
+| created_at / updated_at | TIMESTAMP | | |
+
+UNIQUE: `(user_id, template_habit_item_id)` — một template tối đa 1 lần/user (custom = null, MySQL cho nhiều null).
+
+## 17. `habit_entries` — ô kết quả
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| user_id | BIGINT UNSIGNED | FK→users CASCADE | |
+| user_habit_item_id | BIGINT UNSIGNED | FK→user_habit_items CASCADE | |
+| entry_date | DATE | NOT NULL | |
+| status | ENUM('done','missed') | NOT NULL | ✓ / ✗ ; empty = không có row |
+| created_at / updated_at | TIMESTAMP | | |
+
+UNIQUE: `(user_id, user_habit_item_id, entry_date)`.
+
+## 18. `habit_entry_histories` — lịch sử đổi ô
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| user_id | BIGINT UNSIGNED | FK→users CASCADE | |
+| user_habit_item_id | BIGINT UNSIGNED | FK→user_habit_items CASCADE | |
+| entry_date | DATE | NOT NULL | |
+| from_status | VARCHAR(16) | nullable | |
+| to_status | VARCHAR(16) | nullable | |
+| source | VARCHAR(32) | default `web` | |
+| changed_at | TIMESTAMP | NOT NULL | |
+| created_at / updated_at | TIMESTAMP | | |
+
+> Đặc tả: [`features/habit-tracker.md`](features/habit-tracker.md).
+
+---
+
+## 19. `dishes` — kho món (Hôm nay ăn gì)
+
+| Cột | Kiểu | Ràng buộc | Ghi chú |
+|---|---|---|---|
+| id | BIGINT UNSIGNED | PK | |
+| name | VARCHAR(150) | NOT NULL | |
+| slug | VARCHAR(180) | UNIQUE, NOT NULL | |
+| emoji | VARCHAR(16) | nullable | hiển thị list/popup |
+| summary | VARCHAR(500) | nullable | |
+| meal_slots | JSON | NOT NULL | `["breakfast","lunch","dinner"]` |
+| supports_light | BOOLEAN | default false | ăn nhẹ |
+| supports_main | BOOLEAN | default true | ăn chính |
+| supports_dine_out | BOOLEAN | default true | ăn ngoài |
+| supports_cook_home | BOOLEAN | default true | tự nấu |
+| five_element | VARCHAR(16) | nullable | wood/fire/earth/metal/water |
+| calories_kcal | SMALLINT UNSIGNED | nullable | kcal của **khẩu phần chuẩn** |
+| serving_grams | SMALLINT UNSIGNED | nullable | khối lượng (g) tương ứng `calories_kcal` — UI quy đổi theo gram/kcal |
+| cook_minutes | SMALLINT UNSIGNED | nullable | |
+| ingredients | JSON | nullable | `[{name, amount}]` |
+| steps | JSON | nullable | mảng bước nấu |
+| benefits / harms / advice / notes | TEXT | nullable | tham khảo (disclaimer UI) |
+| search_keywords | VARCHAR(255) | nullable | |
+| status | VARCHAR(20) | default `published` | draft/published/hidden |
+| source | VARCHAR(20) | default `system` | system/user |
+| created_by | FK users | nullable SET NULL | |
+| suggest_count | INT UNSIGNED | default 0 | |
+| created_at / updated_at / deleted_at | TIMESTAMP | | soft delete |
+
+Index: `status`, `five_element`, `(supports_light, supports_main)`, `(supports_dine_out, supports_cook_home)`.
+
+> Đặc tả: [`features/what-to-eat.md`](features/what-to-eat.md). UI: **popup trên Kho**.
+
+---
+
+## 19b. `dish_contributions` — đóng góp tri thức món
+
+| Cột | Kiểu | Ghi chú |
+|---|---|---|
+| dish_id | FK dishes CASCADE | |
+| user_id | FK users SET NULL | |
+| type | VARCHAR(32) | recipe/calories/harm/benefit/advice/note/five_element |
+| payload | JSON | theo type |
+| status | pending/approved/rejected | |
+| is_canonical | BOOLEAN | bản chính sau duyệt |
+| reviewed_by | FK admins nullable | |
+| reviewed_at | TIMESTAMP nullable | |
+
+## 19c. `meal_suggestion_logs` — lịch sử gợi ý (riêng tư)
+
+| Cột | Kiểu | Ghi chú |
+|---|---|---|
+| user_id | FK users CASCADE | |
+| meal_slot / meal_size / meal_mode | VARCHAR | context |
+| filters_json | JSON | count, lat/lng… |
+| suggested_dish_ids | JSON | |
+| chosen_dish_id | FK dishes nullable | |
+| outcome | suggested/chosen | |
+| created_at | TIMESTAMP | không updated_at |
+
+## 19d. `user_food_preferences` — sở thích ăn uống (1-1 user)
+
+| Cột | Kiểu | Ghi chú |
+|---|---|---|
+| user_id | UNIQUE FK users | |
+| diet_flags | JSON | vegetarian… |
+| disliked_dish_ids | JSON | |
+| preferred_elements | JSON | |
+| default_meal_mode | VARCHAR nullable | |
+| max_calories_default | SMALLINT nullable | |
+| balance_elements | BOOLEAN | boost ngũ hành 7 ngày |
+
+---
+
+## 20. Sơ đồ khoá ngoại (tóm tắt)
 
 ```
 users ──1:1── user_profiles
@@ -272,16 +411,23 @@ users ──1:*── experiences ──*:1── categories
                   │  ├──1:*── media
                   │  ├──1:*── comments ──*:1── users
                   │  └──1:*── reactions (morph) ──*:1── users
+users ──1:*── user_habit_items ──*:1── habit_items (optional template)
+users ──1:*── habit_entries ──*:1── user_habit_items
+users ──1:*── habit_entry_histories ──*:1── user_habit_items
 users ──*:1── sample_avatars (optional)
 users ──*:1── avatar_frames (optional)
 users ──1:*── premium_subscriptions ──*:1── admins (granted_by)
+dishes (catalog; optional created_by → users)
 admins (guard admin, roles/permissions riêng)
 taste_traits ── (tham chiếu logic từ user_profiles JSON)
 ```
 
-## 17. Chiến lược index & hiệu năng
+## 21. Chiến lược index & hiệu năng
 - Tìm quanh đây: index `(latitude, longitude)`; ở quy mô lớn cân nhắc spatial index
   (`POINT` + `SPATIAL INDEX`) — ghi ADR nếu chuyển.
 - Feed công khai: index `(status, published_at)`.
 - Đếm reaction/rating: dùng **cột cache** trên `experiences` (cập nhật qua Observer),
   tránh `COUNT` mỗi lần tải.
+- Habit grid: nạp entries theo `(user_id, entry_date BETWEEN month)`; history phân trang
+  theo `changed_at`.
+- What-to-eat: filter `dishes` theo flags + `whereJsonContains(meal_slots)`; seed đủ ma trận.

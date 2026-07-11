@@ -71,6 +71,21 @@ class User extends Authenticatable
         return $this->hasMany(PremiumSubscription::class);
     }
 
+    public function userHabitItems(): HasMany
+    {
+        return $this->hasMany(UserHabitItem::class);
+    }
+
+    public function habitEntries(): HasMany
+    {
+        return $this->hasMany(HabitEntry::class);
+    }
+
+    public function habitEntryHistories(): HasMany
+    {
+        return $this->hasMany(HabitEntryHistory::class);
+    }
+
     public function sampleAvatar(): BelongsTo
     {
         return $this->belongsTo(SampleAvatar::class);

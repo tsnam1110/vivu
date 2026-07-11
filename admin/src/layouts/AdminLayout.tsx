@@ -8,6 +8,9 @@ import {
   SmileOutlined,
   SkinOutlined,
   CrownOutlined,
+  CheckSquareOutlined,
+  CoffeeOutlined,
+  FormOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, theme, Typography, Button, Space } from 'antd';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -37,6 +40,9 @@ export default function AdminLayout() {
             { key: '/categories', icon: <AppstoreOutlined />, label: <Link to="/categories">Danh mục</Link> },
             { key: '/tags', icon: <TagsOutlined />, label: <Link to="/tags">Thẻ</Link> },
             { key: '/taste-traits', icon: <SmileOutlined />, label: <Link to="/taste-traits">Nhãn gu</Link> },
+            { key: '/habit-items', icon: <CheckSquareOutlined />, label: <Link to="/habit-items">Mẫu Habit</Link> },
+            { key: '/dishes', icon: <CoffeeOutlined />, label: <Link to="/dishes">Kho món</Link> },
+            { key: '/dish-contributions', icon: <FormOutlined />, label: <Link to="/dish-contributions">Duyệt món</Link> },
             { key: '/avatar-frames', icon: <SkinOutlined />, label: <Link to="/avatar-frames">Khung avatar</Link> },
             { key: '/premium', icon: <CrownOutlined />, label: <Link to="/premium">Premium</Link> },
           ]}

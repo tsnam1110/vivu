@@ -283,7 +283,7 @@
                         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
                             <button type="submit" :disabled="submitting" @click="status = 'draft'"
                                     class="rounded-xl border border-stone-300 px-4 py-2.5 text-sm font-semibold text-stone-700 hover:bg-stone-50 disabled:opacity-60">
-                                Lưu nháp
+                                Lưu cá nhân
                             </button>
                             <button type="submit" :disabled="submitting" @click="status = 'published'"
                                     class="rounded-xl bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-teal-600/20 hover:bg-teal-700 disabled:opacity-60">

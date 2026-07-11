@@ -8,12 +8,16 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\User;
 use App\Services\ExperienceService;
+use App\Services\HabitService;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function __construct(private readonly ExperienceService $service) {}
+    public function __construct(
+        private readonly ExperienceService $service,
+        private readonly HabitService $habitService,
+    ) {}
 
     /**
      * Trang mặc định: kho cá nhân (đã đăng nhập) hoặc landing (khách).
@@ -56,9 +60,15 @@ class HomeController extends Controller
             ->latest('updated_at')
             ->paginate(12);
 
+        $this->habitService->ensureStarterItems($user);
+        $habitSummary = $this->habitService->currentMonthSummary($user);
+        $habitCharts = $this->habitService->overviewCharts($user);
+
         return view('home.me', [
             'user' => $user->load('profile'),
             'experiences' => $experiences,
+            'habitSummary' => $habitSummary,
+            'habitCharts' => $habitCharts,
         ]);
     }
 }

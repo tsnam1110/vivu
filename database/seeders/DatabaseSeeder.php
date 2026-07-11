@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
             TasteTraitSeeder::class,
             SampleAvatarSeeder::class,
             AvatarFrameSeeder::class,
+            HabitItemSeeder::class,
+            DishSeeder::class,
         ]);
     }
 }

@@ -10,6 +10,9 @@ import CommentsPage from './pages/CommentsPage';
 import CategoriesPage from './pages/CategoriesPage';
 import TagsPage from './pages/TagsPage';
 import TasteTraitsPage from './pages/TasteTraitsPage';
+import HabitItemsPage from './pages/HabitItemsPage';
+import DishesPage from './pages/DishesPage';
+import DishContributionsPage from './pages/DishContributionsPage';
 import AvatarFramesPage from './pages/AvatarFramesPage';
 import PremiumSubscriptionsPage from './pages/PremiumSubscriptionsPage';
 import { getToken } from './api/http';
@@ -45,6 +48,9 @@ export default function App() {
               <Route path="categories" element={<CategoriesPage />} />
               <Route path="tags" element={<TagsPage />} />
               <Route path="taste-traits" element={<TasteTraitsPage />} />
+              <Route path="habit-items" element={<HabitItemsPage />} />
+              <Route path="dishes" element={<DishesPage />} />
+              <Route path="dish-contributions" element={<DishContributionsPage />} />
               <Route path="avatar-frames" element={<AvatarFramesPage />} />
               <Route path="premium" element={<PremiumSubscriptionsPage />} />
             </Route>

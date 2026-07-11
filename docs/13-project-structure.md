@@ -14,7 +14,8 @@ ViVu/
 ├── app/                      # === BACKEND LARAVEL ===
 │   ├── Http/
 │   │   ├── Controllers/
-│   │   │   ├── Api/          # controller cho public API (auth:web / công khai)
+│   │   │   ├── Api/          # controller cho public API (auth:web / công khai) — incl. HabitController
+│   │   │   ├── Web/          # Blade controllers (incl. HabitController)
 │   │   │   └── Admin/        # controller cho /api/admin (auth:admin)
 │   │   ├── Requests/         # Form Request (validate + authorize)
 │   │   ├── Resources/        # API Resource (model → JSON)
@@ -41,13 +42,14 @@ ViVu/
 │   ├── views/                # Design system: docs/15-design-system.md
 │   │   ├── layouts/
 │   │   │   └── app.blade.php # brand + sticky footer + floating iOS nav
-│   │   ├── components/
-│   │   │   └── password-input.blade.php
-│   │   ├── home/             # me (kho), guest, explore
+│   │   ├── components/       # password-input, experience-card, what-to-eat-modal…
+│   │   ├── home/             # me (kho + nút/popup what-to-eat), guest, explore
 │   │   ├── experiences/
 │   │   ├── auth/
 │   │   ├── profile/
 │   │   ├── matches/
+│   │   ├── habits/           # habit tracker (private)
+│   │   ├── what-to-eat/      # partial/trang chi tiết món (không phải entry chính)
 │   │   └── pages/            # terms, privacy, community, cookies
 │   ├── js/                   # Alpine + JS công khai (map, reaction, share)
 │   └── css/app.css           # Tailwind 4 + [x-cloak]

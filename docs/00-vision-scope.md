@@ -56,6 +56,12 @@ toàn** với người dùng thường. Dùng admin panel (React + Ant Design).
 - **Hồ sơ người dùng:** bio + **tính cách + sở thích** (taste profile).
 - **Tìm người cùng gu** dựa trên taste profile.
 - **Admin panel:** quản lý user, experience, danh mục, thẻ, kiểm duyệt bình luận.
+- **Habit tracker (kho cá nhân):** thói quen daily/weekly, check-in, streak; riêng tư;
+  tuỳ chọn gắn danh mục trải nghiệm.
+- **Hôm nay ăn gì (M8, tính năng phụ):** nút trên trang Kho → **popup** chọn bữa /
+  nhẹ–chính / ngoài–nấu / số lượng món → list gợi ý; bấm **Chi tiết** từng món để xem
+  đầy đủ. Kho món hệ thống; (sau) đóng góp công thức & thông tin tham khảo.
+  Xem [`features/what-to-eat.md`](features/what-to-eat.md).
 
 ### Ngoài phạm vi (chưa làm ở v1 — ghi để tránh phình scope)
 - Nhắn tin trực tiếp giữa người dùng (chat).
@@ -64,6 +70,8 @@ toàn** với người dùng thường. Dùng admin panel (React + Ant Design).
 - Gợi ý bằng ML phức tạp (v1 dùng thuật toán tương đồng đơn giản — xem
   [`features/taste-matching.md`](features/taste-matching.md)).
 - Đa ngôn ngữ (i18n) cho nội dung người dùng (giao diện có thể chuẩn bị sẵn khung).
+- Ứng dụng dinh dưỡng y khoa / tính mệnh ngũ hành theo năm sinh (what-to-eat chỉ
+  tham khảo cộng đồng + disclaimer).
 
 ## 5. Nguyên tắc sản phẩm
 
