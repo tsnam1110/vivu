@@ -24,14 +24,15 @@ class ProfileBodyMetricsTest extends TestCase
 
         $this->actingAs($user, 'web')
             ->patch(route('profile.update'), [
-                '_tab' => 'body',
+                'bio' => 'Xin chào',
                 'weight_kg' => 62.5,
                 'height_cm' => 168,
                 'gender' => 'female',
                 'birth_year' => 1995,
                 'activity_level' => 'light',
+                'is_matchable' => 1,
             ])
-            ->assertRedirect(route('profile.me', ['tab' => 'body']));
+            ->assertRedirect(route('profile.edit'));
 
         $profile = $user->fresh()->profile;
         $this->assertSame(62.5, (float) $profile->weight_kg);
@@ -41,28 +42,17 @@ class ProfileBodyMetricsTest extends TestCase
         $this->assertSame('light', $profile->activity_level->value);
     }
 
-    public function test_profile_popup_shows_body_section(): void
+    public function test_profile_edit_shows_body_section(): void
     {
         $this->withoutVite();
         $user = User::factory()->create();
         $user->profile?->update(['weight_kg' => 55]);
 
         $this->actingAs($user, 'web')
-            ->get(route('profile.me', ['tab' => 'body']))
+            ->get(route('profile.edit'))
             ->assertOk()
-            ->assertSee(__('profile.title'), false)
             ->assertSee(__('profile.body_section'), false)
             ->assertSee('weight_kg', false);
-    }
-
-    public function test_old_profile_edit_redirects_to_popup(): void
-    {
-        $this->withoutVite();
-        $user = User::factory()->create();
-
-        $this->actingAs($user, 'web')
-            ->get(route('profile.edit'))
-            ->assertRedirect(route('profile.me', ['tab' => 'taste']));
     }
 
     public function test_suggest_accepts_target_calories(): void
@@ -88,6 +78,6 @@ class ProfileBodyMetricsTest extends TestCase
             ])
             ->assertOk()
             ->assertJsonPath('meta.target_calories', 1500)
-            ->assertJsonPath('meta.meal_budget', 525); // 35% of 1500
+            ->assertJsonPath('meta.meal_budget', 525);
     }
 }

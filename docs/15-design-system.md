@@ -55,8 +55,8 @@ Liên quan: [`02-tech-stack.md`](02-tech-stack.md) · [`07-coding-standards.md`]
 | `/` (Kho) + modal | **Hôm nay ăn gì** (tính năng **phụ**) | Auth | Nút trên Kho → **popup** chọn bữa/số món → list; **Chi tiết** từng món |
 | `/what-to-eat/dishes/{slug}` | Chi tiết món (khi user bấm Chi tiết / deep link) | Auth hoặc public | Disclaimer calo/ngũ hành; không phải entry chính |
 | `/what-to-eat/history` | Lịch sử gợi ý (phase sau) | Auth | Riêng tư; không tab nav |
-| `/profile` | **Hồ sơ** — layout trang như cũ + **tab bar dọc trái** (tổng quan / tài khoản / thể trạng / gu / bảo mật) | Auth | Tab “Profile” |
-| `/profile/edit` | Redirect → `/profile?tab=taste` | Auth | Tương thích link cũ |
+| `/profile` | **Hồ sơ** (avatar, khung, tên/username, mật khẩu) | Auth | Tab “Profile” |
+| `/profile/edit` | Hồ sơ chi tiết (bio, thể trạng, gu) | Auth | Từ Profile / Kho |
 | `/u/{username}` | Hồ sơ công khai | Mọi người | Avatar + experiences published |
 | `/login`, `/register` | Auth | Guest | `x-password-input` |
 | `/terms`, `/privacy`, `/community`, `/cookies` | Pháp lý | Mọi người | Layout legal (card + mục lục) |

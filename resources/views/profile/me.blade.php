@@ -18,16 +18,11 @@
             $errors->first('password'),
             $errors->first('password_confirmation'),
         ])->filter()->first();
-        $profile = $user->profile;
-        $calorieEstimate = app(\App\Services\DailyCalorieEstimator::class)->estimateDaily($profile);
-        $inputClass = 'w-full rounded-xl border border-stone-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200';
-        $tabBtn = 'flex w-full items-center gap-2 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition';
     @endphp
 
     <div
-        class="mx-auto max-w-5xl"
+        class="mx-auto max-w-2xl space-y-6"
         x-data="{
-            tab: @js($initialTab ?? 'overview'),
             modal: @js($initialModal),
             frameId: @js($currentFrameId),
             sampleId: @js($currentSampleId),
@@ -35,7 +30,6 @@
             toast: @js(session('success') ? ['type' => 'success', 'message' => session('success')] : ($passwordErrorSummary ? ['type' => 'error', 'message' => $passwordErrorSummary] : (session('error') ? ['type' => 'error', 'message' => session('error')] : null))),
             open(name) { this.modal = name; document.body.classList.add('overflow-hidden'); },
             close() { this.modal = null; document.body.classList.remove('overflow-hidden'); },
-            setTab(t) { this.tab = t; },
             dismissToast() { this.toast = null; },
         }"
         x-init="
@@ -44,19 +38,17 @@
         "
         @keydown.escape.window="if (modal) close()"
     >
-        {{-- Header trang (giữ layout cũ) --}}
-        <div class="mb-5">
+        <div>
             <p class="text-sm font-medium text-teal-700">{{ __('profile.title') }}</p>
             <h1 class="mt-1 text-2xl font-bold tracking-tight md:text-3xl">{{ __('profile.title') }}</h1>
-            <p class="mt-1 text-sm text-stone-500">{{ __('profile.subtitle') }}</p>
+            <p class="mt-1 text-sm text-stone-500">Ảnh đại diện, khung và thông tin hiển thị công khai.</p>
         </div>
 
-        {{-- Toast --}}
         <div
             x-show="toast"
             x-cloak
             x-transition.opacity.duration.200ms
-            class="mb-4 rounded-2xl border px-4 py-3 text-sm shadow-sm"
+            class="rounded-2xl border px-4 py-3 text-sm shadow-sm"
             :class="toast?.type === 'success'
                 ? 'border-teal-200 bg-teal-50 text-teal-900'
                 : 'border-red-200 bg-red-50 text-red-900'"
@@ -71,302 +63,135 @@
             </div>
         </div>
 
-        {{-- Layout: tab dọc trái + nội dung phải --}}
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
-            {{-- Tab bar dọc --}}
-            <aside class="w-full shrink-0 sm:w-44 md:w-48">
-                <nav class="flex gap-1 overflow-x-auto rounded-3xl border border-stone-200/80 bg-white/90 p-2 shadow-sm sm:flex-col sm:overflow-visible"
-                     aria-label="Mục hồ sơ">
-                    <button type="button" @click="setTab('overview')"
-                            class="{{ $tabBtn }} whitespace-nowrap"
-                            :class="tab === 'overview' ? 'bg-teal-600 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-50'">
-                        <span aria-hidden="true">👤</span> {{ __('profile.tab_overview') }}
-                    </button>
-                    <button type="button" @click="setTab('account')"
-                            class="{{ $tabBtn }} whitespace-nowrap"
-                            :class="tab === 'account' ? 'bg-teal-600 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-50'">
-                        <span aria-hidden="true">🪪</span> {{ __('profile.tab_account') }}
-                    </button>
-                    <button type="button" @click="setTab('body')"
-                            class="{{ $tabBtn }} whitespace-nowrap"
-                            :class="tab === 'body' ? 'bg-teal-600 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-50'">
-                        <span aria-hidden="true">⚖️</span> {{ __('profile.tab_body') }}
-                    </button>
-                    <button type="button" @click="setTab('taste')"
-                            class="{{ $tabBtn }} whitespace-nowrap"
-                            :class="tab === 'taste' ? 'bg-teal-600 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-50'">
-                        <span aria-hidden="true">✨</span> {{ __('profile.tab_taste') }}
-                    </button>
-                    <button type="button" @click="setTab('security')"
-                            class="{{ $tabBtn }} whitespace-nowrap"
-                            :class="tab === 'security' ? 'bg-teal-600 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-50'">
-                        <span aria-hidden="true">🔒</span> {{ __('profile.tab_security') }}
-                    </button>
-                </nav>
-            </aside>
-
-            {{-- Nội dung tab (card trắng như trước) --}}
-            <div class="min-w-0 flex-1 space-y-5">
-
-                {{-- TAB: Tổng quan — card preview + premium (giao diện cũ) --}}
-                <div x-show="tab === 'overview'" x-cloak class="space-y-5">
-                    <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
-                        <div class="flex flex-wrap items-start gap-5">
-                            <div class="flex flex-col items-center gap-3">
-                                <x-user-avatar :user="$user" size="xl" />
-                                <div class="flex items-center gap-2">
-                                    <button type="button" @click="open('avatar')"
-                                            class="rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-stone-700 shadow-sm transition hover:border-teal-300 hover:text-teal-800">
-                                        Avatar
-                                    </button>
-                                    <button type="button" @click="open('frame')"
-                                            class="rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-stone-700 shadow-sm transition hover:border-amber-300 hover:text-amber-900">
-                                        Khung
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="min-w-0 flex-1">
-                                <div class="flex flex-wrap items-center gap-2">
-                                    <h2 class="truncate text-xl font-bold">{{ $user->name }}</h2>
-                                    @if ($hasPremium)
-                                        <span class="rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-2.5 py-0.5 text-[11px] font-semibold text-amber-950 shadow-sm">
-                                            Premium
-                                        </span>
-                                    @endif
-                                </div>
-                                <p class="text-stone-500">{{ '@'.$user->username }}</p>
-                                @if ($hasPremium && $user->premium_expires_at)
-                                    <p class="mt-1 text-xs text-amber-700">
-                                        Premium đến {{ $user->premium_expires_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') }}
-                                    </p>
-                                @endif
-                                @if ($user->profile?->bio)
-                                    <p class="mt-2 line-clamp-2 text-sm text-stone-600">{{ $user->profile->bio }}</p>
-                                @endif
-                                <div class="mt-3 flex flex-wrap gap-4 text-sm text-stone-500">
-                                    <span><strong class="text-stone-800">{{ $stats['experiences'] }}</strong> lưu trữ</span>
-                                    <span><strong class="text-stone-800">{{ $stats['published'] }}</strong> công khai</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-5 flex flex-wrap gap-2">
-                            <a href="{{ route('profile.show', $user->username) }}"
-                               class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
-                                Xem công khai
-                            </a>
-                            <a href="{{ route('habits.index') }}"
-                               class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
-                                Thói quen
-                            </a>
-                            <button type="button" @click="setTab('taste')"
-                                    class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
-                                {{ __('profile.tab_taste') }}
-                            </button>
-                            <a href="{{ route('home') }}"
-                               class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
-                                Kho của tôi
-                            </a>
-                        </div>
-                    </section>
-
-                    @unless ($hasPremium)
-                        <section class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-amber-200/80 bg-gradient-to-r from-amber-50 to-orange-50 px-4 py-3">
-                            <p class="text-sm text-stone-700">
-                                <span class="font-semibold text-amber-800">Premium</span>
-                                — mở khoá khung hiệu ứng cao cấp
-                            </p>
-                            <form method="POST" action="{{ route('profile.premium-avatar') }}">
-                                @csrf
-                                <button type="submit"
-                                        class="rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-4 py-1.5 text-xs font-semibold text-amber-950 shadow-sm hover:from-amber-300 hover:to-amber-400">
-                                    Dùng thử 30 ngày
-                                </button>
-                            </form>
-                        </section>
-                    @endunless
-                </div>
-
-                {{-- TAB: Tài khoản --}}
-                <div x-show="tab === 'account'" x-cloak>
-                    <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold">Thông tin hiển thị</h2>
-                        <form method="POST" action="{{ route('profile.account.update') }}" class="mt-5 space-y-4">
-                            @csrf
-                            @method('PATCH')
-                            <div class="grid gap-4 sm:grid-cols-2">
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">Tên hiển thị</label>
-                                    <input type="text" name="name" value="{{ old('name', $user->name) }}" required class="{{ $inputClass }}">
-                                    @error('name')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
-                                </div>
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">Username</label>
-                                    <input type="text" name="username" value="{{ old('username', $user->username) }}" required class="{{ $inputClass }}">
-                                    @error('username')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
-                                </div>
-                            </div>
-                            <p class="text-xs text-stone-400">Email: {{ $user->email }}</p>
-                            <div class="flex justify-center pt-1">
-                                <button type="submit" class="rounded-full bg-teal-600 px-8 py-2.5 text-sm font-semibold text-white hover:bg-teal-700">
-                                    Lưu thay đổi
-                                </button>
-                            </div>
-                        </form>
-                    </section>
-                </div>
-
-                {{-- TAB: Thể trạng --}}
-                <div x-show="tab === 'body'" x-cloak>
-                    <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold">{{ __('profile.body_section') }}</h2>
-                        <p class="mt-1 text-sm text-stone-500">{{ __('profile.body_hint') }}</p>
-                        <form method="POST" action="{{ route('profile.update') }}" class="mt-5 space-y-4">
-                            @csrf
-                            @method('PATCH')
-                            <input type="hidden" name="_tab" value="body">
-                            <div class="grid gap-3 sm:grid-cols-2">
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">{{ __('profile.weight_kg') }}</label>
-                                    <input type="number" name="weight_kg" step="0.1" min="20" max="300"
-                                           value="{{ old('weight_kg', $profile?->weight_kg) }}" class="{{ $inputClass }}" placeholder="60">
-                                    @error('weight_kg') <p class="mt-1 text-xs text-red-600">{{ $message }}</p> @enderror
-                                </div>
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">{{ __('profile.height_cm') }}</label>
-                                    <input type="number" name="height_cm" min="80" max="250"
-                                           value="{{ old('height_cm', $profile?->height_cm) }}" class="{{ $inputClass }}" placeholder="165">
-                                    @error('height_cm') <p class="mt-1 text-xs text-red-600">{{ $message }}</p> @enderror
-                                </div>
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">{{ __('profile.gender') }}</label>
-                                    <select name="gender" class="{{ $inputClass }}">
-                                        <option value="">—</option>
-                                        @foreach (\App\Enums\Gender::cases() as $g)
-                                            <option value="{{ $g->value }}" @selected(old('gender', $profile?->gender?->value) === $g->value)>{{ $g->label() }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="mb-1 block text-sm font-medium">{{ __('profile.birth_year') }}</label>
-                                    <input type="number" name="birth_year" min="1920" max="{{ now()->year - 10 }}"
-                                           value="{{ old('birth_year', $profile?->birth_year) }}" class="{{ $inputClass }}" placeholder="1995">
-                                    @error('birth_year') <p class="mt-1 text-xs text-red-600">{{ $message }}</p> @enderror
-                                </div>
-                                <div class="sm:col-span-2">
-                                    <label class="mb-1 block text-sm font-medium">{{ __('profile.activity_level') }}</label>
-                                    <select name="activity_level" class="{{ $inputClass }}">
-                                        <option value="">—</option>
-                                        @foreach (\App\Enums\ActivityLevel::cases() as $a)
-                                            <option value="{{ $a->value }}" @selected(old('activity_level', $profile?->activity_level?->value) === $a->value)>{{ $a->label() }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            @if ($profile?->weight_kg)
-                                <p class="text-xs font-medium text-teal-900">
-                                    {{ __('profile.estimated_daily_kcal', ['kcal' => $calorieEstimate['kcal']]) }}
-                                    <span class="font-normal text-teal-800/80">
-                                        ({{ $calorieEstimate['source'] === 'mifflin' ? __('profile.estimated_from_mifflin') : __('profile.estimated_from_weight') }})
-                                    </span>
-                                </p>
-                            @endif
-                            <div class="flex justify-center pt-1">
-                                <button type="submit" class="rounded-full bg-teal-600 px-8 py-2.5 text-sm font-semibold text-white hover:bg-teal-700">
-                                    Lưu thể trạng
-                                </button>
-                            </div>
-                        </form>
-                    </section>
-                </div>
-
-                {{-- TAB: Gu --}}
-                <div x-show="tab === 'taste'" x-cloak>
-                    <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm">
-                        <h2 class="text-lg font-semibold">{{ __('profile.tab_taste') }}</h2>
-                        <p class="mt-1 text-sm text-stone-500">Tính cách & sở thích — gợi ý người cùng gu</p>
-                        <form method="POST" action="{{ route('profile.update') }}" class="mt-5 space-y-5">
-                            @csrf
-                            @method('PATCH')
-                            <input type="hidden" name="_tab" value="taste">
-                            <div>
-                                <label class="mb-1 block text-sm font-medium">Giới thiệu</label>
-                                <textarea name="bio" rows="3" class="{{ $inputClass }}">{{ old('bio', $profile?->bio) }}</textarea>
-                            </div>
-                            <div>
-                                <label class="mb-1 block text-sm font-medium">Thành phố</label>
-                                <input type="text" name="location_city" value="{{ old('location_city', $profile?->location_city) }}"
-                                       class="{{ $inputClass }}" placeholder="Đà Nẵng">
-                            </div>
-                            <div>
-                                <label class="mb-2 block text-sm font-medium">Tính cách</label>
-                                <div class="flex flex-wrap gap-2">
-                                    @forelse ($personalities as $trait)
-                                        <label class="inline-flex items-center gap-1 rounded-full border border-stone-200 px-3 py-1 text-sm">
-                                            <input type="checkbox" name="personality[]" value="{{ $trait->slug }}"
-                                                   @checked(in_array($trait->slug, old('personality', $profile?->personality ?? []), true))>
-                                            {{ $trait->name }}
-                                        </label>
-                                    @empty
-                                        <p class="text-xs text-stone-400">Chưa có nhãn tính cách.</p>
-                                    @endforelse
-                                </div>
-                            </div>
-                            <div>
-                                <label class="mb-2 block text-sm font-medium">Sở thích</label>
-                                <div class="flex flex-wrap gap-2">
-                                    @forelse ($interests as $trait)
-                                        <label class="inline-flex items-center gap-1 rounded-full border border-stone-200 px-3 py-1 text-sm">
-                                            <input type="checkbox" name="interests[]" value="{{ $trait->slug }}"
-                                                   @checked(in_array($trait->slug, old('interests', $profile?->interests ?? []), true))>
-                                            {{ $trait->name }}
-                                        </label>
-                                    @empty
-                                        <p class="text-xs text-stone-400">Chưa có nhãn sở thích.</p>
-                                    @endforelse
-                                </div>
-                            </div>
-                            <label class="flex items-center gap-2 text-sm">
-                                <input type="hidden" name="is_matchable" value="0">
-                                <input type="checkbox" name="is_matchable" value="1" class="rounded border-stone-300 text-teal-600"
-                                       @checked(old('is_matchable', $profile?->is_matchable ?? true))>
-                                Cho phép gợi ý tôi trong «Người cùng gu»
-                            </label>
-                            <div class="flex justify-center pt-1">
-                                <button type="submit" class="rounded-full bg-teal-600 px-8 py-2.5 text-sm font-semibold text-white hover:bg-teal-700">
-                                    Lưu gu
-                                </button>
-                            </div>
-                        </form>
-                    </section>
-                </div>
-
-                {{-- TAB: Bảo mật --}}
-                <div x-show="tab === 'security'" x-cloak class="space-y-4">
-                    <section class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200/80 bg-white/90 px-4 py-3.5 shadow-sm">
-                        <div class="min-w-0">
-                            <p class="text-sm font-semibold text-stone-900">Mật khẩu</p>
-                            <p class="text-xs text-stone-500">Bảo vệ tài khoản bằng mật khẩu mạnh</p>
-                        </div>
-                        <button type="button" @click="open('password')"
-                                class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm transition hover:border-teal-300 hover:text-teal-800">
-                            Đổi mật khẩu
+        <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+            <div class="flex flex-wrap items-start gap-5">
+                <div class="flex flex-col items-center gap-3">
+                    <x-user-avatar :user="$user" size="xl" />
+                    <div class="flex items-center gap-2">
+                        <button type="button"
+                                @click="open('avatar')"
+                                class="rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-stone-700 shadow-sm transition hover:border-teal-300 hover:text-teal-800">
+                            Avatar
                         </button>
-                    </section>
+                        <button type="button"
+                                @click="open('frame')"
+                                class="rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-stone-700 shadow-sm transition hover:border-amber-300 hover:text-amber-900">
+                            Khung
+                        </button>
+                    </div>
+                </div>
 
-                    <div class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-sm">
-                        <span class="text-stone-500">{{ $user->email }}</span>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="text-stone-500 hover:text-red-600">Đăng xuất</button>
-                        </form>
+                <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <h2 class="truncate text-xl font-bold">{{ $user->name }}</h2>
+                        @if ($hasPremium)
+                            <span class="rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-2.5 py-0.5 text-[11px] font-semibold text-amber-950 shadow-sm">
+                                Premium
+                            </span>
+                        @endif
+                    </div>
+                    <p class="text-stone-500">{{ '@'.$user->username }}</p>
+                    @if ($hasPremium && $user->premium_expires_at)
+                        <p class="mt-1 text-xs text-amber-700">
+                            Premium đến {{ $user->premium_expires_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') }}
+                        </p>
+                    @endif
+                    @if ($user->profile?->bio)
+                        <p class="mt-2 line-clamp-2 text-sm text-stone-600">{{ $user->profile->bio }}</p>
+                    @endif
+                    <div class="mt-3 flex flex-wrap gap-4 text-sm text-stone-500">
+                        <span><strong class="text-stone-800">{{ $stats['experiences'] }}</strong> lưu trữ</span>
+                        <span><strong class="text-stone-800">{{ $stats['published'] }}</strong> công khai</span>
                     </div>
                 </div>
             </div>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+                <a href="{{ route('profile.show', $user->username) }}"
+                   class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
+                    Xem công khai
+                </a>
+                <a href="{{ route('habits.index') }}"
+                   class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
+                    Thói quen
+                </a>
+                <a href="{{ route('profile.edit') }}"
+                   class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
+                    {{ __('profile.title') }} chi tiết
+                </a>
+                <a href="{{ route('home') }}"
+                   class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-medium hover:border-teal-300">
+                    Kho của tôi
+                </a>
+            </div>
+        </section>
+
+        @unless ($hasPremium)
+            <section class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-amber-200/80 bg-gradient-to-r from-amber-50 to-orange-50 px-4 py-3">
+                <p class="text-sm text-stone-700">
+                    <span class="font-semibold text-amber-800">Premium</span>
+                    — mở khoá khung hiệu ứng cao cấp
+                </p>
+                <form method="POST" action="{{ route('profile.premium-avatar') }}">
+                    @csrf
+                    <button type="submit"
+                            class="rounded-full bg-gradient-to-r from-amber-400 to-amber-500 px-4 py-1.5 text-xs font-semibold text-amber-950 shadow-sm hover:from-amber-300 hover:to-amber-400">
+                        Dùng thử 30 ngày
+                    </button>
+                </form>
+            </section>
+        @endunless
+
+        <section class="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-sm">
+            <h2 class="text-lg font-semibold">Thông tin hiển thị</h2>
+            <form method="POST" action="{{ route('profile.account.update') }}" class="mt-5 space-y-4">
+                @csrf
+                @method('PATCH')
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div>
+                        <label class="mb-1 block text-sm font-medium">Tên hiển thị</label>
+                        <input type="text" name="name" value="{{ old('name', $user->name) }}" required
+                               class="w-full rounded-xl border border-stone-300 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200">
+                        @error('name')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
+                    </div>
+                    <div>
+                        <label class="mb-1 block text-sm font-medium">Username</label>
+                        <input type="text" name="username" value="{{ old('username', $user->username) }}" required
+                               class="w-full rounded-xl border border-stone-300 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-200">
+                        @error('username')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-1">
+                    <button type="submit" class="rounded-full bg-teal-600 px-8 py-2.5 text-sm font-semibold text-white hover:bg-teal-700">
+                        Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200/80 bg-white/90 px-4 py-3.5 shadow-sm">
+            <div class="min-w-0">
+                <p class="text-sm font-semibold text-stone-900">Mật khẩu</p>
+                <p class="text-xs text-stone-500">Bảo vệ tài khoản bằng mật khẩu mạnh</p>
+            </div>
+            <button type="button"
+                    @click="open('password')"
+                    class="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-700 shadow-sm transition hover:border-teal-300 hover:text-teal-800">
+                Đổi mật khẩu
+            </button>
+        </section>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-sm">
+            <span class="text-stone-500">{{ $user->email }}</span>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="text-stone-500 hover:text-red-600">Đăng xuất</button>
+            </form>
         </div>
 
-        {{-- ========== POPUP AVATAR (giữ như trước) ========== --}}
+        {{-- Popup avatar --}}
         <div
             x-show="modal === 'avatar'"
             x-cloak
@@ -427,7 +252,7 @@
             </div>
         </div>
 
-        {{-- ========== POPUP KHUNG ========== --}}
+        {{-- Popup khung --}}
         <div
             x-show="modal === 'frame'"
             x-cloak
@@ -505,7 +330,7 @@
             </div>
         </div>
 
-        {{-- ========== POPUP ĐỔI MẬT KHẨU ========== --}}
+        {{-- Popup mật khẩu --}}
         <div
             x-show="modal === 'password'"
             x-cloak

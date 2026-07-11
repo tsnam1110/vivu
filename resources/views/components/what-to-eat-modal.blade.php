@@ -8,7 +8,7 @@
         'contributeUrlTemplate' => url('/what-to-eat/dishes/__SLUG__/contributions'),
         'chooseUrl' => route('what-to-eat.choose'),
         'historyUrl' => route('what-to-eat.history'),
-        'profileEditUrl' => route('profile.me', ['tab' => 'body']),
+        'profileEditUrl' => route('profile.edit'),
         'csrf' => csrf_token(),
         'calorieMeta' => $wteCalorieMeta,
         'labels' => [

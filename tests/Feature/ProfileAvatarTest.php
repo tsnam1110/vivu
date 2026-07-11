@@ -47,7 +47,7 @@ class ProfileAvatarTest extends TestCase
                 'username' => $user->username,
                 'avatar_frame_id' => $soft->id,
             ])
-            ->assertRedirect(route('profile.me', ['tab' => 'account']));
+            ->assertRedirect(route('profile.me'));
 
         $user->refresh();
         $this->assertSame('Nguyen Van A', $user->name);
@@ -79,7 +79,7 @@ class ProfileAvatarTest extends TestCase
 
         $this->actingAs($user, 'web')
             ->post(route('profile.premium-avatar'))
-            ->assertRedirect(route('profile.me', ['tab' => 'overview']));
+            ->assertRedirect(route('profile.me'));
 
         $user->refresh();
         $this->assertTrue($user->hasActivePremium());
@@ -91,7 +91,7 @@ class ProfileAvatarTest extends TestCase
                 'username' => $user->username,
                 'avatar_frame_id' => $gold->id,
             ])
-            ->assertRedirect(route('profile.me', ['tab' => 'account']));
+            ->assertRedirect(route('profile.me'));
 
         $this->assertSame($gold->id, $user->fresh()->avatar_frame_id);
     }
@@ -108,7 +108,7 @@ class ProfileAvatarTest extends TestCase
                 'username' => $user->username,
                 'sample_avatar_id' => $sample->id,
             ])
-            ->assertRedirect(route('profile.me', ['tab' => 'account']));
+            ->assertRedirect(route('profile.me'));
 
         $user->refresh();
         $this->assertSame($sample->id, $user->sample_avatar_id);
@@ -130,7 +130,7 @@ class ProfileAvatarTest extends TestCase
                 'username' => $user->username,
                 'avatar' => $file,
             ])
-            ->assertRedirect(route('profile.me', ['tab' => 'account']));
+            ->assertRedirect(route('profile.me'));
 
         $user->refresh();
         $this->assertNotNull($user->avatar_path);

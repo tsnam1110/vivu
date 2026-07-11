@@ -47,7 +47,7 @@
                 icon="🤝"
                 title="Chưa có gợi ý phù hợp"
                 description="Hoàn thiện hồ sơ gu để ViVu tìm người có gu gần với bạn."
-                :action-href="route('profile.me', ['tab' => 'taste'])"
+                :action-href="route('profile.edit')"
                 action-label="Hoàn thiện hồ sơ gu"
             />
         @endforelse

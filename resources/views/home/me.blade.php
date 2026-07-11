@@ -49,10 +49,10 @@
                 <div class="text-sm font-semibold text-stone-900">Thói quen</div>
                 <div class="mt-0.5 text-xs text-stone-500">Check-in & streak</div>
             </a>
-            <a href="{{ route('profile.me', ['tab' => 'taste']) }}"
+            <a href="{{ route('profile.edit') }}"
                class="rounded-2xl bg-white px-4 py-3 ring-1 ring-stone-200/80 transition hover:ring-teal-300">
                 <div class="text-sm font-semibold text-stone-900">{{ __('profile.title') }}</div>
-                <div class="mt-0.5 text-xs text-stone-500">Tài khoản & gu</div>
+                <div class="mt-0.5 text-xs text-stone-500">Tính cách, thể trạng & sở thích</div>
             </a>
         </div>
     </section>
