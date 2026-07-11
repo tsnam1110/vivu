@@ -7,47 +7,46 @@ chạy được end-to-end. Cập nhật trạng thái khi tiến triển; đồ
 ## M0 — Tài liệu & quy tắc ✅ (hoàn thành)
 - Bộ tài liệu `docs/`, CLAUDE.md, quy tắc, đặc tả tính năng.
 
-## M1 — Nền tảng kỹ thuật
+## M1 — Nền tảng kỹ thuật ✅
 - Scaffold Laravel 13, cấu hình `.env`, timezone, MySQL.
 - `config/auth.php`: **2 guard** (`web`, `admin`), provider `admins`.
 - Migration toàn bộ bảng theo [`04-database-schema.md`](04-database-schema.md).
 - Model + quan hệ + `$fillable` + `$casts` + Enums.
 - Seeder: categories, taste_traits, admin mặc định.
-- Bộ khung Resource/Service/Policy/Observer.
+- Bộ khung Resource/Service/Policy.
 - **DoD:** `php artisan migrate --seed` chạy sạch; test khung xanh.
 
-## M2 — Tài khoản & xác thực
+## M2 — Tài khoản & xác thực ✅
 - Đăng ký/đăng nhập user (public, Blade).
-- Đăng nhập admin (Sanctum) + khung Admin SPA (React 19 + AntD 6).
-- Phân quyền admin (role/permission).
+- Đăng nhập admin (Sanctum) + khung Admin SPA (React + AntD).
+- Phân quyền admin (role/permission Spatie: super-admin, moderator).
 - **DoD:** test auth (M2) xanh; user không truy cập `/api/admin`.
 
-## M3 — Trải nghiệm, danh mục, thẻ (lõi sản phẩm)
-- CRUD Experience (public) + upload ảnh (queue resize) + slug SEO.
+## M3 — Trải nghiệm, danh mục, thẻ (lõi sản phẩm) ✅
+- CRUD Experience (public + API) + upload ảnh (queue resize) + slug SEO.
 - Danh mục & thẻ: admin CRUD; gắn thẻ theo danh mục.
-- Tích hợp **Google Maps** chọn vị trí + hiển thị + nearby.
+- Nearby filter (bounding box + Haversine); Google Maps hiển thị khi có key.
 - Trang danh sách/chi tiết public có SEO + Open Graph.
-- **DoD:** đăng 1 trải nghiệm hoàn chỉnh < 3 phút; test M3 xanh.
+- **DoD:** test M3 xanh.
 
-## M4 — Tương tác xã hội
+## M4 — Tương tác xã hội ✅
 - Bình luận + đánh giá sao (cache `rating_avg`).
-- Reaction like/tim (cache `reaction_count`).
-- Chia sẻ MXH + Open Graph hoàn chỉnh.
-- Kiểm duyệt nội dung (admin ẩn/hiện).
-- **DoD:** test M4 xanh; kiểm duyệt hoạt động.
+- Reaction like/tim (cache `reaction_count`, toggle/upsert).
+- Chia sẻ MXH + Open Graph.
+- Kiểm duyệt nội dung (admin ẩn/hiện experience & comment).
+- **DoD:** test M4 xanh.
 
-## M5 — Hồ sơ gu & tìm người cùng gu (điểm khác biệt)
+## M5 — Hồ sơ gu & tìm người cùng gu (điểm khác biệt) ✅
 - Taste profile (personality/interests) + trang chỉnh sửa.
-- Thuật toán taste-match v1 (Jaccard/cosine) + trang gợi ý + `shared_traits`.
-- (Tuỳ chọn) theo dõi (follow) người cùng gu.
-- **DoD:** gợi ý có ý nghĩa + minh bạch lý do; test M5 xanh.
+- Thuật toán taste-match v1 (Jaccard + trọng số) + trang gợi ý + `shared_traits`.
+- Ẩn match qua `is_matchable`.
+- **DoD:** test M5 xanh.
 
-## M6 — Hoàn thiện & sẵn sàng production
-- Rà bảo mật ([`10-security-privacy.md`](10-security-privacy.md)), rate limit, CORS.
-- Tối ưu hiệu năng (index, eager load, cache đếm).
-- CI (lint + phpstan + test), cấu hình staging/prod, storage → S3, HTTPS.
-- Trang tĩnh (điều khoản, quyền riêng tư), xử lý lỗi 404/500 thân thiện.
-- **DoD:** checklist bảo mật đủ; CI xanh; deploy staging thành công.
+## M6 — Hoàn thiện & sẵn sàng production ✅ (local)
+- Rate limit login; middleware `EnsureAdmin`; trang 404/500; terms/privacy.
+- CI (test + admin build); eager load; cột cache đếm.
+- Còn lại khi deploy thật: staging/prod, storage S3, HTTPS, PHPStan nghiêm ngặt.
+
 
 ## Ngoài phạm vi v1 (backlog)
 Chat, booking/thanh toán, mobile native, gợi ý ML nâng cao, i18n nội dung. Xem

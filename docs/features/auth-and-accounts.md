@@ -31,8 +31,10 @@ Cấu hình trong `config/auth.php`: thêm guard `admin` và provider `admins`.
 - Đăng nhập tự động, gửi mail xác thực (queue). Redirect về trang chủ.
 
 ### Đăng nhập / đăng xuất
+- Trang public (local): **http://127.0.0.1:8000/login** (hoặc `http://vivu.test/login`).
 - `GET /login`, `POST /login` (throttle 5/phút/IP), `POST /logout`.
-- "Quên mật khẩu": luồng reset password mặc định Laravel.
+- User **không** seed sẵn — đăng ký tại `/register`.
+- "Quên mật khẩu": luồng reset password mặc định Laravel (nếu bật).
 
 ### Hồ sơ
 - URL công khai: `/u/{username}` (hiển thị bio, taste công khai, experiences).
@@ -41,11 +43,15 @@ Cấu hình trong `config/auth.php`: thêm guard `admin` và provider `admins`.
 ## 4. Luồng quản trị (Admin)
 
 - **Không** đăng ký công khai. Admin tạo bởi seeder hoặc bởi `super-admin`.
-- `POST /api/admin/login` → trả Sanctum token → SPA lưu (memory + refresh) và gắn
+- Giao diện SPA: **http://localhost:5200/** (dev). Public user: **http://127.0.0.1:8000/**.
+- `POST /api/admin/login` → trả Sanctum token → SPA lưu localStorage và gắn
   `Authorization: Bearer`.
 - `POST /api/admin/logout` → thu hồi token.
 - Role qua `spatie/laravel-permission`: `super-admin` (toàn quyền), `moderator`
   (kiểm duyệt nội dung, không quản admin khác).
+- Seed mặc định: `admin@vivu.test` / `password` (đổi ngay ngoài local).
+- Admin dùng Bearer — **không** đưa `localhost:5200` vào `SANCTUM_STATEFUL_DOMAINS`
+  (tránh HTTP 419).
 
 ## 5. Quy tắc nghiệp vụ
 1. Một email **có thể** tồn tại ở cả `users` và `admins` (hai không gian độc lập) —

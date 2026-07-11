@@ -117,12 +117,26 @@ Chi tiết quy ước: [`07-coding-standards.md`](07-coding-standards.md).
 
 | Môi trường | Mô tả |
 |---|---|
-| **Local** | Laragon (Windows), `F:\laragon\www\My_Project\ViVu`, MySQL local, `php artisan serve` hoặc vhost `vivu.test`. |
+| **Local** | Laragon (Windows). Một lệnh: `composer dev` (hoặc `npm run dev`) ở root. |
 | **Staging** | (định nghĩa sau) — mirror production, dữ liệu giả. |
 | **Production** | (định nghĩa sau) — HTTPS bắt buộc, queue worker chạy nền, storage → S3. |
 
+### 6.1 URL local (mặc định)
+
+| Thành phần | URL | Ghi chú |
+|---|---|---|
+| Public site (người dùng) | http://127.0.0.1:8000/ | Blade; vhost tuỳ chọn `http://vivu.test/` |
+| Admin SPA | http://localhost:5200/ | React + Ant Design; Bearer token |
+| API | http://127.0.0.1:8000/api | Admin: `/api/admin/*` |
+| Vite public (HMR) | http://localhost:5201/ | Chỉ assets dev, không phải UI user |
+
+Setup chi tiết: [`06-setup-development.md`](06-setup-development.md).
+
 Biến môi trường quan trọng: `APP_KEY`, `DB_*`, `GOOGLE_MAPS_API_KEY`,
 `SANCTUM_STATEFUL_DOMAINS`, `MAIL_*`, `QUEUE_CONNECTION`. Không commit `.env`.
+
+> Admin SPA dùng **Bearer token** — **không** đưa origin admin (`localhost:5200`) vào
+> `SANCTUM_STATEFUL_DOMAINS` (sẽ gây HTTP 419 CSRF).
 
 ## 7. Quyết định kiến trúc (ADR tóm tắt)
 

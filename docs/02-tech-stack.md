@@ -71,10 +71,11 @@ route `admin/*` của Laravel.
 - **PHP 8.3+** (khuyến nghị 8.4; kiểm tra `php -v`). Laragon có thể cần tải thêm bản
   PHP 8.3/8.4 và chọn qua *Menu → PHP → Version*.
 - Composer 2.x.
-- **Node.js 20 LTS trở lên** (Vite 7 yêu cầu Node 20.19+/22.12+) + npm.
+- **Node.js 20 LTS trở lên** (Vite 8: Node 20.19+/22.12+) + npm.
 - MySQL 8 (Laragon mặc định có; đảm bảo version ≥ 8).
 
-> Chi tiết cài đặt từng bước: [`06-setup-development.md`](06-setup-development.md).
+> Chi tiết cài đặt, **một lệnh `composer dev`**, URL public/admin:
+> [`06-setup-development.md`](06-setup-development.md).
 
 ## 7. Nguyên tắc chọn & nâng cấp thư viện
 

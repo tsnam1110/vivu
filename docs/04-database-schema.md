@@ -54,6 +54,7 @@ Index: `username`, `email`.
 | personality | JSON | nullable | mảng nhãn tính cách, vd `["huong_noi","phieu_luu"]` |
 | interests | JSON | nullable | mảng nhãn sở thích, vd `["am_thuc","nhiep_anh"]` |
 | location_city | VARCHAR(100) | nullable | thành phố (lọc/gợi ý theo vùng) |
+| is_matchable | BOOLEAN | default true | tham gia gợi ý "người cùng gu" |
 | created_at / updated_at | TIMESTAMP | | |
 
 > `personality` & `interests` lưu **JSON mảng slug nhãn**. Danh mục nhãn chuẩn hoá

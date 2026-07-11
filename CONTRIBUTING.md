@@ -6,7 +6,13 @@ trong [`docs/`](docs/).
 ## Trước khi bắt đầu
 1. Đọc [`CLAUDE.md`](CLAUDE.md) — tổng quan & **Golden Rules**.
 2. Dựng môi trường theo [`docs/06-setup-development.md`](docs/06-setup-development.md).
-3. Nếu là **AI Agent**: đọc thêm [`docs/08-agent-playbook.md`](docs/08-agent-playbook.md).
+3. Khởi chạy local (một lệnh ở root):
+   ```bash
+   composer dev
+   # Public:  http://127.0.0.1:8000/
+   # Admin:   http://localhost:5200/
+   ```
+4. Nếu là **AI Agent**: đọc thêm [`docs/08-agent-playbook.md`](docs/08-agent-playbook.md).
 
 ## Quy tắc cốt lõi (bắt buộc)
 - **Tài liệu là nguồn sự thật** — đổi schema/API/kiến trúc thì cập nhật tài liệu cùng lúc.

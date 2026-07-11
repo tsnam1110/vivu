@@ -5,8 +5,32 @@
 > **Đối tượng đọc chính:** AI Agent làm việc trên codebase.
 > **Đối tượng phụ:** Dev kế thừa/tham gia dự án.
 
-Điểm vào ngắn gọn nằm ở [`../CLAUDE.md`](../CLAUDE.md). Thư mục này chứa tài liệu
-chi tiết.
+Điểm vào ngắn gọn: [`../CLAUDE.md`](../CLAUDE.md) · Setup đầy đủ: [`06-setup-development.md`](06-setup-development.md).
+
+---
+
+## Truy cập nhanh (local)
+
+Sau khi cài xong, ở **root** chạy:
+
+```bash
+composer dev
+# hoặc: npm run dev
+```
+
+| Giao diện | URL | Công nghệ |
+|---|---|---|
+| **Người dùng (public)** | **http://127.0.0.1:8000/** | Blade + Tailwind + Alpine |
+| Public (Laragon vhost) | http://vivu.test/ | như trên |
+| **Admin** | **http://localhost:5200/** | React + Ant Design |
+| API | http://127.0.0.1:8000/api | Laravel |
+
+| Tài khoản seed | Email | Mật khẩu |
+|---|---|---|
+| Admin | `admin@vivu.test` | `password` |
+| User | đăng ký tại `/register` | — |
+
+> Cổng **5201** = Vite HMR cho CSS/JS public — **không** mở làm trang người dùng.
 
 ---
 

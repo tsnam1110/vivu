@@ -6,15 +6,19 @@
 ## 1. Quy trình mỗi phiên làm việc
 
 1. **Đọc [`../CLAUDE.md`](../CLAUDE.md)** — nắm ngữ cảnh & Golden Rules.
-2. **Xác định loại việc** và mở đúng tài liệu:
+2. **Biết URL local** (chi tiết [`06-setup-development.md`](06-setup-development.md)):
+   - Public (người dùng): http://127.0.0.1:8000/
+   - Admin: http://localhost:5200/
+   - Khởi chạy: `composer dev` (hoặc `npm run dev`) ở root
+3. **Xác định loại việc** và mở đúng tài liệu:
    - Đụng schema/DB → [`04-database-schema.md`](04-database-schema.md)
    - Đụng API → [`05-api-conventions.md`](05-api-conventions.md)
    - Làm 1 tính năng → file tương ứng trong [`features/`](features/)
    - Viết code → [`07-coding-standards.md`](07-coding-standards.md)
-3. **Lập kế hoạch ngắn** trước khi sửa nhiều file.
-4. **Thực hiện** theo chuẩn.
-5. **Kiểm chứng** (test/chạy thử) — không tuyên bố xong nếu chưa kiểm.
-6. **Cập nhật tài liệu** nếu thay đổi làm lệch tài liệu.
+4. **Lập kế hoạch ngắn** trước khi sửa nhiều file.
+5. **Thực hiện** theo chuẩn.
+6. **Kiểm chứng** (test/chạy thử) — không tuyên bố xong nếu chưa kiểm.
+7. **Cập nhật tài liệu** nếu thay đổi làm lệch tài liệu.
 
 ## 2. Nguyên tắc bất di bất dịch (nhắc lại Golden Rules)
 

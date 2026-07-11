@@ -37,7 +37,7 @@ ViVu/
 │   ├── factories/            # cho test
 │   └── seeders/              # categories, taste_traits, admin mặc định
 │
-├── resources/                # === PUBLIC SITE (Blade) ===
+├── resources/                # === PUBLIC SITE (Blade) — URL: :8000 hoặc vivu.test ===
 │   ├── views/
 │   │   ├── layouts/
 │   │   ├── components/       # <x-...> Blade components
@@ -51,19 +51,19 @@ ViVu/
 │   └── vi/                   # chuỗi hiển thị tiếng Việt (không hard-code)
 │
 ├── public/                   # webroot; ảnh build Vite; storage symlink
+│   # Dev: php artisan serve :8000 · Vite HMR public :5201
 │
-├── admin/                    # === ADMIN SPA (React 19 + AntD 6 + Vite 7) ===
+├── admin/                    # === ADMIN SPA — URL: http://localhost:5200 ===
 │   ├── src/
 │   │   ├── api/              # axios + hàm gọi API theo domain
-│   │   ├── components/
-│   │   ├── features/         # experiences/, categories/, users/, comments/...
-│   │   ├── hooks/
 │   │   ├── layouts/
-│   │   ├── pages/
-│   │   ├── types/            # type khớp API Resource
-│   │   └── utils/
-│   ├── .env                  # VITE_API_BASE_URL...
-│   └── vite.config.ts
+│   │   └── pages/            # Login, Experiences, Users, Comments, ...
+│   ├── .env                  # VITE_API_BASE_URL=http://127.0.0.1:8000/api
+│   ├── vite.config.ts        # server.port = 5200
+│   └── package.json
+│
+├── package.json              # npm run dev = full stack (server+queue+vite+admin)
+├── vite.config.js            # public Vite port 5201
 │
 ├── tests/
 │   ├── Feature/
@@ -72,6 +72,8 @@ ViVu/
 ├── config/                   # auth.php (2 guard), sanctum, filesystems...
 └── storage/                  # logs, ảnh (disk local), cache
 ```
+
+> Khởi chạy local một lệnh: `composer dev` — xem [`06-setup-development.md`](06-setup-development.md).
 
 ## 2. Quy tắc "đặt file mới ở đâu"
 | Bạn đang viết… | Đặt tại |

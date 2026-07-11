@@ -86,39 +86,62 @@ Quy tắc chi tiết cho Agent: [`docs/08-agent-playbook.md`](docs/08-agent-play
 
 ---
 
-## 5. Lệnh thường dùng (sẽ có sau khi scaffold code)
+## 5. Truy cập local & lệnh thường dùng
+
+### 5.1 Bản đồ URL (sau `composer dev`)
+
+| Giao diện | URL | Ghi chú |
+|---|---|---|
+| **Người dùng (public)** | **http://127.0.0.1:8000/** | Blade + Tailwind + Alpine — site chính |
+| Public (vhost Laragon) | **http://vivu.test/** | Tuỳ chọn, trỏ `public/` |
+| **Admin SPA** | **http://localhost:5200/** | React + Ant Design — Bearer token |
+| API | http://127.0.0.1:8000/api | Admin: `/api/admin/*` |
+| Vite public HMR | http://localhost:5201 | **Không** phải trang user — chỉ assets |
+
+Chi tiết route / seed / troubleshooting: [`docs/06-setup-development.md`](docs/06-setup-development.md).
+
+### 5.2 Tài khoản seed
+
+| Vai trò | Email | Mật khẩu | URL đăng nhập |
+|---|---|---|---|
+| Admin | `admin@vivu.test` | `password` | http://localhost:5200/login |
+| User | tự đăng ký | — | http://127.0.0.1:8000/register |
+
+### 5.3 Lệnh
 
 ```bash
-# Backend (Laravel) — chạy trong thư mục gốc
-php artisan serve                 # dev server
+# Khởi chạy local (một lệnh ở root) — API/public + queue + Vite public + Admin
+composer dev                      # hoặc: npm run dev
+
 php artisan migrate               # chạy migration
 php artisan migrate:fresh --seed  # reset DB + seed (CHỈ ở local)
 php artisan test                  # chạy test
-php artisan queue:work            # chạy queue worker
+php artisan storage:link          # symlink ảnh
 
-# Admin SPA (React + Vite) — trong thư mục admin/
-npm install
-npm run dev                       # dev server admin
-npm run build                     # build production
-
-# Public assets (Blade + Vite)
-npm run dev                       # watch tailwind/js
-npm run build
+# Chạy riêng / build
+npm run dev:vite                  # chỉ public assets :5201
+npm run dev:admin                 # chỉ admin :5200
+npm run build                     # build public
+npm run build:admin               # build admin
+npm run build:all                 # build cả hai
 ```
 
-> Laragon (Windows): thư mục gốc `F:\laragon\www\My_Project\ViVu`. Truy cập qua
-> `http://vivu.test` nếu bật virtual host, hoặc `php artisan serve`.
+> Thư mục gốc ví dụ: `D:\laragon\www\vivu`. Public: `http://127.0.0.1:8000` hoặc vhost `http://vivu.test`.
 
 ---
 
 ## 6. Trạng thái hiện tại
 
 - [x] Bộ tài liệu & quy tắc (thư mục này)
-- [ ] Scaffold Laravel + cấu hình `.env`
-- [ ] Migration theo [`04-database-schema.md`](docs/04-database-schema.md)
-- [ ] Auth 2 guard
-- [ ] Admin SPA (antd)
-- [ ] Public site (Blade)
-- [ ] Tính năng review / reaction / tag / map / share / taste-matching
+- [x] Scaffold Laravel 13 + cấu hình `.env`
+- [x] Migration theo [`04-database-schema.md`](docs/04-database-schema.md)
+- [x] Auth 2 guard (`web` session + `admin` Sanctum)
+- [x] Admin SPA (React + Ant Design) trong `admin/`
+- [x] Public site (Blade + Tailwind 4 + Alpine)
+- [x] Experiences / categories / tags / nearby map filters
+- [x] Comments, ratings, reactions, moderation
+- [x] Taste profile + matching (Jaccard)
+- [x] Feature/Unit tests (`php artisan test`)
+- [x] CI workflow (`.github/workflows/ci.yml`)
 
 > Cập nhật checklist này khi hoàn thành từng phần.
