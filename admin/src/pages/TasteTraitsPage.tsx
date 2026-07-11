@@ -1,7 +1,9 @@
 import { Button, Form, Input, Modal, Select, Table, Tag, message } from 'antd';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { createTasteTrait, listTasteTraits } from '../api/resources';
+import { createTasteTrait, listTasteTraits, type TasteTrait } from '../api/resources';
 import { useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 export default function TasteTraitsPage() {
   const qc = useQueryClient();
@@ -20,7 +22,7 @@ export default function TasteTraitsPage() {
         loading={isLoading}
         dataSource={data}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<TasteTrait>(),
           {
             title: 'Loại',
             dataIndex: 'type',
@@ -35,6 +37,7 @@ export default function TasteTraitsPage() {
           },
         ]}
       />
+      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
       <Modal title="Thêm nhãn gu" open={open} onCancel={() => setOpen(false)} onOk={() => form.submit()}>
         <Form form={form} layout="vertical" onFinish={async (values) => {
           await createTasteTrait(values);

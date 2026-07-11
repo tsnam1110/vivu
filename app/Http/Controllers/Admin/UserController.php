@@ -13,6 +13,7 @@ use App\Http\Resources\AdminUserResource;
 use App\Http\Resources\PremiumSubscriptionResource;
 use App\Models\User;
 use App\Services\PremiumSubscriptionService;
+use App\Support\AdminDateRange;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -49,6 +50,8 @@ class UserController extends Controller
                     ->orWhere('email', 'like', "%{$q}%");
             });
         }
+
+        AdminDateRange::apply($query, $request);
 
         return AdminUserResource::collection(
             $query->paginate(min((int) $request->integer('per_page', 15), 50))

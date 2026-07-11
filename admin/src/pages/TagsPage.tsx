@@ -21,6 +21,8 @@ import {
   type Tag,
 } from '../api/resources';
 import { useMemo, useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 type StatusFilter = 'all' | 'pending' | 'approved';
 
@@ -29,12 +31,17 @@ export default function TagsPage() {
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Tag | null>(null);
   const [status, setStatus] = useState<StatusFilter>('all');
+  const [page, setPage] = useState(1);
   const [statusLoadingId, setStatusLoadingId] = useState<number | null>(null);
   const [form] = Form.useForm();
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-tags', status],
-    queryFn: () => listTags(status === 'all' ? undefined : { status }),
+    queryKey: ['admin-tags', status, page],
+    queryFn: () =>
+      listTags({
+        ...(status === 'all' ? {} : { status }),
+        page,
+      }),
   });
 
   const { data: categories } = useQuery({
@@ -107,7 +114,10 @@ export default function TagsPage() {
         <Select
           value={status}
           style={{ width: 180 }}
-          onChange={(v) => setStatus(v)}
+          onChange={(v) => {
+            setStatus(v);
+            setPage(1);
+          }}
           options={[
             { value: 'all', label: 'Tất cả trạng thái' },
             { value: 'pending', label: 'Chờ duyệt' },
@@ -123,8 +133,14 @@ export default function TagsPage() {
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
+        pagination={{
+          current: data?.meta.current_page,
+          total: data?.meta.total,
+          pageSize: data?.meta.per_page,
+          onChange: setPage,
+        }}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<Tag>(data?.meta),
           { title: 'Tên', dataIndex: 'name' },
           { title: 'Slug', dataIndex: 'slug', ellipsis: true },
           {
@@ -195,6 +211,10 @@ export default function TagsPage() {
             ),
           },
         ]}
+      />
+      <ListTotalFooter
+        total={resolveListTotal(data?.meta.total, data?.data?.length)}
+        loading={isLoading}
       />
 
       <Modal

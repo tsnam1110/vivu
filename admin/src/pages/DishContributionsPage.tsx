@@ -6,15 +6,22 @@ import {
   type DishContribution,
 } from '../api/resources';
 import { useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 export default function DishContributionsPage() {
   const qc = useQueryClient();
   const [status, setStatus] = useState<string>('pending');
+  const [page, setPage] = useState(1);
   const [loadingId, setLoadingId] = useState<number | null>(null);
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-dish-contributions', status],
-    queryFn: () => listDishContributions({ status: status === 'all' ? undefined : status }),
+    queryKey: ['admin-dish-contributions', status, page],
+    queryFn: () =>
+      listDishContributions({
+        status: status === 'all' ? undefined : status,
+        page,
+      }),
   });
 
   const act = async (row: DishContribution, next: 'approved' | 'rejected') => {
@@ -41,7 +48,10 @@ export default function DishContributionsPage() {
       <Select
         style={{ width: 160, marginBottom: 16 }}
         value={status}
-        onChange={setStatus}
+        onChange={(v) => {
+          setStatus(v);
+          setPage(1);
+        }}
         options={[
           { value: 'pending', label: 'Chờ duyệt' },
           { value: 'approved', label: 'Đã duyệt' },
@@ -53,8 +63,14 @@ export default function DishContributionsPage() {
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
+        pagination={{
+          current: data?.meta.current_page,
+          total: data?.meta.total,
+          pageSize: data?.meta.per_page,
+          onChange: setPage,
+        }}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<DishContribution>(data?.meta),
           {
             title: 'Món',
             render: (_: unknown, r: DishContribution) =>
@@ -110,6 +126,10 @@ export default function DishContributionsPage() {
             ),
           },
         ]}
+      />
+      <ListTotalFooter
+        total={resolveListTotal(data?.meta.total, data?.data?.length)}
+        loading={isLoading}
       />
     </>
   );

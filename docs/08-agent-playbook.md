@@ -64,6 +64,11 @@
 - Nếu tài liệu mâu thuẫn với code hiện có → nêu mâu thuẫn, đề xuất cách hoà giải,
   không im lặng chọn một bên.
 - Nếu thiếu thông tin (vd khoá Google Maps) → nêu rõ chỗ chặn, không bịa giá trị.
+- **What to Eat / seed món:** fact calo, ngũ hành, hàn–nhiệt, lợi/hại… **chỉ** ghi khi
+  có nguồn xác thực. Chưa chắc → `null` (user đóng góp sau). **Cấm** đoán mò hay
+  “best-effort” để cho đủ. Đọc
+  [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md) và
+  [`features/what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md).
 
 ## 6. Khi thêm một tính năng mới (checklist)
 

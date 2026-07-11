@@ -23,6 +23,18 @@ class TasteTraitController extends Controller
             $query->where('type', $request->string('type'));
         }
 
+        if ($request->filled('is_active')) {
+            $query->where('is_active', filter_var($request->input('is_active'), FILTER_VALIDATE_BOOLEAN));
+        }
+
+        if ($request->filled('q')) {
+            $q = $request->string('q')->toString();
+            $query->where(function ($builder) use ($q) {
+                $builder->where('name', 'like', "%{$q}%")
+                    ->orWhere('slug', 'like', "%{$q}%");
+            });
+        }
+
         return TasteTraitResource::collection($query->get());
     }
 

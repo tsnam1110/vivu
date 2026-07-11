@@ -197,8 +197,8 @@ export const grantUserPremium = (
   payload: { days?: number; lifetime?: boolean; notes?: string },
 ) => http.patch(`/admin/users/${id}/premium`, payload).then((r) => r.data);
 
-export const listAvatarFrames = () =>
-  http.get<{ data: AvatarFrame[] }>('/admin/avatar-frames').then((r) => r.data.data);
+export const listAvatarFrames = (params?: Record<string, unknown>) =>
+  http.get<{ data: AvatarFrame[] }>('/admin/avatar-frames', { params }).then((r) => r.data.data);
 
 export const createAvatarFrame = (payload: Partial<AvatarFrame>) =>
   http.post('/admin/avatar-frames', payload).then((r) => r.data);
@@ -230,8 +230,8 @@ export const updatePremiumSubscription = (
   payload: { action: 'cancel' | 'extend'; days?: number; lifetime?: boolean; notes?: string },
 ) => http.patch(`/admin/premium-subscriptions/${id}`, payload).then((r) => r.data);
 
-export const listCategories = () =>
-  http.get<{ data: Category[] }>('/admin/categories').then((r) => r.data.data);
+export const listCategories = (params?: Record<string, unknown>) =>
+  http.get<{ data: Category[] }>('/admin/categories', { params }).then((r) => r.data.data);
 
 export const createCategory = (payload: Partial<Category>) =>
   http.post('/admin/categories', payload).then((r) => r.data);
@@ -272,14 +272,14 @@ export const updateTagStatus = (id: number, status: 'pending' | 'approved') =>
 
 export const deleteTag = (id: number) => http.delete(`/admin/tags/${id}`);
 
-export const listTasteTraits = () =>
-  http.get<{ data: TasteTrait[] }>('/admin/taste-traits').then((r) => r.data.data);
+export const listTasteTraits = (params?: Record<string, unknown>) =>
+  http.get<{ data: TasteTrait[] }>('/admin/taste-traits', { params }).then((r) => r.data.data);
 
 export const createTasteTrait = (payload: { type: string; name: string }) =>
   http.post('/admin/taste-traits', payload).then((r) => r.data);
 
-export const listHabitItems = () =>
-  http.get<{ data: HabitItem[] }>('/admin/habit-items').then((r) => r.data.data);
+export const listHabitItems = (params?: Record<string, unknown>) =>
+  http.get<{ data: HabitItem[] }>('/admin/habit-items', { params }).then((r) => r.data.data);
 
 export const createHabitItem = (payload: Partial<HabitItem>) =>
   http.post('/admin/habit-items', payload).then((r) => r.data);
@@ -328,8 +328,13 @@ export type DishContribution = {
   user?: { id: number; name: string; username: string } | null;
 };
 
-export const listDishes = (params?: { status?: string; q?: string; page?: number }) =>
-  http.get<Paginated<Dish>>('/admin/dishes', { params }).then((r) => r.data);
+export const listDishes = (params?: {
+  status?: string;
+  q?: string;
+  page?: number;
+  meal_slot?: string;
+  five_element?: string;
+}) => http.get<Paginated<Dish>>('/admin/dishes', { params }).then((r) => r.data);
 
 export const createDish = (payload: Partial<Dish>) =>
   http.post<{ data: Dish }>('/admin/dishes', payload).then((r) => r.data);

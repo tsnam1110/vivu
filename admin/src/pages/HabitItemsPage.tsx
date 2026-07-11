@@ -8,6 +8,8 @@ import {
   type HabitItem,
 } from '../api/resources';
 import { useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 export default function HabitItemsPage() {
   const qc = useQueryClient();
@@ -58,7 +60,7 @@ export default function HabitItemsPage() {
         loading={isLoading}
         dataSource={data}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<HabitItem>(),
           { title: 'Icon', dataIndex: 'icon', width: 70 },
           { title: 'Tên', dataIndex: 'name' },
           { title: 'Slug', dataIndex: 'slug' },
@@ -104,6 +106,7 @@ export default function HabitItemsPage() {
           },
         ]}
       />
+      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
       <Modal
         title={editing ? 'Sửa mẫu habit' : 'Thêm mẫu habit'}
         open={open}

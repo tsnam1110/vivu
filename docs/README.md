@@ -66,6 +66,8 @@ composer dev
 - [`avatar-and-premium.md`](features/avatar-and-premium.md) — Avatar, khung, Premium
 - [`habit-tracker.md`](features/habit-tracker.md) — Theo dõi thói quen (kho cá nhân)
 - [`what-to-eat.md`](features/what-to-eat.md) — Hôm nay ăn gì (popup trên Kho + kho món + đóng góp)
+- [`what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md) — Bộ quy tắc đánh giá / gợi ý mâm (lớp A–E–S)
+- [`what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md) — Chuẩn seed verified-only, provenance, thêm món hàng loạt
 
 ### Dành cho Agent
 - [`08-agent-playbook.md`](08-agent-playbook.md) — **Quy tắc & quy trình bắt buộc cho AI Agent**

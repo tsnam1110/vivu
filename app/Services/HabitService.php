@@ -32,6 +32,10 @@ class HabitService
         ['name' => 'Ghi trải nghiệm', 'icon' => '📝', 'description' => 'Lưu 1 trải nghiệm trên ViVu'],
         ['name' => 'Ăn uống lành mạnh', 'icon' => '🥗', 'description' => 'Bữa ăn cân bằng'],
         ['name' => 'Ngủ đủ giấc', 'icon' => '😴', 'description' => 'Ngủ trước 23h / đủ 7h'],
+        ['name' => 'Thiền / thở', 'icon' => '🧘', 'description' => '5–10 phút tĩnh tâm'],
+        ['name' => 'Đi bộ', 'icon' => '🚶', 'description' => 'Ít nhất 20–30 phút'],
+        ['name' => 'Hạn chế MXH', 'icon' => '📵', 'description' => 'Giới hạn thời gian scroll'],
+        ['name' => 'Học kỹ năng', 'icon' => '🎯', 'description' => 'Học / luyện 1 kỹ năng mới'],
     ];
 
     /**

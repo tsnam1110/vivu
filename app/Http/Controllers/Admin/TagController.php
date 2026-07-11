@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\StoreTagRequest;
 use App\Http\Requests\Admin\UpdateTagStatusRequest;
 use App\Http\Resources\TagResource;
 use App\Models\Tag;
+use App\Support\AdminDateRange;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -37,6 +38,8 @@ class TagController extends Controller
                     ->orWhere('slug', 'like', "%{$q}%");
             });
         }
+
+        AdminDateRange::apply($query, $request);
 
         return TagResource::collection($query->paginate(50));
     }

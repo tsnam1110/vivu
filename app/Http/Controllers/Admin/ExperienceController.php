@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\UpdateExperienceStatusRequest;
 use App\Http\Resources\ExperienceResource;
 use App\Models\Experience;
+use App\Support\AdminDateRange;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
@@ -24,6 +25,10 @@ class ExperienceController extends Controller
             $query->where('status', $request->string('status'));
         }
 
+        if ($request->filled('category_id')) {
+            $query->where('category_id', $request->integer('category_id'));
+        }
+
         if ($request->filled('q')) {
             $q = $request->string('q');
             $query->where(function ($builder) use ($q) {
@@ -31,6 +36,8 @@ class ExperienceController extends Controller
                     ->orWhere('place_name', 'like', "%{$q}%");
             });
         }
+
+        AdminDateRange::apply($query, $request);
 
         return ExperienceResource::collection(
             $query->paginate(min((int) $request->integer('per_page', 15), 50))

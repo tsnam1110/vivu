@@ -359,7 +359,10 @@ UNIQUE: `(user_id, user_habit_item_id, entry_date)`.
 
 Index: `status`, `five_element`, `(supports_light, supports_main)`, `(supports_dine_out, supports_cook_home)`.
 
-> Đặc tả: [`features/what-to-eat.md`](features/what-to-eat.md). UI: **popup trên Kho**.
+> Đặc tả: [`features/what-to-eat.md`](features/what-to-eat.md). UI: **popup trên Kho**.  
+> Chuẩn seed/fact: [`features/what-to-eat-seed-and-kb.md`](features/what-to-eat-seed-and-kb.md)
+> (verified-only; null = chưa xác thực). Rules:
+> [`features/what-to-eat-ruleset.md`](features/what-to-eat-ruleset.md).
 
 ---
 

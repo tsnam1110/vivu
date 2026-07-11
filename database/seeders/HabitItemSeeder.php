@@ -16,6 +16,10 @@ class HabitItemSeeder extends Seeder
             ['name' => 'Ghi trải nghiệm', 'icon' => '📝', 'sort_order' => 4, 'description' => 'Lưu 1 trải nghiệm trên ViVu'],
             ['name' => 'Ăn uống lành mạnh', 'icon' => '🥗', 'sort_order' => 5, 'description' => 'Bữa ăn cân bằng'],
             ['name' => 'Ngủ đủ giấc', 'icon' => '😴', 'sort_order' => 6, 'description' => 'Ngủ trước 23h / đủ 7h'],
+            ['name' => 'Thiền / thở', 'icon' => '🧘', 'sort_order' => 7, 'description' => '5–10 phút tĩnh tâm'],
+            ['name' => 'Đi bộ', 'icon' => '🚶', 'sort_order' => 8, 'description' => 'Ít nhất 20–30 phút'],
+            ['name' => 'Hạn chế MXH', 'icon' => '📵', 'sort_order' => 9, 'description' => 'Giới hạn thời gian scroll'],
+            ['name' => 'Học kỹ năng', 'icon' => '🎯', 'sort_order' => 10, 'description' => 'Học / luyện 1 kỹ năng mới'],
         ];
 
         foreach ($items as $row) {

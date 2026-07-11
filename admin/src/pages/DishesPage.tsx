@@ -14,6 +14,8 @@ import {
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { createDish, deleteDish, listDishes, updateDish, type Dish } from '../api/resources';
 import { useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 const SLOT_OPTS = [
   { value: 'breakfast', label: 'Sáng' },
@@ -34,11 +36,12 @@ export default function DishesPage() {
   const [editing, setEditing] = useState<Dish | null>(null);
   const [status, setStatus] = useState<string | undefined>();
   const [q, setQ] = useState('');
+  const [page, setPage] = useState(1);
   const [form] = Form.useForm();
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-dishes', status, q],
-    queryFn: () => listDishes({ status, q: q || undefined }),
+    queryKey: ['admin-dishes', status, q, page],
+    queryFn: () => listDishes({ status, q: q || undefined, page }),
   });
 
   const closeModal = () => {
@@ -81,7 +84,10 @@ export default function DishesPage() {
           placeholder="Trạng thái"
           style={{ width: 140 }}
           value={status}
-          onChange={setStatus}
+          onChange={(v) => {
+            setStatus(v);
+            setPage(1);
+          }}
           options={[
             { value: 'published', label: 'Published' },
             { value: 'draft', label: 'Draft' },
@@ -91,7 +97,10 @@ export default function DishesPage() {
         <Input.Search
           placeholder="Tìm tên / slug"
           allowClear
-          onSearch={setQ}
+          onSearch={(v) => {
+            setQ(v);
+            setPage(1);
+          }}
           style={{ width: 220 }}
         />
       </Space>
@@ -99,8 +108,14 @@ export default function DishesPage() {
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
-        pagination={{ total: data?.meta?.total, pageSize: 50 }}
+        pagination={{
+          current: data?.meta?.current_page ?? page,
+          total: data?.meta?.total,
+          pageSize: data?.meta?.per_page ?? 50,
+          onChange: setPage,
+        }}
         columns={[
+          sttIdColumn<Dish>(data?.meta),
           { title: '', dataIndex: 'emoji', width: 48 },
           { title: 'Tên', dataIndex: 'name' },
           { title: 'Slug', dataIndex: 'slug', ellipsis: true },
@@ -148,6 +163,10 @@ export default function DishesPage() {
             ),
           },
         ]}
+      />
+      <ListTotalFooter
+        total={resolveListTotal(data?.meta?.total, data?.data?.length)}
+        loading={isLoading}
       />
       <Modal
         title={editing ? 'Sửa món' : 'Thêm món'}

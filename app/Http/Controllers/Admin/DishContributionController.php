@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\UpdateContributionStatusRequest;
 use App\Http\Resources\DishContributionResource;
 use App\Models\DishContribution;
 use App\Services\DishContributionService;
+use App\Support\AdminDateRange;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
@@ -36,6 +37,8 @@ class DishContributionController extends Controller
         if ($request->filled('dish_id')) {
             $query->where('dish_id', $request->integer('dish_id'));
         }
+
+        AdminDateRange::apply($query, $request);
 
         return DishContributionResource::collection($query->paginate(50));
     }

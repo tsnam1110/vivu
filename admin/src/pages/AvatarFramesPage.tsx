@@ -22,6 +22,8 @@ import {
   type AvatarFrame,
 } from '../api/resources';
 import AvatarFramePreview from '../components/AvatarFramePreview';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 const EFFECT_OPTIONS = [
   { value: 'soft', label: 'Viền mềm' },
@@ -168,6 +170,7 @@ export default function AvatarFramesPage() {
         loading={isLoading}
         dataSource={data}
         columns={[
+          sttIdColumn<AvatarFrame>(),
           {
             title: 'Xem trước',
             width: 100,
@@ -226,6 +229,7 @@ export default function AvatarFramesPage() {
           },
         ]}
       />
+      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
 
       <Modal
         title={editing ? 'Sửa khung' : 'Thêm khung'}

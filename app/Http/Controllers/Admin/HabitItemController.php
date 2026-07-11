@@ -10,16 +10,29 @@ use App\Http\Requests\Admin\UpdateHabitItemRequest;
 use App\Http\Resources\HabitItemResource;
 use App\Models\HabitItem;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
 class HabitItemController extends Controller
 {
-    public function index(): AnonymousResourceCollection
+    public function index(Request $request): AnonymousResourceCollection
     {
-        return HabitItemResource::collection(
-            HabitItem::query()->orderBy('sort_order')->orderBy('name')->get()
-        );
+        $query = HabitItem::query()->orderBy('sort_order')->orderBy('name');
+
+        if ($request->filled('is_active')) {
+            $query->where('is_active', filter_var($request->input('is_active'), FILTER_VALIDATE_BOOLEAN));
+        }
+
+        if ($request->filled('q')) {
+            $q = $request->string('q')->toString();
+            $query->where(function ($builder) use ($q) {
+                $builder->where('name', 'like', "%{$q}%")
+                    ->orWhere('slug', 'like', "%{$q}%");
+            });
+        }
+
+        return HabitItemResource::collection($query->get());
     }
 
     public function store(StoreHabitItemRequest $request): JsonResponse

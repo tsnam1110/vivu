@@ -34,6 +34,15 @@ class DishController extends Controller
             });
         }
 
+        if ($request->filled('meal_slot')) {
+            $slot = $request->string('meal_slot')->toString();
+            $query->whereJsonContains('meal_slots', $slot);
+        }
+
+        if ($request->filled('five_element')) {
+            $query->where('five_element', $request->string('five_element')->toString());
+        }
+
         return DishResource::collection($query->paginate(50));
     }
 

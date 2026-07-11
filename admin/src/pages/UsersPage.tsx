@@ -1,8 +1,10 @@
 import {
   Button,
   Form,
+  Input,
   InputNumber,
   Modal,
+  Select,
   Space,
   Switch,
   Table,
@@ -21,6 +23,9 @@ import {
   type UserRow,
 } from '../api/resources';
 import { useState } from 'react';
+import DatePresetSelect from '../components/DatePresetSelect';
+import { DEFAULT_DATE_PRESET, type DatePreset } from '../utils/datePresets';
+import { serverPagination, sttIdColumn } from '../utils/listTable';
 
 function statusTag(status: string | null) {
   if (status === 'done') return <Tag color="green">Đạt ✓</Tag>;
@@ -30,14 +35,26 @@ function statusTag(status: string | null) {
 
 export default function UsersPage() {
   const [page, setPage] = useState(1);
+  const [q, setQ] = useState('');
+  const [status, setStatus] = useState<string | undefined>();
+  const [premium, setPremium] = useState<string | undefined>();
+  const [datePreset, setDatePreset] = useState<DatePreset>(DEFAULT_DATE_PRESET);
   const [premiumUser, setPremiumUser] = useState<UserRow | null>(null);
   const [habitUser, setHabitUser] = useState<UserRow | null>(null);
   const [historyPage, setHistoryPage] = useState(1);
   const [form] = Form.useForm();
   const qc = useQueryClient();
+
   const { data, isLoading } = useQuery({
-    queryKey: ['admin-users', page],
-    queryFn: () => listUsers({ page }),
+    queryKey: ['admin-users', page, q, status, premium, datePreset],
+    queryFn: () =>
+      listUsers({
+        page,
+        q: q || undefined,
+        status,
+        premium,
+        date_preset: datePreset,
+      }),
   });
 
   const { data: habitSummary, isLoading: summaryLoading } = useQuery({
@@ -57,20 +74,64 @@ export default function UsersPage() {
     setHabitUser(user);
   };
 
+  const resetPage = () => setPage(1);
+
   return (
     <>
+      <Space style={{ marginBottom: 16 }} wrap>
+        <Input.Search
+          placeholder="Tìm tên / username / email"
+          allowClear
+          onSearch={(v) => {
+            setQ(v);
+            resetPage();
+          }}
+          style={{ width: 240 }}
+        />
+        <Select
+          allowClear
+          placeholder="Trạng thái"
+          style={{ width: 140 }}
+          value={status}
+          onChange={(v) => {
+            setStatus(v);
+            resetPage();
+          }}
+          options={[
+            { value: 'active', label: 'Active' },
+            { value: 'suspended', label: 'Suspended' },
+          ]}
+        />
+        <Select
+          allowClear
+          placeholder="Premium"
+          style={{ width: 140 }}
+          value={premium}
+          onChange={(v) => {
+            setPremium(v);
+            resetPage();
+          }}
+          options={[
+            { value: 'active', label: 'Đang Premium' },
+            { value: 'none', label: 'Free' },
+          ]}
+        />
+        <DatePresetSelect
+          value={datePreset}
+          onChange={(v) => {
+            setDatePreset(v);
+            resetPage();
+          }}
+        />
+      </Space>
+
       <Table
         rowKey="id"
         loading={isLoading}
         dataSource={data?.data}
-        pagination={{
-          current: data?.meta.current_page,
-          total: data?.meta.total,
-          pageSize: data?.meta.per_page,
-          onChange: setPage,
-        }}
+        pagination={serverPagination(data?.meta, setPage)}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<UserRow>(data?.meta),
           { title: 'Tên', dataIndex: 'name' },
           { title: 'Username', dataIndex: 'username' },
           {
@@ -274,13 +335,7 @@ export default function UsersPage() {
                   loading={historyLoading}
                   dataSource={habitHistory?.data}
                   locale={{ emptyText: 'Chưa có lịch sử ghi nhận' }}
-                  pagination={{
-                    current: habitHistory?.meta.current_page,
-                    total: habitHistory?.meta.total,
-                    pageSize: habitHistory?.meta.per_page,
-                    onChange: setHistoryPage,
-                    showSizeChanger: false,
-                  }}
+                  pagination={serverPagination(habitHistory?.meta, setHistoryPage)}
                   columns={[
                     {
                       title: 'Thời điểm',

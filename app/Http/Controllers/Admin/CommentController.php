@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\UpdateCommentStatusRequest;
 use App\Http\Resources\CommentResource;
 use App\Models\Comment;
 use App\Services\CommentService;
+use App\Support\AdminDateRange;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
@@ -24,6 +25,15 @@ class CommentController extends Controller
         if ($request->filled('status')) {
             $query->where('status', $request->string('status'));
         }
+
+        if ($request->filled('q')) {
+            $q = $request->string('q');
+            $query->where(function ($builder) use ($q) {
+                $builder->where('body', 'like', "%{$q}%");
+            });
+        }
+
+        AdminDateRange::apply($query, $request);
 
         return CommentResource::collection(
             $query->paginate(min((int) $request->integer('per_page', 15), 50))

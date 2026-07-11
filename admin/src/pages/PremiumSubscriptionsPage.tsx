@@ -19,6 +19,8 @@ import {
   updatePremiumSubscription,
   type PremiumSubscription,
 } from '../api/resources';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 function formatDate(iso?: string | null) {
   if (!iso) return 'Lifetime';
@@ -98,7 +100,7 @@ export default function PremiumSubscriptionsPage() {
           onChange: setPage,
         }}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<PremiumSubscription>(data?.meta),
           {
             title: 'User',
             render: (_, r: PremiumSubscription) =>
@@ -173,6 +175,10 @@ export default function PremiumSubscriptionsPage() {
             ),
           },
         ]}
+      />
+      <ListTotalFooter
+        total={resolveListTotal(data?.meta.total, data?.data?.length)}
+        loading={isLoading}
       />
 
       <Modal

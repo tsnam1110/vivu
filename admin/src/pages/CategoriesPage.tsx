@@ -2,6 +2,8 @@ import { Button, Form, Input, InputNumber, Modal, Space, Switch, Table, message 
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { createCategory, deleteCategory, listCategories, updateCategory, type Category } from '../api/resources';
 import { useState } from 'react';
+import ListTotalFooter from '../components/ListTotalFooter';
+import { resolveListTotal, sttIdColumn } from '../utils/listTable';
 
 export default function CategoriesPage() {
   const qc = useQueryClient();
@@ -47,7 +49,7 @@ export default function CategoriesPage() {
         loading={isLoading}
         dataSource={data}
         columns={[
-          { title: 'ID', dataIndex: 'id', width: 70 },
+          sttIdColumn<Category>(),
           { title: 'Icon', dataIndex: 'icon', width: 70 },
           { title: 'Tên', dataIndex: 'name' },
           { title: 'Slug', dataIndex: 'slug' },
@@ -92,6 +94,7 @@ export default function CategoriesPage() {
           },
         ]}
       />
+      <ListTotalFooter total={resolveListTotal(null, data?.length)} loading={isLoading} />
       <Modal
         title={editing ? 'Sửa danh mục' : 'Thêm danh mục'}
         open={open}

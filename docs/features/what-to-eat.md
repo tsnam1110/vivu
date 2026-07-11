@@ -9,12 +9,23 @@ Liên quan: [`../03-domain-model.md`](../03-domain-model.md),
 [`../15-design-system.md`](../15-design-system.md),
 [`../10-security-privacy.md`](../10-security-privacy.md).
 
+**Tài liệu con (bắt buộc khi đụng rule / seed / fact món):**
+
+| File | Nội dung |
+|---|---|
+| [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md) | Lớp rule A–E–S, template mâm, data-gate, version ruleset |
+| [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) | **Chuẩn seed verified-only**, null khi chưa xác thực, pipeline thêm món hàng loạt, provenance, UGC lấp trống |
+
 > **Trạng thái:** Phase **A–D đã implement** (popup, catalog, UGC + admin, history/prefs,
 > match Experience). Calo gắn **khối lượng (serving_grams)** + bộ tính quy đổi gram/kcal
 > trên chi tiết món. Popup form: **mục tiêu kcal/ngày** (preset 1500/2000/2500, mặc định
 > từ cân nặng hồ sơ). Phase E social — backlog.  
+> **Chuẩn dữ liệu (2026-07):** seed / fact hệ thống chỉ nhận giá trị **đã xác thực**;
+> field chưa có nguồn → **để trống (`null`)** để đóng góp sau — chi tiết
+> [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md). Seeder cũ có thể còn
+> fact best-effort (nợ kỹ thuật — audit dần).  
 > **Nguyên tắc:** Đơn giản trước, thông minh sau — tách phase rõ; không biến ViVu
-> thành app dinh dưỡng y khoa.  
+> thành app dinh dưỡng y khoa / không claim chữa bệnh.  
 > **Vị trí sản phẩm:** **Tính năng phụ (utility)** — không cạnh tranh IA chính
 > (Kho / Khám phá / Đăng / Cùng gu / Profile).
 
@@ -619,9 +630,20 @@ Envelope theo [`05-api-conventions.md`](../05-api-conventions.md).
 
 ---
 
-## 13. Seed gợi ý (nhóm món)
+## 13. Seed & tri thức món
 
-Phân bổ để ma trận filter không rỗng:
+**Chuẩn bắt buộc:** [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md).
+
+Tóm tắt:
+
+1. Seed **verified-only** cho fact nhạy (calo, ngũ hành, hàn–nhiệt, lợi/hại y khoa…).  
+2. **Chưa xác thực → `null`** — UI mời đóng góp; rule **skip** field thiếu
+   ([`what-to-eat-ruleset.md`](what-to-eat-ruleset.md) §4).  
+3. Thêm lô lớn: dataset versioned (`database/data/what-to-eat/…`) + provenance + PR fact-gate.  
+4. Được seed skeleton: tên, slug, `meal_slots`, flags light/main/dine/cook; recipe/calo/element
+   chỉ khi có nguồn.
+
+### Gợi ý nhóm món (phủ filter — không đồng nghĩa fact III đầy)
 
 | Nhóm | Ví dụ | Slot | Size | Mode |
 |---|---|---|---|---|
@@ -633,7 +655,7 @@ Phân bổ để ma trận filter không rỗng:
 | Ăn ngoài điển hình | Lẩu, nướng, buffet | dinner | main | dine_out |
 | Chay | Phở chay, cơm chay | all | main/light | both |
 
-Mỗi món seed: `five_element` best-effort + `summary` 1 câu.
+`summary`: mô tả trung tính. **`five_element` / calo: không best-effort** — null nếu chưa verified.
 
 ---
 
@@ -697,3 +719,6 @@ Mỗi món seed: `five_element` best-effort + `summary` 1 câu.
 5. Admin API + SPA pages (Phase B có thể cùng hoặc sau A).
 6. Feature/Unit tests xanh.
 7. Cập nhật `CLAUDE.md` §6 checklist.
+8. **Seed / rule / fact món:** tuân
+   [`what-to-eat-seed-and-kb.md`](what-to-eat-seed-and-kb.md) +
+   [`what-to-eat-ruleset.md`](what-to-eat-ruleset.md) — không đoán field nhạy cảm.

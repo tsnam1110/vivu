@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\UpdateAvatarFrameRequest;
 use App\Http\Resources\AvatarFrameResource;
 use App\Models\AvatarFrame;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
@@ -17,11 +18,27 @@ use Illuminate\Validation\ValidationException;
 
 class AvatarFrameController extends Controller
 {
-    public function index(): AnonymousResourceCollection
+    public function index(Request $request): AnonymousResourceCollection
     {
-        return AvatarFrameResource::collection(
-            AvatarFrame::query()->orderBy('sort_order')->orderBy('id')->get()
-        );
+        $query = AvatarFrame::query()->orderBy('sort_order')->orderBy('id');
+
+        if ($request->filled('is_active')) {
+            $query->where('is_active', filter_var($request->input('is_active'), FILTER_VALIDATE_BOOLEAN));
+        }
+
+        if ($request->filled('is_premium')) {
+            $query->where('is_premium', filter_var($request->input('is_premium'), FILTER_VALIDATE_BOOLEAN));
+        }
+
+        if ($request->filled('q')) {
+            $q = $request->string('q')->toString();
+            $query->where(function ($builder) use ($q) {
+                $builder->where('name', 'like', "%{$q}%")
+                    ->orWhere('slug', 'like', "%{$q}%");
+            });
+        }
+
+        return AvatarFrameResource::collection($query->get());
     }
 
     public function store(StoreAvatarFrameRequest $request): JsonResponse
